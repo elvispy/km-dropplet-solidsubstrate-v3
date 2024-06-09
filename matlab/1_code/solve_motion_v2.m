@@ -100,7 +100,7 @@ function solve_motion_v2(varargin)
     %g = 9.8065e+2;           % Gravitational constant
     %harmonics_qtt = 15;      % Number of harmonics to be used 
     %angular_sampling = harmonics_qtt + 1; 
-    max_dt = 0;         % maximum allowed temporal time step
+    %max_dt = 0;         % maximum allowed temporal time step
     %angle_tol =  pi * 5/harmonics_qtt;
     %simulation_time = 15e-3; % Maximum allowed total time in seconds
     %live_plotting = true; % Whether to plot or not the live results
@@ -154,11 +154,9 @@ function solve_motion_v2(varargin)
 
     initial_pressure_coefficients = zeros(1, harmonics_qtt+1) / pressure_unit; % Just to emphasize the units of these coefficients.
     contact_points = 0;
-    if max_dt == 0
-        dt = round(time_unit/(20 * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; % /(10 * harmonics_qtt^(1/2))
-    else 
-        dt = max_dt/time_unit; 
-    end
+    
+    max_dt = round(time_unit/(20 * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; % /(10 * harmonics_qtt^(1/2))
+    dt = max_dt; 
     
     
     initial_time = 0;
