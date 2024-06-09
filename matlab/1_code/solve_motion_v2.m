@@ -30,41 +30,80 @@ function solve_motion_v2(varargin)
     %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
 
+    %% Handling default arguments. All units are in cgs.
     if nargin >= 3
         default_options = struct('live_plotting', false, 'debug_flag', false);
+        % if isstruct(varargin{3}) == false; error('Option values is not a struct'); end
+
+        % Overriding default values
         A = fieldnames(varargin{3})
         for ii = 1:length(A)
             default_options.(A{ii}) = varargin{3}.(A{ii})
         end
+
+        % Adding the values to the current workspace
+        B = fieldnames(default_options);
+        for jj = 1:length(B)
+            eval(sprintf('%s=%s;', B{jj}, default_options.(B{jj})));
+        end
     end
     if nargin >= 2
-        default_numerical = struct('simul_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan);
+        default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan);
         if isstruct(varargin{2}) == false; error('Numerical values is not a struct'); end
+        % overriding default values
         A = fieldnames(varargin{2})
         for ii = 1:length(A)
             default_numerical.(A{ii}) = varargin{2}.(A{ii})
         end
         if length(A) < 3; default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1; end 
+
+        
+        % Adding the values to the current workspace
+        B = fieldnames(default_numerical);
+        for jj = 1:length(B)
+            eval(sprintf('%s=%s;', B{jj}, default_numerical.(B{jj})));
+        end
     end
     if nargin >= 1
+        if isstruct(varargin{1}) == false; error('Option values is not a struct'); end
+        harmonics_qtt = default_numerical.harmonics_qtt;
+        default_physical = struct('undisturbed_radius', 1, 'initial_height', 1, ...
+                            'initial_velocity', nan, 'initial_amplitudes', zeros(harmonics_qtt, 1), ...
+                            'amplitudes_velocities', zeros(harmonics_qtt, 1), 'rhoS', 0.988, ...
+                            'sigmaS', 72.20, 'g', 9.8065e+2);
+        if isstruct(varargin{1}) == false; error('Numerical values is not a struct'); end
+        % Overriding default values
+        A = fieldnames(varargin{1})
+        for ii = 1:length(A)
+            default_physical.(A{ii}) = varargin{1}.(A{ii})
+        end
 
-    %% Handling default arguments. All units are in cgs.
+        % Adding the values to the current workspace
+        B = fieldnames(default_physical);
+        for jj = 1:length(B)
+            eval(sprintf('%s=%s;', B{jj}, default_physical.(B{jj})));
+        end
+
+    end
     
-    undisturbed_radius = .1;  % Radius of the undeformed spherical sphere 
-    initial_height = Inf;    % Initial position of the sphere center of mass of the sphere (Inf = start at imminent contact)
-    initial_velocity = -10; % Initial velocity of the sphere in cm/s
-    initial_amplitudes = Inf; % Initial amplitudes of the dropplet (Default = undisturbed) OBS: First index is A_1, not A0
-    initial_contact_points = 0;
-    amplitudes_velocities = [];
-    rhoS = 0.998;            % Sphere's density
-    sigmaS = 72.20;          % Sphere's Surface Tension
-    g = 9.8065e+2;           % Gravitational constant
-    harmonics_qtt = 15;      % Number of harmonics to be used 
-    angular_sampling = harmonics_qtt + 1; 
+
+    
+    
+    %undisturbed_radius = .1;  % Radius of the undeformed spherical sphere 
+    %initial_height = Inf;    % Initial position of the sphere center of mass of the sphere (Inf = start at imminent contact)
+    %initial_velocity = -10; % Initial velocity of the sphere in cm/s
+    %initial_amplitudes = Inf; % Initial amplitudes of the dropplet (Default = undisturbed) OBS: First index is A_1, not A0
+    %initial_contact_points = 0;
+    %amplitudes_velocities = [];
+    %rhoS = 0.998;            % Sphere's density
+    %sigmaS = 72.20;          % Sphere's Surface Tension
+    %g = 9.8065e+2;           % Gravitational constant
+    %harmonics_qtt = 15;      % Number of harmonics to be used 
+    %angular_sampling = harmonics_qtt + 1; 
     max_dt = 0;         % maximum allowed temporal time step
     %angle_tol =  pi * 5/harmonics_qtt;
-    simulation_time = 15e-3; % Maximum allowed total time in seconds
-    live_plotting = true; % Whether to plot or not the live results
+    %simulation_time = 15e-3; % Maximum allowed total time in seconds
+    %live_plotting = true; % Whether to plot or not the live results
 
     % Dimensionless Units
     length_unit = undisturbed_radius;
