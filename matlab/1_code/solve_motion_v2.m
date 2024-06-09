@@ -30,6 +30,10 @@ function solve_motion_v2(varargin)
     %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
 
+    if nargin >= 3
+        default_options = struct('live_plotting', false, 'debug_flag', false);
+    end
+
     %% Handling default arguments. All units are in cgs.
     
     undisturbed_radius = .1;  % Radius of the undeformed spherical sphere 
