@@ -68,9 +68,9 @@ function solve_motion_v2(varargin)
         if isstruct(varargin{1}) == false; error('Option values is not a struct'); end
         harmonics_qtt = default_numerical.harmonics_qtt;
         default_physical = struct('undisturbed_radius', 1, 'initial_height', 1, ...
-                            'initial_velocity', nan, 'initial_amplitudes', zeros(harmonics_qtt, 1), ...
-                            'amplitudes_velocities', zeros(harmonics_qtt, 1), 'rhoS', 0.988, ...
-                            'sigmaS', 72.20, 'g', 9.8065e+2);
+                            'initial_velocity', nan, 'initial_amplitudes', zeros(1, harmonics_qtt), ...
+                            'amplitudes_velocities', zeros(1, harmonics_qtt), 'pressure_amplitudes', zeros(1, harmonics_qtt+1), ...
+                            'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, 'g', 9.8065e+2);
         if isstruct(varargin{1}) == false; error('Numerical values is not a struct'); end
         % Overriding default values
         A = fieldnames(varargin{1})
@@ -150,14 +150,11 @@ function solve_motion_v2(varargin)
         amplitudes_velocities = amplitudes_velocities/velocity_unit;
     end
 
-    % tan_tol = tan(min_angle);
-
-    initial_pressure_coefficients = zeros(1, harmonics_qtt+1) / pressure_unit; % Just to emphasize the units of these coefficients.
+    initial_pressure_coefficients = pressure_amplitudes / pressure_unit; % Just to emphasize the units of these coefficients.
     contact_points = 0;
     
-    max_dt = round(time_unit/(20 * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; % /(10 * harmonics_qtt^(1/2))
+    max_dt = round(time_unit/(20 * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; 
     dt = max_dt; 
-    
     
     initial_time = 0;
     current_time = initial_time/time_unit;
@@ -168,12 +165,12 @@ function solve_motion_v2(varargin)
     number_of_extra_indexes = 0;
 
     %contact_points = 0;%  Initial number of contact points
-    contact_time = 0;% TODO: Lab contact time and so on?
-    labcTime = 0;%To record contact time
-    maxDef = 0; %to record max deflection;
-    firstFallFlag = true; %Boolean to record maximum deflection time
-    contactFlag = false; %To record first contact time
-    velocityOutRecorded = false; labvelocityOutRecorded = false;  % To check if Em_out was recorded
+    %contact_time = 0;% TODO: Lab contact time and so on?
+    %labcTime = 0;%To record contact time
+    %maxDef = 0; %to record max deflection;
+    %firstFallFlag = true; %Boolean to record maximum deflection time
+    %contactFlag = false; %To record first contact time
+    %velocityOutRecorded = false; labvelocityOutRecorded = false;  % To check if Em_out was recorded
     grow_dt = false;%  THis variable controls how fast dt can grow
     iii = 0; jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
 
@@ -189,9 +186,9 @@ function solve_motion_v2(varargin)
         "precomputed_integrals", legendre_matrix, ... % integral os legendre polynomials in angle intervals
         "function_to_minimize", @function_to_minimize_v3, ... % v1 = fully nonlinear integration on disk, v2 = nonlinear with spherical approximation, v3 = linearised version of v2
         "jacobian_calculator", @JacobianCalculator_v3, ... % has to be the same version as function to minimize
-        "DEBUG_FLAG", true); %true = plot and save video
+        "DEBUG_FLAG", debug_flag); %true = plot and save video
 
-    %current_conditions = cell(1, 1); % probable_next_conditions = Vector{ProblemConditions}(undef, 5);
+    
     current_conditions = ProblemConditions_v2( ...
         harmonics_qtt, ...
         initial_amplitudes, ...
@@ -368,75 +365,27 @@ function solve_motion_v2(varargin)
                 % Do some real-time variable updating here
             end
             
-            %%%%%%%%%%%%
-            %%%%%%%%%%%%
-            % ANALISE CONTACT TIME, MAXIMUM DEFLECTION, COEF OF RESTITUTION
-            if (contactFlag == false && current_conditions.contact_points > 0) % if contact began, start counting
-                contactFlag = true;
-                
-                impact_velocity = round(recorded_v(current_index - 2, 1), 10); % Store initial impact velocity
-                zeroPotential = lenght_unit; % Store our zero-Potential 
-                Em_in = 1/2 * mS * ((recorded_conditions{current_index - 2}.center_of_mass_velocity)^2); % Mechanical Energy In;
-
-            elseif (contactFlag == true && ...
-                    (velocityOutRecorded == false || labvelocityOutRecorded == false)) % record last contact time
-                if recorded_conditions{current_index - 1}.center_of_mass > lenght_unit 
-                    if labvelocityOutRecorded == false
-                        labEm_out = 1/2 * mS * ((recorded_conditions{current_index - 2}.center_of_mass_velocity)^2) ...
-                            + mS*g*(recorded_conditions{current_index - 2}.center_of_mass - zeroPotential); % Mechanical Energy Out;
-                        labvelocityOutRecorded = true;
-                    end
-                elseif labvelocityOutRecorded == false
-                    labcTime = labcTime + dt;
-                end
-                if current_conditions.contact_points == 0 
-                    if velocityOutRecorded == false
-                        Em_out = 1/2 * mS * ((recorded_conditions{current_index - 2}.center_of_mass_velocity)^2) ...
-                            + mS*g*(recorded_conditions{current_index - 2}.center_of_mass - zeroPotential); % Mechanical Energy Out;
-                        velocityOutRecorded = true;
-                    end
-                elseif velocityOutRecorded == false
-                    contact_time = contact_time + dt;
-                end
-            end
-
-            if (contactFlag == true && recorded_conditions{current_index - 1}.center_of_mass_velocity >= 0) % Record maximum deflection
-                if (firstFallFlag == true) %If velocity has changed sign, record maximum 
-                    %deflection only once
-                    maxDef = maxDef - recorded_conditions{current_index - 2}.center_of_mass;
-                    firstFallFlag = false;
-                end
-            end
-            if  recorded_conditions{current_index - 1}.center_of_mass_velocity < 0 && firstFallFlag == false 
-                if velocityOutRecorded    == false; contact_time    = inf; end
-                if labvelocityOutRecorded == false; labcTime = inf; end
-                
-            end
-
+            
         end
 
     end
+
     
     if PROBLEM_CONSTANTS.DEBUG_FLAG == true
         close(vidObj);
     end
     
     
-    file_path = fullfile("../0_data/", 'manual');
+    file_path = fullfile("../0_data/manual");
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end
     file_name = fullfile(file_path, sprintf("simulation %s.mat", datestr(now, 0)));
     % Post processing
-    impact_parameters = struct('
     indexes_to_save = indexes_to_save(1:(current_to_save-1));
     recorded_conditions = recorded_conditions(indexes_to_save);
     save(file_name, 'recorded_conditions', 'recorded_times', 'length_unit', ...
-        'velocity_unit', 'pressure_unit', 'time_unit', 'froude_nb', 'weber_nb', 'PROBLEM_CONSTANTS');
-
- 
-    
+        'velocity_unit', 'pressure_unit', 'time_unit', 'froude_nb', 'weber_nb', 'PROBLEM_CONSTANTS', ...
+        'default_numerical', 'default_physical');    
 end
 
-
-        
