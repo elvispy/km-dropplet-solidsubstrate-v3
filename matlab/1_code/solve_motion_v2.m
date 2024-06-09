@@ -32,7 +32,21 @@ function solve_motion_v2(varargin)
 
     if nargin >= 3
         default_options = struct('live_plotting', false, 'debug_flag', false);
+        A = fieldnames(varargin{3})
+        for ii = 1:length(A)
+            default_options.(A{ii}) = varargin{3}.(A{ii})
+        end
     end
+    if nargin >= 2
+        default_numerical = struct('simul_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan);
+        if isstruct(varargin{2}) == false; error('Numerical values is not a struct'); end
+        A = fieldnames(varargin{2})
+        for ii = 1:length(A)
+            default_numerical.(A{ii}) = varargin{2}.(A{ii})
+        end
+        if length(A) < 3; default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1; end 
+    end
+    if nargin >= 1
 
     %% Handling default arguments. All units are in cgs.
     
