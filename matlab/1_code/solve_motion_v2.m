@@ -2,11 +2,26 @@
 % email: elvisavfc65@gmail.com
 % Date: January 13th, 2023.
 
-function solve_motion_v2()
+function solve_motion_v2(varargin)
     
     %
     %Tries to solve the full kinematic match between a dropplet
     % and a solid substrate in vacuum conditions.
+    % Arguments:
+    % varargin must contain at most three elements, and all of them must be structs whose fields may be left
+    % empty or assume nan values to adopt default values, when possible.
+    %  - varargin{1} = Physical parameters for the simulation. All dimensions are in cgs units. Can contain the following fields:
+    %                                (dim, default) <-- Default shown as ? if variable is mandatory
+    %      1) undisturbed_radius     (cm, 1)          = radius of the undisturbed sphere 
+    %      2) com_height             (cm, contact)    = Initial height of the COM of the drop. Default is iminent contact
+    %      3) impact_velocity        (cm/s, ?)        = Initial velocity of the COM (negative = towards impact)
+    %      4) amplitudes             (cm, all zeroes) = Spectral legendre amplitudes for the surface of the drop. 1-indexed
+    %      5) amplitudes_vel         (cm, all zeroes) = Spectral legendre velocities for the surface of the drop. 1-indexed
+    %      6) pressure_amplitudes    (. , all zeroes) = Initial pressure amplitudes in spectral coordinates. 0-indexed
+    %      7) initial_contact_points (adim, 0)        = Initial number of contact points
+    %      8) rhoS                   (kg/cm^3, 0.988) = The density of the fluid inside the droplet. Default = water
+    %      9) sigmaS                 (., 72.29)       = Surface tension of the fluid inside the droplet. Default = water
+    %      10) g                     (cm/s^2, 9.81e+2)= Gravitational constant.
 
     %% Handling default arguments. All units are in cgs.
     
