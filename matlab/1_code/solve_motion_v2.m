@@ -73,9 +73,9 @@ function solve_motion_v2(varargin)
                             'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, 'g', 9.8065e+2);
         if isstruct(varargin{1}) == false; error('Numerical values is not a struct'); end
         % Overriding default values
-        A = fieldnames(varargin{1})
+        A = fieldnames(varargin{1});
         for ii = 1:length(A)
-            default_physical.(A{ii}) = varargin{1}.(A{ii})
+            default_physical.(A{ii}) = varargin{1}.(A{ii});
         end
 
         % Adding the values to the current workspace
@@ -380,7 +380,7 @@ function solve_motion_v2(varargin)
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end
-    file_name = fullfile(file_path, sprintf("simulation %s.mat", datestr(now, 0)));
+    file_name = fullfile(file_path, sprintf("simulation %s.mat", string(datetime("now"))));
     % Post processing
     indexes_to_save = indexes_to_save(1:(current_to_save-1));
     recorded_conditions = recorded_conditions(indexes_to_save);
