@@ -30,7 +30,7 @@ function solve_motion_v2(varargin)
     %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
     %      3) version                (int,  1)        = version for the system of equations to be solved.
-    %           v1 = Nonlinear exact integration on contact area
+    %           v1 = Nonlinear exact integration on contact area (Default)
     %           v2 = Nonlinear approximated integration on whole sphere
     %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
 

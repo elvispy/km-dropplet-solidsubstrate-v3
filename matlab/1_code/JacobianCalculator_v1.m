@@ -1,4 +1,4 @@
-function res = JacobianCalculator(Xn, previous_conditions, dt, contact_points, settings)
+function res = JacobianCalculator_v1(Xn, previous_conditions, dt, contact_points, settings)
 
     %Ps = settings.Ps;
     %Flat = settings.Flat;
