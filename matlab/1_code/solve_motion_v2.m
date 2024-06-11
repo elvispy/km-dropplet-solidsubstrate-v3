@@ -11,7 +11,7 @@ function solve_motion_v2(varargin)
     % varargin must contain at most three elements, and all of them must be structs whose fields may be left
     % empty or assume nan values to adopt default values, when possible.
     %  - varargin{1} = Physical parameters for the simulation. All dimensions are in cgs units. Can contain the following fields:
-    %                                (dim, default) <-- Default shown as ? if variable is mandatory
+    %                                (dim, default) <-- Default shown as ? if variable is required
     %      1) undisturbed_radius     (cm, 1)          = radius of the undisturbed sphere 
     %      2) com_height             (cm, contact)    = Initial height of the COM of the drop. Default is iminent contact
     %      3) impact_velocity        (cm/s, ?)        = Initial velocity of the COM (negative = towards impact)
@@ -29,10 +29,15 @@ function solve_motion_v2(varargin)
     %  - varargin{3} = Other options. 
     %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
+    %      3) version                (int,  1)        = version for the system of equations to be solved.
+    %           v1 = Nonlinear exact integration on contact area
+    %           v2 = Nonlinear approximated integration on whole sphere
+    %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
 
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
-        default_options = struct('live_plotting', false, 'debug_flag', false);
+        default_options = struct('live_plotting', false, 'debug_flag', false, ...
+            'version', 1);
         % if isstruct(varargin{3}) == false; error('Option values is not a struct'); end
 
         % Overriding default values
@@ -176,6 +181,8 @@ function solve_motion_v2(varargin)
 
       
     legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
+    function_to_minimize = eval(sprintf('@function_to_minimize_v%d', default_options.version));
+    JacobianCalculator = eval(sprintf('JacobianCalculator_v%d', default_options.version));
     % Constants of the problem formulation
     PROBLEM_CONSTANTS = struct("froude_nb", froude_nb, "weber_nb", weber_nb, ...
         "nb_harmonics", harmonics_qtt, ...
@@ -184,8 +191,8 @@ function solve_motion_v2(varargin)
         "pressure_unit", pressure_unit, ...
         "theta_vector", theta_vector, ... % set of fixed angle vectors
         "precomputed_integrals", legendre_matrix, ... % integral os legendre polynomials in angle intervals
-        "function_to_minimize", @function_to_minimize_v3, ... % v1 = fully nonlinear integration on disk, v2 = nonlinear with spherical approximation, v3 = linearised version of v2
-        "jacobian_calculator", @JacobianCalculator_v3, ... % has to be the same version as function to minimize
+        "function_to_minimize", function_to_minimize, ... % v1 = fully nonlinear integration on disk, v2 = nonlinear with spherical approximation, v3 = linearised version of v2
+        "jacobian_calculator", JacobianCalculator, ... % has to be the same version as function to minimize
         "DEBUG_FLAG", debug_flag); %true = plot and save video
 
     

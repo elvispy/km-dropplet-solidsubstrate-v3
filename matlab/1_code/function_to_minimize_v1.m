@@ -1,4 +1,4 @@
-function res = function_to_minimize(Xn, previous_conditions, dt, contact_points, settings)
+function res = function_to_minimize_v1(Xn, previous_conditions, dt, contact_points, settings)
     % Returns the function to be minimized for the Newton-Raphson Method
     
     Fr = settings.Fr;

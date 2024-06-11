@@ -1,4 +1,4 @@
-function tests = function_to_minimize_test
+function tests = function_to_minimize_v1_test
     tests = functiontests(localfunctions);
     %disp("lol")
 end
@@ -50,7 +50,7 @@ function testJacobian(testCase)
     Xn = [zeros(M-1, 1); zeros(M-1, 1); zeros(M+1, 1); 1; 1];
 
     L = length(Xn);
-    ftm = @(Xn) function_to_minimize(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    ftm = @(Xn) function_to_minimize_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     expected_value = zeros(length(ftm(Xn)), length(Xn));
     COL = ftm(Xn);
     ddt = 1e-4;
@@ -58,7 +58,7 @@ function testJacobian(testCase)
         perturb = zeros(L, 1); perturb(jj) = ddt;
         expected_value(:, jj) = (ftm(Xn + perturb) - COL)/ddt;
     end
-    actual_value = JacobianCalculator(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    actual_value = JacobianCalculator_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     
     verifyEqual(testCase, actual_value, expected_value, 'RelTol', 1e-5); 
 end
@@ -77,7 +77,7 @@ function testJacobianRandomInitialCondition(testCase)
     Xn = [rand(M-1, 1)/1e+2; rand(M-1, 1)/1e+2; rand(M+1, 1)/1e+2; 1; 1];
 
     L = length(Xn);
-    ftm = @(Xn) function_to_minimize(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    ftm = @(Xn) function_to_minimize_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     expected_value = zeros(length(ftm(Xn)), length(Xn));
     COL = ftm(Xn);
     ddt = 1e-5;
@@ -85,7 +85,7 @@ function testJacobianRandomInitialCondition(testCase)
         perturb = zeros(L, 1); perturb(jj) = ddt;
         expected_value(:, jj) = (ftm(Xn + perturb) - COL)/ddt;
     end
-    actual_value = JacobianCalculator(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    actual_value = JacobianCalculator_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     
     verifyEqual(testCase, actual_value, expected_value, 'AbsTol', 1e-5); 
 end
@@ -103,7 +103,7 @@ function testJacobianContactPoints(testCase)
     Xn = [rand(M-1, 1)/1e+2; rand(M-1, 1)/1e+2; rand(M+1, 1)/1e+2; 1; 1];
 
     L = length(Xn);
-    ftm = @(Xn) function_to_minimize(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    ftm = @(Xn) function_to_minimize_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     expected_value = zeros(length(ftm(Xn)), length(Xn));
     COL = ftm(Xn);
     ddt = 1e-5;
@@ -111,7 +111,7 @@ function testJacobianContactPoints(testCase)
         perturb = zeros(L, 1); perturb(jj) = ddt;
         expected_value(:, jj) = (ftm(Xn + perturb) - COL)/ddt;
     end
-    actual_value = JacobianCalculator(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    actual_value = JacobianCalculator_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     
     verifyEqual(testCase, actual_value, expected_value, 'AbsTol', 1e-5); 
 end
@@ -130,7 +130,7 @@ function testJacobianRandomContactPoints(testCase)
     Xn = [rand(M-1, 1)/1e+2; rand(M-1, 1)/1e+2; rand(M+1, 1)/1e+2; rand()/1e+2; rand()/1e+2];
 
     L = length(Xn);
-    ftm = @(Xn) function_to_minimize(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    ftm = @(Xn) function_to_minimize_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     expected_value = zeros(length(ftm(Xn)), length(Xn));
     COL = ftm(Xn);
     ddt = 1e-5;
@@ -138,7 +138,7 @@ function testJacobianRandomContactPoints(testCase)
         perturb = zeros(L, 1); perturb(jj) = ddt;
         expected_value(:, jj) = (ftm(Xn + perturb) - COL)/ddt;
     end
-    actual_value = JacobianCalculator(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    actual_value = JacobianCalculator_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     
     verifyEqual(testCase, actual_value, expected_value, 'AbsTol', 1e-5); 
 end
@@ -169,7 +169,7 @@ function testJacobianRandomPreviousConditions(testCase)
     Xn = [rand(M-1, 1)/1e+4; rand(M-1, 1)/1e+4; rand(M+1, 1)/1e+4; rand()/1e+2; rand()/1e+2];
 
     L = length(Xn);
-    ftm = @(Xn) function_to_minimize(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    ftm = @(Xn) function_to_minimize_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     expected_value = zeros(length(ftm(Xn)), length(Xn));
     COL = ftm(Xn);
     ddt = 1e-5;
@@ -177,7 +177,7 @@ function testJacobianRandomPreviousConditions(testCase)
         perturb = zeros(L, 1); perturb(jj) = ddt;
         expected_value(:, jj) = (ftm(Xn + perturb) - COL)/ddt;
     end
-    actual_value = JacobianCalculator(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
+    actual_value = JacobianCalculator_v1(Xn, previous_conditions, dt, contact_points, testCase.TestData.settings);
     
     verifyEqual(testCase, actual_value, expected_value, 'AbsTol', 1e-5); 
 end
