@@ -36,9 +36,9 @@ function solve_motion_v2(varargin)
         % if isstruct(varargin{3}) == false; error('Option values is not a struct'); end
 
         % Overriding default values
-        A = fieldnames(varargin{3})
+        A = fieldnames(varargin{3});
         for ii = 1:length(A)
-            default_options.(A{ii}) = varargin{3}.(A{ii})
+            default_options.(A{ii}) = varargin{3}.(A{ii});
         end
 
         % Adding the values to the current workspace
@@ -51,9 +51,9 @@ function solve_motion_v2(varargin)
         default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan);
         if isstruct(varargin{2}) == false; error('Numerical values is not a struct'); end
         % overriding default values
-        A = fieldnames(varargin{2})
+        A = fieldnames(varargin{2});
         for ii = 1:length(A)
-            default_numerical.(A{ii}) = varargin{2}.(A{ii})
+            default_numerical.(A{ii}) = varargin{2}.(A{ii});
         end
         if length(A) < 3; default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1; end 
 
