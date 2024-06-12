@@ -25,7 +25,8 @@ function solve_motion_v2(varargin)
     %  - varargin{2} = Numerical parameters for the simulation
     %      1) harmonics_qtt          (adim, ?)        = Number of spectral amplitudes that describe the motion. 
     %      2) angular_sampling (adim, harmonics_qtt+1)= Number of angles that describe the shape of the drop.
-    %      3) simul_time             (s, 15e-3)       = Maximum simulation time allowed.
+    %      3) simulation_time        (s, inf)         = Maximum simulation time allowed. 
+    %                                                   (Inf = simulate roughly until contact has ended)
     %  - varargin{3} = Other options. 
     %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
@@ -163,7 +164,11 @@ function solve_motion_v2(varargin)
     
     initial_time = 0;
     current_time = initial_time/time_unit;
-    final_time = simulation_time/time_unit;
+    if simulation_time == inf
+        final_time = 10000;
+    else
+        final_time = simulation_time/time_unit;
+    end
     current_index = 2;%  This integer points to the next available index in variables that are going to 
                       %  export data (index 1 is for initial conditions)
     maximum_index = ceil((final_time - initial_time)/dt) + 4;
@@ -356,6 +361,8 @@ function solve_motion_v2(varargin)
                 else
                     number_of_extra_indexes = number_of_extra_indexes + 1;
                 end
+
+                if simulation_time == inf && contact_points == 0; break; end
     
                 if live_plotting == true
                     % Do some live plotting here
