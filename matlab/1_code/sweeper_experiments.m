@@ -6,44 +6,51 @@
 % STEP 1: Define which simulations are to be run. 
 
 ddate = datestr(datetime(), 30); % 30 = ISO 8601
-diary(sprintf("../0_data/manual/Logger/sweeper_water_%s.txt", ddate));
+diary(sprintf("../0_data/manual/Logger/%s_%s.txt", mfilename, ddate));
 disp("------------");
-fprintf("%s \n %s\n", datestr(datetime()), mfilename('fullpath'));
+fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 
 
 %% Setting simulation parameters
-D = 50 %#ok<*NOPTS>
-Quant = 100
-rho = 1 % must multiply by x1000
-sigma = 72.20 % must multiply by x100
-nu = 9.78E-3 % Multiply by x10000
-muair = 0
-RhoS = 1 % must multiply by x1000
-SigmaS = 72.20 % must multiply by x100
-R = 0.035 % linspace(0.02, 0.05, 5)'; % must multiply by x10
-Ang = 180
-U = linspace(57, 47, 6)' %inspace(59, 39, 6)';
-modes = 21
-tol = 5e-5
+%#ok<*NOPTS>
+vars = struct(...    %D = 50  %Quant = 100
+    "rho", 1, ... % must multiply by x1000 
+    "sigma", 72.20, ... % must multiply by x100 %nu = 9.78E-3 % Multiply by x10000 %muair = 0
+    "RhoS", 1, ... % must multiply by x1000
+    "SigmaS", 72.20, ... % must multiply by x100
+    "R", 0.035, ... % linspace(0.02, 0.05, 5)'; % must multiply by x10 %Ang = 180
+    "U", linspace(57, 47, 6)', ... %inspace(59, 39, 6)';
+    "modes", 21);%tol = 5e-5
+
+% We check how many outputs we want
+numOutputs = length(fieldnames(vars));
 
 
+idxs = cell(1, numOutputs);
+lengths = arrayfun(@(x) length(x{1}), struct2cell(vars), 'UniformOutput', false);
+idxinputs = arrayfun(@(x) 1:x{1}, lengths, 'UniformOutput', false);
+[idxs{:}] = ndgrid(idxinputs{:});
+
+fnames = fieldnames(vars);
+cartesian_product = cell2mat( ...
+    arrayfun(@(varidx) vars.(fnames{varidx})(idxs{varidx}, :), 1:numOutputs, ...
+    'UniformOutput',false));
 % Creating table for all simulations
-[Didx, Quantidx, rhoidx, sigmaidx, muairidx, nuidx, ...
-    RhoSidx, SigmaSidx, Ridx, Angidx, Uidx, modesidx, tolidx] = ...
-    ndgrid(1:length(D), 1:length(Quant), 1:length(rho), 1:length(sigma), ...
-    1:length(muair), 1:length(nu), 1:length(RhoS), 1:length(SigmaS), ...
-    1:length(R), 1:length(Ang), 1:length(U), 1:length(modes), 1:length(tol));
+% [Didx, Quantidx, rhoidx, sigmaidx, muairidx, nuidx, ...
+%     RhoSidx, SigmaSidx, Ridx, Angidx, Uidx, modesidx, tolidx] = ...
+%     ndgrid(1:length(D), 1:length(Quant), 1:length(rho), 1:length(sigma), ...
+%     1:length(muair), 1:length(nu), 1:length(RhoS), 1:length(SigmaS), ...
+%     1:length(R), 1:length(Ang), 1:length(U), 1:length(modes), 1:length(tol));
 
-cartesian_product = [D(Didx, :), Quant(Quantidx, :), rho(rhoidx, :), ...
-    sigma(sigmaidx, :), muair(muairidx, :), nu(nuidx, :), RhoS(RhoSidx, :), ...
-    SigmaS(SigmaSidx, :), R(Ridx, :), Ang(Angidx, :), U(Uidx, :), modes(modesidx, :), ...
-    tol(tolidx, :)];
+%cartesian_product = arrayfun(@(x) )
+% cartesian_product = [D(Didx, :), Quant(Quantidx, :), rho(rhoidx, :), ...
+%     sigma(sigmaidx, :), muair(muairidx, :), nu(nuidx, :), RhoS(RhoSidx, :), ...
+%     SigmaS(SigmaSidx, :), R(Ridx, :), Ang(Angidx, :), U(Uidx, :), modes(modesidx, :), ...
+%     tol(tolidx, :)];
 
 % Turn simulations into table
-if isempty(cartesian_product) == true; cartesian_product = double.empty(0, 10); end
-simulations_cgs = array2table(cartesian_product, ...
-    "VariableNames", ["D", "Quant", "rho", "sigma", "muair", "nu", "RhoS", ...
-    "SigmaS", "R", "Ang", "U", "modes", "convergence_tol"]);
+if isempty(cartesian_product) == true; cartesian_product = double.empty(0, length(fieldnames(vars))); end
+simulations_cgs = array2table(cartesian_product, "VariableNames", fnames);
 % Now you can manually add any simulations that you would like to run, such
 % as:
 %  simulations_cgs = [simulations_cgs; ...
