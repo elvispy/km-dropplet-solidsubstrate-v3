@@ -6,7 +6,7 @@
 % STEP 1: Define which simulations are to be run. 
 
 ddate = datestr(datetime(), 30); % 30 = ISO 8601
-diary(sprintf("../0_data/manual/Logger/%s_%s.txt", mfilename, ddate));
+diary(sprintf("../2_output/Logger/%s_%s.txt", mfilename, ddate));
 disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 
@@ -14,8 +14,6 @@ fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 %% Setting simulation parameters
 %#ok<*NOPTS>
 vars = struct(...    %D = 50  %Quant = 100
-    "rho", 1, ... % must multiply by x1000 
-    "sigma", 72.20, ... % must multiply by x100 %nu = 9.78E-3 % Multiply by x10000 %muair = 0
     "RhoS", 1, ... % must multiply by x1000
     "SigmaS", 72.20, ... % must multiply by x100
     "R", 0.035, ... % linspace(0.02, 0.05, 5)'; % must multiply by x10 %Ang = 180
@@ -35,18 +33,7 @@ fnames = fieldnames(vars);
 cartesian_product = cell2mat( ...
     arrayfun(@(varidx) vars.(fnames{varidx})(idxs{varidx}, :), 1:numOutputs, ...
     'UniformOutput',false));
-% Creating table for all simulations
-% [Didx, Quantidx, rhoidx, sigmaidx, muairidx, nuidx, ...
-%     RhoSidx, SigmaSidx, Ridx, Angidx, Uidx, modesidx, tolidx] = ...
-%     ndgrid(1:length(D), 1:length(Quant), 1:length(rho), 1:length(sigma), ...
-%     1:length(muair), 1:length(nu), 1:length(RhoS), 1:length(SigmaS), ...
-%     1:length(R), 1:length(Ang), 1:length(U), 1:length(modes), 1:length(tol));
 
-%cartesian_product = arrayfun(@(x) )
-% cartesian_product = [D(Didx, :), Quant(Quantidx, :), rho(rhoidx, :), ...
-%     sigma(sigmaidx, :), muair(muairidx, :), nu(nuidx, :), RhoS(RhoSidx, :), ...
-%     SigmaS(SigmaSidx, :), R(Ridx, :), Ang(Angidx, :), U(Uidx, :), modes(modesidx, :), ...
-%     tol(tolidx, :)];
 
 % Turn simulations into table
 if isempty(cartesian_product) == true; cartesian_product = double.empty(0, length(fieldnames(vars))); end
@@ -71,7 +58,7 @@ force_sweep = false;
 root = pwd;
 % A folder which MUST have all the dependencies needed (and all its
 % parents, too. 
-safe_folder = fullfile(root, "simulation_code2");
+safe_folder = fullfile(root, "simulation_code");
 addpath(safe_folder, '-begin');
 %safe_folder = fullfile(root, "D50Quant100", "rho1000sigma7220nu98muair0", ...
 %    "RhoS1000SigmaS7220", "R0350mm", "ImpDefCornerAng180U38");
@@ -80,22 +67,32 @@ final_folders = simulations_cgs.folder;
 
 % Some common features of all the simulations to be run
 
-numerical_options = struct("harmonics_qtt", 20, "simul_time", inf);
+
 %% Starting simulation
-parfor ii = 1:height(simulations_cgs)
+for ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     cd(final_folders(ii));
 
     if force_sweep == true || isempty(dir("recorded*.mat")) == true
+        
+        numerical_parameters = struct("harmonics_qtt", simulations_cgs.modes(ii),...
+            "simulation_time", inf, "version", 1);
+
+        physical_parameters = struct("undisturbed_radius", simulations_cgs.R(ii), "initial_height", nan, ...
+            "initial_velocity", simulations_cgs.U(ii), "initial_amplitudes", zeros(1, simulations_cgs.modes(ii)), ...
+            "pressure_amplitudes", zeros(1, simulations_cgs.modes(ii)+1), "initial_contact_radius", 0, ...
+            "rhoS", simulations_cgs.RhoS(ii), "sigmaS", simulations_cgs.SigmaS(ii));
+        
+        solve_motion_v2(physical_parameters, numerical_parameters);
 
         try
-            solve_motion_v2();
+            solve_motion_v2(physical_parameters, numerical_parameters);
         catch ME
             cd(final_folders(ii))
             fprintf("Couldn't run simulation with the following parameters: \n Velocity: %g \n Modes: %g \n", ...
                 simulations_cgs.U(ii), simulations_cgs.modes(ii)); 
             a = datetime('now'); a.Format = 'yyyyMMddmmss';
-            parsave(sprintf("error_logU0=%g-%s.mat", simulations_cgs.U(ii), a), ME);
+            save(sprintf("error_logU0=%g-%s.mat", simulations_cgs.U(ii), a), ME);
         end
     else
         fprintf("Not running simulation with the following parameters (already done): \n Velocity: %g \n Modes: %g \n", ...

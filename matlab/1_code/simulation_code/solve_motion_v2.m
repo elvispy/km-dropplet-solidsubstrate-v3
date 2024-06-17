@@ -34,11 +34,20 @@ function solve_motion_v2(varargin)
     %           v1 = Nonlinear exact integration on contact area (Default)
     %           v2 = Nonlinear approximated integration on whole sphere
     %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
-
+    
+    %% Defining default Arguments
+    default_options = struct('live_plotting', false, 'debug_flag', false, ...
+            'version', 1);
+    default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan);
+    harmonics_qtt = default_numerical.harmonics_qtt; if ~isfinite(harmonics_qtt); harmonics_qtt = 0; end
+    default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
+        'initial_velocity', nan, 'initial_amplitudes', zeros(1, harmonics_qtt), ...
+        'amplitudes_velocities', zeros(1, harmonics_qtt), 'pressure_amplitudes', zeros(1, harmonics_qtt+1), ...
+        'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, 'g', 9.8065e+2);
+    
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
-        default_options = struct('live_plotting', false, 'debug_flag', false, ...
-            'version', 1);
+        
         % if isstruct(varargin{3}) == false; error('Option values is not a struct'); end
 
         % Overriding default values
@@ -46,15 +55,9 @@ function solve_motion_v2(varargin)
         for ii = 1:length(A)
             default_options.(A{ii}) = varargin{3}.(A{ii});
         end
-
-        % Adding the values to the current workspace
-        B = fieldnames(default_options);
-        for jj = 1:length(B)
-            eval(sprintf('%s=%s;', B{jj}, default_options.(B{jj})));
-        end
     end
     if nargin >= 2
-        default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan);
+        
         if isstruct(varargin{2}) == false; error('Numerical values is not a struct'); end
         % overriding default values
         A = fieldnames(varargin{2});
@@ -63,35 +66,23 @@ function solve_motion_v2(varargin)
         end
         if length(A) < 3; default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1; end 
 
-        
-        % Adding the values to the current workspace
-        B = fieldnames(default_numerical);
-        for jj = 1:length(B)
-            eval(sprintf('%s=%s;', B{jj}, default_numerical.(B{jj})));
-        end
     end
     if nargin >= 1
-        if isstruct(varargin{1}) == false; error('Option values is not a struct'); end
-        harmonics_qtt = default_numerical.harmonics_qtt;
-        default_physical = struct('undisturbed_radius', 1, 'initial_height', 1, ...
-                            'initial_velocity', nan, 'initial_amplitudes', zeros(1, harmonics_qtt), ...
-                            'amplitudes_velocities', zeros(1, harmonics_qtt), 'pressure_amplitudes', zeros(1, harmonics_qtt+1), ...
-                            'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, 'g', 9.8065e+2);
         if isstruct(varargin{1}) == false; error('Numerical values is not a struct'); end
         % Overriding default values
         A = fieldnames(varargin{1});
         for ii = 1:length(A)
             default_physical.(A{ii}) = varargin{1}.(A{ii});
         end
-
-        % Adding the values to the current workspace
-        B = fieldnames(default_physical);
-        for jj = 1:length(B)
-            eval(sprintf('%s=%s;', B{jj}, default_physical.(B{jj})));
-        end
-
     end
     
+    % Adding values to current workspace
+    include_scope = @(fields, struc) arrayfun(@(jj) ...
+        evalin('caller', sprintf('%s=%s;', fields{jj}, string(struc.(fields{jj})))), 1:length(fields));
+    
+    include_scope(fieldnames(default_physical), default_physical);
+    include_scope(fieldnames(default_options), default_options);
+    include_scope(fieldnames(default_numerical), default_numerical);
 
     
     
@@ -141,7 +132,7 @@ function solve_motion_v2(varargin)
     else
         initial_amplitudes = initial_amplitudes/length_unit;
     end
-    if initial_height == Inf
+    if initial_height == Inf || isnan(initial_height)
         initial_height = get_initial_height(initial_amplitudes);
     else
         assert(initial_height >= get_initial_height(initial_amplitudes));
@@ -165,7 +156,7 @@ function solve_motion_v2(varargin)
     initial_time = 0;
     current_time = initial_time/time_unit;
     if simulation_time == inf
-        final_time = 10000;
+        final_time = 20000*dt;
     else
         final_time = simulation_time/time_unit;
     end
@@ -362,7 +353,10 @@ function solve_motion_v2(varargin)
                     number_of_extra_indexes = number_of_extra_indexes + 1;
                 end
 
-                if simulation_time == inf && contact_points == 0; break; end
+                if simulation_time == inf && contact_points == 0
+                    final_time = current_time*1.1;
+                    simulation_time = 1e+6; % So as not to enter to this if ever again
+                end
     
                 if live_plotting == true
                     % Do some live plotting here
