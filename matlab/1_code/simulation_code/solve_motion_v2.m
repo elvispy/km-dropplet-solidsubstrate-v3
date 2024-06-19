@@ -38,7 +38,7 @@ function solve_motion_v2(varargin)
     %% Defining default Arguments
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
             'version', 1);
-    default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan);
+    default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan, 'version', 1);
     harmonics_qtt = default_numerical.harmonics_qtt; if ~isfinite(harmonics_qtt); harmonics_qtt = 0; end
     default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
         'initial_velocity', nan, 'initial_amplitudes', zeros(1, harmonics_qtt), ...
@@ -75,15 +75,28 @@ function solve_motion_v2(varargin)
             default_physical.(A{ii}) = varargin{1}.(A{ii});
         end
     end
-    
+   
+    %undisturbed_radius = nan; initial_height=nan; initial_velocity=nan; initial_amplitudes=nan; pressure_amplitudes =nan; initial_contact_radius=nan; rhoS=nan; sigmaS=nan; harmonics_qtt=nan; simulation_time =nan; version=nan;
     % Adding values to current workspace
-    include_scope = @(fields, struc) arrayfun(@(jj) ...
-        evalin('caller', sprintf('%s=%s;', fields{jj}, string(struc.(fields{jj})))), 1:length(fields));
+    %include_scope = @(fields, struc) arrayfun(@(jj) ...
+    %    eval(sprintf('%s=%s;', fields{jj}, string(struc.(fields{jj})))), 1:length(fields));
     
-    include_scope(fieldnames(default_physical), default_physical);
-    include_scope(fieldnames(default_options), default_options);
-    include_scope(fieldnames(default_numerical), default_numerical);
-
+    %include_scope(fieldnames(default_physical), default_physical);
+    %include_scope(fieldnames(default_options), default_options);
+    %include_scope(fieldnames(default_numerical), default_numerical);
+    undisturbed_radius = default_physical.undisturbed_radius; 
+    initial_height = default_physical.initial_height; 
+    initial_velocity=default_physical.initial_velocity; 
+    initial_amplitudes=default_physical.initial_amplitudes; 
+    pressure_amplitudes = default_physical.pressure_amplitudes; 
+    initial_contact_points = default_physical.initial_contact_points; 
+    rhoS = default_physical.rhoS; 
+    sigmaS= default_physical.sigmaS; 
+    harmonics_qtt = default_numerical.harmonics_qtt; 
+    simulation_time = default_numerical.simulation_time; 
+    version=default_numerical.version;
+    g = default_physical.g;
+    
     
     
     %undisturbed_radius = .1;  % Radius of the undeformed spherical sphere 
