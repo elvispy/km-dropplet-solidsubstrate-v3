@@ -1,0 +1,22 @@
+------------
+19-Jun-2024 15:34:16 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Attempt to add "undisturbed_radius" to a static workspace.
+ See <a href="matlab: helpview([docroot '/techdoc/matlab_prog/matlab_prog.map'],'adding_variables_dynamically')">Variables in Nested and Anonymous Functions</a>.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2>@(jj)evalin(''caller'',sprintf(''%s=%s;'',fields{jj},string(struc.(fields{jj}))))', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 82)" style="font-weight:bold">solve_motion_v2>@(jj)evalin('caller',sprintf('%s=%s;',fields{jj},string(struc.(fields{jj}))))</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',82,0)">line 82</a>)
+        evalin('caller', sprintf('%s=%s;', fields{jj}, string(struc.(fields{jj})))), 1:length(fields));
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2>@(fields,struc)arrayfun(@(jj)evalin(''caller'',sprintf(''%s=%s;'',fields{jj},string(struc.(fields{jj})))),1:length(fields))', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 81)" style="font-weight:bold">solve_motion_v2>@(fields,struc)arrayfun(@(jj)evalin('caller',sprintf('%s=%s;',fields{jj},string(struc.(fields{jj})))),1:length(fields))</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',81,0)">line 81</a>)
+    include_scope = @(fields, struc) arrayfun(@(jj) ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 84)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',84,0)">line 84</a>)
+    include_scope(fieldnames(default_physical), default_physical);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 86)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',86,0)">line 86</a>)
+        solve_motion_v2(physical_parameters, numerical_parameters);
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

@@ -44,8 +44,8 @@ function [probable_next_conditions, errortan] = ...
         end % end for
     end % end outer if
     
-    if norm(initial_condition-best_solution)/norm(initial_condition) >= 1e-2/nb_harmonics
-        warning('Finished newton method. The solution is too far away from the previous condition'); 
+    if norm(initial_condition-best_solution)/norm(initial_condition) >= 1/nb_harmonics
+        %warning('Finished newton method. The solution is too far away from the previous condition'); 
     end
     
     % Lets try with the same pressure

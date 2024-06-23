@@ -1,0 +1,56 @@
+------------
+19-Jun-2024 15:51:11 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+
+angular_sampling =
+
+   NaN
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/vpasolve', '/Applications/MATLAB_R2020a.app/toolbox/symbolic/symbolic/@sym/vpasolve.m', 145)" style="font-weight:bold">sym/vpasolve</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/symbolic/symbolic/@sym/vpasolve.m',145,0)">line 145</a>)
+Unable to find variables in equations.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 136)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',136,0)">line 136</a>)
+    theta_vector = [pi; acos(double(vpasolve(legendreP(angular_sampling-1, x))))]'; clear x;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 86)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',86,0)">line 86</a>)
+        solve_motion_v2(physical_parameters, numerical_parameters);
+} 
+help try
+ <strong>try</strong>  Begin <strong>try</strong> block.
+    The general form of a <strong>try</strong> statement is:
+  
+       <strong>try</strong>
+          statement, ..., statement, 
+       CATCH ME
+          statement, ..., statement 
+       END
+ 
+    Normally, only the statements between the <strong>try</strong> and CATCH are executed.
+    However, if an error occurs while executing any of the statements, the
+    error is captured into an object, ME, of class MException, and the 
+    statements between the CATCH and END are executed. If an error occurs 
+    within the CATCH statements, execution stops, unless caught by another 
+    <strong>try</strong>...CATCH block. The ME argument is optional. 
+ 
+    See also <a href="matlab:help catch">catch</a>, <a href="matlab:help MException">MException</a>, <a href="matlab:help rethrow">rethrow</a>, <a href="matlab:help eval">eval</a>, <a href="matlab:help evalin">evalin</a>, <a href="matlab:help end">end</a>.
+
+    <a href="matlab:doc try">Documentation for try</a>
+
+solve_motion_v2
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/vpasolve', '/Applications/MATLAB_R2020a.app/toolbox/symbolic/symbolic/@sym/vpasolve.m', 145)" style="font-weight:bold">sym/vpasolve</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/symbolic/symbolic/@sym/vpasolve.m',145,0)">line 145</a>)
+Unable to find variables in equations.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 141)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',141,0)">line 141</a>)
+    theta_vector = [pi; acos(double(vpasolve(legendreP(angular_sampling-1, x))))]'; clear x;
+} 
+1/nan
+
+ans =
+
+   NaN
+
+zeros(1, nan)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('zeros')" style="font-weight:bold">zeros</a>
+NaN and Inf not allowed.
+} 
+sweeper_experiments

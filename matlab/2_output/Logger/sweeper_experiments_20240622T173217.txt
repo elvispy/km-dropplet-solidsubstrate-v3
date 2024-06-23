@@ -1,0 +1,142 @@
+------------
+22-Jun-2024 17:32:17 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Se dividio dt por 2
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Se dividio dt por 2
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Se dividio dt por 2
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 199)
+  In parallel_function>make_general_channel/channel_general (line 847)
+  In remoteParallelFunction (line 67)
+Se dividio dt por 2

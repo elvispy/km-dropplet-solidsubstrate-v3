@@ -37,7 +37,7 @@ function solve_motion_v2(varargin)
     
     %% Defining default Arguments
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
-            'version', 1);
+            'version', 1, 'folder', "");
     default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan, 'version', 1);
     harmonics_qtt = default_numerical.harmonics_qtt; if ~isfinite(harmonics_qtt); harmonics_qtt = 0; end
     default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
@@ -64,8 +64,13 @@ function solve_motion_v2(varargin)
         for ii = 1:length(A)
             default_numerical.(A{ii}) = varargin{2}.(A{ii});
         end
-        if length(A) < 3; default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1; end 
-
+        try 
+            zeros(default_numerical.angular_sampling);
+        catch 
+            default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1;
+        end
+    
+    
     end
     if nargin >= 1
         if isstruct(varargin{1}) == false; error('Numerical values is not a struct'); end
@@ -95,8 +100,10 @@ function solve_motion_v2(varargin)
     harmonics_qtt = default_numerical.harmonics_qtt; 
     simulation_time = default_numerical.simulation_time; 
     version=default_numerical.version;
+    angular_sampling = default_numerical.angular_sampling;
     g = default_physical.g;
-    
+    debug_flag = default_options.debug_flag;
+    live_plotting = default_options.live_plotting;
     
     
     %undisturbed_radius = .1;  % Radius of the undeformed spherical sphere 
@@ -154,11 +161,11 @@ function solve_motion_v2(varargin)
     
     initial_velocity_adim = initial_velocity/velocity_unit;
 
-    if length(amplitudes_velocities) ~= harmonics_qtt
-        amplitudes_velocities = zeros(1, harmonics_qtt);
-    else
-        amplitudes_velocities = amplitudes_velocities/velocity_unit;
-    end
+    %if length(initial_mplitude_velocities) ~= harmonics_qtt
+        initial_mplitude_velocities = zeros(1, harmonics_qtt);
+    %else
+    %    initial_mplitude_velocities = initial_mplitude_velocities/velocity_unit;
+    %end
 
     initial_pressure_coefficients = pressure_amplitudes / pressure_unit; % Just to emphasize the units of these coefficients.
     contact_points = 0;
@@ -191,7 +198,7 @@ function solve_motion_v2(varargin)
       
     legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
     function_to_minimize = eval(sprintf('@function_to_minimize_v%d', default_options.version));
-    JacobianCalculator = eval(sprintf('JacobianCalculator_v%d', default_options.version));
+    JacobianCalculator = eval(sprintf('@JacobianCalculator_v%d', default_options.version));
     % Constants of the problem formulation
     PROBLEM_CONSTANTS = struct("froude_nb", froude_nb, "weber_nb", weber_nb, ...
         "nb_harmonics", harmonics_qtt, ...
@@ -208,7 +215,7 @@ function solve_motion_v2(varargin)
     current_conditions = ProblemConditions_v2( ...
         harmonics_qtt, ...
         initial_amplitudes, ...
-        amplitudes_velocities, ...
+        initial_mplitude_velocities, ...
         initial_pressure_coefficients, ...
         current_time, ...
         dt, ...
@@ -266,7 +273,7 @@ function solve_motion_v2(varargin)
         open(vidObj);
     end
 
-    file_path = fullfile("../0_data/manual");
+    file_path = fullfile(sprintf("../2_output/%s/", default_options.folder));
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end    
@@ -366,7 +373,7 @@ function solve_motion_v2(varargin)
                     number_of_extra_indexes = number_of_extra_indexes + 1;
                 end
 
-                if simulation_time == inf && contact_points == 0
+                if simulation_time == inf && contact_points == 0 && current_time > 0
                     final_time = current_time*1.1;
                     simulation_time = 1e+6; % So as not to enter to this if ever again
                 end

@@ -17,8 +17,9 @@ vars = struct(...    %D = 50  %Quant = 100
     "RhoS", 1, ... % must multiply by x1000
     "SigmaS", 72.20, ... % must multiply by x100
     "R", 0.035, ... % linspace(0.02, 0.05, 5)'; % must multiply by x10 %Ang = 180
-    "U", linspace(57, 47, 6)', ... %inspace(59, 39, 6)';
-    "modes", 21);%tol = 5e-5
+    "U", -linspace(10, 50, 5)', ... %inspace(59, 39, 6)';
+    "modes", [10, 20, 40]', ...
+    "version", [1, 2, 3]');%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -69,30 +70,35 @@ final_folders = simulations_cgs.folder;
 
 
 %% Starting simulation
-for ii = 1:height(simulations_cgs)
+parfor ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     cd(final_folders(ii));
 
     if force_sweep == true || isempty(dir("recorded*.mat")) == true
         
         numerical_parameters = struct("harmonics_qtt", simulations_cgs.modes(ii),...
-            "simulation_time", inf, "version", 1);
+            "simulation_time", inf, "version", simulations_cgs.version(ii));
+        options = struct('version', simulations_cgs.version(ii), ...
+            'folder', sprintf("Version v%d (%g)", simulations_cgs.version(ii), ...
+        simulations_cgs.RhoS(ii) * simulations_cgs.SigmaS(ii)));
 
         physical_parameters = struct("undisturbed_radius", simulations_cgs.R(ii), "initial_height", nan, ...
             "initial_velocity", simulations_cgs.U(ii), "initial_amplitudes", zeros(1, simulations_cgs.modes(ii)), ...
             "pressure_amplitudes", zeros(1, simulations_cgs.modes(ii)+1), "initial_contact_points", 0, ...
             "rhoS", simulations_cgs.RhoS(ii), "sigmaS", simulations_cgs.SigmaS(ii));
         
-        solve_motion_v2(physical_parameters, numerical_parameters);
+        %solve_motion_v2(physical_parameters, numerical_parameters);
 
         try
-            solve_motion_v2(physical_parameters, numerical_parameters);
+            fprintf("Starting simulation with velocity %g, modes %d, version v%d", ...
+                simulations_cgs.U(ii), simulations_cgs.modes(ii), simulations_cgs.version(ii));
+            solve_motion_v2(physical_parameters, numerical_parameters, options);
         catch ME
             cd(final_folders(ii))
             fprintf("Couldn't run simulation with the following parameters: \n Velocity: %g \n Modes: %g \n", ...
                 simulations_cgs.U(ii), simulations_cgs.modes(ii)); 
             a = datetime('now'); a.Format = 'yyyyMMddmmss';
-            save(sprintf("error_logU0=%g-%s.mat", simulations_cgs.U(ii), a), ME);
+            parsave(sprintf("error_logU0=%g-%s.mat", simulations_cgs.U(ii), a), ME);
         end
     else
         fprintf("Not running simulation with the following parameters (already done): \n Velocity: %g \n Modes: %g \n", ...
@@ -103,120 +109,12 @@ for ii = 1:height(simulations_cgs)
 end
 
 cd(root);
-delete(gcp); % Deleting current parallel workers
+delete(gcp("nocreate")); % Deleting current parallel workers
 
 % Load Python3 in MACOS based on https://www.mathworks.com/matlabcentral/answers/359408-trouble-with-a-command-in-matlab-s-system
 if ~ispc && system('python3 --version') ~= 0; setenv('PATH', [getenv('PATH') ':/usr/local/bin/']); end
 
-system('python3 sending_email.py'); % Sending email to notify that's finished
+false && system('python3 sending_email.py'); % Sending email to notify that's finished
 diary off % turning logger off
 
-% function final_folder = create_folder_stucture(entry)
-%     base =  pwd;
-%     safe_folder = fullfile(base, "D50Quant100");
-% 
-%     % Defining folder structure
-%     physical_space = sprintf("D%gQuant%g", entry.D, entry.Quant);
-%     fluid_parameters = sprintf("rho%gsigma%gnu%.0fmuair%g", entry.rho*1000, entry.sigma*100, entry.nu*10000, entry.muair);
-%     sphere_parameters = sprintf("rhoS%gsigmaS%g", entry.RhoS*1000, entry.SigmaS*100);
-%     radius_folder = sprintf("R%04.4gmm", entry.R*10000);
-%     velocity_folder = sprintf("ImpDefCornerAng%gU%.4g", entry.Ang, entry.U);
-%     modes_folder = sprintf("N=%dtol=%0.2e", entry.modes, entry.convergence_tol);
-% 
-%     if ~isfolder(physical_space)
-%         mkdir(physical_space);
-%     end
-% 
-%     cd(physical_space);
-%     if ~isfile("zdrop.mat")
-%         copyfile(fullfile(safe_folder, "ParRadDTNStops.m"), pwd);
-% 
-%         s = fileread(fullfile(safe_folder, "DomainMaker.m"));
-%         s = regexprep(s, "D = [^\s]+;", sprintf("D = %g;", entry.D));
-%         s = regexprep(s, "quant = [^\s]+;", sprintf("quant = %g;", entry.Quant));
-% 
-%         writeID = fopen("DomainMaker.m", 'w+');
-%         fprintf(writeID, "%s", s);
-%         fclose(writeID);
-%         DomainMaker;
-%         if ~isfile("DTN*.mat")
-%             error("Integration matrix for fluid contact not found. Maually run ParRadDTNStops.m");
-%         end
-%     end
-% 
-% 
-%     safe_folder = fullfile(safe_folder, "rho1000sigma7220nu98muair0");
-%     if ~isfolder(fluid_parameters)
-%         mkdir(fluid_parameters);
-%     end
-%     cd(fluid_parameters);
-%     if ~isfile("muair.mat")
-%         s = fileread(fullfile(safe_folder, "BathMaker.m"));
-%         s = regexprep(s, "rho = [^\s]+;", sprintf("rho = %g;", entry.rho));
-%         s = regexprep(s, "sigma = [^\s]+;", sprintf("sigma = %g;", entry.sigma));
-%         s = regexprep(s, "nu = [^\s]+;", sprintf("nu = %.2e;", entry.nu));
-%         s = regexprep(s, "muair = [^\s]+;", sprintf("muair = %g;", entry.muair));
-% 
-%         writeID = fopen("BathMaker.m", 'w+');
-%         fprintf(writeID, "%s", s);
-%         fclose(writeID);
-%         BathMaker;
-%     end
-% 
-% 
-%     safe_folder = fullfile(safe_folder, "RhoS1000SigmaS7220");
-%     if ~isfolder(sphere_parameters)
-%         mkdir(sphere_parameters);
-%        %  copyfile(fullfile(safe_folder, "DropFluidMaker.m"), pwd);
-%     end
-%     cd(sphere_parameters);
-%     if ~isfile("sigmaS.mat")
-%         s = fileread(fullfile(safe_folder, "DropFluidMaker.m"));
-%         s = regexprep(s, "rhoS = [^\s]+;", sprintf("rhoS = %g;", entry.RhoS));
-%         s = regexprep(s, "sigmaS = [^\s]+;", sprintf("sigmaS = %g;", entry.SigmaS));
-%         writeID = fopen("DropFluidMaker.m", 'w+');
-%         fprintf(writeID, "%s", s);
-%         fclose(writeID);
-%         DropFluidMaker;
-%     end
-% 
-%     %safe_folder = fullfile(safe_folder, "R0350mm");
-%     if ~isfolder(radius_folder)
-%         mkdir(radius_folder);
-%     end
-%     cd(radius_folder);
-%     if ~isfile("Ro.mat")
-%         s = sprintf("Ro = %d; save('Ro.mat','Ro') % Ball radius in cm. This will be our unit length", entry.R);
-%         writeID = fopen("RoMaker.m", "w+");
-%         fprintf(writeID, "%s", s);
-%         fclose(writeID);
-%         RoMaker;
-%     end
-% 
-%     %safe_folder = fullfile(safe_folder, "ImpDefCornerAng180U38");
-%     if ~isfolder(velocity_folder)
-%         mkdir(velocity_folder);    
-%     end
-%     cd(velocity_folder);
-% 
-%     if ~isfolder(modes_folder)
-%         mkdir(modes_folder);    
-%     end
-%     cd(modes_folder);
-% 
-%     % Modify This file accordingly
-%     %s = fileread(fullfile(safe_folder, "VertPolarExactSH.m"));
-%     %s = regexprep(s, "U0 = 38;", sprintf("U0 = %g;", entry.U));
-%     %s = regexprep(s, "N = \d+;", sprintf("N = %g;", entry.modes));
-%     %writeID = fopen("VertPolarExactSH.m", 'w+');
-%     %fprintf(writeID, "%s", s);
-%     %fclose(writeID);
-%     final_folder = pwd;
-% 
-%     cd(base);
-% end
-
-function parsave(fname, errormsg)
-  save(fname, 'errormsg')
-end
 

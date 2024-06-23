@@ -18,3 +18,5 @@ Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback
 Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 86)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',86,0)">line 86</a>)
         solve_motion_v2(physical_parameters, numerical_parameters);
 } 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments
