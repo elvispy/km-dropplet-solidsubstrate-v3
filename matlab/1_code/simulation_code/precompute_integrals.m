@@ -30,7 +30,7 @@ function [M, angles] = precompute_integrals(angles, N)
         angles = linspace(pi, 0, angles);
     else
         if min(angles) < pi*0.5
-            warning("The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.");
+            %warning("The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.");
         end
     end
     

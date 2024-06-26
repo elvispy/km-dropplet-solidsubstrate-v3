@@ -14,7 +14,7 @@ function solve_motion_v2(varargin)
     %                                (dim, default) <-- Default shown as ? if variable is required
     %      1) undisturbed_radius     (cm, 1)          = radius of the undisturbed sphere 
     %      2) com_height             (cm, contact)    = Initial height of the COM of the drop. Default is iminent contact
-    %      3) impact_velocity        (cm/s, ?)        = Initial velocity of the COM (negative = towards impact)
+    %      3) initial_velocity       (cm/s, ?)        = Initial velocity of the COM (negative = towards impact)
     %      4) amplitudes             (cm, all zeroes) = Spectral legendre amplitudes for the surface of the drop. 1-indexed
     %      5) amplitudes_vel         (cm, all zeroes) = Spectral legendre velocities for the surface of the drop. 1-indexed
     %      6) pressure_amplitudes    (. , all zeroes) = Initial pressure amplitudes in spectral coordinates. 0-indexed
@@ -34,6 +34,8 @@ function solve_motion_v2(varargin)
     %           v1 = Nonlinear exact integration on contact area (Default)
     %           v2 = Nonlinear approximated integration on whole sphere
     %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
+    %      4) folder                 (string, ") .    = Folder whre the
+    %                                 results will be stored. Default is current directory
     
     %% Defining default Arguments
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
@@ -134,7 +136,7 @@ function solve_motion_v2(varargin)
     
     f = @(n)  sqrt(n .* (n+2) .* (n-1));
     omegas_frequencies = f(1:harmonics_qtt)';
-    f2 = @(n) (1 - n ./ ((angular_sampling+n):-1:(1+n))) * pi * (angular_sampling + n)/angular_sampling;
+    %f2 = @(n) (1 - n ./ ((angular_sampling+n):-1:(1+n))) * pi * (angular_sampling + n)/angular_sampling;
     syms x;
     
     % we choose the angles to be the zeros of the last legendre Polynomial
@@ -273,7 +275,7 @@ function solve_motion_v2(varargin)
         open(vidObj);
     end
 
-    file_path = fullfile(sprintf("../2_output/%s/", default_options.folder));
+    file_path = default_options.folder; %fullfile(sprintf("../2_output/%s/", default_options.folder));
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end    
@@ -283,6 +285,7 @@ function solve_motion_v2(varargin)
     %   v5 = Newton method with best value estimator
     advance_one_step = @(a, b, c, d) get_next_step_v5(a, b, c, d);
     %% Starting main loop
+    init = clock;
     try
         while ( current_time < final_time) 
             % First, we try to solve with the same number of contact points
@@ -340,9 +343,17 @@ function solve_motion_v2(varargin)
             
             if recalculate == true
                 dt = dt/2;
-                disp("Se dividio dt por 2");
+                fprintf("Se dividio dt por 2. . U = %g, modes = %g, version = %d", initial_velocity, harmonics_qtt, version);
                 % Refine time step in index notation 
                 iii = iii + 1; jjj = 2 * jjj;
+                
+                if dt * time_unit < 5e-7 % 0.1 microseconds is not physically meaningful
+                    error("Time step too small (%e). U = %g, modes = %g, version = %d", dt, initial_velocity, harmonics_qtt, version);
+                end
+                % If one hour has elapsed, close this simulation
+                if etime(clock, init) > 60 * 60
+                    error("Too much has ellapsed U = %g, modes = %g, version = %d", initial_velocity, harmonics_qtt, version);
+                end
             else
                 previous_conditions = {previous_conditions{2:end} current_conditions};
                 
@@ -403,6 +414,7 @@ function solve_motion_v2(varargin)
         file_name = fullfile(file_path, sprintf("simulation %s.mat", string(datetime("now"))));
     catch me
         file_name = fullfile(file_path, sprintf("simulation %s (Errored).mat", string(datetime("now"))));
+        PROBLEM_CONSTANTS.error = me;
     end
     
     if PROBLEM_CONSTANTS.DEBUG_FLAG == true

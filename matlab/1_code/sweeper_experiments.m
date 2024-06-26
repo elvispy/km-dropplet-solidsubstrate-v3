@@ -14,11 +14,11 @@ fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 %% Setting simulation parameters
 %#ok<*NOPTS>
 vars = struct(...    %D = 50  %Quant = 100
-    "RhoS", 1, ... % must multiply by x1000
-    "SigmaS", 72.20, ... % must multiply by x100
-    "R", 0.035, ... % linspace(0.02, 0.05, 5)'; % must multiply by x10 %Ang = 180
-    "U", -linspace(10, 50, 5)', ... %inspace(59, 39, 6)';
-    "modes", [10, 20, 40]', ...
+    "rhoS", 1, ... % must multiply by x1000
+    "sigmaS", 72.20, ... % must multiply by x100
+    "undisturbed_radius", 0.035, ... % linspace(0.02, 0.05, 5)'; % must multiply by x10 %Ang = 180
+    "initial_velocity", -linspace(10, 50, 5)', ... %inspace(59, 39, 6)';
+    "harmonics_qtt", [20, 40, 80]', ...
     "version", [1, 2, 3]');%tol = 5e-5
 
 % We check how many outputs we want
@@ -39,19 +39,24 @@ cartesian_product = cell2mat( ...
 % Turn simulations into table
 if isempty(cartesian_product) == true; cartesian_product = double.empty(0, length(fieldnames(vars))); end
 simulations_cgs = array2table(cartesian_product, "VariableNames", fnames);
+
+force_sweep = false;
+
 % Now you can manually add any simulations that you would like to run, such
 % as:
 %  simulations_cgs = [simulations_cgs; ...
 %      {50, 100, 1, 72.20, 0, 9.78E-3, 1, 72.20, 0.001, 180, 1}];
-nrow = size(simulations_cgs, 1);
-simulations_cgs.folder = repmat("../2_output/", nrow, 1);
 
+% retrieve simulations that have already been done. 
+if force_sweep == false
+    simulations_cgs.done = ismember(simulations_cgs, pull_done_experiments(simulations_cgs)); 
+else
+    simulations_cgs.done = false;
+end
 
-
-% List of files needed to run the simulation and that do not need to change
-% from simul to simul.
-
-force_sweep = false;
+a=rowfun(@(a, b, c) sprintf("../2_output/Version v%d (%g)/", a, b*c), ...
+    simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS'}, 'OutputVariableName', 'folder');
+simulations_cgs.folder = a.folder;
 
 % STEP 3: Actually run the simulations. 
 
@@ -64,45 +69,60 @@ addpath(safe_folder, '-begin');
 %safe_folder = fullfile(root, "D50Quant100", "rho1000sigma7220nu98muair0", ...
 %    "RhoS1000SigmaS7220", "R0350mm", "ImpDefCornerAng180U38");
 
+%final_folders = simulations_cgs.folder;
+
+% Extract columns from table as parfor does not allowusing them inside the
+% loop (TOOD: convert the table to a struct array
 final_folders = simulations_cgs.folder;
-
-% Some common features of all the simulations to be run
-
-
+completed_simulations = simulations_cgs.done;
+harmonics_qtt = simulations_cgs.harmonics_qtt;
+version = simulations_cgs.version;
+rhoS = simulations_cgs.rhoS;
+sigmaS = simulations_cgs.sigmaS;
+initial_velocity = simulations_cgs.initial_velocity;
+undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
 parfor ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
-    cd(final_folders(ii));
+    if ~exist(final_folders(ii), 'dir')
+        mkdir(final_folders(ii))
+    else
+        cd(final_folders(ii));
+    end
 
-    if force_sweep == true || isempty(dir("recorded*.mat")) == true
+    if completed_simulations(ii) == false
         
-        numerical_parameters = struct("harmonics_qtt", simulations_cgs.modes(ii),...
-            "simulation_time", inf, "version", simulations_cgs.version(ii));
-        options = struct('version', simulations_cgs.version(ii), ...
-            'folder', sprintf("Version v%d (%g)", simulations_cgs.version(ii), ...
-        simulations_cgs.RhoS(ii) * simulations_cgs.SigmaS(ii)));
+        numerical_parameters = struct("harmonics_qtt", harmonics_qtt(ii),...
+            "simulation_time", inf, "version", version(ii));
+        options = struct('version', version(ii), ...
+            'folder', final_folders(ii));
 
-        physical_parameters = struct("undisturbed_radius", simulations_cgs.R(ii), "initial_height", nan, ...
-            "initial_velocity", simulations_cgs.U(ii), "initial_amplitudes", zeros(1, simulations_cgs.modes(ii)), ...
-            "pressure_amplitudes", zeros(1, simulations_cgs.modes(ii)+1), "initial_contact_points", 0, ...
-            "rhoS", simulations_cgs.RhoS(ii), "sigmaS", simulations_cgs.SigmaS(ii));
+        physical_parameters = struct("undisturbed_radius", undisturbed_radius(ii), ...
+            "initial_height", nan, "initial_velocity", initial_velocity(ii), ...
+            "initial_amplitudes", zeros(1, harmonics_qtt(ii)), ...
+            "pressure_amplitudes", zeros(1, harmonics_qtt(ii)+1), "initial_contact_points", 0, ...
+            "rhoS", rhoS(ii), "sigmaS", sigmaS(ii));
         
         %solve_motion_v2(physical_parameters, numerical_parameters);
 
         try
-            fprintf("Starting simulation with velocity %g, modes %d, version v%d", ...
-                simulations_cgs.U(ii), simulations_cgs.modes(ii), simulations_cgs.version(ii));
+            fprintf("---------\n");
+            fprintf("Starting simulation with velocity %g, modes %d, version v%d ... \n", ...
+                initial_velocity(ii), harmonics_qtt(ii), version(ii));
             solve_motion_v2(physical_parameters, numerical_parameters, options);
+            completed_simulations(ii) = true; % To attest that the simulation has been finished
         catch ME
             cd(final_folders(ii))
-            fprintf("Couldn't run simulation with the following parameters: \n Velocity: %g \n Modes: %g \n", ...
-                simulations_cgs.U(ii), simulations_cgs.modes(ii)); 
+            fprintf("---------\n");
+            fprintf("Couldn't run simulation with the following parameters: \n Velocity: %g \n Modes: %g \n Version: %g \n", ...
+                initial_velocity(ii), harmonics_qtt(ii), version(ii)); 
             a = datetime('now'); a.Format = 'yyyyMMddmmss';
-            parsave(sprintf("error_logU0=%g-%s.mat", simulations_cgs.U(ii), a), ME);
+            parsave(sprintf("error_logU0=%g-%s.mat", initial_velocity(ii), a), ME);
         end
     else
-        fprintf("Not running simulation with the following parameters (already done): \n Velocity: %g \n Modes: %g \n", ...
-                simulations_cgs.U(ii), simulations_cgs.modes(ii)); 
+        fprintf("---------\n");
+        fprintf("Not running simulation with the following parameters (already done): \n Velocity: %g \n Modes: %g \n Version: %g \n", ...
+                initial_velocity(ii), harmonics_qtt(ii), version(ii)); 
     end
     
 
@@ -114,7 +134,10 @@ delete(gcp("nocreate")); % Deleting current parallel workers
 % Load Python3 in MACOS based on https://www.mathworks.com/matlabcentral/answers/359408-trouble-with-a-command-in-matlab-s-system
 if ~ispc && system('python3 --version') ~= 0; setenv('PATH', [getenv('PATH') ':/usr/local/bin/']); end
 
-false && system('python3 sending_email.py'); % Sending email to notify that's finished
+system('python3 sending_email.py'); % Sending email to notify that's finished
 diary off % turning logger off
 
 
+function parsave(fname, errormsg)
+    save(fname, 'errormsg')
+end
