@@ -14,7 +14,6 @@ function export_animation(varargin)
             plot_condition(1, recorded_conditions{ii}, 5);
             writeVideo(vidObj, getframe(gcf));
             
-
         end
         close(vidObj);
     end

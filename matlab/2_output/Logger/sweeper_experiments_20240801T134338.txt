@@ -1,0 +1,427 @@
+------------
+01-Aug-2024 13:43:38 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+---------
+Starting simulation with velocity -20, modes 20, version v1 ... 
+---------
+Starting simulation with velocity -20, modes 40, version v1 ... 
+---------
+Starting simulation with velocity -20, modes 80, version v1 ... 
+---------
+Starting simulation with velocity -20, modes 20, version v2 ... 
+---------
+Starting simulation with velocity -20, modes 40, version v2 ... 
+---------
+Starting simulation with velocity -20, modes 80, version v2 ... 
+IdleTimeout has been reached.
+Parallel pool using the 'local' profile is shutting down.
+PROBLEM_CONSTANTS
+
+PROBLEM_CONSTANTS = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                froude_nb: 736.25
+                 weber_nb: 1
+             nb_harmonics: 80
+       omegas_frequencies: [80×1 double]
+               angles_qtt: 81
+            pressure_unit: 7220
+             theta_vector: [1×81 double]
+    precomputed_integrals: [39×81 double]
+     function_to_minimize: @function_to_minimize_v2
+      jacobian_calculator: @JacobianCalculator_v2
+               DEBUG_FLAG: 0
+
+PROBLEM_CONSTANTS.function_to_minimize
+
+ans =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @function_to_minimize_v2
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+string
+
+ans = 
+
+    ""
+
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/2_output/2_output/2_output/2_output/2_output/Version v2 (72.2)'
+
+cd
+
+/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/2_output/2_output/2_output/2_output/2_output/Version v2 (72.2)
+
+cd ..
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cd')" style="font-weight:bold">cd</a>
+Cannot CD to /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/2_output/2_output/2_output/2_output/2_output/Version v2 (72.2)/.. (Name is nonexistent or not a directory).
+} 
+cd("..")
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cd')" style="font-weight:bold">cd</a>
+Cannot CD to /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/2_output/2_output/2_output/2_output/2_output/Version v2 (72.2)/.. (Name is nonexistent or not a directory).
+} 
+help cd
+ <strong>cd</strong>     Change current working directory.
+    <strong>cd</strong> directory-spec sets the current directory to the one specified.
+    <strong>cd</strong> .. moves to the directory above the current one.
+    <strong>cd</strong>, by itself, prints out the current directory.
+ 
+    WD = <strong>cd</strong> returns the current directory as a character vector.
+ 
+    Use the functional form of <strong>cd</strong>, such as <strong>cd</strong>('directory-spec'),
+    when the directory specification is stored as text.
+ 
+    See also <a href="matlab:help pwd">pwd</a>.
+
+    <a href="matlab:doc cd">Documentation for cd</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('cd')">Other functions named cd</a>
+
+cd ..
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('cd')" style="font-weight:bold">cd</a>
+Cannot CD to /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/2_output/2_output/2_output/2_output/2_output/Version v2 (72.2)/.. (Name is nonexistent or not a directory).
+} 
+cd /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/
+load('simulation 01-Aug-2024 05:22:43.mat', 'PROBLEM_CONSTANTS')
+PROBLEM_CONSTANTS
+
+PROBLEM_CONSTANTS = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                froude_nb: 736.25
+                 weber_nb: 1
+             nb_harmonics: 20
+       omegas_frequencies: [20×1 double]
+               angles_qtt: 21
+            pressure_unit: 7220
+             theta_vector: [3.1416 3.0243 2.8723 2.7195 2.5665 2.4133 2.2602 2.107 1.9538 1.8006 1.6474 1.4942 1.341 1.1878 1.0346 0.88142 0.72826 0.57514 0.42209 0.26925 0.1173]
+    precomputed_integrals: [10×21 double]
+     function_to_minimize: @function_to_minimize_v1
+      jacobian_calculator: @JacobianCalculator_v1
+               DEBUG_FLAG: 0
+
+string(PROBLEM_CONSTANTS.function_to_minimize)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('string')" style="font-weight:bold">string</a>
+Conversion to string from function_handle is not possible.
+} 
+
+a = PROBLEM_CONSTANTS.function_to_minimize
+
+a =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @function_to_minimize_v1
+
+a
+
+a =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @function_to_minimize_v1
+
+a.
+ a.
+   ↑
+{Error: Invalid expression. Check for missing or extra characters.
+} 
+func2str(a)
+
+ans =
+
+    'function_to_minimize_v1'
+
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output'
+
+ls
+Logger						simulation 22-Jun-2024 17:26:21.mat		simulation 22-Jun-2024 17:58:55.mat		simulation 23-Jun-2024 23:20:02.mat		simulation 26-Jun-2024 09:55:20.mat
+error_logU0=-40-202406241326.mat		simulation 22-Jun-2024 17:32:22.mat		simulation 22-Jun-2024 18:01:26.mat		simulation 23-Jun-2024 23:32:15.mat		simulation 26-Jun-2024 21:49:44.mat
+simulation 01-Aug-2024 05:22:43.mat		simulation 22-Jun-2024 17:32:23.mat		simulation 22-Jun-2024 18:01:28.mat		simulation 23-Jun-2024 23:51:13.mat		simulation 26-Jun-2024 23:42:24.mat
+simulation 01-Aug-2024 05:23:01.mat		simulation 22-Jun-2024 17:32:24.mat		simulation 22-Jun-2024 18:07:43.mat		simulation 24-Jun-2024 00:30:11.mat		simulation 27-Jun-2024 02:58:06.mat
+simulation 01-Aug-2024 13:53:04.mat		simulation 22-Jun-2024 17:32:26.mat		simulation 22-Jun-2024 18:07:44.mat		simulation 24-Jun-2024 06:15:23.mat		simulation 27-Jun-2024 13:07:17.mat
+simulation 02-Aug-2024 10:17:47.mat		simulation 22-Jun-2024 17:32:29.mat		simulation 22-Jun-2024 18:07:46.mat		simulation 25-Jun-2024 05:35:07.mat		simulation 27-Jun-2024 16:06:24.mat
+simulation 03-Aug-2024 04:02:32.mat		simulation 22-Jun-2024 17:32:32.mat		simulation 22-Jun-2024 18:15:02.mat		simulation 25-Jun-2024 05:54:41.mat		simulation 28-Jun-2024 02:31:12.mat
+simulation 03-Aug-2024 04:11:43.mat		simulation 22-Jun-2024 17:32:35.mat		simulation 22-Jun-2024 18:21:09.mat		simulation 25-Jun-2024 08:55:16.mat		simulation 28-Jun-2024 05:10:05.mat
+simulation 04-Aug-2024 00:13:53.mat		simulation 22-Jun-2024 17:37:58.mat		simulation 22-Jun-2024 18:26:59.mat		simulation 25-Jun-2024 09:27:02.mat		simulation 28-Jun-2024 11:36:48.mat
+simulation 22-Jun-2024 17:26:00.mat		simulation 22-Jun-2024 17:38:42.mat		simulation 23-Jun-2024 08:47:59.mat		simulation 25-Jun-2024 19:40:34.mat		simulation 29-Jun-2024 04:38:33.mat
+simulation 22-Jun-2024 17:26:01.mat		simulation 22-Jun-2024 17:43:44.mat		simulation 23-Jun-2024 09:09:50.mat		simulation 25-Jun-2024 20:16:43.mat		simulation 29-Jun-2024 07:17:22.mat
+simulation 22-Jun-2024 17:26:02.mat		simulation 22-Jun-2024 17:45:23.mat		simulation 23-Jun-2024 09:40:23.mat		simulation 25-Jun-2024 20:21:54.mat		simulation 29-Jun-2024 14:20:58.mat
+simulation 22-Jun-2024 17:26:05.mat		simulation 22-Jun-2024 17:50:24.mat		simulation 23-Jun-2024 10:13:03.mat		simulation 25-Jun-2024 23:08:37.mat		simulation 30-Jun-2024 05:52:46.mat
+simulation 22-Jun-2024 17:26:10.mat		simulation 22-Jun-2024 17:52:33.mat		simulation 23-Jun-2024 23:07:21.mat		simulation 25-Jun-2024 23:34:15 (Errored).mat	tree_fixer.sh
+simulation 22-Jun-2024 17:26:15.mat		simulation 22-Jun-2024 17:58:52.mat		simulation 23-Jun-2024 23:13:28.mat		simulation 26-Jun-2024 03:26:02.mat
+
+dir
+
+.                                              simulation 22-Jun-2024 17:26:10.mat            simulation 22-Jun-2024 17:58:52.mat            simulation 23-Jun-2024 23:20:02.mat            simulation 26-Jun-2024 21:49:44.mat            
+..                                             simulation 22-Jun-2024 17:26:15.mat            simulation 22-Jun-2024 17:58:55.mat            simulation 23-Jun-2024 23:32:15.mat            simulation 26-Jun-2024 23:42:24.mat            
+.DS_Store                                      simulation 22-Jun-2024 17:26:21.mat            simulation 22-Jun-2024 18:01:26.mat            simulation 23-Jun-2024 23:51:13.mat            simulation 27-Jun-2024 02:58:06.mat            
+Logger                                         simulation 22-Jun-2024 17:32:22.mat            simulation 22-Jun-2024 18:01:28.mat            simulation 24-Jun-2024 00:30:11.mat            simulation 27-Jun-2024 13:07:17.mat            
+error_logU0=-40-202406241326.mat               simulation 22-Jun-2024 17:32:23.mat            simulation 22-Jun-2024 18:07:43.mat            simulation 24-Jun-2024 06:15:23.mat            simulation 27-Jun-2024 16:06:24.mat            
+simulation 01-Aug-2024 05:22:43.mat            simulation 22-Jun-2024 17:32:24.mat            simulation 22-Jun-2024 18:07:44.mat            simulation 25-Jun-2024 05:35:07.mat            simulation 28-Jun-2024 02:31:12.mat            
+simulation 01-Aug-2024 05:23:01.mat            simulation 22-Jun-2024 17:32:26.mat            simulation 22-Jun-2024 18:07:46.mat            simulation 25-Jun-2024 05:54:41.mat            simulation 28-Jun-2024 05:10:05.mat            
+simulation 01-Aug-2024 13:53:04.mat            simulation 22-Jun-2024 17:32:29.mat            simulation 22-Jun-2024 18:15:02.mat            simulation 25-Jun-2024 08:55:16.mat            simulation 28-Jun-2024 11:36:48.mat            
+simulation 02-Aug-2024 10:17:47.mat            simulation 22-Jun-2024 17:32:32.mat            simulation 22-Jun-2024 18:21:09.mat            simulation 25-Jun-2024 09:27:02.mat            simulation 29-Jun-2024 04:38:33.mat            
+simulation 03-Aug-2024 04:02:32.mat            simulation 22-Jun-2024 17:32:35.mat            simulation 22-Jun-2024 18:26:59.mat            simulation 25-Jun-2024 19:40:34.mat            simulation 29-Jun-2024 07:17:22.mat            
+simulation 03-Aug-2024 04:11:43.mat            simulation 22-Jun-2024 17:37:58.mat            simulation 23-Jun-2024 08:47:59.mat            simulation 25-Jun-2024 20:16:43.mat            simulation 29-Jun-2024 14:20:58.mat            
+simulation 04-Aug-2024 00:13:53.mat            simulation 22-Jun-2024 17:38:42.mat            simulation 23-Jun-2024 09:09:50.mat            simulation 25-Jun-2024 20:21:54.mat            simulation 30-Jun-2024 05:52:46.mat            
+simulation 22-Jun-2024 17:26:00.mat            simulation 22-Jun-2024 17:43:44.mat            simulation 23-Jun-2024 09:40:23.mat            simulation 25-Jun-2024 23:08:37.mat            tree_fixer.sh                                  
+simulation 22-Jun-2024 17:26:01.mat            simulation 22-Jun-2024 17:45:23.mat            simulation 23-Jun-2024 10:13:03.mat            simulation 25-Jun-2024 23:34:15 (Errored).mat  
+simulation 22-Jun-2024 17:26:02.mat            simulation 22-Jun-2024 17:50:24.mat            simulation 23-Jun-2024 23:07:21.mat            simulation 26-Jun-2024 03:26:02.mat            
+simulation 22-Jun-2024 17:26:05.mat            simulation 22-Jun-2024 17:52:33.mat            simulation 23-Jun-2024 23:13:28.mat            simulation 26-Jun-2024 09:55:20.mat            
+
+mfilename
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup char" style="font-weight:bold">char</a> array
+
+mfilename('fullpath')
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup char" style="font-weight:bold">char</a> array
+
+move_files
+{Unrecognized function or variable 'diisp'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('move_files', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m', 3)" style="font-weight:bold">move_files</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m',3,0)">line 3</a>)
+diisp(mfilename('fulllpath'))
+} 
+move_files
+move_files
+matlab.desktop.editor.getActiveFilename
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m'
+
+move_files
+move_files
+  75×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+move_files
+move_files
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unknown text on line number 1 of ASCII file .DS_Store
+"".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('move_files', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m', 9)" style="font-weight:bold">move_files</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m',9,0)">line 9</a>)
+    load(files(i).name), 'PROBLEM_CONSTANTS)';
+} 
+move_files
+move_files
+{Unrecognized function or variable 'constaint'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('move_files', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m', 13)" style="font-weight:bold">move_files</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m',13,0)">line 13</a>)
+    if constaint(fname, 'v1')
+} 
+move_files
+move_files
+{Unrecognized function or variable 'containts'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('move_files', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m', 16)" style="font-weight:bold">move_files</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m',16,0)">line 16</a>)
+     if containts(fname, 'v2')
+} 
+move_files
+move_files
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unable to read file 'move_files.m'. Input must be a MAT-file or an ASCII file containing numeric data with same number of columns in each row.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('move_files', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m', 9)" style="font-weight:bold">move_files</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/move_files.m',9,0)">line 9</a>)
+    load(files(i).name), 'PROBLEM_CONSTANTS)';
+} 
+help fullfile
+ <strong>fullfile</strong> Build full file name from parts.
+    F = fullfile(FOLDERNAME1, FOLDERNAME2, ..., FILENAME) builds a full
+    file specification F from the folders and file name specified. Input
+    arguments FOLDERNAME1, FOLDERNAME2, etc. and FILENAME can be strings,
+    character vectors, or cell arrays of character vectors. Non-scalar
+    strings and cell arrays of character vectors must all be the same size.
+ 
+    If any input is a string array, F is a string array. Otherwise, if any
+    input is a cell array, F is a cell array.  Otherwise, F is a character
+    array.
+ 
+    The output of <strong>fullfile</strong> is conceptually equivalent to character vector
+    horzcat operation:
+ 
+       F = [FOLDERNAME1 filesep FOLDERNAME2 filesep ... filesep FILENAME]
+ 
+    except that care is taken to handle the cases when the folders begin or
+    end with a file separator.
+ 
+    <strong>fullfile</strong> collapses inner repeated file separators unless they appear at 
+    the beginning of the full file specification. <strong>fullfile</strong> also collapses 
+    relative folders indicated by the dot symbol, unless they appear at 
+    the end of the full file specification. Relative folders indicated 
+    by the double-dot symbol are not collapsed.
+ 
+    To split a full file name into folder parts, use split(f, filesep).
+ 
+    Examples
+      % To build platform dependent paths to files:
+         fullfile(matlabroot,'toolbox','matlab','general','Contents.m')
+ 
+      % To build platform dependent paths to a folder:
+         fullfile(matlabroot,'toolbox','matlab',filesep)
+ 
+      % To build a collection of platform dependent paths to files:
+         fullfile(toolboxdir('matlab'),'iofun',{'filesep.m';'fullfile.m'})
+ 
+    See also <a href="matlab:help filesep">filesep</a>, <a href="matlab:help pathsep">pathsep</a>, <a href="matlab:help fileparts">fileparts</a>, <a href="matlab:help genpath">genpath</a>, <a href="matlab:help path">path</a>, <a href="matlab:help split">split</a>.
+
+    <a href="matlab:doc fullfile">Documentation for fullfile</a>
+
+dir(fullfile(pwd, '*.mat'))
+
+simulation 01-Aug-2024 05:22:43.mat            simulation 22-Jun-2024 17:32:23.mat            simulation 22-Jun-2024 18:01:28.mat            simulation 23-Jun-2024 23:51:13.mat            simulation 26-Jun-2024 23:42:24.mat            
+simulation 01-Aug-2024 05:23:01.mat            simulation 22-Jun-2024 17:32:24.mat            simulation 22-Jun-2024 18:07:43.mat            simulation 24-Jun-2024 00:30:11.mat            simulation 27-Jun-2024 02:58:06.mat            
+simulation 01-Aug-2024 13:53:04.mat            simulation 22-Jun-2024 17:32:26.mat            simulation 22-Jun-2024 18:07:44.mat            simulation 24-Jun-2024 06:15:23.mat            simulation 27-Jun-2024 13:07:17.mat            
+simulation 02-Aug-2024 10:17:47.mat            simulation 22-Jun-2024 17:32:29.mat            simulation 22-Jun-2024 18:07:46.mat            simulation 25-Jun-2024 05:35:07.mat            simulation 27-Jun-2024 16:06:24.mat            
+simulation 03-Aug-2024 04:02:32.mat            simulation 22-Jun-2024 17:32:32.mat            simulation 22-Jun-2024 18:15:02.mat            simulation 25-Jun-2024 05:54:41.mat            simulation 28-Jun-2024 02:31:12.mat            
+simulation 03-Aug-2024 04:11:43.mat            simulation 22-Jun-2024 17:32:35.mat            simulation 22-Jun-2024 18:21:09.mat            simulation 25-Jun-2024 08:55:16.mat            simulation 28-Jun-2024 05:10:05.mat            
+simulation 04-Aug-2024 00:13:53.mat            simulation 22-Jun-2024 17:37:58.mat            simulation 22-Jun-2024 18:26:59.mat            simulation 25-Jun-2024 09:27:02.mat            simulation 28-Jun-2024 11:36:48.mat            
+simulation 22-Jun-2024 17:26:00.mat            simulation 22-Jun-2024 17:38:42.mat            simulation 23-Jun-2024 08:47:59.mat            simulation 25-Jun-2024 19:40:34.mat            simulation 29-Jun-2024 04:38:33.mat            
+simulation 22-Jun-2024 17:26:01.mat            simulation 22-Jun-2024 17:43:44.mat            simulation 23-Jun-2024 09:09:50.mat            simulation 25-Jun-2024 20:16:43.mat            simulation 29-Jun-2024 07:17:22.mat            
+simulation 22-Jun-2024 17:26:02.mat            simulation 22-Jun-2024 17:45:23.mat            simulation 23-Jun-2024 09:40:23.mat            simulation 25-Jun-2024 20:21:54.mat            simulation 29-Jun-2024 14:20:58.mat            
+simulation 22-Jun-2024 17:26:05.mat            simulation 22-Jun-2024 17:50:24.mat            simulation 23-Jun-2024 10:13:03.mat            simulation 25-Jun-2024 23:08:37.mat            simulation 30-Jun-2024 05:52:46.mat            
+simulation 22-Jun-2024 17:26:10.mat            simulation 22-Jun-2024 17:52:33.mat            simulation 23-Jun-2024 23:07:21.mat            simulation 25-Jun-2024 23:34:15 (Errored).mat  
+simulation 22-Jun-2024 17:26:15.mat            simulation 22-Jun-2024 17:58:52.mat            simulation 23-Jun-2024 23:13:28.mat            simulation 26-Jun-2024 03:26:02.mat            
+simulation 22-Jun-2024 17:26:21.mat            simulation 22-Jun-2024 17:58:55.mat            simulation 23-Jun-2024 23:20:02.mat            simulation 26-Jun-2024 09:55:20.mat            
+simulation 22-Jun-2024 17:32:22.mat            simulation 22-Jun-2024 18:01:26.mat            simulation 23-Jun-2024 23:32:15.mat            simulation 26-Jun-2024 21:49:44.mat            
+
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output'
+
+move_files
+move_files
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output'
+
+cd ..
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab'
+
+fileparts(pwd)
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3'
+
+help fileparts
+ <strong>fileparts</strong> Filename parts.
+    [FILEPATH,NAME,EXT] = <strong>fileparts</strong>(FILE) returns the path, file name, and file name
+    extension for the specified FILE. The FILE input is the name of a file or folder,
+    and can include a path and file name extension. The function interprets all
+    characters following the right-most path delimiter as a file name plus extension.
+ 
+    If the FILE input consists of a folder name only, be sure that the right-most
+    character is a path delimiter (/ or \). Otherwise, <strong>fileparts</strong> parses the trailing
+    portion of FILE as the name of a file and returns it in NAME instead of in
+    FILEPATH.
+ 
+    <strong>fileparts</strong> only parses file names. It does not verify that the file or folder
+    exists. 
+ 
+    To reconstruct a file name from the output of <strong>fileparts</strong>, use STRCAT to 
+    concatenate the file name and the extension that begins with a period (.) 
+    without a path separator. Then, use FULLFILE to build the file name with 
+    the platform-dependent file separators where necessary. 
+    For example, fullfile(filepath, strcat(name,ext)).
+ 
+    <strong>fileparts</strong> is platform dependent. On Microsoft Windows systems, you can 
+    use either forward (/) or back (\) slashes as path delimiters, even within 
+    the same path. On Unix and Macintosh systems, use only / as a delimiter.
+ 
+    See also <a href="matlab:help fullfile">fullfile</a>, <a href="matlab:help pathsep">pathsep</a>, <a href="matlab:help filesep">filesep</a>.
+
+    <a href="matlab:doc fileparts">Documentation for fileparts</a>
+
+fileparts(pwd)
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3'
+
+help fullfile
+ <strong>fullfile</strong> Build full file name from parts.
+    F = fullfile(FOLDERNAME1, FOLDERNAME2, ..., FILENAME) builds a full
+    file specification F from the folders and file name specified. Input
+    arguments FOLDERNAME1, FOLDERNAME2, etc. and FILENAME can be strings,
+    character vectors, or cell arrays of character vectors. Non-scalar
+    strings and cell arrays of character vectors must all be the same size.
+ 
+    If any input is a string array, F is a string array. Otherwise, if any
+    input is a cell array, F is a cell array.  Otherwise, F is a character
+    array.
+ 
+    The output of <strong>fullfile</strong> is conceptually equivalent to character vector
+    horzcat operation:
+ 
+       F = [FOLDERNAME1 filesep FOLDERNAME2 filesep ... filesep FILENAME]
+ 
+    except that care is taken to handle the cases when the folders begin or
+    end with a file separator.
+ 
+    <strong>fullfile</strong> collapses inner repeated file separators unless they appear at 
+    the beginning of the full file specification. <strong>fullfile</strong> also collapses 
+    relative folders indicated by the dot symbol, unless they appear at 
+    the end of the full file specification. Relative folders indicated 
+    by the double-dot symbol are not collapsed.
+ 
+    To split a full file name into folder parts, use split(f, filesep).
+ 
+    Examples
+      % To build platform dependent paths to files:
+         fullfile(matlabroot,'toolbox','matlab','general','Contents.m')
+ 
+      % To build platform dependent paths to a folder:
+         fullfile(matlabroot,'toolbox','matlab',filesep)
+ 
+      % To build a collection of platform dependent paths to files:
+         fullfile(toolboxdir('matlab'),'iofun',{'filesep.m';'fullfile.m'})
+ 
+    See also <a href="matlab:help filesep">filesep</a>, <a href="matlab:help pathsep">pathsep</a>, <a href="matlab:help fileparts">fileparts</a>, <a href="matlab:help genpath">genpath</a>, <a href="matlab:help path">path</a>, <a href="matlab:help split">split</a>.
+
+    <a href="matlab:doc fullfile">Documentation for fullfile</a>
+
+mfilename
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup char" style="font-weight:bold">char</a> array
+
+mfilename('fullpath')
+
+ans =
+
+  0×0 empty <a href="matlab:helpPopup char" style="font-weight:bold">char</a> array
+
+sweeper_experiments

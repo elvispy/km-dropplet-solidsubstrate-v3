@@ -1,0 +1,55 @@
+------------
+17-Jun-2024 15:55:47 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+who
+
+Your variables are:
+
+A                  B                  default_numerical  default_options    default_physical   harmonics_qtt      ii                 jj                 simulation_time    varargin           
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 78)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',78,0)">line 78</a>)
+Error: Invalid text character. Check for unsupported symbol, invisible character, or pasting of non-ASCII characters.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 86)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',86,0)">line 86</a>)
+        solve_motion_v2(physical_parameters, numerical_parameters);
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+solve_motion_v2
+if system_dependent('IsDebugMode')==1, dbcont; end
+{Unrecognized function or variable 'undisturbed_radius'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 119)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',119,0)">line 119</a>)
+    length_unit = undisturbed_radius;
+} 
+who
+
+Your variables are:
+
+default_numerical  default_options    default_physical   harmonics_qtt      varargin           
+
+help eval
+ <strong>eval</strong> Execute MATLAB expression in text.
+    <strong>eval</strong>(EXPRESSION) evaluates the MATLAB code in EXPRESSION. Specify
+    EXPRESSION as a character vector or string scalar.
+ 
+    [OUTPUT1,...,OUTPUTN] = <strong>eval</strong>(EXPRESSION) returns output from EXPRESSION
+    in the specified variables.
+ 
+    Example: Interactively request the name of a matrix to plot.
+ 
+       expression = input('Enter the name of a matrix: ','s');
+       if (exist(expression,'var'))
+          plot(eval(expression))
+       end
+ 
+    See also <a href="matlab:help feval">feval</a>, <a href="matlab:help evalin">evalin</a>, <a href="matlab:help assignin">assignin</a>, <a href="matlab:help evalc">evalc</a>.
+
+    <a href="matlab:doc eval">Documentation for eval</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('eval')">Other functions named eval</a>
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

@@ -1,0 +1,14 @@
+------------
+17-Jun-2024 15:39:38 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',72,1)">72  </a>for ii = 1:height(simulations_cgs)
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+{Unable to resolve the name simulation_cgs.modes.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 78)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',78,0)">line 78</a>)
+        numerical_parameters = struct("harmonics_qtt", simulation_cgs.modes(ii),...
+} 
+sweeper_experiments

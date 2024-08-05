@@ -1,0 +1,62 @@
+------------
+22-Jun-2024 17:18:43 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+simulations_cgs.version
+
+ans =
+
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     2
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+     3
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 73)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',73,0)">line 73</a>)
+Unable to resolve the name simulation_cgs.version.
+} 
+opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',73,0)
+clc
+sweeper_experiments

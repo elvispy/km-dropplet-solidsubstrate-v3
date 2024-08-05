@@ -1,0 +1,22 @@
+------------
+24-Jun-2024 05:48:54 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 1 
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 1 
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 1 
+Starting simulation with velocity -40, modes 10, version v1 ... 
+[Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('precompute_integrals', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/precompute_integrals.m', 33)" style="font-weight:bold">precompute_integrals</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/precompute_integrals.m',33,0)">line 33</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 201)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',201,0)">line 201</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 105)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',105,0)">line 105</a>)] 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

@@ -1,0 +1,14 @@
+------------
+24-Jun-2024 04:53:47 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('double.empty')" style="font-weight:bold">double.empty</a>
+At least one dimension must be zero.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 3)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',3,0)">line 3</a>)
+    A = array2table(double.empty(length(fldnames)), 'VariableNames', fldnames);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 52)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',52,0)">line 52</a>)
+    simulations_cgs.done = ismember(simulations_cgs, pull_done_experiments(simulations_cgs));
+} 
+if system_dependent('IsDebugMode')==1, dbquit all; end
+sweeper_experiments

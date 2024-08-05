@@ -1,0 +1,61 @@
+------------
+24-Jun-2024 06:13:22 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 1 
+---------
+Starting simulation with velocity -40, modes 10, version v1 ... 
+---------
+Couldn't run simulation with the following parameters: 
+ Velocity: -40 
+ Modes: 10 
+ Version: 1 
+[Warning: The format 'yyyyMMddmmss' contains a field for minute (m) in what appears to be a date portion. You might have intended to use the symbol for month (M) rather than for minute (m). See the <a href="matlab:doc('datetime.Format')">datetime.Format property</a> for a complete
+description of the identifiers used in datetime formats.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('verifyFormat', '/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/datetime/@datetime/private/verifyFormat.m', 26)" style="font-weight:bold">verifyFormat</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/datetime/@datetime/private/verifyFormat.m',26,0)">line 26</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('datetime/subsasgnDot', '/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgnDot.m', 25)" style="font-weight:bold">datetime/subsasgnDot</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgnDot.m',25,0)">line 25</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('datetime/subsasgn', '/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgn.m', 23)" style="font-weight:bold">datetime/subsasgn</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgn.m',23,0)">line 23</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 120)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',120,0)">line 120</a>)] 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 20 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 20 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 20 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 20 
+ Version: 1 
+---------
+Starting simulation with velocity -50, modes 20, version v1 ... 
+Se dividio dt por 2
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

@@ -1,0 +1,191 @@
+------------
+05-Aug-2024 09:15:48 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+simulations_cgs
+
+simulations_cgs =
+
+  3×8 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>    <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                      <strong>folder</strong>                                                  
+    <strong>____</strong>    <strong>______</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>_________________________________________________________________________________________________________</strong>
+
+     1       72.2            0.01                 -20                20             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2)"
+     1       72.2            0.01                 -20                40             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2)"
+     1       72.2            0.01                 -20                80             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2)"
+
+ls
+DropAndSubstrate.mp4		certificate_install.py		lol.m				pull_done_experiments.m		simulation.mat			simulation_code			sweeper_experiments.m~
+__pycache__			export_animation.m		my_spy.m			sending_email.py		simulation2.mat			sweeper_experiments.m		sweeper_postprocessing.m
+
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code'
+
+help dir
+ <strong>dir</strong> List folder.
+    <strong>dir</strong> NAME lists the files in a folder. NAME must be specified as a
+    character vector or string scalar.
+ 
+    NAME can include a relative path, but the relative path must be in the 
+    current folder. Otherwise, NAME must include a full path.
+ 
+    To list files and folders at a remote location, NAME must contain a
+    full path specified as a uniform resource locator (URL).
+ 
+    Pathnames and asterisk wildcards may be used in NAME. A single asterisk
+    in the path touching only file separators will represent exactly one
+    folder name. A single asterisk at the end of an input will represent
+    any filename. An asterisk followed or preceded by characters will
+    resolve to zero or more characters. A double asterisk can only be used
+    in the path and will represent zero or more folder names. It cannot
+    touch a character other than a file separator. For example, <strong>dir</strong> *.m
+    lists all files with a .m extension in the current folder. <strong>dir</strong> */*.m
+    lists all files with a .m extension exactly one folder under the
+    current folder. <strong>dir</strong> **/*.m lists all files with a .m extension zero or
+    more folders under the current folder.
+ 
+    D = <strong>dir</strong>('NAME') returns the results in an M-by-1
+    structure with the fields: 
+        name        -- Filename
+        folder      -- Absolute path
+        date        -- Modification date
+        bytes       -- Number of bytes allocated to the file
+        isdir       -- 1 if name is a folder and 0 if not
+        datenum     -- Modification date as a MATLAB serial date number.
+                    This value is locale-dependent.
+ 
+    See also <a href="matlab:help what">what</a>, <a href="matlab:help cd">cd</a>, <a href="matlab:help type">type</a>, <a href="matlab:help delete">delete</a>, <a href="matlab:help ls">ls</a>, <a href="matlab:help rmdir">rmdir</a>, <a href="matlab:help mkdir">mkdir</a>, <a href="matlab:help datenum">datenum</a>.
+
+    <a href="matlab:doc dir">Documentation for dir</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('dir')">Other functions named dir</a>
+
+ls
+DropAndSubstrate.mp4		certificate_install.py		lol.m				pull_done_experiments.m		simulation.mat			simulation_code			sweeper_experiments.m~
+__pycache__			export_animation.m		my_spy.m			sending_email.py		simulation2.mat			sweeper_experiments.m		sweeper_postprocessing.m
+
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code'
+
+cd ..
+dir(fullfile(pwd, '*.m'))
+No matches for pattern '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/*.m'.
+dir(fullfile(pwd, '*.mat'))
+No matches for pattern '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/*.mat'.
+files = dir(fullfile(pwd, '*.mat'))
+
+files = 
+
+  0×1 empty <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+files = dir(fullfile(pwd, '*'))
+
+files = 
+
+  6×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+files
+
+files = 
+
+  6×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+files(~[files.isdir])
+
+ans = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+       name: '.DS_Store'
+     folder: '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab'
+       date: '17-Jun-2024 15:02:15'
+      bytes: 6148
+      isdir: 0
+    datenum: 7.3942e+05
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+pwd
+
+ans =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab'
+
+dir(fullfile(fileparts(fileparts(pwd)), '**/*.mat'))
+Files Found in: /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/0_data/manual
+
+simulation 20-Jun-2024 14:09:06.mat  simulation 20-Jun-2024 14:09:08.mat  simulation 20-Jun-2024 14:09:09.mat  simulation 20-Jun-2024 14:09:11.mat  
+
+Files Found in: /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code
+
+simulation.mat   simulation2.mat  
+
+Files Found in: /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2)
+
+error_logU0=-40-202406241326.mat     simulation 22-Jun-2024 17:26:01.mat  simulation 22-Jun-2024 17:32:22.mat  simulation 22-Jun-2024 17:58:52.mat  simulation 25-Jun-2024 05:54:41.mat  simulation 26-Jun-2024 21:49:44.mat  
+simulation 01-Aug-2024 05:22:43.mat  simulation 22-Jun-2024 17:26:02.mat  simulation 22-Jun-2024 17:32:23.mat  simulation 22-Jun-2024 17:58:55.mat  simulation 25-Jun-2024 08:55:16.mat  simulation 27-Jun-2024 16:06:24.mat  
+simulation 01-Aug-2024 13:53:04.mat  simulation 22-Jun-2024 17:26:05.mat  simulation 22-Jun-2024 17:32:24.mat  simulation 23-Jun-2024 09:40:23.mat  simulation 25-Jun-2024 09:27:02.mat  
+simulation 02-Aug-2024 10:17:47.mat  simulation 22-Jun-2024 17:26:10.mat  simulation 22-Jun-2024 17:37:58.mat  simulation 23-Jun-2024 10:13:03.mat  simulation 25-Jun-2024 20:16:43.mat  
+simulation 03-Aug-2024 04:02:32.mat  simulation 22-Jun-2024 17:26:15.mat  simulation 22-Jun-2024 17:43:44.mat  simulation 24-Jun-2024 00:30:11.mat  simulation 25-Jun-2024 20:21:54.mat  
+simulation 22-Jun-2024 17:26:00.mat  simulation 22-Jun-2024 17:26:21.mat  simulation 22-Jun-2024 17:50:24.mat  simulation 24-Jun-2024 06:15:23.mat  simulation 26-Jun-2024 03:26:02.mat  
+
+Files Found in: /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2)
+
+simulation 01-Aug-2024 05:23:01.mat  simulation 22-Jun-2024 17:32:29.mat  simulation 22-Jun-2024 17:45:23.mat  simulation 23-Jun-2024 08:47:59.mat  simulation 25-Jun-2024 05:35:07.mat  simulation 28-Jun-2024 11:36:48.mat  
+simulation 03-Aug-2024 04:11:43.mat  simulation 22-Jun-2024 17:32:32.mat  simulation 22-Jun-2024 17:52:33.mat  simulation 23-Jun-2024 23:07:21.mat  simulation 25-Jun-2024 19:40:34.mat  simulation 29-Jun-2024 04:38:33.mat  
+simulation 04-Aug-2024 00:13:53.mat  simulation 22-Jun-2024 17:32:35.mat  simulation 22-Jun-2024 18:01:26.mat  simulation 23-Jun-2024 23:13:28.mat  simulation 26-Jun-2024 23:42:24.mat  simulation 29-Jun-2024 14:20:58.mat  
+simulation 22-Jun-2024 17:32:26.mat  simulation 22-Jun-2024 17:38:42.mat  simulation 22-Jun-2024 18:01:28.mat  simulation 23-Jun-2024 23:51:13.mat  simulation 28-Jun-2024 02:31:12.mat  
+
+Files Found in: /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2)
+
+simulation 22-Jun-2024 18:07:43.mat            simulation 22-Jun-2024 18:21:09.mat            simulation 23-Jun-2024 23:32:15.mat            simulation 27-Jun-2024 02:58:06.mat            simulation 30-Jun-2024 05:52:46.mat            
+simulation 22-Jun-2024 18:07:44.mat            simulation 22-Jun-2024 18:26:59.mat            simulation 25-Jun-2024 23:08:37.mat            simulation 27-Jun-2024 13:07:17.mat            
+simulation 22-Jun-2024 18:07:46.mat            simulation 23-Jun-2024 09:09:50.mat            simulation 25-Jun-2024 23:34:15 (Errored).mat  simulation 28-Jun-2024 05:10:05.mat            
+simulation 22-Jun-2024 18:15:02.mat            simulation 23-Jun-2024 23:20:02.mat            simulation 26-Jun-2024 09:55:20.mat            simulation 29-Jun-2024 07:17:22.mat            
+
+a  =ans;
+a
+
+a =
+
+    '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab'
+
+a = dir(fullfile(fileparts(fileparts(pwd)), '**/*.mat'))
+
+a = 
+
+  78×1 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+sweeper_experiments

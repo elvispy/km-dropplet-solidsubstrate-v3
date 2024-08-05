@@ -1,0 +1,250 @@
+------------
+24-Jun-2024 05:01:39 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Starting simulation with velocity -40, modes 10, version v1if system_dependent('IsDebugMode')==1, dbquit; end
+help rowfun
+--- help for <strong>tabular/rowfun</strong> ---
+
+ <strong>rowfun</strong> Apply a function to rows of a table or timetable.
+    B = <strong>rowfun</strong>(FUN,A) applies the function FUN to each row of the table A, and
+    returns the results in the table B.  B contains one variable for each output of
+    FUN.  FUN accepts M separate inputs, where M is SIZE(A,2).
+ 
+    B = <strong>rowfun</strong>(FUN,A, 'PARAM1',val1, 'PARAM2',val2, ...) allows you to specify
+    optional parameter name/value pairs to control how <strong>rowfun</strong> uses the variables
+    in A and how it calls FUN.  Parameters are:
+ 
+       'InputVariables'      - Specifies which variables in A are inputs to FUN.
+       'GroupingVariables'   - Specifies one or more variables in A that define groups
+                               of rows.  Each group consists of rows in A that have the
+                               same combination of values in those variables.  <strong>rowfun</strong>
+                               applies FUN to each group of rows, rather than separately
+                               to each row of A.  B has one row for each group.  For
+                               timetables, specify either the row times by name or
+                               variables from A.  When you specify grouping variables
+                               as variables from A, you cannot include row times as
+                               one of the grouping variables.  
+ 
+    'GroupingVariables' and 'InputVariables' are each a positive integer, a
+    vector of positive integers, a variable name, a cell array containing one or
+    more variable names, or a logical vector.  'InputVariables' may also be a
+    function handle that returns a logical scalar.  In this case, <strong>rowfun</strong> treats
+    as data variables only those variables in A for which that function returns
+    true.
+ 
+       'SeparateInputs'      - Specifies whether FUN expects separate inputs, or one
+                               vector containing all inputs.  When true (the default),
+                               <strong>rowfun</strong> calls FUN with one argument for each data variable.
+                               When false, <strong>rowfun</strong> creates the input vector to FUN by
+                               concatenating the values in each row of A, and the data
+                               variables in A must be compatible for that concatenation.
+       'ExtractCellContents' - When true, <strong>rowfun</strong> extracts the contents of cell variables
+                               in A and passes the values, rather than the cells, to FUN.
+                               Default is false.  This parameter is ignored when
+                               SeparateInputs is false.  For grouped computation, the
+                               values within each group in a cell variable must allow
+                               vertical concatenation.
+       'OutputVariableNames' - Specifies the variable names for the outputs of FUN.
+       'NumOutputs'          - Specifies the number of outputs with which <strong>rowfun</strong>
+                               calls FUN.  This may be less than the number of
+                               output arguments that FUN declares, and may be zero.
+       'OutputFormat'        - Specifies the form in which <strong>rowfun</strong> returns the values
+                               computed by FUN.  Choose from the following:
+ 
+            'uniform'   - <strong>rowfun</strong> concatenates the values into a vector.  All of FUN's
+                          outputs must be scalars with the same type.
+            'table'     - <strong>rowfun</strong> returns a table with one variable for each output of
+                          FUN.  For grouped computation, B also contains the grouping
+                          variables.  'table' allows you to use a function that returns
+                          values of different sizes or types.  However, for ungrouped
+                          computation, all of FUN's outputs must have one row each
+                          time it is called.  For grouped computation, all of FUN's
+                          outputs for one call must have the same number of rows.
+                          'table' is the default OutputFormat if A is a table.
+            'timetable' - <strong>rowfun</strong> returns a timetable with one variable for each
+                          output of FUN.  For grouped computation, B also
+                          contains the grouping variables.  B's time vector is
+                          created from the row times of A.  If these times do not
+                          make sense in the context of FUN, use 'table' OutputFormat.
+                          For example, when you calculate the means of groups of
+                          data, it might not make sense to return the first row
+                          time of each group as a row time that labels the group. If
+                          this is the case for your data, then return the grouped
+                          variables in a table. 'timetable' is the default
+                          OutputFormat if A is a timetable.
+            'cell'    -   B is a cell array.  'cell' allows you to use a function
+                          that returns values of different sizes or types.
+ 
+       'ErrorHandler' - a function handle, specifying the function <strong>rowfun</strong> is to
+                        call if the call to FUN fails.   <strong>rowfun</strong> calls the error
+                        handling function with the following input arguments:
+                        -  a structure with fields named "identifier", "message",
+                           and "index" containing, respectively, the identifier
+                           of the error that occurred, the text of the error
+                           message, and the row or group index at which the error
+                           occurred.
+                        -  the set of input arguments at which the call to the
+                           function failed.
+   
+                        The error handling function should either throw an error,
+                        or return the same number and type and size of outputs as
+                        FUN.  These outputs are then returned in B.  For example:
+   
+                           function [A, B] = errorFunc(S, varargin)
+                           warning(S.identifier, S.message); A = NaN; B = NaN;
+   
+                        If an error handler is not specified, <strong>rowfun</strong> rethrows
+                        the error from the call to FUN.
+   
+    Examples:
+ 
+       Example 1 - Simulate a geometric brownian motion model for a range of parameters
+          mu = [-.5; -.25; 0; .25; .5];
+          sigma = [.1; .2; .3; .2; .1];
+          params = table(mu,sigma);
+          stats = rowfun(@gbmSim,params, ...
+                            'OutputVariableNames',{'simulatedMean' 'trueMean' 'simulatedStd' 'trueStd'});
+          [params stats]
+ 
+          function [m,mtrue,s,strue] = gbmSim(mu,sigma)
+          % Discrete approximation to geometric Brownian motion
+          numReplicates = 1000; numSteps = 100;
+          y0 = 1;
+          t1 = 1;
+          dt = t1 / numSteps;
+          y1 = y0*prod(1 + mu*dt + sigma*sqrt(dt)*randn(numSteps,numReplicates));
+          m = mean(y1); s = std(y1);
+          % Theoretical values
+          mtrue = y0 * exp(mu*t1); strue = mtrue * sqrt(exp(sigma^2*t1) - 1);
+ 
+       Example 2 - Compute the average difference between a pair of variables, by group.
+          t = table(randi(3,15,1),randn(15,1),rand(15,1),'VariableNames',{'g' 'x' 'y'})
+          rowfun(@(x,y) mean(x-y),t,'GroupingVariable','g', ...
+                         'InputVariables',{'x' 'y'}, 'OutputVariableName','MeanDiff')
+ 
+       Example 3 - Convert units of ozone air quality timeseries data
+          Time = datetime(2015,12,31,20,0,0)+hours(0:8)';
+          OzoneData = [32.5 32.3 31.7 32.0 62.5 61.0 60.8 61.2 60.3]';
+          Unit = categorical([1 1 1 1 2 2 2 2 2]', [1 2], {'ppbv', 'ug_m3'});
+          tt = timetable(Time, OzoneData,Unit);
+          % The unit changes between years of data.  Create a function to convert
+          % ug/m3 to ppbv.
+          function dataPPBV = OzoneConcToMixingRatio(data,unit)
+            if unit == 'ppbv'
+                dataPPBV = data;
+            elseif unit == 'ug_m3'
+                % Assume standard T,P.
+                dataPPBV = data./2.00;
+            else
+                dataPPBV = nan;
+            end
+          end
+          
+          % Use rowfun to make a timetable with consistent units for all data
+          ttPPBV = rowfun(@OzoneConcToMixingRatio, tt, 'OutputVariableName','Ozone_ppbv')
+ 
+       Example 4 - Find largest outlier from annual mean in terms of number of standard deviations
+          % Make some sample data in a table
+          Time = datetime(2016,3,1) + days(randi(1000,50,1));
+          data = randn(50,1)+3;
+          tt = timetable(Time,data);
+          % Shift time to yearly
+          tt.Time = dateshift(tt.Time,'start','year');
+          % Use rowfun to group and normalize to zero mean and unit standard deviation.
+          rf = rowfun(@(x) max(abs((x-mean(x))./std(x))), tt, 'GroupingVariables','Time', 'OutputVariableName', 'MaxStdDev')
+ 
+    See also <a href="matlab:help tabular/varfun">varfun</a>, <a href="matlab:help cellfun">cellfun</a>, <a href="matlab:help structfun">structfun</a>, <a href="matlab:help arrayfun">arrayfun</a>.
+
+rowfun(@(a, b, c) sprintf("Version v%d (%g)", a, b*c), simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS'}, 'OutputVariables', 'folders')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tabular/rowfun', '/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/rowfun.m', 170)" style="font-weight:bold">tabular/rowfun</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/rowfun.m',170,0)">line 170</a>)
+Invalid parameter name: OutputVariables.
+} 
+<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/rowfun.m',170,1)">170 </a>    = matlab.internal.datatypes.parseArgs(pnames, dflts, varargin{:});
+if system_dependent('IsDebugMode')==1, dbquit; end
+rowfun(@(a, b, c) sprintf("Version v%d (%g)", a, b*c), simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS'}, 'OutputVariableName', 'folders')
+
+ans =
+
+  45×1 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+          <strong>folders</strong>      
+    <strong>___________________</strong>
+
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v1 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v2 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+    "Version v3 (72.2)"
+
+linspace(10, 50, 5
+ linspace(10, 50, 5
+                   ↑
+{Error: Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched delimiters.
+} 
+linspace(10, 50, 5)
+
+ans =
+
+    10    20    30    40    50
+
+throw("lol")
+{Check for missing argument or incorrect argument data type in call to function 'throw'.
+} 
+error("lol")
+{lol
+} 
+fprintf("%e", pi)
+3.141593e+00sweeper_experiments

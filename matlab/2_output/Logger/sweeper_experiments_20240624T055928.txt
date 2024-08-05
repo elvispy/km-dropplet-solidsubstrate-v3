@@ -1,0 +1,119 @@
+------------
+24-Jun-2024 05:59:28 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 1 
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 1 
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 1 
+Starting simulation with velocity -40, modes 10, version v1 ... 
+Starting simulation with velocity -10, modes 40, version v1 ... 
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 201)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 201)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+Starting simulation with velocity -30, modes 80, version v1 ... 
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 201)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 10 
+ Version: 2 
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 10 
+ Version: 2 
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 2 
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 2 
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 2 
+Starting simulation with velocity -50, modes 80, version v1 ... 
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 201)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+Analyzing and transferring files to the workers ...done.
+Starting simulation with velocity -40, modes 10, version v1 ... 
+Starting simulation with velocity -10, modes 40, version v1 ... 
+Starting simulation with velocity -30, modes 80, version v1 ... 
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 10 
+ Version: 2 
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 201)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 10 
+ Version: 2 
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 2 
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 2 
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 2 
+Starting simulation with velocity -50, modes 80, version v1 ... 
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 201)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+Warning: The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.
+> In precompute_integrals (line 33)
+  In solve_motion_v2 (line 201)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+Couldn't run simulation with the following parameters: 
+ Velocity: -40 
+ Modes: 10 
+ Version: 1 
+Warning: The format 'yyyyMMddmmss' contains a field for minute (m) in what appears to be a date portion. You might have intended to use the symbol for month (M) rather than for minute (m). See the <a href="matlab:doc('datetime.Format')">datetime.Format property</a> for a complete description of the identifiers used in datetime formats.
+> In verifyFormat (line 26)
+  In datetime/subsasgnDot (line 25)
+  In datetime/subsasgn (line 23)
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 85)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',85,0)">line 85</a>)
+An UndefinedFunction error was thrown on the workers for 'parsave'.  This might be because the file containing 'parsave' is not accessible on the workers. Use addAttachedFiles(pool, files) to specify the required files to be attached.  For more
+information, see the documentation for 'parallel.Pool/addAttachedFiles'.
+
+Caused by:
+    Undefined function 'parsave' for input arguments of type 'MException'.
+} 
+sweeper_experiments

@@ -1,0 +1,12 @@
+------------
+19-Jun-2024 15:50:42 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+{Unrecognized function or variable 'angular_sampling'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 135)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',135,0)">line 135</a>)
+    theta_vector = [pi; acos(double(vpasolve(legendreP(angular_sampling-1, x))))]'; clear x;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 86)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',86,0)">line 86</a>)
+        solve_motion_v2(physical_parameters, numerical_parameters);
+} 
+sweeper_experiments

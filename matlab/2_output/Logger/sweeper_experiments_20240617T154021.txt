@@ -1,0 +1,25 @@
+------------
+17-Jun-2024 15:40:21 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+simulation_cgs
+{Unrecognized function or variable 'simulation_cgs'.
+} 
+simulations_cgs.modes
+
+ans =
+
+    21
+    21
+    21
+    21
+    21
+    21
+
+simulations_cgs.modes(1)
+
+ans =
+
+    21
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

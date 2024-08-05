@@ -1,0 +1,13 @@
+------------
+19-Jun-2024 15:55:53 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+{Unrecognized function or variable 'amplitudes_velocities'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 164)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',164,0)">line 164</a>)
+    if length(amplitudes_velocities) ~= harmonics_qtt
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 86)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',86,0)">line 86</a>)
+        solve_motion_v2(physical_parameters, numerical_parameters);
+} 
+opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',164,0)
+sweeper_experiments

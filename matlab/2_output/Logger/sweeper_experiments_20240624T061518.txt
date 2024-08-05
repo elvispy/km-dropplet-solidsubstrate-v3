@@ -1,0 +1,138 @@
+------------
+24-Jun-2024 06:15:18 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 1 
+---------
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 1 
+Starting simulation with velocity -40, modes 10, version v1 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 40 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 40 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 10 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 40 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 40 
+ Version: 3 
+---------
+Starting simulation with velocity -40, modes 40, version v3 ... 
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+Se dividio dt por 2
+<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/parallel/distcomp/+distcomp/remoteparfor.m',375,1)">375 </a>                    obj.displayOutput();
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

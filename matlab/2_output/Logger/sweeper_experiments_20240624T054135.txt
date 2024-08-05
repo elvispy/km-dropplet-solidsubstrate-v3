@@ -1,0 +1,11 @@
+------------
+24-Jun-2024 05:41:35 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tabular/rowfun', '/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/rowfun.m', 170)" style="font-weight:bold">tabular/rowfun</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/rowfun.m',170,0)">line 170</a>)
+Invalid parameter name: OutputVariables.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 57)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',57,0)">line 57</a>)
+simulations_cgs.folder = rowfun(@(a, b, c) sprintf("../2_output/Version v%d (%g)/", a, b*c), ...
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments
