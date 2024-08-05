@@ -1,0 +1,24 @@
+------------
+24-Jun-2024 06:12:14 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 1 
+---------
+Starting simulation with velocity -40, modes 10, version v1 ... 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 85)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',85,0)">line 85</a>)
+Cannot CD to /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/2_output/2_output/2_output/2_output/2_output/Version v1 (72.2)/../2_output/Version v1 (72.2) (Name is nonexistent or not a directory).
+} 
+sweeper_experiments

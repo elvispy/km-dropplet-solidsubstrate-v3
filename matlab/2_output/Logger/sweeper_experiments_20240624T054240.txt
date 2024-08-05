@@ -1,0 +1,76 @@
+------------
+24-Jun-2024 05:42:40 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+rowfun(@(a, b, c) sprintf("../2_output/Version v%d (%g)/", a, b*c), ...
+    simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS'})
+
+ans =
+
+  60×1 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+                  <strong>Var1</strong>              
+    <strong>________________________________</strong>
+
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v1 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v2 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+    "../2_output/Version v3 (72.2)/"
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

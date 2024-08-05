@@ -1,0 +1,83 @@
+------------
+24-Jun-2024 05:45:35 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+simulations_cgs
+
+simulations_cgs =
+
+  60×8 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>    <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                  <strong>folder</strong>             
+    <strong>____</strong>    <strong>______</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>________________________________</strong>
+
+     1       72.2           0.035                 -10                10             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -20                10             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -30                10             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -40                10             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -50                10             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -10                20             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -20                20             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -30                20             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -40                20             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -50                20             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -10                40             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -20                40             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -30                40             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -40                40             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -50                40             1       true     "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -10                80             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -20                80             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -30                80             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -40                80             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -50                80             1       false    "../2_output/Version v1 (72.2)/"
+     1       72.2           0.035                 -10                10             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -20                10             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -30                10             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -40                10             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -50                10             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -10                20             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -20                20             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -30                20             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -40                20             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -50                20             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -10                40             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -20                40             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -30                40             2       false    "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -40                40             2       false    "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -50                40             2       true     "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -10                80             2       false    "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -20                80             2       false    "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -30                80             2       false    "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -40                80             2       false    "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -50                80             2       false    "../2_output/Version v2 (72.2)/"
+     1       72.2           0.035                 -10                10             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -20                10             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -30                10             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -40                10             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -50                10             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -10                20             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -20                20             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -30                20             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -40                20             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -50                20             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -10                40             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -20                40             3       true     "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -30                40             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -40                40             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -50                40             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -10                80             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -20                80             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -30                80             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -40                80             3       false    "../2_output/Version v3 (72.2)/"
+     1       72.2           0.035                 -50                80             3       false    "../2_output/Version v3 (72.2)/"
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+solve_motion_v2
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sym/vpasolve', '/Applications/MATLAB_R2020a.app/toolbox/symbolic/symbolic/@sym/vpasolve.m', 145)" style="font-weight:bold">sym/vpasolve</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/symbolic/symbolic/@sym/vpasolve.m',145,0)">line 145</a>)
+Unable to find variables in equations.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 143)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',143,0)">line 143</a>)
+    theta_vector = [pi; acos(double(vpasolve(legendreP(angular_sampling-1, x))))]'; clear x;
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

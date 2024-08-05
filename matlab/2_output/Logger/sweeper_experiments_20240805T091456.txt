@@ -1,0 +1,26 @@
+------------
+05-Aug-2024 09:14:56 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+simulation_cgs
+
+simulation_cgs = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    done: 1
+
+simulations_cgs
+
+simulations_cgs =
+
+  3×8 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>    <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                          <strong>folder</strong>                                                     
+    <strong>____</strong>    <strong>______</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>________________________________________________________________________________________________________________</strong>
+
+     1       72.2            0.01                 -20                20             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/2_output/Version v3 (72.2)"
+     1       72.2            0.01                 -20                40             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/2_output/Version v3 (72.2)"
+     1       72.2            0.01                 -20                80             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/2_output/Version v3 (72.2)"
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

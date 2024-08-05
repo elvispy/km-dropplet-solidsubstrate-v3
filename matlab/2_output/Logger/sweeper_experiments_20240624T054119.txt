@@ -1,0 +1,10 @@
+------------
+24-Jun-2024 05:41:19 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+{Unrecognized function or variable 'owfun'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 57)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',57,0)">line 57</a>)
+simulations_cgs.folder = owfun(@(a, b, c) sprintf("../2_output/Version v%d (%g)/", a, b*c), ...
+} 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

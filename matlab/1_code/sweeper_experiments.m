@@ -16,10 +16,10 @@ fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 vars = struct(...    %D = 50  %Quant = 100
     "rhoS", 1, ... % must multiply by x1000
     "sigmaS", 72.20, ... % must multiply by x100
-    "undisturbed_radius", 0.035, ... % linspace(0.02, 0.05, 5)'; % must multiply by x10 %Ang = 180
-    "initial_velocity", -linspace(10, 50, 5)', ... %inspace(59, 39, 6)';
+    "undisturbed_radius", 0.01, ... % (in cm) must multiply by x10 %Ang = 180
+    "initial_velocity", -linspace(20, 20, 1)', ... %inspace(59, 39, 6)';
     "harmonics_qtt", [20, 40, 80]', ...
-    "version", [1, 2, 3]');%tol = 5e-5
+    "version", [3]');%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -54,14 +54,15 @@ else
     simulations_cgs.done = false;
 end
 
-a=rowfun(@(a, b, c) sprintf("../2_output/Version v%d (%g)/", a, b*c), ...
+root = pwd;
+parentDir = fileparts(fileparts(mfilename('fullpath')));
+a=rowfun(@(a, b, c) fullfile(parentDir, '2_output', sprintf("Version v%d (%g)", a, b*c)), ...
     simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS'}, 'OutputVariableName', 'folder');
 simulations_cgs.folder = a.folder;
 
 % STEP 3: Actually run the simulations. 
 
-% Initial folder to go back to
-root = pwd;
+
 % A folder which MUST have all the dependencies needed (and all its
 % parents, too. 
 safe_folder = fullfile(root, "simulation_code");
@@ -82,7 +83,7 @@ sigmaS = simulations_cgs.sigmaS;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
-parfor ii = 1:height(simulations_cgs)
+for ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))

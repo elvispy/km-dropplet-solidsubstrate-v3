@@ -43,7 +43,12 @@ em.set_content(body)
 
 context = ssl.create_default_context()
 
-with smtplib.SMTP_SSL('smtp.gmail.com', 465, context = context) as smtp:
-    smtp.login(email_sender, email_password)
+try:
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465, context = context) as smtp:
+        smtp.login(email_sender, email_password)
 
-    smtp.sendmail(email_sender, email_receiver, em.as_string())
+        smtp.sendmail(email_sender, email_receiver, em.as_string())
+except ssl.SSLCertVerificationError:
+    import certificate_install
+    certificate_install.main()
+    print("SSL Certiicate installed. Try again")

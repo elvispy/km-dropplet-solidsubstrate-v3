@@ -1,0 +1,107 @@
+------------
+24-Jun-2024 14:56:15 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 10 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 10 
+ Version: 1 
+if system_dependent('IsDebugMode')==1, dbstep; end
+---------
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Starting simulation with velocity -40, modes 10, version v1 ... 
+if system_dependent('IsDebugMode')==1, dbquit; end
+help clock
+ <strong>clock</strong>  Current date and time as date vector.
+    C = <strong>clock</strong> returns a six element date vector containing the current time
+    and date in decimal form:
+  
+       [year month day hour minute seconds]
+  
+    The sixth element of the date vector output (seconds) is accurate to
+    several digits beyond the decimal point. FIX(<strong>clock</strong>) rounds to integer
+    display format.
+ 
+    [C TF] = <strong>clock</strong> returns a second output argument that is 1 (true) if 
+    the current date and time occur during Daylight Saving Time (DST), 
+    and 0 (false) otherwise.
+ 
+    Note: When timing the duration of an event, use the TIC and TOC
+    functions instead of <strong>clock</strong> or ETIME. These latter two functions are
+    based on the system time which can be adjusted periodically by the
+    operating system and thus might not be reliable in time comparison
+    operations.
+ 
+    See also <a href="matlab:help datevec">datevec</a>, <a href="matlab:help datenum">datenum</a>, <a href="matlab:help now">now</a>, <a href="matlab:help etime">etime</a>, <a href="matlab:help tic">tic</a>, <a href="matlab:help toc">toc</a>, <a href="matlab:help cputime">cputime</a>.
+
+    <a href="matlab:doc clock">Documentation for clock</a>
+
+help etime
+ <strong>etime</strong>  Elapsed time.
+    <strong>etime</strong>(T1,T0) returns the time in seconds that has elapsed between
+    vectors T1 and T0.  The two vectors must be six elements long, in
+    the format returned by CLOCK:
+ 
+        T = [Year Month Day Hour Minute Second]
+ 
+    Time differences over many orders of magnitude are computed accurately.
+    The result can be thousands of seconds if T1 and T0 differ in their
+    first five components, or small fractions of seconds if the first five
+    components are equal.
+ 
+    Note: When timing the duration of an event, use the TIC and TOC
+    functions instead of CLOCK or <strong>etime</strong>. These latter two functions are
+    based on the system time which can be adjusted periodically by the
+    operating system and thus might not be reliable in time comparison
+    operations.
+ 
+    Example:
+      This example shows two ways to calculate how long a particular FFT 
+      operation takes. Using TIC and TOC is preferred, as it can be 
+      more reliable for timing the duration of an event:
+ 
+      x = rand(800000, 1);
+      
+      t1 = tic;  fft(x);  toc(t1)             % Recommended
+      Elapsed time is 0.097665 seconds.
+      
+      t = clock;  fft(x);  etime(clock, t)
+      ans =
+          0.1250
+ 
+    See also <a href="matlab:help tic">tic</a>, <a href="matlab:help toc">toc</a>, <a href="matlab:help clock">clock</a>, <a href="matlab:help cputime">cputime</a>, <a href="matlab:help datenum">datenum</a>.
+
+    <a href="matlab:doc etime">Documentation for etime</a>
+
+a = clock;
+a
+
+a =
+
+         2024            6           24           15            6       43.353
+
+etime(clock, a)
+
+ans =
+
+        7.316
+
+etime(a, clock)
+
+ans =
+
+      -14.858
+
+Parallel pool using the 'local' profile is shutting down.
+sweeper_experiments

@@ -1,0 +1,13 @@
+------------
+01-Aug-2024 05:12:23 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+---------
+---------
+---------
+---------
+Starting simulation with velocity -20, modes 20, version v1 ... 
+Starting simulation with velocity -20, modes 20, version v2 ... 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

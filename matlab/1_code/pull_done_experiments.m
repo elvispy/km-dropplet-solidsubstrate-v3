@@ -2,7 +2,7 @@ function A = pull_done_experiments(simulations)
     fldnames = simulations.Properties.VariableNames;
     A = array2table(double.empty(0, length(fldnames)), 'VariableNames', fldnames);
     
-    res = dir("../2_output/*/*.mat");
+    res = dir(fullfile(fileparts(fileparts(pwd)), '**/*.mat')); %dir("../2_output/*/*.mat");
     
     for jj = 1:length(res)
         if contains(res(jj).name, 'error') 
@@ -15,14 +15,12 @@ function A = pull_done_experiments(simulations)
 end
 
 function A = addSimulation(A, stru)
-    load(fullfile(stru.folder, stru.name), 'default_numerical', 'default_physical');
-    
-    % Load structs and merge them
-    tempStruct = cell2struct([struct2cell(default_numerical); struct2cell(default_physical)], ...
-        [fieldnames(default_numerical); fieldnames(default_physical)]);
-    
-    
-    try
+	try
+        load(fullfile(stru.folder, stru.name), 'default_numerical', 'default_physical');
+
+        % Load structs and merge them
+        tempStruct = cell2struct([struct2cell(default_numerical); struct2cell(default_physical)], ...
+            [fieldnames(default_numerical); fieldnames(default_physical)]);
         % Remove field that are not present 
         tempStruct = rmfield(tempStruct, setdiff(fieldnames(tempStruct), A.Properties.VariableNames));
         % Merge fields into simulared 
@@ -30,7 +28,9 @@ function A = addSimulation(A, stru)
     catch me
         switch me.identifier
             case 'MATLAB:table:vertcat:SizeMismatch'
-                fprintf("Could not load simulation on %s, %s", stru.folder, stru.name);
+                fprintf("Could not load simulation on %s, %s \n", stru.folder, stru.name);
+            case 'MATLAB:UndefinedFunction'
+                fprintf("Could not load simulation on %s, %s, undefined function or variable \n", stru.folder, stru.name);
             otherwise
                 rethrow(me)
         end

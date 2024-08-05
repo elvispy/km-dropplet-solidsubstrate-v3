@@ -1,0 +1,184 @@
+------------
+24-Jun-2024 15:22:17 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 20 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 20 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 20 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 20 
+ Version: 1 
+---------
+Starting simulation with velocity -40, modes 40, version v2 ... 
+Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2Se dividio dt por 2. . U = -40, modes = 40, version = 2---------
+Starting simulation with velocity -30, modes 40, version v2 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 40 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 40 
+ Version: 1 
+---------
+Starting simulation with velocity -20, modes 40, version v1 ... 
+---------
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 20 
+ Version: 2 
+---------
+Starting simulation with velocity -50, modes 80, version v1 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -30 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 40 
+ Version: 3 
+---------
+Starting simulation with velocity -30, modes 40, version v3 ... 
+---------
+Starting simulation with velocity -40, modes 80, version v1 ... 
+---------
+Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2Se dividio dt por 2. . U = -30, modes = 40, version = 2---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -20 
+ Modes: 40 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 40 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 20 
+ Version: 2 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10 
+ Modes: 40 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 20 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -40 
+ Modes: 20 
+ Version: 3 
+---------
+Starting simulation with velocity -50, modes 40, version v3 ... 
+Starting simulation with velocity -10, modes 40, version v1 ... 
+---------
+Starting simulation with velocity -50, modes 20, version v1 ... 
+Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3Se dividio dt por 2. . U = -30, modes = 40, version = 3---------
+Starting simulation with velocity -40, modes 40, version v3 ... 
+Starting simulation with velocity -30, modes 80, version v1 ... 
+---------
+Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3Se dividio dt por 2. . U = -50, modes = 40, version = 3---------
+Starting simulation with velocity -20, modes 80, version v1 ... 
+---------
+Se dividio dt por 2. . U = -50, modes = 20, version = 1---------
+Starting simulation with velocity -50, modes 80, version v2 ... 
+---------
+Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3Se dividio dt por 2. . U = -40, modes = 40, version = 3---------
+Starting simulation with velocity -30, modes 80, version v3 ... 
+Starting simulation with velocity -10, modes 80, version v3 ... 
+Starting simulation with velocity -10, modes 80, version v1 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 40 
+ Version: 1 
+Starting simulation with velocity -40, modes 80, version v2 ... 
+---------
+---------
+Starting simulation with velocity -50, modes 80, version v3 ... 
+---------
+---------
+Starting simulation with velocity -20, modes 80, version v2 ... 
+---------
+Starting simulation with velocity -30, modes 80, version v2 ... 
+Starting simulation with velocity -40, modes 80, version v3 ... 
+Starting simulation with velocity -10, modes 80, version v2 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -50 
+ Modes: 40 
+ Version: 2 
+---------
+Starting simulation with velocity -20, modes 80, version v3 ... 
+IdleTimeout has been reached.
+Parallel pool using the 'local' profile is shutting down.
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Python 3.9.5
+Traceback (most recent call last):
+  File "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sending_email.py", line 46, in <module>
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465, context = context) as smtp:
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 1045, in __init__
+    SMTP.__init__(self, host, port, local_hostname, timeout,
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 1052, in _get_socket
+    new_socket = self.context.wrap_socket(new_socket,
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)
