@@ -411,9 +411,11 @@ function solve_motion_v2(varargin)
             end
     
         end
-        file_name = fullfile(file_path, sprintf("simulation %s.mat", string(datetime("now"))));
+        file_name = fullfile(file_path, sprintf("simulation %s.mat", ...
+           replace(string(datetime('now')), ':', '-')));
     catch me
-        file_name = fullfile(file_path, sprintf("simulation %s (Errored).mat", string(datetime("now"))));
+        file_name = fullfile(file_path, sprintf("simulation %s (Errored).mat", ...
+            replace(string(datetime('now')), ':', '-')));
         PROBLEM_CONSTANTS.error = me;
     end
     
