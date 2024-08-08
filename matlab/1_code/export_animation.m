@@ -2,6 +2,9 @@ function export_animation(varargin)
     if nargin == 1
        
     else
+        % Add functions to calculate maximum width
+        safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
+        addpath(safe_folder, '-begin');
         [file, path] = uigetfile("*.mat");
         fullfilepath = fullfile(path, file);
         load(fullfilepath, "recorded_conditions", "length_unit", "velocity_unit", "presure_unit");
@@ -10,7 +13,7 @@ function export_animation(varargin)
         open(vidObj);
         
         for ii = 1:size(recorded_conditions, 1)
-            recorded_conditions{ii}.amplitude_defor = 1;
+            %recorded_conditions{ii}.amplitude_defor = 1;
             plot_condition(1, recorded_conditions{ii}, 5);
             writeVideo(vidObj, getframe(gcf));
             

@@ -198,7 +198,7 @@ function solve_motion_v2(varargin)
     iii = 0; jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
 
       
-    legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
+    %legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
     function_to_minimize = eval(sprintf('@function_to_minimize_v%d', default_options.version));
     JacobianCalculator = eval(sprintf('@JacobianCalculator_v%d', default_options.version));
     % Constants of the problem formulation
@@ -246,7 +246,7 @@ function solve_motion_v2(varargin)
     % TODO: Write post processing variables
 
    %  Preallocate variables that will be exported (All of them have units!)
-   recorded_conditions =cell(maximum_index, 1); % Vector{ProblemConditions}(undef, (maximum_index, )); 
+   recorded_conditions =cell(maximum_index, 1); 
    give_dimensions_v2 = @(X) ProblemConditions_v2( ...
        X.nb_harmonics, ...
         X.deformation_amplitudes * length_unit, ...
