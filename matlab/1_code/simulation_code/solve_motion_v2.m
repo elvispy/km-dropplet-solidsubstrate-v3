@@ -27,29 +27,30 @@ function solve_motion_v2(varargin)
     %      2) angular_sampling (adim, harmonics_qtt+1)= Number of angles that describe the shape of the drop.
     %      3) simulation_time        (s, inf)         = Maximum simulation time allowed. 
     %                                                   (Inf = simulate roughly until contact has ended)
-    %  - varargin{3} = Other options. 
-    %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
-    %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
-    %      3) version                (int,  1)        = version for the system of equations to be solved.
+    %      4) version                (int,  1)        = version for the system of equations to be solved.
     %           v1 = Nonlinear exact integration on contact area (Default)
     %           v2 = Nonlinear approximated integration on whole sphere
     %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
-    %      4) folder                 (string, ") .    = Folder whre the
+    %  - varargin{3} = Other options. 
+    %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
+    %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
+    %      3) folder                 (string, ") .    = Folder whre the
     %                                 results will be stored. Default is current directory
     
     %% Defining default Arguments
+    
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
-            'version', 1, 'folder', "");
-    default_numerical = struct('simulation_time', 15e-3, 'harmonics_qtt', nan, 'angular_sampling', nan, 'version', 1);
-    harmonics_qtt = default_numerical.harmonics_qtt; if ~isfinite(harmonics_qtt); harmonics_qtt = 0; end
+            'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'));
+    default_numerical = struct('simulation_time', inf, 'harmonics_qtt', nan, ...
+        'angular_sampling', nan, 'version', 1);
+    
     default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
-        'initial_velocity', nan, 'initial_amplitudes', zeros(1, harmonics_qtt), ...
-        'amplitudes_velocities', zeros(1, harmonics_qtt), 'pressure_amplitudes', zeros(1, harmonics_qtt+1), ...
+        'initial_velocity', nan, 'initial_amplitudes', nan, ...
+        'amplitudes_velocities', nan, 'pressure_amplitudes', nan, ...
         'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, 'g', 9.8065e+2);
     
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
-        
         % if isstruct(varargin{3}) == false; error('Option values is not a struct'); end
 
         % Overriding default values
@@ -66,14 +67,8 @@ function solve_motion_v2(varargin)
         for ii = 1:length(A)
             default_numerical.(A{ii}) = varargin{2}.(A{ii});
         end
-        try 
-            zeros(default_numerical.angular_sampling);
-        catch 
-            default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1;
-        end
-    
-    
     end
+    
     if nargin >= 1
         if isstruct(varargin{1}) == false; error('Numerical values is not a struct'); end
         % Overriding default values
@@ -82,15 +77,20 @@ function solve_motion_v2(varargin)
             default_physical.(A{ii}) = varargin{1}.(A{ii});
         end
     end
-   
-    %undisturbed_radius = nan; initial_height=nan; initial_velocity=nan; initial_amplitudes=nan; pressure_amplitudes =nan; initial_contact_radius=nan; rhoS=nan; sigmaS=nan; harmonics_qtt=nan; simulation_time =nan; version=nan;
-    % Adding values to current workspace
-    %include_scope = @(fields, struc) arrayfun(@(jj) ...
-    %    eval(sprintf('%s=%s;', fields{jj}, string(struc.(fields{jj})))), 1:length(fields));
     
-    %include_scope(fieldnames(default_physical), default_physical);
-    %include_scope(fieldnames(default_options), default_options);
-    %include_scope(fieldnames(default_numerical), default_numerical);
+
+    if ~isfinite(default_numerical.harmonics_qtt)
+        default_numerical.harmonics_qtt = 20; 
+    end
+    if ~isfinite(default_numerical.angular_sampling)
+        default_numerical.angular_sampling = default_numerical.harmonics_qtt + 1; 
+    end
+    harmonics_qtt = default_numerical.harmonics_qtt; 
+    if isnan(default_physical.initial_amplitudes); default_physical.initial_amplitudes = zeros(1, harmonics_qtt); end
+    if isnan(default_physical.amplitudes_velocities); default_physical.amplitudes_velocities = zeros(1, harmonics_qtt); end
+    if isnan(default_physical.pressure_amplitudes); default_physical.pressure_amplitudes = zeros(1, harmonics_qtt+1); end
+    
+    %% Setting default values to variables for conciseness
     undisturbed_radius = default_physical.undisturbed_radius; 
     initial_height = default_physical.initial_height; 
     initial_velocity=default_physical.initial_velocity; 
@@ -107,22 +107,6 @@ function solve_motion_v2(varargin)
     debug_flag = default_options.debug_flag;
     live_plotting = default_options.live_plotting;
     
-    
-    %undisturbed_radius = .1;  % Radius of the undeformed spherical sphere 
-    %initial_height = Inf;    % Initial position of the sphere center of mass of the sphere (Inf = start at imminent contact)
-    %initial_velocity = -10; % Initial velocity of the sphere in cm/s
-    %initial_amplitudes = Inf; % Initial amplitudes of the dropplet (Default = undisturbed) OBS: First index is A_1, not A0
-    %initial_contact_points = 0;
-    %amplitudes_velocities = [];
-    %rhoS = 0.998;            % Sphere's density
-    %sigmaS = 72.20;          % Sphere's Surface Tension
-    %g = 9.8065e+2;           % Gravitational constant
-    %harmonics_qtt = 15;      % Number of harmonics to be used 
-    %angular_sampling = harmonics_qtt + 1; 
-    %max_dt = 0;         % maximum allowed temporal time step
-    %angle_tol =  pi * 5/harmonics_qtt;
-    %simulation_time = 15e-3; % Maximum allowed total time in seconds
-    %live_plotting = true; % Whether to plot or not the live results
 
     % Dimensionless Units
     length_unit = undisturbed_radius;
@@ -134,6 +118,7 @@ function solve_motion_v2(varargin)
     mS = rhoS * length_unit^3;
     mass_unit = mS;
     
+    % Definition of angles that correspond to samplings
     f = @(n)  sqrt(n .* (n+2) .* (n-1));
     omegas_frequencies = f(1:harmonics_qtt)';
     %f2 = @(n) (1 - n ./ ((angular_sampling+n):-1:(1+n))) * pi * (angular_sampling + n)/angular_sampling;
@@ -145,7 +130,7 @@ function solve_motion_v2(varargin)
     % The smallest the argument, the more skewed is towards pi. For an uniform distribution, use linspace(pi, 0, angular_sampling);
 
     
-    % % Initial conditions
+    %% Initial conditions
     % Set dropplet's sphere height initial conditions
     get_initial_height = @(amplitudes) 1 - sum(arrayfun(@(idx) amplitudes(idx) * (-1.0)^(idx), 1:length(amplitudes)));
     
@@ -172,13 +157,16 @@ function solve_motion_v2(varargin)
     initial_pressure_coefficients = pressure_amplitudes / pressure_unit; % Just to emphasize the units of these coefficients.
     contact_points = 0;
     
-    max_dt = round(time_unit/(20 * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; 
+    % Define the time step so that the highest frequency has N steps
+    N = 20;
+    max_dt = round(time_unit/(N * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; 
     dt = max_dt; 
     
     initial_time = 0;
     current_time = initial_time/time_unit;
     if simulation_time == inf
-        final_time = 20000*dt;
+        % Just to save some values in the matrix
+        final_time = min(20000*dt, 5e-3/time_unit);
     else
         final_time = simulation_time/time_unit;
     end
@@ -198,17 +186,17 @@ function solve_motion_v2(varargin)
     iii = 0; jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
 
       
-    %legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
-    function_to_minimize = eval(sprintf('@function_to_minimize_v%d', default_options.version));
-    JacobianCalculator = eval(sprintf('@JacobianCalculator_v%d', default_options.version));
+    legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
+    function_to_minimize = eval(sprintf('@function_to_minimize_v%d', default_numerical.version));
+    JacobianCalculator = eval(sprintf('@JacobianCalculator_v%d', default_numerical.version));
     % Constants of the problem formulation
     PROBLEM_CONSTANTS = struct("froude_nb", froude_nb, "weber_nb", weber_nb, ...
         "nb_harmonics", harmonics_qtt, ...
         "omegas_frequencies", omegas_frequencies, ...
         "angles_qtt", harmonics_qtt + 1, ... % number of angles 
         "pressure_unit", pressure_unit, ...
+        'precomputed_integrals', legendre_matrix, ...
         "theta_vector", theta_vector, ... % set of fixed angle vectors
-        "precomputed_integrals", legendre_matrix, ... % integral os legendre polynomials in angle intervals
         "function_to_minimize", function_to_minimize, ... % v1 = fully nonlinear integration on disk, v2 = nonlinear with spherical approximation, v3 = linearised version of v2
         "jacobian_calculator", JacobianCalculator, ... % has to be the same version as function to minimize
         "DEBUG_FLAG", debug_flag); %true = plot and save video
@@ -260,25 +248,25 @@ function solve_motion_v2(varargin)
 
      recorded_conditions{1} = give_dimensions_v2(previous_conditions{end});
      recorded_times = zeros(maximum_index, 1); recorded_times(1) =  current_time * time_unit;
-%     
-%    %  Coefficient of restitution
-%     mechanical_energy_in = NaN;
-%     mechanical_energy_out = NaN; % TODO: Lab COef of restitution?
 
     indexes_to_save = zeros(maximum_index, 1); indexes_to_save(1) = 1;
     current_to_save = 2;
     
-    if PROBLEM_CONSTANTS.DEBUG_FLAG == true
-        file_name2 = 'DropAndSubstrate.mp4';
-        vidObj = VideoWriter(file_name2,'MPEG-4');
-        set(vidObj,'FrameRate',10)
-        open(vidObj);
-    end
-
     file_path = default_options.folder; %fullfile(sprintf("../2_output/%s/", default_options.folder));
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end    
+    
+    datestring = replace(string(datetime('now')), ':', '-');
+    if PROBLEM_CONSTANTS.DEBUG_FLAG == true
+        file_name2 = fullfile(file_path, sprintf('%s.mp4', datestring));
+        vidObj = VideoWriter(file_name2,'MPEG-4');
+        set(vidObj,'FrameRate',10)
+        open(vidObj);
+        
+        progress_bar = 0.1;
+    end
+
     
     % Define advancing step function: 
     %   v4 = classic newton method
@@ -348,11 +336,11 @@ function solve_motion_v2(varargin)
                 iii = iii + 1; jjj = 2 * jjj;
                 
                 if dt * time_unit < 5e-7 % 0.1 microseconds is not physically meaningful
-                    error("Time step too small (%e). U = %g, modes = %g, version = %d", dt, initial_velocity, harmonics_qtt, version);
+                    error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt, initial_velocity, harmonics_qtt, version);
                 end
                 % If one hour has elapsed, close this simulation
                 if etime(clock, init) > 60 * 60
-                    error("Too much has ellapsed U = %g, modes = %g, version = %d", initial_velocity, harmonics_qtt, version);
+                    error("Too much has ellapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
                 end
             else
                 previous_conditions = {previous_conditions{2:end} current_conditions};
@@ -385,8 +373,12 @@ function solve_motion_v2(varargin)
                 end
 
                 if simulation_time == inf && contact_points == 0 && current_time > 0
-                    final_time = current_time*1.1;
+                    final_time = current_time*1.5;
                     simulation_time = 1e+6; % So as not to enter to this if ever again
+                    if PROBLEM_CONSTANTS.DEBUG_FLAG==true
+                        fprintf("Changed final time. Current progress: %.0f%%\n", ...
+                        current_time/final_time*100);
+                    end
                 end
     
                 if live_plotting == true
@@ -404,18 +396,21 @@ function solve_motion_v2(varargin)
                     end
     
                 else
-                    % Do some real-time variable updating here
-                end
-                
-                
+                    if PROBLEM_CONSTANTS.DEBUG_FLAG == true
+                        if current_time/final_time >= progress_bar
+                            fprintf("Done %.0f%% of the simulation.\n", current_time/final_time*100);
+                            progress_bar = progress_bar + 0.1;
+                        end
+                    end
+                end   
             end
     
         end
         file_name = fullfile(file_path, sprintf("simulation %s.mat", ...
-           replace(string(datetime('now')), ':', '-')));
+           datestring));
     catch me
         file_name = fullfile(file_path, sprintf("simulation %s (Errored).mat", ...
-            replace(string(datetime('now')), ':', '-')));
+            datestring));
         PROBLEM_CONSTANTS.error = me;
     end
     

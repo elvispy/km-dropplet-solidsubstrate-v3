@@ -40,7 +40,7 @@ for ii = 1:length(files_folder)
         coef_restitution = nan; Vin = nan; Vout = nan;
         min_height = inf;
         max_contact_radius = -inf;
-        for jj = 1:size(recorded_conditions, 1)
+        for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
             drop_radius = zeta_generator(adim_deformations);
