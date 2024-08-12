@@ -166,7 +166,7 @@ function solve_motion_v2(varargin)
     current_time = initial_time/time_unit;
     if simulation_time == inf
         % Just to save some values in the matrix
-        final_time = min(20000*dt, 5e-3/time_unit);
+        final_time = min(20000*dt, 10e-3/time_unit);
     else
         final_time = simulation_time/time_unit;
     end

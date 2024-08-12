@@ -16,10 +16,10 @@ fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 vars = struct(...    %D = 50  %Quant = 100
     "rhoS", 1, ... % must multiply by x1000
     "sigmaS", 72.20, ... % must multiply by x100
-    "undisturbed_radius", 0.01, ... % (in cm) must multiply by x10 %Ang = 180
-    "initial_velocity", -linspace(20, 20, 1)', ... %inspace(59, 39, 6)';
-    "harmonics_qtt", [20, 40, 80]', ...
-    "version", [3]');%tol = 5e-5
+    "undisturbed_radius", 0.04, ... % (in cm) must multiply by x10 %Ang = 180
+    "initial_velocity", -linspace(10, 40, 4)', ... %inspace(59, 39, 6)';
+    "harmonics_qtt", [10, 20]', ...
+    "version", [1, 3]');%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
