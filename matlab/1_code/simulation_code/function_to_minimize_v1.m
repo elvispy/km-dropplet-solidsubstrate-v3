@@ -55,10 +55,12 @@ function res = function_to_minimize_v1(Xn, previous_conditions, dt, contact_poin
     Aidx = (2:M)';
     
     D1N = Aidx .* (Aidx + 2) .* (Aidx - 1);
+    D1N2 = 2*settings.Oh*(Aidx-1) .* (2*Aidx+1);
     
     R2 =  (sum(coefs .* [previous_velocities, current_velocities], 2) ...
-         + dt * (Aidx .* current_pressures(3:end) + ...
-         D1N .* current_deformation));
+         + dt * (Aidx .* current_pressures(3:end) ...
+         + D1N2 .* current_velocities ... % Added viscocity term
+         + D1N .* current_deformation));
      
     %if theta_contact < pi
     % Third ROW BLOCK (flat surface on contact angle condition)
