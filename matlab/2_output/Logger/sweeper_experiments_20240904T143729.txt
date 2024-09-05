@@ -1,0 +1,44 @@
+------------
+04-Sep-2024 14:37:29 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+rhoS
+
+rhoS =
+
+     1
+     1
+     1
+
+rhoS.* initial_velocity.^2 .*undisturbed_radius./sigmaS
+{Matrix dimensions must agree.
+} 
+sigmaS
+
+sigmaS =
+
+   72.2000
+   72.2000
+   72.2000
+
+undisturbed_radius
+
+undisturbed_radius =
+
+    0.0400
+    0.0400
+    0.0400
+    0.0400
+    0.0400
+    0.0400
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+rhoS.* initial_velocity.^2 .*undisturbed_radius./sigmaS
+
+ans =
+
+    0.1247
+    0.3463
+    0.6787
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments
