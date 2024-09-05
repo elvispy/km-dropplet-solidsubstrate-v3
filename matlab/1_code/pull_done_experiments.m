@@ -18,9 +18,18 @@ function A = addSimulation(A, stru)
 	try
         load(fullfile(stru.folder, stru.name), 'default_numerical', 'default_physical');
 
-        % Load structs and merge them
+        %Viscocity is special: it was added afterwards: If no viscocity is
+        %present, we set it to zero
+        if any(strcmp(A.Properties.VariableNames, "nu")) && ...
+                ~isfield(default_physical, 'nu')
+            default_physical.nu = 0;
+            save(fullfile(stru.folder, stru.name), "default_physical", "-append");
+        end
+        
+         % Load structs and merge them
         tempStruct = cell2struct([struct2cell(default_numerical); struct2cell(default_physical)], ...
             [fieldnames(default_numerical); fieldnames(default_physical)]);
+        
         % Remove field that are not present 
         tempStruct = rmfield(tempStruct, setdiff(fieldnames(tempStruct), A.Properties.VariableNames));
         % Merge fields into simulared 
@@ -33,6 +42,6 @@ function A = addSimulation(A, stru)
                 fprintf("Could not load simulation on %s, %s, undefined function or variable \n", stru.folder, stru.name);
             otherwise
                 rethrow(me)
-        end
-    end
+        end % end switch
+    end % end try
 end
