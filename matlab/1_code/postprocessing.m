@@ -17,9 +17,9 @@ addpath(safe_folder, '-begin');
 files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 
 % Create table to fill values
-varNames=["fileName", "initialVelocity", "dropLiquid", "nb_harmonics", ...
+varNames=["fileName", "initialVelocity", "Westar", "Ohnesorge", "dropLiquid", "nb_harmonics", ...
     "maxWidth", "contactTime", "coefRestitution", "minHeight", "maxContactRadius"];
-varTypes=["string", "double", "string", "double", "double", "double", "double", ...
+varTypes=["string", "double", "double", "double", "string", "double", "double", "double", "double", ...
     "double", "double"];
 sz = [length(files_folder) length(varNames)];
 data = table('Size', sz, 'VariableTypes', varTypes, 'VariableNames', varNames);
@@ -31,9 +31,13 @@ for ii = 1:length(files_folder)
         load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
             "recorded_conditions", "recorded_times", "default_physical", ...
             "length_unit", "PROBLEM_CONSTANTS");
-        if contains(lastwarn, 'not found'); errormsg(lastwarn);  end
+        if contains(lastwarn, 'not found'); error(lastwarn);  end
         
         theta_vector = PROBLEM_CONSTANTS.theta_vector;
+        Westar = default_physical.rhoS * default_physical.initial_velocity^2 * ...
+            default_physical.undisturbed_radius / default_physical.sigmaS;
+        Oh = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
+            * default_physical.undisturbed_radius));
 
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
@@ -44,6 +48,7 @@ for ii = 1:length(files_folder)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
             drop_radius = zeta_generator(adim_deformations);
+            drop_radius = @(theta) 1 + drop_radius(theta);
 
             % Max width calculation
             current_width = maximum_contact_radius(adim_deformations);
@@ -85,7 +90,7 @@ for ii = 1:length(files_folder)
         end
         % Add value to tables
         [~, dropLiquid, lol] = fileparts(files_folder(ii).folder); dropLiquid = strcat(dropLiquid, lol);
-        data(ii, :) = {files_folder(ii).name, Vin, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
+        data(ii, :) = {files_folder(ii).name, Vin, Westar, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
             max_width, contact_time, coef_restitution, min_height, max_contact_radius};
     catch me
         fprintf("%s %s \n", files_folder(ii).folder, files_folder(ii).name)

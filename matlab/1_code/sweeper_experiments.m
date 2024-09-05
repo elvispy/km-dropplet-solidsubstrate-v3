@@ -85,7 +85,7 @@ nu = simulations_cgs.nu;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
-parfor ii = 1:height(simulations_cgs)
+for ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))
