@@ -22203,3 +22203,1233 @@ postprocessing
          stack: [1×1 struct]
     Correction: []
 
+-------
+05-Sep-2024 15:20:22 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.internal.math.checkDataVariables', '/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/checkDataVariables.m', 55)" style="font-weight:bold">matlab.internal.math.checkDataVariables</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/checkDataVariables.m',55,0)">line 55</a>)
+Invalid 'DataVariables' value.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.internal.math.rmMissingOutliersVarargin', '/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/rmMissingOutliersVarargin.m', 80)" style="font-weight:bold">matlab.internal.math.rmMissingOutliersVarargin</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/rmMissingOutliersVarargin.m',80,0)">line 80</a>)
+                    dataVars = matlab.internal.math.checkDataVariables(...
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.internal.math.rmMissingOutliers>parseInputs', '/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/rmMissingOutliers.m', 175)" style="font-weight:bold">matlab.internal.math.rmMissingOutliers>parseInputs</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/rmMissingOutliers.m',175,0)">line 175</a>)
+opts = matlab.internal.math.rmMissingOutliersVarargin(funName,A,opts,...
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.internal.math.rmMissingOutliers', '/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/rmMissingOutliers.m', 17)" style="font-weight:bold">matlab.internal.math.rmMissingOutliers</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/rmMissingOutliers.m',17,0)">line 17</a>)
+opts = parseInputs(funName,A,varargin{:});
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('rmmissing', '/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/rmmissing.m', 63)" style="font-weight:bold">rmmissing</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/rmmissing.m',63,0)">line 63</a>)
+[B,I] = matlab.internal.math.rmMissingOutliers('rmmissing',A,varargin{:});
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 114)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',114,0)">line 114</a>)
+data = rmmissing(data, 'DataVariables','fileName');
+} 
+opentoline('/Applications/MATLAB_R2024a.app/toolbox/matlab/datafun/+matlab/+internal/+math/checkDataVariables.m',55,0)
+data
+
+data =
+
+  95×12 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+                  <strong>file_name</strong>                  <strong>initial_velocity_cgs</strong>     <strong>weber</strong>      <strong>ohnesorge</strong>       <strong>parent_folder</strong>       <strong>number_of_harmonics</strong>    <strong>max_width</strong>    <strong>contact_time</strong>    <strong>coef_restitution</strong>    <strong>north_pole_min_height</strong>    <strong>max_contact_radius</strong>    <strong>spread_time</strong>
+    <strong>_____________________________________</strong>    <strong>____________________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>_________</strong>    <strong>____________</strong>    <strong>________________</strong>    <strong>_____________________</strong>    <strong>__________________</strong>    <strong>___________</strong>
+
+    <missing>                                          0                    0        0        <missing>                       0                   0               0                0                     0                         0                 0 
+    "simulation 01-Aug-2024 05-22-43.mat"            -20             0.055402        0        "Version v1 (72.2)"            20              1.0711        0.000372          0.82868                1.6522                   0.38369          0.000278 
+    "simulation 01-Aug-2024 13-53-04.mat"            -20             0.055402        0        "Version v1 (72.2)"            20              1.0711        0.000372          0.82868                1.6522                   0.38369          0.000278 
+    "simulation 02-Aug-2024 10-17-47.mat"            -20             0.055402        0        "Version v1 (72.2)"            40              1.0316             NaN              NaN                1.8476                  0.063099         0.0002736 
+    "simulation 03-Aug-2024 04-02-32.mat"            -20             0.055402        0        "Version v1 (72.2)"            80                   1             NaN              NaN                     2                1.2246e-16             7e-07 
+
+                      :                               :                 :            :                 :                      :                 :             :                 :                      :                      :                  :     
+
+    "simulation 27-Jun-2024 02-58-06.mat"            -30              0.43629        0        "Version v3 (72.2)"            80                   1             NaN              NaN                     2                1.2246e-16             4e-06 
+    "simulation 27-Jun-2024 13-07-17.mat"            -10             0.048476        0        "Version v3 (72.2)"            80                   1             NaN              NaN                     2                1.2246e-16             4e-06 
+    "simulation 28-Jun-2024 05-10-05.mat"            -50               1.2119        0        "Version v3 (72.2)"            80                   1             NaN              NaN                     2                1.2246e-16             4e-06 
+    "simulation 29-Jun-2024 07-17-22.mat"            -40              0.77562        0        "Version v3 (72.2)"            80                   1             NaN              NaN                     2                1.2246e-16             4e-06 
+    "simulation 30-Jun-2024 05-52-46.mat"            -20              0.19391        0        "Version v3 (72.2)"            80                   1             NaN              NaN                     2                1.2246e-16             4e-06 
+
+	<a href="matlab:if exist('data','var') && istabular(data),displayWholeObj(data,'data'),else,fprintf('Unable to display table variable ''data'' because it no longer exists.\n');end">Display all 95 rows.</a>
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+-------
+if system_dependent('IsDebugMode')==1, dbstep; end
+05-Sep-2024 15:26:03 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessingif system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing
+if system_dependent('IsDebugMode')==1, dbcont; end
+-------
+05-Sep-2024 15:27:27 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessingif system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing
+if system_dependent('IsDebugMode')==1, dbcont; end
+-------
+05-Sep-2024 15:28:08 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessingif system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+if system_dependent('IsDebugMode')==1, dbstep; end
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+05-Sep-2024 16:03:47 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessingif system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 01-Aug-2024 05-22-43.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 01-Aug-2024 13-53-04.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 02-Aug-2024 10-17-47.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 03-Aug-2024 04-02-32.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 10-Aug-2024 13-28-48.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 10-Aug-2024 13-28-56.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 10-Aug-2024 13-28-58.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 10-Aug-2024 13-36-59.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 10-Aug-2024 13-38-23.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 12-Aug-2024 08-50-15.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 12-Aug-2024 08-50-21.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 12-Aug-2024 08-50-26.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-26-00.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-26-01.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-26-02.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-26-05.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-26-10.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-26-15.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-26-21.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-32-22.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-32-23.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-32-24.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-37-58.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-43-44.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-50-24.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-58-52.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 22-Jun-2024 17-58-55.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 23-Jun-2024 09-40-23.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 23-Jun-2024 10-13-03.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 24-Jun-2024 00-30-11.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 24-Jun-2024 06-15-23.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 25-Jun-2024 05-54-41.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 25-Jun-2024 08-55-16.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 25-Jun-2024 09-27-02.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 25-Jun-2024 20-16-43.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 25-Jun-2024 20-21-54.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 26-Jun-2024 03-26-02.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 26-Jun-2024 21-49-44.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 27-Jun-2024 16-06-24.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 01-Aug-2024 05-23-01.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 03-Aug-2024 04-11-43.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 04-Aug-2024 00-13-53.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 17-32-26.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 17-32-29.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 17-32-32.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 17-32-35.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 17-38-42.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 17-45-23.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 17-52-33.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 18-01-26.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 22-Jun-2024 18-01-28.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 23-Jun-2024 08-47-59.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 23-Jun-2024 23-07-21.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 23-Jun-2024 23-13-28.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 23-Jun-2024 23-51-13.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 25-Jun-2024 05-35-07.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 25-Jun-2024 19-40-34.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 26-Jun-2024 23-42-24.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 28-Jun-2024 02-31-12.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 28-Jun-2024 11-36-48.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 29-Jun-2024 04-38-33.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2) simulation 29-Jun-2024 14-20-58.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 04-Sep-2024 14-40-30.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 05-Aug-2024 12-56-05.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 05-Sep-2024 12-55-14.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 05-Sep-2024 13-02-28.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 06-Aug-2024 09-38-40.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Aug-2024 06-15-53.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 10-Aug-2024 13-28-56.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 10-Aug-2024 13-28-59.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 10-Aug-2024 13-29-00.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 10-Aug-2024 13-29-02.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 10-Aug-2024 13-29-03.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 10-Aug-2024 13-43-33.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 10-Aug-2024 13-47-50.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 12-Aug-2024 08-50-31.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 22-Jun-2024 18-07-43.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 22-Jun-2024 18-07-44.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 22-Jun-2024 18-07-46.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 22-Jun-2024 18-15-02.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 22-Jun-2024 18-21-09.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 22-Jun-2024 18-26-59.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 23-Jun-2024 09-09-50.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 23-Jun-2024 23-20-02.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 23-Jun-2024 23-32-15.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 25-Jun-2024 23-08-37.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 26-Jun-2024 09-55-20.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 27-Jun-2024 02-58-06.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 27-Jun-2024 13-07-17.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 28-Jun-2024 05-10-05.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 29-Jun-2024 07-17-22.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 30-Jun-2024 05-52-46.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+05-Sep-2024 16:04:27 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessingif system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+files_folder(ii).name
+
+ans =
+
+    'error_logU0=-40-202406241326.mat'
+
+data.file_name
+
+ans = 
+
+  0×1 empty <a href="matlab:helpPopup('string')" style="font-weight:bold">string</a> array
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+if system_dependent('IsDebugMode')==1, dbstep; end
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+files_folder(ii).name
+
+ans =
+
+    'simulation 01-Aug-2024 05-22-43.mat'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 01-Aug-2024 05-22-43.mat 
+if system_dependent('IsDebugMode')==1, dbstep; end
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'mtimes' for input arguments of type 'cell'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+postprocessing
+-------
+05-Sep-2024 16:06:22 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
