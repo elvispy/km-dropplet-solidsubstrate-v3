@@ -18,7 +18,7 @@ vars = struct(...
     "sigmaS", 72.20, ... % Surface tension in cgs
     "nu", .978e-2, ... % Viscocity in cgs
     "undisturbed_radius", 0.04, ... % (cgs)
-    "initial_velocity", -[15, 25, 35]', ... %inspace(59, 39, 6)' (cgs)
+    "initial_velocity", -sqrt(linspace(5^2, 45^2, 10))', ... %(cgs)
     "harmonics_qtt", [20]', ...
     "version", [3]');%tol = 5e-5
 
@@ -85,7 +85,7 @@ nu = simulations_cgs.nu;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
-for ii = 1:height(simulations_cgs)
+parfor ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))
@@ -114,6 +114,8 @@ for ii = 1:height(simulations_cgs)
                 initial_velocity(ii), harmonics_qtt(ii), version(ii));
             solve_motion_v2(physical_parameters, numerical_parameters, options);
             completed_simulations(ii) = true; % To attest that the simulation has been finished
+            fprintf("Finished simulation with velocity %g, modes %d, version v%d ... \n", ...
+                initial_velocity(ii), harmonics_qtt(ii), version(ii));
         catch ME
             cd(final_folders(ii))
             fprintf("---------\n");
