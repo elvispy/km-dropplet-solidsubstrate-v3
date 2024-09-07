@@ -11,7 +11,7 @@ function export_animation(varargin)
         load(fullfilepath, "recorded_conditions", "is_adim");
         
         vidObj = VideoWriter(replace(fullfilepath, ".mat", ".mp4"), "MPEG-4");
-        set(vidObj, 'Quality', 100, 'FrameRate', 100);
+        set(vidObj, 'Quality', 100, 'FrameRate', 30);
         open(vidObj);
         
         for ii = 1:size(recorded_conditions, 1)
