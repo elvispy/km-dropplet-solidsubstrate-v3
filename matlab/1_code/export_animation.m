@@ -11,10 +11,10 @@ function export_animation(varargin)
         load(fullfilepath, "recorded_conditions", "is_adim");
         
         vidObj = VideoWriter(replace(fullfilepath, ".mat", ".mp4"), "MPEG-4");
-        set(vidObj, 'Quality', 100, 'FrameRate', 30);
+        set(vidObj, 'Quality', 100, 'FrameRate', 50);
         open(vidObj);
         
-        for ii = 1:size(recorded_conditions, 1)
+        for ii = floor(linspace(1, size(recorded_conditions, 1), 500))
             adim_conditions = recorded_conditions{ii};
             if exist('is_adim') == 0 || is_adim == false
                 load(fullfilepath, "length_unit", "velocity_unit", "pressure_unit"); 

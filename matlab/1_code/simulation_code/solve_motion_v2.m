@@ -163,7 +163,7 @@ function solve_motion_v2(varargin)
     
     % Define the time step so that the highest frequency has N steps
     N = 20;
-    max_dt = round(time_unit/(N * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; 
+    max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; 
     dt = max_dt; 
     
     initial_time = 0;

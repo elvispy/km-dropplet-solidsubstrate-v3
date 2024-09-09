@@ -18,9 +18,9 @@ vars = struct(...
     "sigmaS", 72.20, ... % Surface tension in cgs
     "nu", .978e-2, ... % Viscocity in cgs
     "undisturbed_radius", 0.04, ... % (cgs)
-    "initial_velocity", -sqrt(linspace(5^2, 45^2, 10))', ... %(cgs)
-    "harmonics_qtt", [40]', ...
-    "version", [3]');%tol = 5e-5
+    "initial_velocity", -sqrt(linspace(5^2, 45^2, 3))', ... %(cgs)
+    "harmonics_qtt", [30]', ...
+    "version", [1, 3]');%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -85,7 +85,7 @@ nu = simulations_cgs.nu;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
-for ii = 1:height(simulations_cgs)
+parfor ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))
