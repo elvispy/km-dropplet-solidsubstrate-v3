@@ -1,4 +1,4 @@
-function [probable_next_conditions, errortan] = ...
+function [probable_next_conditions, errortan, mat_inverses] = ...
     get_next_step_v5(previous_conditions, dt, contact_points, PROBLEM_CONSTANTS)
 
     % This function tries to minimize the objetive function by Newton
@@ -11,6 +11,7 @@ function [probable_next_conditions, errortan] = ...
     settings.theta_vector = PROBLEM_CONSTANTS.theta_vector; theta_vector = settings.theta_vector;
     settings.legendre_matrix = PROBLEM_CONSTANTS.precomputed_integrals;
     settings.Oh = PROBLEM_CONSTANTS.Oh;
+    mat_inverses.version = PROBLEM_CONSTANTS.version;
     %1./(1:nb_harmonics) 1 1 1]';
     
     
@@ -31,7 +32,7 @@ function [probable_next_conditions, errortan] = ...
         % Newton Method
         for m = 1:100
             %perturb = jaccalc(Xn)\ftm(Xn);
-            [perturb, PROBLEM_CONSTANTS] = my_lsqr(jaccalc, ftm, Xn, PROBLEM_CONSTANTS);
+            [perturb, mat_inverses] = my_lsqr(jaccalc, ftm, Xn, mat_inverses, dt);
             Xnp1 = Xn - perturb;
             %if PROBLEM_CONSTANTS.DEBUG_FLAG == true; plot_condition(2, [0; Xnp1(1:(nb_harmonics-1))]); end
             Xn = Xnp1;
@@ -80,17 +81,17 @@ function [probable_next_conditions, errortan] = ...
     
 end % end main function definition
 
-function [perturb, PROBLEM_CONSTANTS] = my_lsqr(jaccalc, ftm, Xn, PROBLEM_CONSTANTS)
+function [perturb, mat_inverse] = my_lsqr(jaccalc, ftm, Xn, mat_inverse, dt)
     A = jaccalc(Xn);
-    
+    fieldName = strrep(strrep(sprintf('dt%.2e', dt), '-', ""), ".", "");
     S = size(A);
     if S(1) == S(2) % If it's square matrix, just invert it
         % If there's already one in PROBLEM_CONSTANTS, use it
-        if isfield(PROBLEM_CONSTANTS, 'mat_inverse')
-            perturb = PROBLEM_CONSTANTS.mat_inverse * ftm(Xn);
+        if isfield(mat_inverse, fieldName)
+            perturb = mat_inverse.(fieldName) * ftm(Xn);
         else
-            if PROBLEM_CONSTANTS.version == 3 % Only take inverse if it's a linearized model
-                PROBLEM_CONSTANTS.mat_inverse = inv(A);
+            if mat_inverse.version == 3 % Only take inverse if it's a linearized model
+                mat_inverse.(fieldName) = inv(A);
             end
             perturb = A\ftm(Xn);
         end
