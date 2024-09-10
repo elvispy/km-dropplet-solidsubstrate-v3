@@ -28,7 +28,7 @@ function solve_motion_v2(varargin)
     %      2) angular_sampling (adim, harmonics_qtt+1)= Number of angles that describe the shape of the drop.
     %      3) simulation_time        (s, inf)         = Maximum simulation time allowed. 
     %                                                   (Inf = simulate roughly until contact has ended)
-    %      4) version                (int,  1)        = version for the system of equations to be solved.
+    %      4) version                (int,  3)        = version for the system of equations to be solved.
     %           v1 = Nonlinear exact integration on contact area (Default)
     %           v2 = Nonlinear approximated integration on whole sphere
     %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
@@ -45,7 +45,7 @@ function solve_motion_v2(varargin)
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
             'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'));
     default_numerical = struct('simulation_time', inf, 'harmonics_qtt', nan, ...
-        'angular_sampling', nan, 'version', 1, 'order', 1);
+        'angular_sampling', nan, 'version', 3, 'order', 1);
     
     default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
         'initial_velocity', nan, 'initial_amplitudes', nan, ...
