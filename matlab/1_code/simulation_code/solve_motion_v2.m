@@ -32,6 +32,8 @@ function solve_motion_v2(varargin)
     %           v1 = Nonlinear exact integration on contact area (Default)
     %           v2 = Nonlinear approximated integration on whole sphere
     %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
+    %      5) order                  (int, 1)         = order of the finite
+    %                                                   differences to be solved
     %  - varargin{3} = Other options. 
     %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
@@ -43,7 +45,7 @@ function solve_motion_v2(varargin)
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
             'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'));
     default_numerical = struct('simulation_time', inf, 'harmonics_qtt', nan, ...
-        'angular_sampling', nan, 'version', 1);
+        'angular_sampling', nan, 'version', 1, 'order', 1);
     
     default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
         'initial_velocity', nan, 'initial_amplitudes', nan, ...
@@ -162,7 +164,7 @@ function solve_motion_v2(varargin)
     contact_points = 0;
     
     % Define the time step so that the highest frequency has N steps
-    N = 20;
+    N = 1;
     max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; 
     dt = max_dt; 
     
@@ -219,19 +221,19 @@ function solve_motion_v2(varargin)
  
     previous_conditions = {current_conditions, current_conditions}; 
     % TODO: Define this array properly to implement BDF2.
-    previous_conditions{1}.current_time = previous_conditions{2}.current_time - dt;
-    previous_conditions{1}.center_of_mass_velocity = ...
-        previous_conditions{2}.center_of_mass_velocity + dt/froude_nb;
-    previous_conditions{1}.center_of_mass = ...
-        previous_conditions{2}.center_of_mass - previous_conditions{2}.center_of_mass_velocity * dt;
-    
-    g = @(t, idx) current_conditions.deformation_amplitudes(idx) * cos(f(idx) * t) ...
-        + current_conditions.deformation_velocities(idx)/(f(idx)+1e-30) * sin(f(idx) * t); 
-
-    for idx = 1:harmonics_qtt
-        previous_conditions{1}.deformation_amplitudes(idx) = g(-dt, idx);
-        previous_conditions{1}.deformation_velocities(idx) = (g(0, idx) - g(-2*dt/1000, idx))/(2*dt/1000);
-    end
+    % previous_conditions{1}.current_time = previous_conditions{2}.current_time - dt;
+    % previous_conditions{1}.center_of_mass_velocity = ...
+    %     previous_conditions{2}.center_of_mass_velocity + dt/froude_nb;
+    % previous_conditions{1}.center_of_mass = ...
+    %     previous_conditions{2}.center_of_mass - previous_conditions{2}.center_of_mass_velocity * dt;
+    % 
+    % g = @(t, idx) current_conditions.deformation_amplitudes(idx) * cos(f(idx) * t) ...
+    %     + current_conditions.deformation_velocities(idx)/(f(idx)+1e-30) * sin(f(idx) * t); 
+    % 
+    % for idx = 1:harmonics_qtt
+    %     previous_conditions{1}.deformation_amplitudes(idx) = g(-dt, idx);
+    %     previous_conditions{1}.deformation_velocities(idx) = (g(0, idx) - g(-2*dt/1000, idx))/(2*dt/1000);
+    % end
     % 1-st order set
     previous_conditions = previous_conditions(end);
 
@@ -348,8 +350,14 @@ function solve_motion_v2(varargin)
                     error("Too much has ellapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
                 end
             else
-                previous_conditions = {previous_conditions{2:end} current_conditions};
-                
+                % Progressively increase order of method until desired
+                % length of previous conditions have been attained
+                if default_numerical.order > length(previous_conditions)
+                    previous_conditions = {previous_conditions{1:end} current_conditions};
+                else
+                    previous_conditions = {previous_conditions{2:end} current_conditions};
+                end
+
                 current_time = current_time + dt; jjj = jjj + 1;
                 if mod(jjj, 2) == 0 && grow_dt == true
                     jjj = floor(jjj/2); 
