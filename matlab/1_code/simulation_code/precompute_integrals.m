@@ -3,12 +3,12 @@ function [M, angles] = precompute_integrals(angles, N)
     % precomputes the integral int_{cos(angles(ii))}^{cos(angles(ii+1))}
     % P+l(u)/u**3 du
     % for l less than N, including zero. All angles should be in the
-    % interval pi/2, pi inclusive. 
+    % interval 0, pi/2 inclusive (south pole based). 
     
     % Inputs:
     %   - angles: Vector of angles to be selected. If scalar, will assume
-    %   uniformly spaced angles from pi to 0, and discard values
-    %   accordingly. If Nan, will assume N+1 uniformly spaced functions
+    %   uniformly spaced angles from 0 to pi, and discard values
+    %   accordingly. If Nan, will assume N+1 uniformly spaced values
     %   - N: Number of harmonic modes in the legendre decomposition (plus
     %   zero)
     
@@ -25,22 +25,22 @@ function [M, angles] = precompute_integrals(angles, N)
     
     
     if isnan(angles)
-        angles = linspace(pi, 0, N+1);
+        angles = linspace(0, pi, N+1);
     elseif isscalar(angles)
-        angles = linspace(pi, 0, angles);
+        angles = linspace(0, pi, angles);
     else
         if min(angles) < pi*0.5
             %warning("The angles vector has entries outside of the interval [pi/2, pi]. Rescaling values.");
         end
     end
     
-    angles = angles(angles > pi * 0.51); angles = angles(angles <= pi);
-    angles = [pi, (angles(1:(end-1)) + angles(2:end))/2];
+    angles = angles(angles < pi * 0.49); angles = angles(angles >= 0);
+    angles = [0, (angles(1:(end-1)) + angles(2:end))/2];
     M = zeros(length(angles)-1, N+1);
     for ii = 1:(length(angles)-1)
         M(ii, 2:end) = integral(@(u) collectPl(N, u) ./(u.^3), ...
-            cos(angles(ii)), cos(angles(ii+1)), 'RelTol', 1e-5, ...
+            cos(angles(ii+1)), cos(angles(ii)), 'RelTol', 1e-5, ...
             'AbsTol', 1e-5, 'ArrayValued', 1);
-        M(ii, 1) = integral(@(x) 1./x.^3, cos(angles(ii)), cos(angles(ii+1)));
+        M(ii, 1) = integral(@(x) 1./x.^3, cos(angles(ii+1)), cos(angles(ii)));
     end
 end

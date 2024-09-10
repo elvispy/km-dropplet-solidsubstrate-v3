@@ -12,7 +12,6 @@ function f = zeta_generator(amplitudes, varargin)
 % Arguments:
 % - amplitudes: One dimensional scalar array or STRUCT with field
 % "deformation_amplitudes"
-% - varargin: Use of varargin is deprecated as of 01/23/2023
 %
 % Outputs:
 % - f: function handle
@@ -28,12 +27,6 @@ function f = zeta_generator(amplitudes, varargin)
     
     order = length(amplitudes);
     
-    if nargin == 1
-        if size(amplitudes, 2) > 1; amplitudes = amplitudes'; end
-        f = @(theta) sum(amplitudes .* collectPl(order, cos(theta)), 1);
-    else
-        warning("I'm deprecated!");
-        LP = varargin{1}.LEGENDRE_POLYNOMIALS;
-        f = @(theta) arrayfun(@(ang) sum(times(amplitudes, arrayfun(@(idx) LP{idx}(cos(ang)), 1:order))), theta);
-    end
+    if size(amplitudes, 2) > 1; amplitudes = amplitudes'; end
+    f = @(theta) sum(amplitudes .* collectPl(order, cos(theta)), 1);
 end

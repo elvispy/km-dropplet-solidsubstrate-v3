@@ -60,17 +60,16 @@ function [probable_next_conditions, errortan] = ...
     probable_next_conditions.dt = dt;
     probable_next_conditions.current_time = previous_conditions{end}.current_time + dt;
     probable_next_conditions.contact_points = contact_points;
-%     probable_next_conditions.contact_radius = ...
-%         round(sin(PROBLEM_CONSTANTS.theta_vector(contact_points)) * (1 + ...
-%         sum(arrayfun(@(idx) (-1)^(idx) * Xnp1(idx), 1:length(Xnp1)))), 10);
-    z_calculator = @(angle) cos(angle) .* (1 + sum(probable_next_conditions.deformation_amplitudes' .* ...
-        collectPl(nb_harmonics, cos(angle)))) + probable_next_conditions.center_of_mass;
+
+    z_calculator = @(angle) -cos(angle) .* (1 + sum(probable_next_conditions.deformation_amplitudes' .* ...
+        collectPl(nb_harmonics, cos(angle)))) + probable_next_conditions.center_of_mass; % minus sign = south pole reference
     errortan = 0;
-    angles_check = theta_vector(theta_vector > pi/2);
+
+    angles_check = theta_vector(theta_vector < pi/2);
     if contact_points > 0
         errortan = (z_calculator(theta_vector(contact_points+1)) - ...
             z_calculator(theta_vector(contact_points)))/...
-            (theta_vector(contact_points) - theta_vector(contact_points+1));
+            (theta_vector(contact_points+1) - theta_vector(contact_points));
         angles_check = angles_check(angles_check < theta_vector(contact_points));
     end
    

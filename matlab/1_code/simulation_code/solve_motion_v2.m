@@ -130,15 +130,13 @@ function solve_motion_v2(varargin)
     %f2 = @(n) (1 - n ./ ((angular_sampling+n):-1:(1+n))) * pi * (angular_sampling + n)/angular_sampling;
     syms x;
     
-    % we choose the angles to be the zeros of the last legendre Polynomial
-    theta_vector = [pi; acos(double(vpasolve(legendreP(angular_sampling-1, x))))]'; clear x;
-    %theta_vector = f2(harmonics_qtt); % The bigger the argument of f2, the more uniform is the distribution.
-    % The smallest the argument, the more skewed is towards pi. For an uniform distribution, use linspace(pi, 0, angular_sampling);
+    % we choose the angles to be the zeros of the last legendre Polynomial (SOUTH POLE BASED)
+    theta_vector = [0; flipud(acos(double(vpasolve(legendreP(angular_sampling-1, x)))))]'; clear x;
 
     
     %% Initial conditions
     % Set dropplet's sphere height initial conditions
-    get_initial_height = @(amplitudes) 1 - sum(arrayfun(@(idx) amplitudes(idx) * (-1.0)^(idx), 1:length(amplitudes)));
+    get_initial_height = @(amplitudes) 1 + sum(amplitudes); % sum(arrayfun(@(idx) amplitudes(idx) * (-1.0)^(idx), 1:length(amplitudes)));
     
     if length(initial_amplitudes) ~= harmonics_qtt
         initial_amplitudes = zeros(1, harmonics_qtt);

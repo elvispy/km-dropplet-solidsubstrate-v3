@@ -28,7 +28,4 @@ function r = r_from_spherical(angles, amplitudes)
     if isstruct(amplitudes); amplitudes = amplitudes.deformation_amplitudes; end
     if size(amplitudes, 2) > 1; amplitudes = amplitudes'; end
     r = sin(angles) .* (1 + sum(amplitudes .* collectPl(length(amplitudes), cos(angles)), 1));
-%     r = arrayfun(@(angle) ...
-%         sin(angle) * (1 + sum(dot(amplitudes, ...
-%         arrayfun(@(idx) LP{idx}(cos(angle)), 1:d)))), theta);
 end

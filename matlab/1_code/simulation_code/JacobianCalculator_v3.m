@@ -43,7 +43,7 @@ function res = JacobianCalculator_v3(Xn, previous_conditions, dt, contact_points
         theta_contact = theta_vector(1:contact_points);
         P2 = collectPl(M, cos(theta_contact))';
         B2 = cos(theta_contact) .* P2(:, 2:end); % Discard A1
-        R3 = [B2, zeros(contact_points, M-1), zeros(contact_points, M+1), ones(contact_points, 1), zeros(contact_points, 1)];
+        R3 = [B2, zeros(contact_points, M-1), zeros(contact_points, M+1), -ones(contact_points, 1), zeros(contact_points, 1)];
         %R3 = R3(1:contact_points, :);
     
         % Fourth ROW BLOCK (No pressure outside condition)
