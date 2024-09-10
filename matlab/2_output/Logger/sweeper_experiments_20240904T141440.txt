@@ -1,0 +1,103 @@
+------------
+04-Sep-2024 14:14:40 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/0_data/manual, simulation 20-Jun-2024 14-09-06.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/0_data/manual, simulation 20-Jun-2024 14-09-08.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/0_data/manual, simulation 20-Jun-2024 14-09-09.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/0_data/manual, simulation 20-Jun-2024 14-09-11.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, simulation 09-Aug-2024 17-15-35.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, simulation 09-Aug-2024 17-54-55.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, simulation 09-Aug-2024 18-34-07.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, simulation 09-Aug-2024 18-41-29.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 01-Aug-2024 05-22-43.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 01-Aug-2024 13-53-04.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 02-Aug-2024 10-17-47.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 03-Aug-2024 04-02-32.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 10-Aug-2024 13-28-48.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 10-Aug-2024 13-28-56.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 10-Aug-2024 13-28-58.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 10-Aug-2024 13-36-59.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 10-Aug-2024 13-38-23.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 12-Aug-2024 08-50-15.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 12-Aug-2024 08-50-21.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 12-Aug-2024 08-50-26.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-26-00.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-26-01.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-26-02.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-26-05.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-26-10.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-26-15.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-26-21.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-32-22.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-32-23.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-32-24.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-37-58.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-43-44.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-50-24.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-58-52.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 22-Jun-2024 17-58-55.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 23-Jun-2024 09-40-23.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 23-Jun-2024 10-13-03.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 24-Jun-2024 00-30-11.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 24-Jun-2024 06-15-23.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 25-Jun-2024 05-54-41.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 25-Jun-2024 08-55-16.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 25-Jun-2024 09-27-02.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 25-Jun-2024 20-16-43.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 25-Jun-2024 20-21-54.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 26-Jun-2024 03-26-02.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 26-Jun-2024 21-49-44.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2), simulation 27-Jun-2024 16-06-24.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 01-Aug-2024 05-23-01.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 03-Aug-2024 04-11-43.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 04-Aug-2024 00-13-53.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 17-32-26.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 17-32-29.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 17-32-32.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 17-32-35.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 17-38-42.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 17-45-23.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 17-52-33.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 18-01-26.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 22-Jun-2024 18-01-28.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 23-Jun-2024 08-47-59.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 23-Jun-2024 23-07-21.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 23-Jun-2024 23-13-28.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 23-Jun-2024 23-51-13.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 25-Jun-2024 05-35-07.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 25-Jun-2024 19-40-34.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 26-Jun-2024 23-42-24.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 28-Jun-2024 02-31-12.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 28-Jun-2024 11-36-48.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 29-Jun-2024 04-38-33.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (72.2), simulation 29-Jun-2024 14-20-58.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 05-Aug-2024 12-56-05.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 06-Aug-2024 09-38-40.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 07-Aug-2024 06-15-53.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 10-Aug-2024 13-28-56.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 10-Aug-2024 13-28-59.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 10-Aug-2024 13-29-00.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 10-Aug-2024 13-29-02.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 10-Aug-2024 13-29-03.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 10-Aug-2024 13-43-33.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 10-Aug-2024 13-47-50.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 12-Aug-2024 08-50-31.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 22-Jun-2024 18-07-43.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 22-Jun-2024 18-07-44.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 22-Jun-2024 18-07-46.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 22-Jun-2024 18-15-02.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 22-Jun-2024 18-21-09.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 22-Jun-2024 18-26-59.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 23-Jun-2024 09-09-50.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 23-Jun-2024 23-20-02.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 23-Jun-2024 23-32-15.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 25-Jun-2024 23-08-37.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 25-Jun-2024 23-34-15 (Errored).mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 26-Jun-2024 09-55-20.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 27-Jun-2024 02-58-06.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 27-Jun-2024 13-07-17.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 28-Jun-2024 05-10-05.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 29-Jun-2024 07-17-22.mat 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2), simulation 30-Jun-2024 05-52-46.mat 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

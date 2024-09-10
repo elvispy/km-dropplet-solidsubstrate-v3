@@ -1,0 +1,18 @@
+------------
+05-Sep-2024 13:09:13 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+simulations_cgs
+
+simulations_cgs =
+
+  3×9 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>      <strong>nu</strong>       <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                      <strong>folder</strong>                                                  
+    <strong>____</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>_________________________________________________________________________________________________________</strong>
+
+     1       72.2     0.00978           0.04                 -15                20             3       true     "/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2)"
+     1       72.2     0.00978           0.04                 -25                20             3       true     "/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2)"
+     1       72.2     0.00978           0.04                 -35                20             3       true     "/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2)"
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_postprocessing

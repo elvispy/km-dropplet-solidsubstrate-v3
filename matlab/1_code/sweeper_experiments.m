@@ -13,12 +13,13 @@ fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-vars = struct(...    %D = 50  %Quant = 100
-    "rhoS", 1, ... % must multiply by x1000
-    "sigmaS", 72.20, ... % must multiply by x100
-    "undisturbed_radius", 0.04, ... % (in cm) must multiply by x10 %Ang = 180
-    "initial_velocity", -linspace(10, 40, 4)', ... %inspace(59, 39, 6)';
-    "harmonics_qtt", [10, 20]', ...
+vars = struct(...  
+    "rhoS", 1, ... % Droplet density in cgs
+    "sigmaS", 72.20, ... % Surface tension in cgs
+    "nu", .978e-2, ... % Viscocity in cgs
+    "undisturbed_radius", 0.04, ... % (cgs)
+    "initial_velocity", -sqrt(linspace(5^2, 45^2, 3))', ... %(cgs)
+    "harmonics_qtt", [30]', ...
     "version", [1, 3]');%tol = 5e-5
 
 % We check how many outputs we want
@@ -80,10 +81,11 @@ harmonics_qtt = simulations_cgs.harmonics_qtt;
 version = simulations_cgs.version;
 rhoS = simulations_cgs.rhoS;
 sigmaS = simulations_cgs.sigmaS;
+nu = simulations_cgs.nu;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
-for ii = 1:height(simulations_cgs)
+parfor ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))
@@ -102,7 +104,7 @@ for ii = 1:height(simulations_cgs)
             "initial_height", nan, "initial_velocity", initial_velocity(ii), ...
             "initial_amplitudes", zeros(1, harmonics_qtt(ii)), ...
             "pressure_amplitudes", zeros(1, harmonics_qtt(ii)+1), "initial_contact_points", 0, ...
-            "rhoS", rhoS(ii), "sigmaS", sigmaS(ii));
+            "rhoS", rhoS(ii), "sigmaS", sigmaS(ii), "nu", nu(ii));
         
         %solve_motion_v2(physical_parameters, numerical_parameters);
 
@@ -112,6 +114,8 @@ for ii = 1:height(simulations_cgs)
                 initial_velocity(ii), harmonics_qtt(ii), version(ii));
             solve_motion_v2(physical_parameters, numerical_parameters, options);
             completed_simulations(ii) = true; % To attest that the simulation has been finished
+            fprintf("Finished simulation with velocity %g, modes %d, version v%d ... \n", ...
+                initial_velocity(ii), harmonics_qtt(ii), version(ii));
         catch ME
             cd(final_folders(ii))
             fprintf("---------\n");

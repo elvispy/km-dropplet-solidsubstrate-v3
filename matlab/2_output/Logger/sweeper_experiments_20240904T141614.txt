@@ -1,0 +1,113 @@
+------------
+04-Sep-2024 14:16:14 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+A.Properties.Variables
+{Unknown table property: Variables.
+} 
+A.Properties.VariableNames
+
+ans =
+
+  1×7 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'rhoS'}    {'sigmaS'}    {'nu'}    {'undisturbed_rad…'}    {'initial_velocity'}    {'harmonics_qtt'}    {'version'}
+
+help isvarname
+ <strong>isvarname</strong> True for valid variable name.
+    <strong>isvarname</strong>(S) is true if S is a valid MATLAB variable name. A valid
+    variable name begins with a letter and contains not more than
+    namelengthmax characters. Valid variable names can include letters,
+    digits, and underscores. MATLAB keywords are not valid variable names.
+ 
+    See also <a href="matlab:help matlab.lang.makeValidName">matlab.lang.makeValidName</a>, <a href="matlab:help iskeyword">iskeyword</a>, <a href="matlab:help namelengthmax">namelengthmax</a>.
+
+    <a href="matlab:doc isvarname">Documentation for isvarname</a>
+
+help isfield
+ <strong>isfield</strong> True if field is in structure array.
+    <strong>isfield</strong>(S,FIELD) returns true if FIELD is the name of a field in the
+    structure array S. FIELD can be a character vector or a string.
+ 
+    TF = <strong>isfield</strong>(S,FIELDNAMES) returns a logical array, TF, the same size
+    as that of FIELDNAMES.  FIELDNAMES can be a string array or cell array of
+    character vectors. TF contains true for the elements of FIELDNAMES that
+    are the names of fields in the structure array S and false otherwise.
+ 
+    NOTE: TF is false when FIELD or FIELDNAMES are empty.
+ 
+    Example:
+       s = struct('one',1,'two',2);
+       fields = isfield(s,{'two','pi','One',3.14})
+ 
+    See also <a href="matlab:help getfield">getfield</a>, <a href="matlab:help setfield">setfield</a>, <a href="matlab:help fieldnames">fieldnames</a>, <a href="matlab:help orderfields">orderfields</a>, <a href="matlab:help rmfield">rmfield</a>,
+    <a href="matlab:help isstruct">isstruct</a>, <a href="matlab:help struct">struct</a>.
+
+    <a href="matlab:doc isfield">Documentation for isfield</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('isfield')">Other functions named isfield</a>
+
+isfield(A, 'nu')
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+isfield(A, "nu")
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+strcmp(A.Properties.VariableNames, "nu")
+
+ans =
+
+  1×7 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   0   0   1   0   0   0   0
+
+&&
+ &&
+ ↑
+{Error: Invalid use of operator.
+} 
+true && false
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+A
+{Unrecognized function or variable 'A'.
+} 
+A = struct('a', 1)
+
+A = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    a: 1
+
+isfield(A, 'a')
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+isfield(A, 'b')
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+sweeper_experiments

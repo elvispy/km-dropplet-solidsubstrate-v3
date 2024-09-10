@@ -22,6 +22,7 @@ function solve_motion_v2(varargin)
     %      8) rhoS                   (kg/cm^3, 0.988) = The density of the fluid inside the droplet. Default = water
     %      9) sigmaS                 (., 72.29)       = Surface tension of the fluid inside the droplet. Default = water
     %      10) g                     (cm/s^2, 9.81e+2)= Gravitational constant.
+    %      11) nu                  (cm^2/s, .978e-2)  = Water's kinematic viscocity
     %  - varargin{2} = Numerical parameters for the simulation
     %      1) harmonics_qtt          (adim, ?)        = Number of spectral amplitudes that describe the motion. 
     %      2) angular_sampling (adim, harmonics_qtt+1)= Number of angles that describe the shape of the drop.
@@ -47,7 +48,8 @@ function solve_motion_v2(varargin)
     default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
         'initial_velocity', nan, 'initial_amplitudes', nan, ...
         'amplitudes_velocities', nan, 'pressure_amplitudes', nan, ...
-        'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, 'g', 9.8065e+2);
+        'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, ...
+        'g', 9.8065e+2, 'nu', .978e-2);
     
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
@@ -104,6 +106,7 @@ function solve_motion_v2(varargin)
     version=default_numerical.version;
     angular_sampling = default_numerical.angular_sampling;
     g = default_physical.g;
+    nu = default_physical.nu;
     debug_flag = default_options.debug_flag;
     live_plotting = default_options.live_plotting;
     
@@ -115,6 +118,7 @@ function solve_motion_v2(varargin)
     pressure_unit = rhoS * velocity_unit^2;
     froude_nb   = length_unit/(g*time_unit.^2);
     weber_nb    = rhoS * undisturbed_radius.^3/ (sigmaS*time_unit.^2); % Weber's number of the dropplet
+    Oh = nu * sqrt(rhoS/(sigmaS*undisturbed_radius));
     mS = rhoS * length_unit^3;
     mass_unit = mS;
     
@@ -159,7 +163,7 @@ function solve_motion_v2(varargin)
     
     % Define the time step so that the highest frequency has N steps
     N = 20;
-    max_dt = round(time_unit/(N * harmonics_qtt^(1/2)), 1, 'significant')/time_unit; 
+    max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; 
     dt = max_dt; 
     
     initial_time = 0;
@@ -191,6 +195,7 @@ function solve_motion_v2(varargin)
     JacobianCalculator = eval(sprintf('@JacobianCalculator_v%d', default_numerical.version));
     % Constants of the problem formulation
     PROBLEM_CONSTANTS = struct("froude_nb", froude_nb, "weber_nb", weber_nb, ...
+        "Oh", Oh, ...
         "nb_harmonics", harmonics_qtt, ...
         "omegas_frequencies", omegas_frequencies, ...
         "angles_qtt", harmonics_qtt + 1, ... % number of angles 

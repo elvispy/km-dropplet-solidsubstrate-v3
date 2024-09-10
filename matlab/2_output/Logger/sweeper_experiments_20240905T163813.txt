@@ -1,0 +1,7 @@
+------------
+05-Sep-2024 16:38:13 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+---------
+Starting simulation with velocity -5, modes 20, version v3 ... 
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

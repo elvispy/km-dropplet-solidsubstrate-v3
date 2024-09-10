@@ -10,6 +10,7 @@ function [probable_next_conditions, errortan] = ...
     settings.M = PROBLEM_CONSTANTS.angles_qtt;
     settings.theta_vector = PROBLEM_CONSTANTS.theta_vector; theta_vector = settings.theta_vector;
     settings.legendre_matrix = PROBLEM_CONSTANTS.precomputed_integrals;
+    settings.Oh = PROBLEM_CONSTANTS.Oh;
     %1./(1:nb_harmonics) 1 1 1]';
     
     

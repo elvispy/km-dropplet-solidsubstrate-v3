@@ -17,6 +17,7 @@ function setupOnce(testCase)
     settings.legendre_matrix = precompute_integrals(...
         settings.theta_vector, testCase.TestData.M);
     settings.weights = 0;
+    settings.Oh = rand()/10;
     testCase.TestData.settings = settings;
     
     testCase.TestData.current_conditions = ProblemConditions_v2( ...

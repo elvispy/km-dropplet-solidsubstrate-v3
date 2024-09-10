@@ -2,6 +2,7 @@ function res = JacobianCalculator_v3(Xn, previous_conditions, dt, contact_points
 
     %Ps = settings.Ps;
     %Flat = settings.Flat;
+    Oh = settings.Oh;
     %weights = settings.weights; % weights of all the equations present in the system
     n = length(previous_conditions); % Determines the order of the method
     theta_vector = settings.theta_vector; if size(theta_vector, 2) > 1; theta_vector = theta_vector'; end
@@ -31,7 +32,7 @@ function res = JacobianCalculator_v3(Xn, previous_conditions, dt, contact_points
     %Bidx = 0:N;
     D1N = diag(Aidx .* (Aidx  + 2) .* (Aidx - 1));
     D2N = [zeros(M-1, 2), diag(Aidx)]; % B0 and B1 do not contribute to the motion of the drop
-    R2 = [dt*D1N, coefs(end) * eye(M-1), dt * D2N, zeros(M-1, 2)];
+    R2 = [dt*D1N, diag(coefs(end)+2*dt*Oh*(2*Aidx+1) .* (Aidx-1)), dt * D2N, zeros(M-1, 2)];
 
 
         

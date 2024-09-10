@@ -1,0 +1,25 @@
+------------
+05-Sep-2024 12:55:00 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',88,1)">88  </a>for ii = 1:height(simulations_cgs)
+if system_dependent('IsDebugMode')==1, dbcont; end
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -15 
+ Modes: 20 
+ Version: 3 
+---------
+Starting simulation with velocity -25, modes 20, version v3 ... 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+---------
+Starting simulation with velocity -35, modes 20, version v3 ... 
+Python 3.9.6
+Traceback (most recent call last):
+  File "/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/sending_email.py", line 15, in <module>
+    with open(path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/0_data/credentials/lol.txt'
