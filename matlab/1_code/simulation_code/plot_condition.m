@@ -25,7 +25,7 @@ function h = plot_condition(idx, conditions, varargin)
     end
     clf;
     hold on;  
-    cut = 0.75 * pi;
+    cut = 0.25 * pi;
     sample = [linspace(0, cut, 30), linspace(cut, pi, 30)];
     arrX = sin(sample);
     arrY = cos(sample);
@@ -38,19 +38,19 @@ function h = plot_condition(idx, conditions, varargin)
         nb_harmonics = conditions.nb_harmonics;
     else
         nb_harmonics = length(conditions);
-        height = 1 + sum(arrayfun(@(idx) (-1)^idx * conditions(idx), 2:nb_harmonics));
+        height = 1 - sum(conditions(2:nb_harmonics));
     end
     EtaX = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), sample);
-    EtaY = height + arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), sample);
+    EtaY = height - arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), sample);
     if nargin >= 5
         theta_vector = varargin{3};
         EtaX2 = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), theta_vector);
-        EtaY2 = height + arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), theta_vector);
+        EtaY2 = height - arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), theta_vector);
         scatter([EtaX2, -EtaX2], [EtaY2, EtaY2], 30, 'filled');
         if conditions.contact_points > 0
             contact_angle = theta_vector(conditions.contact_points);
-            etacontactX = sin(contact_angle) * (1 + etas(contact_angle));
-            etacontactY = cos(contact_angle) * (1 + etas(contact_angle)) + height;
+            etacontactX =  sin(contact_angle) * (1 + etas(contact_angle));
+            etacontactY = -cos(contact_angle) * (1 + etas(contact_angle)) + height;
             
             %scatter(-EtaX2, EtaY2, 50, 'filled');
             scatter(etacontactX, etacontactY, 60, 'Marker', 'x', 'MarkerEdgeColor', 'r', 'LineWidth', 5);
@@ -80,6 +80,7 @@ function h = plot_condition(idx, conditions, varargin)
         %mps(5) = 1;
         quiver(EtaX, EtaY, mps .* (-arrX), mps .* (-arrY), 0); 
         
+        % Cross around center of mass
         if idx ~= 1
             angle_tol = pi*2/nb_harmonics;
             cm = conditions.center_of_mass;
