@@ -89,9 +89,9 @@ function res = function_to_minimize_v3(Xn, previous_conditions, dt, contact_poin
         % Sixth ROW BLOCK (Center of mass diff equation)
         R6 =  sum(coefs .* [previous_COM, center_of_mass] , 2) - dt * center_of_mass_vel; %[zeros(1, 3*N-1), coefs(end), -dt];
 
-        % Seventh ROW BLOCK (center of mass velocity diff equation, exact pressure integral on contact area)
-        
-        current_pressures = Xn((end-M-2):(end-2))';
+        % Seventh ROW BLOCK (center of mass velocity diff equation, exact
+        % pressure integral on contact area)
+        %current_pressures = Xn((end-M-2):(end-2))';
         idx = 2:M;
         Cl = 3 * idx .* (idx-1) ./ (2.*idx - 1) ./ (2.*idx + 1); Cl = zeros(size(Cl));
         Dl = 3 * (idx + 2) .* (idx + 1) ./ (2 * idx + 3) ./ (2.*idx + 1); Dl = zeros(size(Dl));
