@@ -196,6 +196,7 @@ function solve_motion_v2(varargin)
     % Constants of the problem formulation
     PROBLEM_CONSTANTS = struct("froude_nb", froude_nb, "weber_nb", weber_nb, ...
         "Oh", Oh, ...
+        "version", version, ...
         "nb_harmonics", harmonics_qtt, ...
         "omegas_frequencies", omegas_frequencies, ...
         "angles_qtt", harmonics_qtt + 1, ... % number of angles 
@@ -205,6 +206,7 @@ function solve_motion_v2(varargin)
         "function_to_minimize", function_to_minimize, ... % v1 = fully nonlinear integration on disk, v2 = nonlinear with spherical approximation, v3 = linearised version of v2
         "jacobian_calculator", JacobianCalculator, ... % has to be the same version as function to minimize
         "DEBUG_FLAG", debug_flag); %true = plot and save video
+        
 
     
     current_conditions = ProblemConditions_v2( ...
@@ -218,25 +220,8 @@ function solve_motion_v2(varargin)
         initial_velocity_adim, initial_contact_points); % Last argument is contact radius
  
     previous_conditions = {current_conditions, current_conditions}; 
-    % TODO: Define this array properly to implement BDF2.
-    % previous_conditions{1}.current_time = previous_conditions{2}.current_time - dt;
-    % previous_conditions{1}.center_of_mass_velocity = ...
-    %     previous_conditions{2}.center_of_mass_velocity + dt/froude_nb;
-    % previous_conditions{1}.center_of_mass = ...
-    %     previous_conditions{2}.center_of_mass - previous_conditions{2}.center_of_mass_velocity * dt;
-    % 
-    % g = @(t, idx) current_conditions.deformation_amplitudes(idx) * cos(f(idx) * t) ...
-    %     + current_conditions.deformation_velocities(idx)/(f(idx)+1e-30) * sin(f(idx) * t); 
-    % 
-    % for idx = 1:harmonics_qtt
-    %     previous_conditions{1}.deformation_amplitudes(idx) = g(-dt, idx);
-    %     previous_conditions{1}.deformation_velocities(idx) = (g(0, idx) - g(-2*dt/1000, idx))/(2*dt/1000);
-    % end
     % 1-st order set
     previous_conditions = previous_conditions(end);
-
-    % % Preparing post-processing
-    % TODO: Write post processing variables
 
    %  Preallocate variables that will be exported (All of them have units!)
    recorded_conditions =cell(maximum_index, 1); 
@@ -340,7 +325,8 @@ function solve_motion_v2(varargin)
                 % Refine time step in index notation 
                 iii = iii + 1; jjj = 2 * jjj;
                 
-                if dt * time_unit < 5e-7 % 0.1 microseconds is not physically meaningful
+                if dt * time_unit < 1e-9 % Time step this small is not physically meaningful
+                    fprint("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt, initial_velocity, harmonics_qtt, version);
                     error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt, initial_velocity, harmonics_qtt, version);
                 end
                 % If one hour has elapsed, close this simulation
