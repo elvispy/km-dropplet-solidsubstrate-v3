@@ -32,6 +32,7 @@ function res = JacobianCalculator_v3(Xn, previous_conditions, dt, contact_points
     %Bidx = 0:N;
     D1N = diag(Aidx .* (Aidx  + 2) .* (Aidx - 1));
     D2N = [zeros(M-1, 2), diag(Aidx)]; % B0 and B1 do not contribute to the motion of the drop
+    if contact_points == 0; D2N = zeros(size(D2N)); end % To avoid of Al and Bl interaction when there's no contact.
     R2 = [dt*D1N, diag(coefs(end)+2*dt*Oh*(2*Aidx+1) .* (Aidx-1)), dt * D2N, zeros(M-1, 2)];
 
 
