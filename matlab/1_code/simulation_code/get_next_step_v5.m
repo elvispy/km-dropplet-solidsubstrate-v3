@@ -31,7 +31,7 @@ function [probable_next_conditions, errortan] = ...
         % Newton Method
         for m = 1:100
             %perturb = jaccalc(Xn)\ftm(Xn);
-            [perturb, ~] =  lsqr(jaccalc(Xn), ftm(Xn), [], 500, [], [], Xn);
+            [perturb, PROBLEM_CONSTANTS] = my_lsqr(jaccalc, ftm, Xn, PROBLEM_CONSTANTS);
             Xnp1 = Xn - perturb;
             %if PROBLEM_CONSTANTS.DEBUG_FLAG == true; plot_condition(2, [0; Xnp1(1:(nb_harmonics-1))]); end
             Xn = Xnp1;
@@ -70,7 +70,7 @@ function [probable_next_conditions, errortan] = ...
         errortan = (z_calculator(theta_vector(contact_points+1)) - ...
             z_calculator(theta_vector(contact_points)))/...
             (theta_vector(contact_points+1) - theta_vector(contact_points));
-        angles_check = angles_check(angles_check < theta_vector(contact_points));
+        %angles_check = angles_check(angles_check < theta_vector(contact_points));
     end
    
     check = any(z_calculator(angles_check) < 0);
@@ -80,6 +80,21 @@ function [probable_next_conditions, errortan] = ...
     
 end % end main function definition
 
-
-
-
+function [perturb, PROBLEM_CONSTANTS] = my_lsqr(jaccalc, ftm, Xn, PROBLEM_CONSTANTS)
+    A = jaccalc(Xn);
+    
+    S = size(A);
+    if S(1) == S(2) % If it's square matrix, just invert it
+        % If there's already one in PROBLEM_CONSTANTS, use it
+        if isfield(PROBLEM_CONSTANTS, 'mat_inverse')
+            perturb = PROBLEM_CONSTANTS.mat_inverse * ftm(Xn);
+        else
+            if PROBLEM_CONSTANTS.version == 3 % Only take inverse if it's a linearized model
+                PROBLEM_CONSTANTS.mat_inverse = inv(A);
+            end
+            perturb = A\ftm(Xn);
+        end
+    else
+        [perturb, ~] = lsqr(A, ftm(Xn), [], 500, [], [], Xn);
+    end
+end
