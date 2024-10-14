@@ -94,7 +94,7 @@ function h = plot_condition(idx, conditions, varargin)
     end
     
     if nargin >= 5 && isstruct(conditions)
-        theta_vector = varargin{3};
+        theta_vector = varargin{3}.theta_vector;
         if conditions.contact_points > 0
             x = 0.15 + ceil(3 * conditions.center_of_mass * sin(pi - theta_vector(conditions.contact_points)))/3;
         else
