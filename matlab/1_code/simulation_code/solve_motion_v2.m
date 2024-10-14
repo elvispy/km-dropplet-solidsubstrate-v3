@@ -331,7 +331,7 @@ function solve_motion_v2(varargin)
                 end
                 % If one hour has elapsed, close this simulation
                 if etime(clock, init) > 60 * 60
-                    error("Too much has ellapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
+                    error("Too much time has elapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
                 end
             else
                 % Progressively increase order of method until desired
@@ -385,7 +385,7 @@ function solve_motion_v2(varargin)
                        1e+3 * current_time * time_unit, current_conditions.contact_points, ...
                             current_conditions.center_of_mass_velocity * velocity_unit, ...
                             current_conditions.center_of_mass* length_unit);
-                    h = plot_condition(1, current_conditions, 1.25, plot_title, PROBLEM_CONSTANTS.theta_vector);
+                    h = plot_condition(1, current_conditions, 1.25, plot_title, PROBLEM_CONSTANTS);
                     
                     if PROBLEM_CONSTANTS.DEBUG_FLAG == true
                         currFrame = getframe(h);
