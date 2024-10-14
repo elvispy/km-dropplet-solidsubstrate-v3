@@ -43,7 +43,8 @@ function h = plot_condition(idx, conditions, varargin)
     EtaX = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), sample);
     EtaY = height - arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), sample);
     if nargin >= 5
-        theta_vector = varargin{3};
+        theta_vector = varargin{3}.theta_vector;
+        pressure_unit = varargin{3}.pressure_unit;
         EtaX2 = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), theta_vector);
         EtaY2 = height - arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), theta_vector);
         scatter([EtaX2, -EtaX2], [EtaY2, EtaY2], 30, 'filled');
@@ -59,6 +60,7 @@ function h = plot_condition(idx, conditions, varargin)
                 (1 + etas(theta_vector(conditions.contact_points)/2 + theta_vector(conditions.contact_points+1)/2));
             plot([-contact_radius, contact_radius], [0, 0], 'g--', 'LineWidth', 3);
         end
+    
     end
     
     plot( EtaX,EtaY, 'LineWidth',1.5 , 'Color', [.5 .5 .5]);
@@ -76,9 +78,11 @@ function h = plot_condition(idx, conditions, varargin)
             cos(theta)), 1);
         %zps = zeta_generator(conditions.pressure_amplitudes((end-nb_harmonics+1):end));
         ps = @(ang) zps(ang) + conditions.pressure_amplitudes(1);
-        mps = ps(sample)/10;
+        mps = ps(sample)/pressure_unit;
+        arrowX = mps .* sin(sample);
+        arrowY = mps .* (-cos(sample));
         %mps(5) = 1;
-        quiver(EtaX, EtaY, mps .* (-arrX), mps .* (-arrY), 0); 
+        quiver(EtaX, EtaY, arrowX, arrowY, 'AutoScaleFactor',2); 
         
         % Cross around center of mass
         if idx ~= 1
