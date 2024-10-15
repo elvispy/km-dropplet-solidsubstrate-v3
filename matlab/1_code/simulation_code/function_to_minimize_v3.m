@@ -57,16 +57,20 @@ function res = function_to_minimize_v3(Xn, previous_conditions, dt, contact_poin
     
     D1N = Aidx .* (Aidx + 2) .* (Aidx - 1);
     D1N2 = 2*settings.Oh*(Aidx-1) .* (2*Aidx+1);
-    
+    if contact_points == 0
+        pressure_submatrix = zeros(size(Aidx));
+    else
+        pressure_submatrix = Aidx;
+    end
     R2 =  (sum(coefs .* [previous_velocities, current_velocities], 2) ...
-         + dt * (Aidx .* current_pressures(3:end) ...
+         + dt * (pressure_submatrix .* current_pressures(3:end) ...
          + D1N2 .* current_velocities ... % Added viscocity term
          + D1N .* current_deformation));
      
     %if theta_contact < pi
         % Third ROW BLOCK (flat surface on contact angle condition)
         %L = 10; % This, too, must be unified.
-        theta_contact = theta_vector(1:contact_points); %theta_i2 = reshape(linspace(theta_contact, pi, Flat), Flat, 1); 
+        theta_contact = theta_vector(1:contact_points);
         
         cosines = cos(theta_contact);
         P2 = collectPl(M, cosines)';
@@ -89,28 +93,19 @@ function res = function_to_minimize_v3(Xn, previous_conditions, dt, contact_poin
         % Sixth ROW BLOCK (Center of mass diff equation)
         R6 =  sum(coefs .* [previous_COM, center_of_mass] , 2) - dt * center_of_mass_vel; %[zeros(1, 3*N-1), coefs(end), -dt];
 
-        % Seventh ROW BLOCK (center of mass velocity diff equation, exact pressure integral on contact area)
-        
-        current_pressures = Xn((end-M-2):(end-2))';
+        % Seventh ROW BLOCK (center of mass velocity diff equation, exact
+        % pressure integral on contact area)
+        %current_pressures = Xn((end-M-2):(end-2))';
         idx = 2:M;
         Cl = 3 * idx .* (idx-1) ./ (2.*idx - 1) ./ (2.*idx + 1); Cl = zeros(size(Cl));
         Dl = 3 * (idx + 2) .* (idx + 1) ./ (2 * idx + 3) ./ (2.*idx + 1); Dl = zeros(size(Dl));
         %Xl = (Cl .* current_pressures(2:M) - Dl .* [current_pressures(4:(M+1)), 0])';
         %Yl = [0, 1, [Cl(2:end) .* current_amplitudes(3:M), 0] - [0, Dl(1:(M-2)) .* current_amplitudes(2:(M-1))]];
         
-        
+        % We only introduce pressure term when there is contact! (To
+        % decouple the system)
         R7 =  (sum(coefs .* [previous_COM_vel, center_of_mass_vel], 2) - ...
-            dt * (-1/Fr - current_pressures(2))); % + sum(current_deformation .* Xl)));
+            dt * (-1/Fr - (contact_points > 0) * current_pressures(2)));
         
-            % [-dt * 3 * (current_deformation + oneN) * B, ...
-            %zeros(1, N-1), -dt*(3/2 * A) * Cl, 0, coefs(end)];
-%     else
-%         R3 = current_pressures;
-%         R4 = zeros(0, 1);
-%         R5 = zeros(0, 1);
-%         R6 = sum(coefs .* [previous_COM, center_of_mass] , 2) - dt * center_of_mass_vel;
-%         R7 = sum(coefs .* [previous_COM_vel, center_of_mass_vel], 2) + dt/Fr;
-%     end
-    %res = weights .* [R1;R2;R3;R4;R6;R7];
     res = [R1;R2;R3;R4;R6;R7];
 end
