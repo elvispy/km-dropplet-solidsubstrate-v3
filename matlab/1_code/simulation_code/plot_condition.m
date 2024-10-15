@@ -5,7 +5,7 @@ function h = plot_condition(idx, conditions, varargin)
     INPUTS:
       - idx: The position index of the plot. Must be 1 or 2, so as to
       position the box plot.
-      - condiitons: current conditions to be plotted. Can be a
+      - conditions: current conditions to be plotted. Can be a
       ProblemConditions_vx (x<=3) struct. conditions also can be a
       one-dimensional scalar vector representing the legendre amplitudes,
       and contact will be assumed
@@ -43,7 +43,8 @@ function h = plot_condition(idx, conditions, varargin)
     EtaX = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), sample);
     EtaY = height + arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), sample);
     if nargin >= 5
-        theta_vector = varargin{3};
+        theta_vector = varargin{3}.theta_vector;
+        pressure_unit = varargin{3}.pressure_unit;
         EtaX2 = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), theta_vector);
         EtaY2 = height + arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), theta_vector);
         scatter([EtaX2, -EtaX2], [EtaY2, EtaY2], 30, 'filled');
@@ -76,10 +77,11 @@ function h = plot_condition(idx, conditions, varargin)
             cos(theta)), 1);
         %zps = zeta_generator(conditions.pressure_amplitudes((end-nb_harmonics+1):end));
         ps = @(ang) zps(ang) + conditions.pressure_amplitudes(1);
-        mps = ps(sample)/10;
+        mps = ps(sample)/pressure_unit;
+
         %mps(5) = 1;
-        quiver(EtaX, EtaY, mps .* (-arrX), mps .* (-arrY), 0); 
-        
+        quiver(EtaX, EtaY, mps .* (-arrX), mps .* (-arrY), 'AutoScaleFactor',1);
+
         if idx ~= 1
             angle_tol = pi*2/nb_harmonics;
             cm = conditions.center_of_mass;
@@ -89,7 +91,7 @@ function h = plot_condition(idx, conditions, varargin)
     end
     
     if nargin >= 5 && isstruct(conditions)
-        theta_vector = varargin{3};
+        theta_vector = varargin{3}.theta_vector;
         if conditions.contact_points > 0
             x = 0.15 + ceil(3 * conditions.center_of_mass * sin(pi - theta_vector(conditions.contact_points)))/3;
         else
@@ -114,9 +116,9 @@ function h = plot_condition(idx, conditions, varargin)
     if nargin > 3 && idx == 2 && isstruct(conditions)
         ss = varargin{2};
         
-        s = sprintf("Attempting to fit the solution with contact radius %.3f. \n Previous contact radius: %.3f. Iteration number: %d", ...
-            conditions.contact_radius, ss.contact_radius, ss.iteration);
-        title(s, 'FontSize', 14);
+        %s = sprintf("Attempting to fit the solution with contact radius %.3f. \n Previous contact radius: %.3f. Iteration number: %d", ...
+        %    conditions.contact_radius, ss.contact_radius, ss.iteration);
+        %title(s, 'FontSize', 14);
         legend("Contact Radius");
         x = xlim;
         y = ylim;
