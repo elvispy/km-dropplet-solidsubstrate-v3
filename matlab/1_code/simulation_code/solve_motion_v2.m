@@ -28,7 +28,7 @@ function solve_motion_v2(varargin)
     %      2) angular_sampling (adim, harmonics_qtt+1)= Number of angles that describe the shape of the drop.
     %      3) simulation_time        (s, inf)         = Maximum simulation time allowed. 
     %                                                   (Inf = simulate roughly until contact has ended)
-    %      4) version                (int,  1)        = version for the system of equations to be solved.
+    %      4) version                (int,  3)        = version for the system of equations to be solved.
     %           v1 = Nonlinear exact integration on contact area (Default)
     %           v2 = Nonlinear approximated integration on whole sphere
     %           v3 = Linearised version of v2 (Only first non constant pressure harmonic contributing)
@@ -44,14 +44,14 @@ function solve_motion_v2(varargin)
     
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
             'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'));
-    default_numerical = struct('simulation_time', inf, 'harmonics_qtt', nan, ...
-        'angular_sampling', nan, 'version', 1, 'order', 1);
+    default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 20, ...
+        'angular_sampling', nan, 'version', 1, 'order', 2);
     
-    default_physical = struct('undisturbed_radius', 1, 'initial_height', inf, ...
-        'initial_velocity', nan, 'initial_amplitudes', nan, ...
+    default_physical = struct('undisturbed_radius', .05, 'initial_height', inf, ...
+        'initial_velocity', -10, 'initial_amplitudes', nan, ...
         'amplitudes_velocities', nan, 'pressure_amplitudes', nan, ...
         'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, ...
-        'g', 9.8065e+2, 'nu', .978e-2);
+        'g', 9.81e+2, 'nu', .978e-2);
     
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
@@ -110,7 +110,7 @@ function solve_motion_v2(varargin)
     g = default_physical.g;
     nu = default_physical.nu;
     debug_flag = default_options.debug_flag;
-    live_plotting = default_options.live_plotting;
+    live_plotting = default_options.live_plotting || true;
     
 
     % Dimensionless Units
@@ -130,10 +130,8 @@ function solve_motion_v2(varargin)
     %f2 = @(n) (1 - n ./ ((angular_sampling+n):-1:(1+n))) * pi * (angular_sampling + n)/angular_sampling;
     syms x;
     
-    % we choose the angles to be the zeros of the last legendre Polynomial
+    % we choose the angles to be the zeros of the last legendre Polynomial (SOUTH POLE BASED)
     theta_vector = [pi; acos(double(vpasolve(legendreP(angular_sampling-1, x))))]'; clear x;
-    %theta_vector = f2(harmonics_qtt); % The bigger the argument of f2, the more uniform is the distribution.
-    % The smallest the argument, the more skewed is towards pi. For an uniform distribution, use linspace(pi, 0, angular_sampling);
 
     
     %% Initial conditions
@@ -164,8 +162,9 @@ function solve_motion_v2(varargin)
     contact_points = 0;
     
     % Define the time step so that the highest frequency has N steps
-    N = 1;
-    max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; 
+    N = 20;
+    max_dt = (2*pi/(sqrt(harmonics_qtt*(harmonics_qtt+2)*(harmonics_qtt-1))*N));
+    %max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; %max_dt = 0.0034359491980026735;
     dt = max_dt; 
     
     initial_time = 0;
@@ -198,6 +197,7 @@ function solve_motion_v2(varargin)
     % Constants of the problem formulation
     PROBLEM_CONSTANTS = struct("froude_nb", froude_nb, "weber_nb", weber_nb, ...
         "Oh", Oh, ...
+        "version", version, ...
         "nb_harmonics", harmonics_qtt, ...
         "omegas_frequencies", omegas_frequencies, ...
         "angles_qtt", harmonics_qtt + 1, ... % number of angles 
@@ -207,6 +207,7 @@ function solve_motion_v2(varargin)
         "function_to_minimize", function_to_minimize, ... % v1 = fully nonlinear integration on disk, v2 = nonlinear with spherical approximation, v3 = linearised version of v2
         "jacobian_calculator", JacobianCalculator, ... % has to be the same version as function to minimize
         "DEBUG_FLAG", debug_flag); %true = plot and save video
+        
 
     
     current_conditions = ProblemConditions_v2( ...
@@ -215,30 +216,13 @@ function solve_motion_v2(varargin)
         initial_mplitude_velocities, ...
         initial_pressure_coefficients, ...
         current_time, ...
-        dt, ...
+        dt(end), ...
         initial_height, ...
         initial_velocity_adim, initial_contact_points); % Last argument is contact radius
  
     previous_conditions = {current_conditions, current_conditions}; 
-    % TODO: Define this array properly to implement BDF2.
-    % previous_conditions{1}.current_time = previous_conditions{2}.current_time - dt;
-    % previous_conditions{1}.center_of_mass_velocity = ...
-    %     previous_conditions{2}.center_of_mass_velocity + dt/froude_nb;
-    % previous_conditions{1}.center_of_mass = ...
-    %     previous_conditions{2}.center_of_mass - previous_conditions{2}.center_of_mass_velocity * dt;
-    % 
-    % g = @(t, idx) current_conditions.deformation_amplitudes(idx) * cos(f(idx) * t) ...
-    %     + current_conditions.deformation_velocities(idx)/(f(idx)+1e-30) * sin(f(idx) * t); 
-    % 
-    % for idx = 1:harmonics_qtt
-    %     previous_conditions{1}.deformation_amplitudes(idx) = g(-dt, idx);
-    %     previous_conditions{1}.deformation_velocities(idx) = (g(0, idx) - g(-2*dt/1000, idx))/(2*dt/1000);
-    % end
     % 1-st order set
     previous_conditions = previous_conditions(end);
-
-    % % Preparing post-processing
-    % TODO: Write post processing variables
 
    %  Preallocate variables that will be exported (All of them have units!)
    recorded_conditions =cell(maximum_index, 1); 
@@ -288,17 +272,17 @@ function solve_motion_v2(varargin)
             errortan = Inf * ones(1, 5);
             recalculate = false;
             
-            [probableNextConditions{3}, errortan(3)] = advance_one_step(previous_conditions, dt, ...
+            [probableNextConditions{3}, errortan(3)] = advance_one_step(previous_conditions, dt(end), ...
                 contact_points, PROBLEM_CONSTANTS);
-            [probableNextConditions{4}, errortan(4)] = advance_one_step(previous_conditions, dt, ...
+            [probableNextConditions{4}, errortan(4)] = advance_one_step(previous_conditions, dt(end), ...
                 contact_points+1, PROBLEM_CONSTANTS);
-            [probableNextConditions{2}, errortan(2)] = advance_one_step(previous_conditions, dt, ...
+            [probableNextConditions{2}, errortan(2)] = advance_one_step(previous_conditions, dt(end), ...
                 contact_points-1, PROBLEM_CONSTANTS);
                 
             if (abs(errortan(3)) > abs(errortan(4)) || abs(errortan(3)) > abs(errortan(2)))
                 if abs(errortan(4)) <= abs(errortan(2))
                     %Now lets check with one more point to be sure
-                    [~, errortan(5)] = advance_one_step(previous_conditions, dt, ...
+                    [~, errortan(5)] = advance_one_step(previous_conditions, dt(end), ...
             contact_points+2, PROBLEM_CONSTANTS);
     
                     if abs(errortan(4)) < abs(errortan(5))
@@ -313,7 +297,7 @@ function solve_motion_v2(varargin)
                 else
                     %now lets check if errortan is good enough with one point
                     %less
-                    [~, errortan(1)] = advance_one_step(previous_conditions, dt, ...
+                    [~, errortan(1)] = advance_one_step(previous_conditions, dt(end), ...
             contact_points-2, PROBLEM_CONSTANTS);
     
     
@@ -337,17 +321,18 @@ function solve_motion_v2(varargin)
             end %
             
             if recalculate == true
-                dt = dt/2;
-                fprintf("Se dividio dt por 2. . U = %g, modes = %g, version = %d", initial_velocity, harmonics_qtt, version);
+                dt = [dt(1:(end-1)), dt(end)/2, dt(end)/2];
+                fprintf("Se dividio dt por 2, dt=%e U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
                 % Refine time step in index notation 
-                iii = iii + 1; jjj = 2 * jjj;
+                %iii = iii + 1; jjj = 2 * jjj;
                 
-                if dt * time_unit < 5e-7 % 0.1 microseconds is not physically meaningful
-                    error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt, initial_velocity, harmonics_qtt, version);
+                if dt(end) * time_unit < 1e-9 % Time step this small is not physically meaningful
+                    fprint("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
+                    error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
                 end
                 % If one hour has elapsed, close this simulation
                 if etime(clock, init) > 60 * 60
-                    error("Too much has ellapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
+                    error("Too much time has elapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
                 end
             else
                 % Progressively increase order of method until desired
@@ -358,15 +343,16 @@ function solve_motion_v2(varargin)
                     previous_conditions = {previous_conditions{2:end} current_conditions};
                 end
 
-                current_time = current_time + dt; jjj = jjj + 1;
-                if mod(jjj, 2) == 0 && grow_dt == true
-                    jjj = floor(jjj/2); 
-                    iii = iii - 1;
-                    % Increase time step
-                    dt = 2 * dt;
-                    % Decrease the number of time you can make dt bigger
-                    grow_dt = false;
-                end
+                current_time = current_time + dt(end); jjj = jjj + 1;
+                dt = dt(1:max(1, end-1));
+                % if mod(jjj, 2) == 0 && grow_dt == true
+                %     jjj = floor(jjj/2); 
+                %     iii = iii - 1;
+                %     % Increase time step
+                %     dt = 2 * dt;
+                %     % Decrease the number of time you can make dt bigger
+                %     grow_dt = false;
+                % end
     
                 %  TODO: Update Indexes if necessary
     
@@ -376,9 +362,9 @@ function solve_motion_v2(varargin)
                 current_index = current_index + 1; % Point to the next space in memory 
     
                 % If we are in a multiple of max_dt, reset indexes
-                if jjj == 2^iii
-                    jjj = 0;
-                    grow_dt = true;
+                if dt(end) == max_dt
+                    %jjj = 0;
+                    %grow_dt = true;
                     indexes_to_save(current_to_save) = current_index - 1;
                     current_to_save = current_to_save + 1;
                 else
@@ -401,7 +387,7 @@ function solve_motion_v2(varargin)
                        1e+3 * current_time * time_unit, current_conditions.contact_points, ...
                             current_conditions.center_of_mass_velocity * velocity_unit, ...
                             current_conditions.center_of_mass* length_unit);
-                    h = plot_condition(1, current_conditions, 1.25, plot_title, PROBLEM_CONSTANTS.theta_vector);
+                    h = plot_condition(1, current_conditions, 1.25, plot_title, PROBLEM_CONSTANTS);
                     
                     if PROBLEM_CONSTANTS.DEBUG_FLAG == true
                         currFrame = getframe(h);
@@ -439,4 +425,3 @@ function solve_motion_v2(varargin)
         'velocity_unit', 'pressure_unit', 'time_unit', 'froude_nb', 'weber_nb', 'PROBLEM_CONSTANTS', ...
         'default_numerical', 'default_physical');    
 end
-
