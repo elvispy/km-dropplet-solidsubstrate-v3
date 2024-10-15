@@ -69,9 +69,9 @@ function [probable_next_conditions, errortan, mat_inverses] = ...
     angles_check = theta_vector(theta_vector < pi/2);
     if contact_points > 0
         errortan = (z_calculator(theta_vector(contact_points+1)) - ...
-            z_calculator(theta_vector(contact_points)))/...
-            (theta_vector(contact_points+1) - theta_vector(contact_points));
-        %angles_check = angles_check(angles_check < theta_vector(contact_points));
+            z_calculator(theta_vector(contact_points)));%/...
+            %(theta_vector(contact_points+1) - theta_vector(contact_points));
+        angles_check = angles_check(angles_check > theta_vector(contact_points));
     end
    
     check = any(z_calculator(angles_check) < 0);
@@ -85,17 +85,17 @@ function [perturb, mat_inverse] = my_lsqr(jaccalc, ftm, Xn, mat_inverse, dt)
     A = jaccalc(Xn);
     fieldName = strrep(strrep(sprintf('dt%.2e', dt), '-', ""), ".", "");
     S = size(A);
-    if S(1) == S(2) % If it's square matrix, just invert it
+    %if S(1) == S(2) % If it's square matrix, just invert it
         % If there's already one in PROBLEM_CONSTANTS, use it
-        if isfield(mat_inverse, fieldName)
-            perturb = mat_inverse.(fieldName) * ftm(Xn);
-        else
-            if mat_inverse.version == 3 % Only take inverse if it's a linearized model
-                mat_inverse.(fieldName) = inv(A);
-            end
-            perturb = A\ftm(Xn);
-        end
+    if isfield(mat_inverse, fieldName)
+        perturb = mat_inverse.(fieldName) * ftm(Xn);
     else
-        [perturb, ~] = lsqr(A, ftm(Xn), [], 500, [], [], Xn);
+        if mat_inverse.version == 3 && S(1) == S(2) % Only take inverse if it's a linearized model
+            mat_inverse.(fieldName) = inv(A);
+        end
+        perturb = A\ftm(Xn);
     end
+    % else
+    %     [perturb, ~] = lsqr(A, ftm(Xn), [], 500, [], [], Xn);
+    % end
 end
