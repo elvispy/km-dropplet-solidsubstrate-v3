@@ -78,8 +78,9 @@ function h = plot_condition(idx, conditions, varargin)
         %zps = zeta_generator(conditions.pressure_amplitudes((end-nb_harmonics+1):end));
         ps = @(ang) zps(ang) + conditions.pressure_amplitudes(1);
         mps = ps(sample)/pressure_unit;
-        arrowX = mps .* sin(sample);
-        arrowY = mps .* (-cos(sample));
+        % -sin, cos for south pole
+        arrowX = mps .* (-sin(sample));
+        arrowY = mps .* cos(sample);
         %mps(5) = 1;
         quiver(EtaX, EtaY, arrowX, arrowY, 'AutoScaleFactor',2); 
         
