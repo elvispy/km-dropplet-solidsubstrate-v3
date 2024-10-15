@@ -44,8 +44,8 @@ function solve_motion_v2(varargin)
     
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
             'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'));
-    default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 40, ...
-        'angular_sampling', nan, 'version', 3, 'order', 1);
+    default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 100, ...
+        'angular_sampling', 30, 'version', 3, 'order', 1);
     
     default_physical = struct('undisturbed_radius', .05, 'initial_height', inf, ...
         'initial_velocity', -10, 'initial_amplitudes', nan, ...
@@ -110,7 +110,7 @@ function solve_motion_v2(varargin)
     g = default_physical.g;
     nu = default_physical.nu;
     debug_flag = default_options.debug_flag;
-    live_plotting = default_options.live_plotting || true;
+    live_plotting = default_options.live_plotting;
     
 
     % Dimensionless Units
@@ -171,7 +171,7 @@ function solve_motion_v2(varargin)
     current_time = initial_time/time_unit;
     if simulation_time == inf
         % Just to save some values in the matrix
-        final_time = min(20000*dt, 10e-3/time_unit);
+        final_time = min(15000*dt, 10e-3/time_unit);
     else
         final_time = simulation_time/time_unit;
     end
@@ -243,7 +243,7 @@ function solve_motion_v2(varargin)
     indexes_to_save = zeros(maximum_index, 1); indexes_to_save(1) = 1;
     current_to_save = 2;
     
-    file_path = default_options.folder; %fullfile(sprintf("../2_output/%s/", default_options.folder));
+    file_path = fullfile(default_options.folder, sprintf('Version v%d (%.2g)', version, rhoS*sigmaS*undisturbed_radius)); %fullfile(sprintf("../2_output/%s/", default_options.folder));
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end    
