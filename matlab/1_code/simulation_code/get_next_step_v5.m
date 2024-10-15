@@ -1,4 +1,4 @@
-function [probable_next_conditions, errortan] = ...
+function [probable_next_conditions, errortan, mat_inverses] = ...
     get_next_step_v5(previous_conditions, dt, contact_points, PROBLEM_CONSTANTS)
 
     % This function tries to minimize the objetive function by Newton
@@ -11,6 +11,7 @@ function [probable_next_conditions, errortan] = ...
     settings.theta_vector = PROBLEM_CONSTANTS.theta_vector; theta_vector = settings.theta_vector;
     settings.legendre_matrix = PROBLEM_CONSTANTS.precomputed_integrals;
     settings.Oh = PROBLEM_CONSTANTS.Oh;
+    mat_inverses.version = PROBLEM_CONSTANTS.version;
     %1./(1:nb_harmonics) 1 1 1]';
     
     
@@ -31,7 +32,7 @@ function [probable_next_conditions, errortan] = ...
         % Newton Method
         for m = 1:100
             %perturb = jaccalc(Xn)\ftm(Xn);
-            [perturb, ~] =  lsqr(jaccalc(Xn), ftm(Xn), [], 500, [], [], Xn);
+            [perturb, mat_inverses] = my_lsqr(jaccalc, ftm, Xn, mat_inverses, dt);
             Xnp1 = Xn - perturb;
             %if PROBLEM_CONSTANTS.DEBUG_FLAG == true; plot_condition(2, [0; Xnp1(1:(nb_harmonics-1))]); end
             Xn = Xnp1;
@@ -60,9 +61,7 @@ function [probable_next_conditions, errortan] = ...
     probable_next_conditions.dt = dt;
     probable_next_conditions.current_time = previous_conditions{end}.current_time + dt;
     probable_next_conditions.contact_points = contact_points;
-%     probable_next_conditions.contact_radius = ...
-%         round(sin(PROBLEM_CONSTANTS.theta_vector(contact_points)) * (1 + ...
-%         sum(arrayfun(@(idx) (-1)^(idx) * Xnp1(idx), 1:length(Xnp1)))), 10);
+
     z_calculator = @(angle) cos(angle) .* (1 + sum(probable_next_conditions.deformation_amplitudes' .* ...
         collectPl(nb_harmonics, cos(angle)))) + probable_next_conditions.center_of_mass;
     errortan = 0;
@@ -71,7 +70,7 @@ function [probable_next_conditions, errortan] = ...
         errortan = (z_calculator(theta_vector(contact_points+1)) - ...
             z_calculator(theta_vector(contact_points)))/...
             (theta_vector(contact_points) - theta_vector(contact_points+1));
-        angles_check = angles_check(angles_check < theta_vector(contact_points));
+        %angles_check = angles_check(angles_check < theta_vector(contact_points));
     end
    
     check = any(z_calculator(angles_check) < 0);
@@ -81,6 +80,21 @@ function [probable_next_conditions, errortan] = ...
     
 end % end main function definition
 
-
-
-
+function [perturb, mat_inverse] = my_lsqr(jaccalc, ftm, Xn, mat_inverse, dt)
+    A = jaccalc(Xn);
+    fieldName = strrep(strrep(sprintf('dt%.2e', dt), '-', ""), ".", "");
+    S = size(A);
+    %if S(1) == S(2) % If it's square matrix, just invert it
+        % If there's already one in PROBLEM_CONSTANTS, use it
+    if isfield(mat_inverse, fieldName)
+        perturb = mat_inverse.(fieldName) * ftm(Xn);
+    else
+        if mat_inverse.version == 3 && S(1) == S(2)% Only take inverse if it's a linearized model
+            mat_inverse.(fieldName) = inv(A);
+        end
+        perturb = A\ftm(Xn);
+    end
+    %else
+    %    [perturb, diagnostic] = lsqr(A, ftm(Xn), [], 500, [], [], Xn);
+    %end
+end
