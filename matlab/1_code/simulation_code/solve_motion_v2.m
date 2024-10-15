@@ -47,11 +47,11 @@ function solve_motion_v2(varargin)
     default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 40, ...
         'angular_sampling', nan, 'version', 3, 'order', 1);
     
-    default_physical = struct('undisturbed_radius', .5, 'initial_height', inf, ...
-        'initial_velocity', -2, 'initial_amplitudes', nan, ...
+    default_physical = struct('undisturbed_radius', .05, 'initial_height', inf, ...
+        'initial_velocity', -10, 'initial_amplitudes', nan, ...
         'amplitudes_velocities', nan, 'pressure_amplitudes', nan, ...
         'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, ...
-        'g', 9.81e-2, 'nu', .978e-2);
+        'g', 9.81e+2, 'nu', .978e-2);
     
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
@@ -162,8 +162,9 @@ function solve_motion_v2(varargin)
     contact_points = 0;
     
     % Define the time step so that the highest frequency has N steps
-    N = 1;
-    max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; %max_dt = 0.0034359491980026735;
+    N = 20;
+    max_dt = (2*pi/(sqrt(harmonics_qtt*(harmonics_qtt+2)*(harmonics_qtt-1))*N));
+    %max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; %max_dt = 0.0034359491980026735;
     dt = max_dt; 
     
     initial_time = 0;
@@ -215,7 +216,7 @@ function solve_motion_v2(varargin)
         initial_mplitude_velocities, ...
         initial_pressure_coefficients, ...
         current_time, ...
-        dt, ...
+        dt(end), ...
         initial_height, ...
         initial_velocity_adim, initial_contact_points); % Last argument is contact radius
  
@@ -271,17 +272,17 @@ function solve_motion_v2(varargin)
             errortan = Inf * ones(1, 5);
             recalculate = false;
             
-            [probableNextConditions{3}, errortan(3)] = advance_one_step(previous_conditions, dt, ...
+            [probableNextConditions{3}, errortan(3)] = advance_one_step(previous_conditions, dt(end), ...
                 contact_points, PROBLEM_CONSTANTS);
-            [probableNextConditions{4}, errortan(4)] = advance_one_step(previous_conditions, dt, ...
+            [probableNextConditions{4}, errortan(4)] = advance_one_step(previous_conditions, dt(end), ...
                 contact_points+1, PROBLEM_CONSTANTS);
-            [probableNextConditions{2}, errortan(2)] = advance_one_step(previous_conditions, dt, ...
+            [probableNextConditions{2}, errortan(2)] = advance_one_step(previous_conditions, dt(end), ...
                 contact_points-1, PROBLEM_CONSTANTS);
                 
             if (abs(errortan(3)) > abs(errortan(4)) || abs(errortan(3)) > abs(errortan(2)))
                 if abs(errortan(4)) <= abs(errortan(2))
                     %Now lets check with one more point to be sure
-                    [~, errortan(5)] = advance_one_step(previous_conditions, dt, ...
+                    [~, errortan(5)] = advance_one_step(previous_conditions, dt(end), ...
             contact_points+2, PROBLEM_CONSTANTS);
     
                     if abs(errortan(4)) < abs(errortan(5))
@@ -296,7 +297,7 @@ function solve_motion_v2(varargin)
                 else
                     %now lets check if errortan is good enough with one point
                     %less
-                    [~, errortan(1)] = advance_one_step(previous_conditions, dt, ...
+                    [~, errortan(1)] = advance_one_step(previous_conditions, dt(end), ...
             contact_points-2, PROBLEM_CONSTANTS);
     
     
@@ -320,14 +321,14 @@ function solve_motion_v2(varargin)
             end %
             
             if recalculate == true
-                dt = dt/2;
-                fprintf("Se dividio dt por 2. . U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
+                dt = [dt(1:(end-1)), dt(end)/2, dt(end)/2];
+                fprintf("Se dividio dt por 2, dt=%e U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
                 % Refine time step in index notation 
-                iii = iii + 1; jjj = 2 * jjj;
+                %iii = iii + 1; jjj = 2 * jjj;
                 
-                if dt * time_unit < 1e-9 % Time step this small is not physically meaningful
-                    fprint("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt, initial_velocity, harmonics_qtt, version);
-                    error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt, initial_velocity, harmonics_qtt, version);
+                if dt(end) * time_unit < 1e-9 % Time step this small is not physically meaningful
+                    fprint("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
+                    error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
                 end
                 % If one hour has elapsed, close this simulation
                 if etime(clock, init) > 60 * 60
@@ -342,15 +343,16 @@ function solve_motion_v2(varargin)
                     previous_conditions = {previous_conditions{2:end} current_conditions};
                 end
 
-                current_time = current_time + dt; jjj = jjj + 1;
-                if mod(jjj, 2) == 0 && grow_dt == true
-                    jjj = floor(jjj/2); 
-                    iii = iii - 1;
-                    % Increase time step
-                    dt = 2 * dt;
-                    % Decrease the number of time you can make dt bigger
-                    grow_dt = false;
-                end
+                current_time = current_time + dt(end); jjj = jjj + 1;
+                dt = dt(1:max(1, end-1));
+                % if mod(jjj, 2) == 0 && grow_dt == true
+                %     jjj = floor(jjj/2); 
+                %     iii = iii - 1;
+                %     % Increase time step
+                %     dt = 2 * dt;
+                %     % Decrease the number of time you can make dt bigger
+                %     grow_dt = false;
+                % end
     
                 %  TODO: Update Indexes if necessary
     
@@ -360,9 +362,9 @@ function solve_motion_v2(varargin)
                 current_index = current_index + 1; % Point to the next space in memory 
     
                 % If we are in a multiple of max_dt, reset indexes
-                if jjj == 2^iii
-                    jjj = 0;
-                    grow_dt = true;
+                if dt(end) == max_dt
+                    %jjj = 0;
+                    %grow_dt = true;
                     indexes_to_save(current_to_save) = current_index - 1;
                     current_to_save = current_to_save + 1;
                 else
