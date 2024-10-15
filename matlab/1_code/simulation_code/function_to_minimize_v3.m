@@ -75,7 +75,7 @@ function res = function_to_minimize_v3(Xn, previous_conditions, dt, contact_poin
         cosines = cos(theta_contact);
         P2 = collectPl(M, cosines)';
         P2 = P2(:, 2:end); % Discard A1
-        R3 = cosines .* (1 + sum(P2 * current_deformation, 2)) - center_of_mass; % minus sign = south pole reference
+        R3 = (1 + sum(P2 * current_deformation, 2)) - center_of_mass./cosines; % minus sign = south pole reference
 
     
         % fourth ROW BLOCK (No pressure outside condition)
