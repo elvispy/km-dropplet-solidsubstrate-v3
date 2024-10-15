@@ -44,14 +44,14 @@ function solve_motion_v2(varargin)
     
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
             'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'));
-    default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 20, ...
+    default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 40, ...
         'angular_sampling', nan, 'version', 3, 'order', 1);
     
-    default_physical = struct('undisturbed_radius', .1, 'initial_height', inf, ...
-        'initial_velocity', -10, 'initial_amplitudes', nan, ...
+    default_physical = struct('undisturbed_radius', .5, 'initial_height', inf, ...
+        'initial_velocity', -2, 'initial_amplitudes', nan, ...
         'amplitudes_velocities', nan, 'pressure_amplitudes', nan, ...
         'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, ...
-        'g', 9.81e+2, 'nu', 0); %.978e-22);
+        'g', 9.81e-2, 'nu', .978e-2);
     
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
@@ -110,7 +110,7 @@ function solve_motion_v2(varargin)
     g = default_physical.g;
     nu = default_physical.nu;
     debug_flag = default_options.debug_flag;
-    live_plotting = default_options.live_plotting;
+    live_plotting = default_options.live_plotting || true;
     
 
     % Dimensionless Units
@@ -163,7 +163,7 @@ function solve_motion_v2(varargin)
     
     % Define the time step so that the highest frequency has N steps
     N = 1;
-    max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; 
+    max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; %max_dt = 0.0034359491980026735;
     dt = max_dt; 
     
     initial_time = 0;

@@ -23518,3 +23518,186 @@ if system_dependent('IsDebugMode')==1, dbcont; end
          stack: [1×1 struct]
     Correction: []
 
+-------
+12-Sep-2024 10:10:20 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+12-Sep-2024 10:47:00 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',27,1)">27  </a>    load(fullfile(root_folder,"2_output", "postprocessing.mat"), "data");
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+12-Sep-2024 11:26:48 
+ /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+/Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+

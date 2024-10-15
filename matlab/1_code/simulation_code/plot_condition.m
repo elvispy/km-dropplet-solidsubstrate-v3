@@ -27,8 +27,7 @@ function h = plot_condition(idx, conditions, varargin)
     hold on;  
     cut = 0.25 * pi;
     sample = [linspace(0, cut, 30), linspace(cut, pi, 30)];
-    arrX = sin(sample);
-    arrY = cos(sample);
+    
     etas = zeta_generator(conditions);
     
     if isstruct(conditions)

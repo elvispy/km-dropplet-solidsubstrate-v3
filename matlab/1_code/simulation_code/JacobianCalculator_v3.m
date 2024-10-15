@@ -70,7 +70,7 @@ function res = JacobianCalculator_v3(Xn, previous_conditions, dt, contact_points
         Cl = -3 * idx .* (idx-1) ./ (2.*idx - 1) ./ (2.*idx + 1); Cl = zeros(size(Cl));
         Dl = -3 * (idx + 2) .* (idx + 1) ./ (2 * idx + 3) ./ (2.*idx + 1); Dl = zeros(size(Dl));
         Xl = Cl .* current_pressures(2:M) - Dl .* [current_pressures(4:(M+1)), 0];
-        Yl = [0, 1 + Cl(1) * current_amplitudes(1), [Cl(2:end) .* current_amplitudes(2:end), 0] - [0, Dl(1:(end-1)) .* current_amplitudes(1:(end-1))]];
+        Yl = [0, -(contact_points > 0), [Cl(2:end) .* current_amplitudes(2:end), 0] - [0, Dl(1:(end-1)) .* current_amplitudes(1:(end-1))]];
         R7 = [dt * Xl, zeros(1, M-1), dt * Yl, 0, coefs(end)];
         
 
