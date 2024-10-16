@@ -110,7 +110,7 @@ function solve_motion_v2(varargin)
     g = default_physical.g;
     nu = default_physical.nu;
     debug_flag = default_options.debug_flag;
-    live_plotting = default_options.live_plotting || true;
+    live_plotting = default_options.live_plotting;
     
 
     % Dimensionless Units
