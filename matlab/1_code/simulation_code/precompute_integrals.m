@@ -1,7 +1,7 @@
 function [M, angles] = precompute_integrals(angles, N)
     %% Documentation
     % precomputes the integral int_{cos(angles(ii))}^{cos(angles(ii+1))}
-    % P+l(u)/u**3 du
+    % P_l(u)/u**3 du
     % for l less than N, including zero. All angles should be in the
     % interval 0, pi/2 inclusive (south pole based). 
     
@@ -14,7 +14,7 @@ function [M, angles] = precompute_integrals(angles, N)
     
     % Outputs:
     %   - M: JxN matrix, such that M(jj, l) is the integral from agle(jj)
-    %   to angles(jj+1) of order P_l
+    %   to angles(jj+1) of order P_(l-1)
     %   - angles: vector of size J+1, representing the angles to be
     %   integrated
     
