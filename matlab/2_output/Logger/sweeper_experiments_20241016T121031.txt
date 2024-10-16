@@ -1,0 +1,102 @@
+------------
+16-Oct-2024 12:10:31 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: [2×1 double]
+    undisturbed_radius: 0.020100000000000
+      initial_velocity: [4×1 double]
+         harmonics_qtt: [2×1 double]
+               version: 1
+
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 19)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',19,0)">line 19</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 11)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',11,0)">line 11</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 53)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',53,0)">line 53</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 19)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',19,0)">line 19</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 11)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',11,0)">line 11</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 53)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',53,0)">line 53</a>)] 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.1042 
+ Modes: 30 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.1042 
+ Modes: 30 
+ Version: 1 
+---------
+---------
+---------
+Starting simulation with velocity -16.4354, modes 30, version v1 ... 
+Finished simulation with velocity -16.4354, modes 30, version v1 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -16.4354 
+ Modes: 30 
+ Version: 1 
+---------
+Starting simulation with velocity -12.8487, modes 30, version v1 ... 
+Finished simulation with velocity -12.8487, modes 30, version v1 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -12.8487 
+ Modes: 30 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -12.8487 
+ Modes: 60 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -12.8487 
+ Modes: 60 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -16.4354 
+ Modes: 60 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -16.4354 
+ Modes: 60 
+ Version: 1 
+Starting simulation with velocity -10.0736, modes 30, version v1 ... 
+Finished simulation with velocity -10.0736, modes 30, version v1 ... 
+Starting simulation with velocity -10.0736, modes 30, version v1 ... 
+Finished simulation with velocity -10.0736, modes 30, version v1 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.1042 
+ Modes: 60 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.1042 
+ Modes: 60 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10.0736 
+ Modes: 60 
+ Version: 1 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10.0736 
+ Modes: 60 
+ Version: 1 
+Parallel pool using the 'local' profile is shutting down.
+Python 3.9.5

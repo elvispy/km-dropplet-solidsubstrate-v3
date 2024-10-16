@@ -14,13 +14,13 @@ fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 %% Setting simulation parameters
 %#ok<*NOPTS>
 vars = struct(...  
-    "rhoS", 1, ... % Droplet density in cgs
-    "sigmaS", 72.20, ... % Surface tension in cgs
-    "nu", .978e-2, ... % Viscocity in cgs
+    "rhoS", 0.96, ... % Droplet density in cgs
+    "sigmaS", 20.5, ... % Surface tension in cgs
+    "nu", [0, 2e-2]', ... % Viscocity in cgs
     "undisturbed_radius", 0.0201, ... % (cgs)
-    "initial_velocity", -sqrt(linspace(5^2, 45^2, 3))', ... %(cgs)
+    "initial_velocity", -[8.1042, 10.0736, 12.8487, 16.4354]', ... %(cgs)
     "harmonics_qtt", [30, 60]', ...
-    "version", [11]')%tol = 5e-5
+    "version", [1]')%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -57,8 +57,9 @@ end
 
 root = pwd;
 parentDir = fileparts(fileparts(mfilename('fullpath')));
-a=rowfun(@(a, b, c) fullfile(parentDir, '2_output', sprintf("Version v%d (%g)", a, b*c)), ...
-    simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS'}, 'OutputVariableName', 'folder');
+
+a=rowfun(@(a, b, c, d) fullfile(parentDir, '2_output', sprintf("Version v%d (rhoS=%.2e, sigmaS=%.2e, R=%.2e)", a, b, c, d)), ...
+    simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS', 'undisturbed_radius'}, 'OutputVariableName', 'folder');
 simulations_cgs.folder = a.folder;
 
 % STEP 3: Actually run the simulations. 
@@ -97,8 +98,7 @@ parfor ii = 1:height(simulations_cgs)
         
         numerical_parameters = struct("harmonics_qtt", harmonics_qtt(ii),...
             "simulation_time", inf, "version", version(ii));
-        options = struct('version', version(ii), ...
-            'folder', final_folders(ii));
+        options = struct('version', version(ii));
 
         physical_parameters = struct("undisturbed_radius", undisturbed_radius(ii), ...
             "initial_height", nan, "initial_velocity", initial_velocity(ii), ...

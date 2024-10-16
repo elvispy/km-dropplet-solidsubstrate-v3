@@ -1,0 +1,27 @@
+------------
+16-Oct-2024 10:44:30 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: [0 0.020000000000000]
+    undisturbed_radius: 0.020100000000000
+      initial_velocity: [4×1 double]
+         harmonics_qtt: [2×1 double]
+               version: 1
+
+{Index in position 1 exceeds array bounds (must not exceed 1).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments>@(varidx)vars.(fnames{varidx})(idxs{varidx},:)', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 36)" style="font-weight:bold">sweeper_experiments>@(varidx)vars.(fnames{varidx})(idxs{varidx},:)</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',36,0)">line 36</a>)
+    arrayfun(@(varidx) vars.(fnames{varidx})(idxs{varidx}, :), 1:numOutputs, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m', 36)" style="font-weight:bold">sweeper_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',36,0)">line 36</a>)
+    arrayfun(@(varidx) vars.(fnames{varidx})(idxs{varidx}, :), 1:numOutputs, ...
+} 
+opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments.m',36,0)
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments

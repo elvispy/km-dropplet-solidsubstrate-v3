@@ -237,12 +237,12 @@ function solve_motion_v2(varargin)
     indexes_to_save = zeros(maximum_index, 1); indexes_to_save(1) = 1;
     current_to_save = 2;
     
-    file_path = fullfile(default_options.folder, sprintf('Version v%d (rhoS=%.2g, sigmaS=%.2g, R=%.2g)', version, rhoS, sigmaS, undisturbed_radius)); %fullfile(sprintf("../2_output/%s/", default_options.folder));
+    file_path = fullfile(default_options.folder, sprintf('Version v%d (rhoS=%.2e, sigmaS=%.2e, R=%.2e)', version, rhoS, sigmaS, undisturbed_radius)); %fullfile(sprintf("../2_output/%s/", default_options.folder));
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end    
     
-    datestring = replace(string(datetime('now')), ':', '-');
+    datestring = datestr(datetime(), 30);
     if PROBLEM_CONSTANTS.DEBUG_FLAG == true
         file_name2 = fullfile(file_path, sprintf('%s.mp4', datestring));
         vidObj = VideoWriter(file_name2,'MPEG-4');
@@ -415,7 +415,14 @@ function solve_motion_v2(varargin)
     
     % Post processing
     indexes_to_save = indexes_to_save(1:(current_to_save-1));
-    recorded_conditions = recorded_conditions(indexes_to_save);
+    recorded_conditions = recorded_conditions(indexes_to_save); recorded_times = recorded_times(indexes_to_save);
+    for ii = 1:10
+        if exist(file_name, 'file')
+            file_name = replace(file_name, ".mat", sprintf("-%d.mat", randi(9)));
+        else
+            break;
+        end
+    end
     save(file_name, 'recorded_conditions', 'recorded_times', 'length_unit', ...
         'velocity_unit', 'pressure_unit', 'time_unit', 'froude_nb', 'weber_nb', 'PROBLEM_CONSTANTS', ...
         'default_numerical', 'default_physical');    
