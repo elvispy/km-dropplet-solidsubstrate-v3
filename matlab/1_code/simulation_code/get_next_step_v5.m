@@ -36,11 +36,12 @@ function [probable_next_conditions, errortan, mat_inverses] = ...
             Xnp1 = Xn - perturb;
             %if PROBLEM_CONSTANTS.DEBUG_FLAG == true; plot_condition(2, [0; Xnp1(1:(nb_harmonics-1))]); end
             Xn = Xnp1;
-            if norm(ftm(Xnp1)) < best_value
-                best_value = norm(ftm(Xnp1));
+            score = norm(ftm(Xnp1));
+            if score < best_value
+                best_value = score;
                 best_solution = Xnp1;
             end
-            if norm(ftm(Xnp1)) < 1e-7 || norm(perturb) < 1e-8
+            if (score < 1e-10 || norm(perturb) < 1e-10)
                 break
             end
         end % end for
