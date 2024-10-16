@@ -1,5 +1,5 @@
 function [probable_next_conditions, errortan, mat_inverses] = ...
-    get_next_step_v5(previous_conditions, dt, contact_points, PROBLEM_CONSTANTS)
+    get_next_step_v5(previous_conditions, dt, contact_points, PROBLEM_CONSTANTS, mat_inverses)
 
     % This function tries to minimize the objetive function by Newton
     % Method
@@ -32,7 +32,7 @@ function [probable_next_conditions, errortan, mat_inverses] = ...
         % Newton Method
         for m = 1:100
             %perturb = jaccalc(Xn)\ftm(Xn);
-            [perturb, mat_inverses] = my_lsqr(jaccalc, ftm, Xn, mat_inverses, dt);
+            [perturb, mat_inverses] = my_lsqr(jaccalc, ftm, Xn, mat_inverses, contact_points, dt, length(previous_conditions));
             Xnp1 = Xn - perturb;
             %if PROBLEM_CONSTANTS.DEBUG_FLAG == true; plot_condition(2, [0; Xnp1(1:(nb_harmonics-1))]); end
             Xn = Xnp1;
@@ -80,9 +80,9 @@ function [probable_next_conditions, errortan, mat_inverses] = ...
     
 end % end main function definition
 
-function [perturb, mat_inverse] = my_lsqr(jaccalc, ftm, Xn, mat_inverse, dt)
+function [perturb, mat_inverse] = my_lsqr(jaccalc, ftm, Xn, mat_inverse, contact_points, dt, order)
     A = jaccalc(Xn);
-    fieldName = strrep(strrep(sprintf('dt%.2e', dt), '-', ""), ".", "");
+    fieldName = strrep(strrep(sprintf('cp%ddt%.2eorder%d', contact_points, dt, order), '-', ""), ".", "");
     S = size(A);
     %if S(1) == S(2) % If it's square matrix, just invert it
         % If there's already one in PROBLEM_CONSTANTS, use it

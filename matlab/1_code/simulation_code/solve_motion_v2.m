@@ -207,7 +207,7 @@ function solve_motion_v2(varargin)
         "function_to_minimize", function_to_minimize, ... % v1 = fully nonlinear integration on disk, v2 = nonlinear with spherical approximation, v3 = linearised version of v2
         "jacobian_calculator", JacobianCalculator, ... % has to be the same version as function to minimize
         "DEBUG_FLAG", debug_flag); %true = plot and save video
-        
+    mat_inverses = struct();
 
     
     current_conditions = ProblemConditions_v2( ...
@@ -297,8 +297,8 @@ function solve_motion_v2(varargin)
                 else
                     %now lets check if errortan is good enough with one point
                     %less
-                    [~, errortan(1)] = advance_one_step(previous_conditions, dt(end), ...
-            contact_points-2, PROBLEM_CONSTANTS);
+                    [~, errortan(1), mat_inverses] = advance_one_step(previous_conditions, dt(end), ...
+            contact_points-2, PROBLEM_CONSTANTS, mat_inverses);
     
     
                     if abs(errortan(2)) < abs(errortan(1))
