@@ -12,7 +12,7 @@ function setupOnce(testCase)
     testCase.TestData.dt = 1;
     testCase.TestData.M = M; % nb_harmonics
     testCase.TestData.N = M+1; % nb_angles
-    settings.Fr = 1;
+    settings.Fr = rand()/10;
     settings.theta_vector = linspace(pi, 0, testCase.TestData.N);
     settings.legendre_matrix = precompute_integrals(...
         settings.theta_vector, testCase.TestData.M);
