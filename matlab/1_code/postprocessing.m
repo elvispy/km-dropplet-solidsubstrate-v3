@@ -16,11 +16,19 @@ addpath(safe_folder, '-begin');
 % FInding all .mat files that correspond to simulations
 files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 
+%<<<<<<< HEAD
 % Create table to fill values (adimensional unless stated in the title)
 varNames=["file_name", "initial_velocity_cgs", "weber", "ohnesorge", "parent_folder", "number_of_harmonics", ...
     "max_width", "contact_time_ms", "coef_restitution", "north_pole_min_height", "max_contact_radius", "spread_time_ms"];
 varTypes=["string", "double", "double", "double", "string", "double", "double", "double", "double", ...
     "double", "double", "double"];
+%=======
+% Create table to fill values
+%varNames=["fileName", "initialVelocity", "Weber*", "Ohnesorge", "dropLiquid", "nb_harmonics", ...
+%    "maxWidth", "contactTime", "coefRestitution", "northPoleminHeight", "maxContactRadius"];
+%varTypes=["string", "double", "double", "double", "string", "double", "double", "double", "double", ...
+%    "double", "double"];
+%>>>>>>> f7a5944 (added westar and Ohnesorge number to table + fixed bug)
 sz = [length(files_folder) length(varNames)];
 
 if isfile(fullfile(root_folder, "2_output", "postprocessing.mat"))
@@ -43,6 +51,9 @@ for ii = 1:length(files_folder)
         if contains(lastwarn, 'not found'); error(lastwarn);  end
         
         recorded_times = recorded_times * 1e+3; % To miliseconds
+        sigmaS = default_physical.sigmaS; rhoS = default_physical.rhoS; Ro = default_physical.undisturbed_radius;
+        Westar = rhoS * default_physical.initial_velocity^2 * Ro/sigmaS;
+        if isfield(default_physical, 'nu'); Oh = default_physical.nu / sqrt(sigma * Ro * rho); else; Oh = 0; end
         theta_vector = PROBLEM_CONSTANTS.theta_vector;
         Westar = default_physical.rhoS * default_physical.initial_velocity^2 * ...
             default_physical.undisturbed_radius / default_physical.sigmaS;
@@ -85,7 +96,7 @@ for ii = 1:length(files_folder)
                 coef_restitution = abs(Vout/Vin);
             end
 
-            % Min_height
+            % Min_height (north pole)
             current_height = drop_radius(0) + adim_CM;
             if current_height < north_pole_min_height; north_pole_min_height = current_height; end
 
@@ -106,6 +117,7 @@ for ii = 1:length(files_folder)
         [~, dropLiquid, lol] = fileparts(files_folder(ii).folder); dropLiquid = strcat(dropLiquid, lol);
         data(ii, :) = {files_folder(ii).name, Vin, Westar, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
             max_width, contact_time, coef_restitution, north_pole_min_height, max_contact_radius, spread_time};
+
     catch me
         fprintf("%s %s \n", files_folder(ii).folder, files_folder(ii).name)
         disp(me);
