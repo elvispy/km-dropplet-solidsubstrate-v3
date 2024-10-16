@@ -22137,6 +22137,7 @@ D:\GITRepos\km-dropplet-solidsubstrate-v3\matlab\2_output\Version v3 (72.2) simu
     Correction: []
 -------
 <<<<<<< HEAD
+<<<<<<< HEAD
 05-Sep-2024 13:21:59 
  /Users/eaguerov/Documents/Brown/impacts/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_postprocessing-------
 05-Sep-2024 13:22:14 
@@ -22199,6 +22200,9 @@ postprocessing
   <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
 =======
 05-Sep-2024 13:30:16 
+=======
+03-Sep-2024 16:12:02 
+>>>>>>> 032370b (added loggers)
  /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
 [Warning: Variable 'recorded_times' not found.] 
@@ -22211,7 +22215,10 @@ postprocessing
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
 /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
   <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+<<<<<<< HEAD
 >>>>>>> a2c1f6b (added simulation)
+=======
+>>>>>>> 032370b (added loggers)
 
     identifier: 'MATLAB:UndefinedFunction'
        message: 'Undefined function 'errormsg' for input arguments of type 'char'.'
@@ -22219,6 +22226,7 @@ postprocessing
          stack: [1×1 struct]
     Correction: []
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 -------
 05-Sep-2024 15:20:22 
@@ -23471,6 +23479,113 @@ if system_dependent('IsDebugMode')==1, dbcont; end
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
 [Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
+=======
+<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/collectPl.m',6,1)">6   </a>    y(2, :) = x;
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+-------
+03-Sep-2024 16:32:51 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessingdrop_radius(0)
+
+ans =
+
+   -0.6981
+
+drop_radius(0) + adim_CM
+
+ans =
+
+   -0.1123
+
+recorded_conditions{jj}
+
+ans = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+               nb_harmonics: 20
+     deformation_amplitudes: [1×20 double]
+     deformation_velocities: [1×20 double]
+        pressure_amplitudes: [1×21 double]
+               current_time: 0.0033
+                         dt: 4.0000e-05
+             center_of_mass: 0.0586
+    center_of_mass_velocity: -21.5836
+             contact_points: 7
+
+PROBLEM_CONSTANTS
+
+PROBLEM_CONSTANTS = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                froude_nb: 7.4519
+                 weber_nb: 1
+             nb_harmonics: 20
+       omegas_frequencies: [20×1 double]
+               angles_qtt: 21
+            pressure_unit: 722
+    precomputed_integrals: [10×21 double]
+             theta_vector: [1×21 double]
+     function_to_minimize: @function_to_minimize_v3
+      jacobian_calculator: @JacobianCalculator_v3
+               DEBUG_FLAG: 0
+
+files_folder(ii)
+
+ans = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+       name: 'simulation 09-Aug-2024 18-34-07.mat'
+     folder: '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output'
+       date: '10-Aug-2024 13:23:34'
+      bytes: 72577
+      isdir: 0
+    datenum: 7.3947e+05
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('export_animation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+postprocessing
+-------
+03-Sep-2024 16:44:18 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Undefined function 'errormsg' for input arguments of type 'char'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+03-Sep-2024 17:08:11 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 31)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',31,0)">line 31</a>)] 
+>>>>>>> 032370b (added loggers)
 /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
   <a href="matlab:helpPopup MException" style="font-weight:bold">MException</a> with properties:
 
@@ -23480,6 +23595,7 @@ if system_dependent('IsDebugMode')==1, dbcont; end
          stack: [1×1 struct]
     Correction: []
 
+<<<<<<< HEAD
 [Warning: Variable 'recorded_conditions' not found.] 
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 40)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',40,0)">line 40</a>)] 
 [Warning: Variable 'recorded_times' not found.] 
@@ -23518,3 +23634,5 @@ if system_dependent('IsDebugMode')==1, dbcont; end
          stack: [1×1 struct]
     Correction: []
 
+=======
+>>>>>>> 032370b (added loggers)

@@ -1,3 +1,7 @@
 ------------
 12-Aug-2024 08:53:05 
  /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments
+if system_dependent('IsDebugMode')==1, dbquit; end
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('export_animation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
