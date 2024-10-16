@@ -60,6 +60,9 @@ function h = plot_condition(idx, conditions, varargin)
                 (1 + etas(theta_vector(conditions.contact_points)/2 + theta_vector(conditions.contact_points+1)/2));
             plot([-contact_radius, contact_radius], [0, 0], 'g--', 'LineWidth', 3);
         end
+    else
+        pressure_unit = 1;
+        %warning("Assuming pressure unit");
     end
     
     plot( EtaX,EtaY, 'LineWidth',1.5 , 'Color', [.5 .5 .5]);

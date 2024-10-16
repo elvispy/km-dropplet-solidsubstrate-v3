@@ -8,7 +8,7 @@ function export_animation(varargin)
         [file, path] = uigetfile("*.mat");
         fullfilepath = fullfile(path, file);
         clear is_adim
-        load(fullfilepath, "recorded_conditions", "is_adim");
+        load(fullfilepath, "recorded_conditions", "is_adim", "PROBLEM_CONSTANTS");
         
         vidObj = VideoWriter(replace(fullfilepath, ".mat", ".mp4"), "MPEG-4");
         set(vidObj, 'Quality', 100, 'FrameRate', 50);
