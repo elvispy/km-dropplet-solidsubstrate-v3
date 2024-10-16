@@ -40,7 +40,7 @@ function [probable_next_conditions, errortan, mat_inverses] = ...
                 best_value = norm(ftm(Xnp1));
                 best_solution = Xnp1;
             end
-            if norm(ftm(Xnp1)) < 1e-7 || norm(perturb) < 1e-8
+            if norm(ftm(Xnp1)) < 1e-10 || norm(perturb) < 1e-12
                 break
             end
         end % end for
@@ -68,9 +68,9 @@ function [probable_next_conditions, errortan, mat_inverses] = ...
     angles_check = theta_vector(theta_vector > pi/2);
     if contact_points > 0
         errortan = (z_calculator(theta_vector(contact_points+1)) - ...
-            z_calculator(theta_vector(contact_points)))/...
-            (theta_vector(contact_points) - theta_vector(contact_points+1));
-        %angles_check = angles_check(angles_check < theta_vector(contact_points));
+            z_calculator(theta_vector(contact_points)));%/...
+            %(theta_vector(contact_points) - theta_vector(contact_points+1));
+        angles_check = angles_check(angles_check < theta_vector(contact_points));
     end
    
     check = any(z_calculator(angles_check) < 0);
