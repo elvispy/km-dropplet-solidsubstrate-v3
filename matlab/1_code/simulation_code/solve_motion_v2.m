@@ -22,11 +22,7 @@ function solve_motion_v2(varargin)
     %      8) rhoS                   (kg/cm^3, 0.988) = The density of the fluid inside the droplet. Default = water
     %      9) sigmaS                 (., 72.29)       = Surface tension of the fluid inside the droplet. Default = water
     %      10) g                     (cm/s^2, 9.81e+2)= Gravitational constant.
-<<<<<<< HEAD
-    %      11) nu                  (cm^2/s, .978e-2)  = Water's kinematic viscocity
-=======
     %      11) nu              (St = cm^2/s, .978e-2) = Kinematic Viscocity
->>>>>>> b75474b (added viscocity term and Ohnesorge number to PROBLEM_CONSTANTS)
     %  - varargin{2} = Numerical parameters for the simulation
     %      1) harmonics_qtt          (adim, ?)        = Number of spectral amplitudes that describe the motion. 
     %      2) angular_sampling (adim, harmonics_qtt+1)= Number of angles that describe the shape of the drop.
@@ -54,13 +50,9 @@ function solve_motion_v2(varargin)
     default_physical = struct('undisturbed_radius', .05, 'initial_height', inf, ...
         'initial_velocity', -10, 'initial_amplitudes', nan, ...
         'amplitudes_velocities', nan, 'pressure_amplitudes', nan, ...
-<<<<<<< HEAD
         'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, ...
         'g', 9.81e+2, 'nu', .978e-2);
-=======
-        'initial_contact_points', 0, 'rhoS', 0.988, 'sigmaS', 72.20, 'g', 9.8065e+2, 'nu', .978e-2);
->>>>>>> b75474b (added viscocity term and Ohnesorge number to PROBLEM_CONSTANTS)
-    
+
     %% Handling default arguments. All units are in cgs.
     if nargin >= 3
         % if isstruct(varargin{3}) == false; error('Option values is not a struct'); end

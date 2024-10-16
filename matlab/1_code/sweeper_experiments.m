@@ -17,10 +17,10 @@ vars = struct(...
     "rhoS", 1, ... % Droplet density in cgs
     "sigmaS", 72.20, ... % Surface tension in cgs
     "nu", .978e-2, ... % Viscocity in cgs
-    "undisturbed_radius", 0.04, ... % (cgs)
+    "undisturbed_radius", 0.0201, ... % (cgs)
     "initial_velocity", -sqrt(linspace(5^2, 45^2, 3))', ... %(cgs)
-    "harmonics_qtt", [30]', ...
-    "version", [1, 3]');%tol = 5e-5
+    "harmonics_qtt", [30, 60]', ...
+    "version", [11]')%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
