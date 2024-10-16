@@ -180,13 +180,6 @@ function solve_motion_v2(varargin)
     maximum_index = ceil((final_time - initial_time)/dt) + 4;
     number_of_extra_indexes = 0;
 
-    %contact_points = 0;%  Initial number of contact points
-    %contact_time = 0;% TODO: Lab contact time and so on?
-    %labcTime = 0;%To record contact time
-    %maxDef = 0; %to record max deflection;
-    %firstFallFlag = true; %Boolean to record maximum deflection time
-    %contactFlag = false; %To record first contact time
-    %velocityOutRecorded = false; labvelocityOutRecorded = false;  % To check if Em_out was recorded
     grow_dt = false;%  THis variable controls how fast dt can grow
     iii = 0; jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
 
@@ -200,7 +193,7 @@ function solve_motion_v2(varargin)
         "version", version, ...
         "nb_harmonics", harmonics_qtt, ...
         "omegas_frequencies", omegas_frequencies, ...
-        "angles_qtt", harmonics_qtt + 1, ... % number of angles 
+        "angles_qtt", angular_sampling, ... % number of angles 
         "pressure_unit", pressure_unit, ...
         'precomputed_integrals', legendre_matrix, ...
         "theta_vector", theta_vector, ... % set of fixed angle vectors
@@ -243,7 +236,7 @@ function solve_motion_v2(varargin)
     indexes_to_save = zeros(maximum_index, 1); indexes_to_save(1) = 1;
     current_to_save = 2;
     
-    file_path = default_options.folder; %fullfile(sprintf("../2_output/%s/", default_options.folder));
+    file_path = fullfile(default_options.folder, sprintf('Version v%d (rhoS=%.2g, sigmaS=%.2g, R=%.2g)', version, rhoS, sigmaS, undisturbed_radius)); %fullfile(sprintf("../2_output/%s/", default_options.folder));
     if exist(file_path, 'dir') ~= 7 % CHeck if folder simulations exists
         mkdir(file_path); % If not, create it
     end    
@@ -262,9 +255,10 @@ function solve_motion_v2(varargin)
     % Define advancing step function: 
     %   v4 = classic newton method
     %   v5 = Newton method with best value estimator
-    advance_one_step = @(a, b, c, d) get_next_step_v5(a, b, c, d);
+    advance_one_step = @get_next_step_v5;
     %% Starting main loop
     init = clock;
+    
     try
         while ( current_time < final_time) 
             % First, we try to solve with the same number of contact points
@@ -337,7 +331,7 @@ function solve_motion_v2(varargin)
             else
                 % Progressively increase order of method until desired
                 % length of previous conditions have been attained
-                if default_numerical.order > length(previous_conditions)
+                if default_numerical.order > length(previous_conditions) && current_time/dt >= 10
                     previous_conditions = {previous_conditions{1:end} current_conditions};
                 else
                     previous_conditions = {previous_conditions{2:end} current_conditions};
@@ -371,8 +365,8 @@ function solve_motion_v2(varargin)
                     number_of_extra_indexes = number_of_extra_indexes + 1;
                 end
 
-                if simulation_time == inf && contact_points == 0 && current_time > 0
-                    final_time = current_time*1.5;
+                if simulation_time == inf && contact_points == 0 && current_conditions.center_of_mass_velocity > 0
+                    final_time = current_time*1.1;
                     simulation_time = 1e+6; % So as not to enter to this if ever again
                     if PROBLEM_CONSTANTS.DEBUG_FLAG==true
                         fprintf("Changed final time. Current progress: %.0f%%\n", ...
