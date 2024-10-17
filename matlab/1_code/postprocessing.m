@@ -53,7 +53,8 @@ for ii = 1:length(files_folder)
         recorded_times = recorded_times * 1e+3; % To miliseconds
         sigmaS = default_physical.sigmaS; rhoS = default_physical.rhoS; Ro = default_physical.undisturbed_radius;
         Westar = rhoS * default_physical.initial_velocity^2 * Ro/sigmaS;
-        if isfield(default_physical, 'nu'); Oh = default_physical.nu / sqrt(sigma * Ro * rho); else; Oh = 0; end
+        if isfield(default_physical, 'nu'); Oh = default_physical.nu / sqrt(sigmaS * Ro * rhoS); else; Oh = 0; end
+        g = default_physical.g;
         theta_vector = PROBLEM_CONSTANTS.theta_vector;
         Westar = default_physical.rhoS * default_physical.initial_velocity^2 * ...
             default_physical.undisturbed_radius / default_physical.sigmaS;
@@ -81,6 +82,8 @@ for ii = 1:length(files_folder)
                         recorded_conditions{jj+1}.contact_points > 0
                     touch_time = recorded_times(jj);
                     Vin = recorded_conditions{jj}.center_of_mass_velocity;
+                    CM_in = recorded_conditions{jj}.center_of_mass;
+                    Ein = 1/2 * Vin^2;
                 end
             end
             if isnan(liftoff_time)
@@ -88,12 +91,14 @@ for ii = 1:length(files_folder)
                         recorded_conditions{jj+1}.contact_points == 0
                     liftoff_time = recorded_times(jj);
                     Vout = recorded_conditions{jj}.center_of_mass_velocity;
+                    Eout = 1/2*Vout^2 + (recorded_conditions{jj}.center_of_mass ...
+                        - CM_in)*g;
                 end
             end
             if ~isnan(touch_time) && ~isnan(liftoff_time)
                 contact_time = liftoff_time - touch_time;
                 
-                coef_restitution = abs(Vout/Vin);
+                coef_restitution = sqrt(abs(Eout/Ein));
             end
 
             % Min_height (north pole)
@@ -119,6 +124,7 @@ for ii = 1:length(files_folder)
             max_width, contact_time, coef_restitution, north_pole_min_height, max_contact_radius, spread_time};
 
     catch me
+        if contains(files_folder(ii).name, "error"); continue; end
         fprintf("%s %s \n", files_folder(ii).folder, files_folder(ii).name)
         disp(me);
     end
