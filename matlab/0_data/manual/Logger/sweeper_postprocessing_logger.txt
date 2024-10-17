@@ -23636,3 +23636,933 @@ postprocessing
 
 =======
 >>>>>>> 032370b (added loggers)
+-------
+17-Oct-2024 11:30:17 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 17-16-08.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 17-42-29.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 17-47-17.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 17-51-28.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 18-17-10.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 18-35-31.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 18-43-11.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 18-46-41.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 19-09-34.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 19-29-09.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 19-36-28.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 19-47-22.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 20-22-11.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 20-22-57.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 20-50-16.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 21-17-33.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 07-Sep-2024 21-55-39.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) simulation 09-Sep-2024 09-30-33.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121904-2.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121904-6.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121904-9.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121904.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121913-7.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121913.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121914-7.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121914.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121920.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121921.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121928-5.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121928.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121943.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T121944.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T122010.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02) simulation 20241016T122013.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 17-42-09.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 18-21-59.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 19-01-53.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 19-41-56.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 20-03-44.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 21-12-03.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 21-15-59.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 21-55-35.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 22-12-24.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 22-15-46.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 22-21-17.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 22-35-15.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 22-50-39.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 23-03-25.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 23-22-50.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 23-28-59.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 23-40-48 (Errored).mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 07-Sep-2024 23-45-26.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 08-Sep-2024 00-33-45 (Errored).mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 08-Sep-2024 00-35-06 (Errored).mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) simulation 09-Sep-2024 09-30-33.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=0.99, sigmaS=72, R=0.05) simulation 16-Oct-2024 10-35-03.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'sigma'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+17-Oct-2024 11:30:55 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+if system_dependent('IsDebugMode')==1, dbstep; end
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+if system_dependent('IsDebugMode')==1, dbstep; end
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+files_folder(ii).folder
+
+ans =
+
+    '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2)'
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing
+-------
+17-Oct-2024 11:34:29 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessingif system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+if system_dependent('IsDebugMode')==1, dbstep; end
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+if system_dependent('IsDebugMode')==1, dbcont; end
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+if system_dependent('IsDebugMode')==1, dbcont; end
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+17-Oct-2024 13:37:10 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+17-Oct-2024 14:08:38 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+17-Oct-2024 14:10:32 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing
+-------
+17-Oct-2024 14:17:17 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (72.2) error_logU0=-40-202406241326.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-25-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (72.2) error_logU0=-35-202409054623.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: ''
+       message: 'Variable 'PROBLEM_CONSTANTS' not found.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+-------
+17-Oct-2024 14:18:53 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_conditions' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'recorded_times' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'length_unit' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
+[Warning: Variable 'PROBLEM_CONSTANTS' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 48)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',48,0)">line 48</a>)] 
