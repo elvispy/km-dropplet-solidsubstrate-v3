@@ -8,13 +8,13 @@ function export_animation(varargin)
         [file, path] = uigetfile("*.mat");
         fullfilepath = fullfile(path, file);
         clear is_adim
-        load(fullfilepath, "recorded_conditions", "is_adim", "PROBLEM_CONSTANTS");
+        load(fullfilepath, "recorded_conditions", "is_adim", "default_physical");
         
         vidObj = VideoWriter(replace(fullfilepath, ".mat", ".mp4"), "MPEG-4");
-        set(vidObj, 'Quality', 100, 'FrameRate', 50);
+        set(vidObj, 'Quality', 100, 'FrameRate', 10);
         open(vidObj);
         
-        for ii = floor(linspace(1, size(recorded_conditions, 1), 500))
+        for ii = floor(linspace(1, size(recorded_conditions, 1), 200))
             adim_conditions = recorded_conditions{ii};
             if exist('is_adim') == 0 || is_adim == false
                 load(fullfilepath, "length_unit", "velocity_unit", "pressure_unit"); 
@@ -25,9 +25,14 @@ function export_animation(varargin)
             end
             
             %recorded_conditions{ii}.amplitude_defor = 1;
-            plot_condition(1, adim_conditions, 2);
-            title(sprintf('t = %.2g, CP = %g',...
-                adim_conditions.current_time, adim_conditions.contact_points))
+            plot_condition(1, adim_conditions, 1.5);
+            title(sprintf('t = %.4f (ms), CM velocity = %.2f (cm/s), Contact Points = %g',...
+                adim_conditions.current_time*1000, recorded_conditions{ii}.center_of_mass_velocity, ...
+                adim_conditions.contact_points), ...
+                'FontSize', 14);
+            set(gca, 'FontSize', 16);
+            xlabel('$ x/R_o $', 'Interpreter','Latex', 'FontSize', 20);
+            ylabel('$ y/R_o $', 'Interpreter','Latex', 'FontSize', 20);
             writeVideo(vidObj, getframe(gcf));
             
         end

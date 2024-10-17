@@ -65,8 +65,8 @@ function h = plot_condition(idx, conditions, varargin)
         %warning("Assuming pressure unit");
     end
     
-    plot( EtaX,EtaY, 'LineWidth',1.5 , 'Color', [.5 .5 .5]);
-    plot(-EtaX,EtaY, 'LineWidth',1.5 , 'Color', [.5 .5 .5]);
+    plot( EtaX,EtaY, 'LineWidth',1.5 , 'Color', [135, 206, 235]/256);
+    plot(-EtaX,EtaY, 'LineWidth',1.5 , 'Color', [135, 206, 235]/256);
     
 %     gr = -100:100;
 %     if nargin > 2
@@ -114,7 +114,7 @@ function h = plot_condition(idx, conditions, varargin)
     ylim([-2*N/5 * x  , 0.8*2*N*x]);
     %axis equal;
     %ylim([-0.1, 2.5]);
-    yline(0, 'r', 'LineWidth', 2);
+    yline(0, 'k', 'LineWidth', 1.5);
     
     if nargin > 3 && idx == 2 && isstruct(conditions)
         ss = varargin{2};
