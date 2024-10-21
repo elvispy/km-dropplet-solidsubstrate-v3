@@ -1,0 +1,42 @@
+------------
+17-Oct-2024 16:00:15 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: [5×1 double]
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: [15×1 double]
+         harmonics_qtt: [3×1 double]
+               version: 1
+
+rho*Ro/sigma * velocities.^2
+
+ans =
+
+  Columns 1 through 8
+
+   0.000001000000000   0.000100000000000   0.010000000000000   0.000009000000000   0.000900000000000   0.090000000000000   0.000025000000000   0.002500000000000
+
+  Columns 9 through 15
+
+   0.250000000000000   0.000049000000000   0.004900000000000   0.490000000000000   0.000081000000000   0.008100000000000   0.810000000000000
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+rho*Ro/sigma * (velocities.^2)
+
+ans =
+
+  Columns 1 through 8
+
+   0.000001000000000   0.000100000000000   0.010000000000000   0.000009000000000   0.000900000000000   0.090000000000000   0.000025000000000   0.002500000000000
+
+  Columns 9 through 15
+
+   0.250000000000000   0.000049000000000   0.004900000000000   0.490000000000000   0.000081000000000   0.008100000000000   0.810000000000000
+
+sweeoer_experiments_oil

@@ -1,0 +1,56 @@
+------------
+17-Oct-2024 15:51:16 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: [5×1 double]
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: [15×1 double]
+         harmonics_qtt: [3×1 double]
+               version: 1
+
+We
+
+We =
+
+  Columns 1 through 4
+
+ 31.798990977743191 +22.567187587334907i 29.886521042784043 +24.011285671403542i 26.788314513658765 +26.788314513658765i  0.000000000000000 +               Infi
+
+  Columns 5 through 8
+
+  0.000000000000000 + 0.000000000000000i 44.970564310504109 +31.914822750626790i 42.265923390854091 +33.957085846513650i 37.884397698332251 +37.884397698332251i
+
+  Columns 9 through 12
+
+  0.000000000000000 +               Infi  0.000000000000000 + 0.000000000000000i 71.104705442136279 +50.461765506270318i 66.828292662643022 +53.690866988424986i
+
+  Columns 13 through 15
+
+ 59.900492255185213 +59.900492255185213i  0.000000000000000 +               Infi  0.000000000000000 + 0.000000000000000i
+
+V
+
+V =
+
+  Columns 1 through 4
+
+  0.477121254719662 + 1.364376353841841i  0.301029995663981 + 1.364376353841841i  0.000000000000000 + 1.364376353841841i               -Inf + 0.000000000000000i
+
+  Column 5
+
+  0.000000000000000 + 0.000000000000000i
+
+log10(2)
+
+ans =
+
+   0.301029995663981
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+sweeoer_experiments_oil
