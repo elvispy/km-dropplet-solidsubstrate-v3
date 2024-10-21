@@ -321,8 +321,8 @@ function solve_motion_v2(varargin)
                 % Refine time step in index notation 
                 %iii = iii + 1; jjj = 2 * jjj;
                 
-                if dt(end) * time_unit < 1e-9 % Time step this small is not physically meaningful
-                    fprint("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
+                if dt(end) * time_unit < 1e-12 % Time step this small is not physically meaningful
+                    fprintf("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
                     error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
                 end
                 % If one hour has elapsed, close this simulation

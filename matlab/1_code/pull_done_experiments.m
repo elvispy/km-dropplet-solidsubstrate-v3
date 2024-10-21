@@ -5,7 +5,7 @@ function A = pull_done_experiments(simulations)
     res = dir(fullfile(fileparts(fileparts(pwd)), '**/*.mat')); %dir("../2_output/*/*.mat");
     
     for jj = 1:length(res)
-        if contains(res(jj).name, 'error') 
+        if contains(lower(res(jj).name), 'error') 
             continue; 
         end
         A = addSimulation(A, res(jj)); 

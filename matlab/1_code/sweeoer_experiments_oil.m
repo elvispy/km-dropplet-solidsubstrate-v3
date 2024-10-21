@@ -1,4 +1,3 @@
-% Sweep 
 % This sript will try to sweep simulations according to two
 % rules:
 % 1) Parameters set in this sweep
@@ -12,15 +11,20 @@ disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 
 
-%% Setting simulation parameters. For OIL
+%% Setting simulation parameters
 %#ok<*NOPTS>
-vars = struct(...    %D = 50  %Quant = 100
-    "rhoS", 0.96, ... % in g/cm3
-    "sigmaS", 20.5, ... % in dyne/cm
-    "undisturbed_radius", 0.02, ... % in cm
-    "initial_velocity", -linspace(10, 40, 4)', ... % in cm/s 
-    "harmonics_qtt", [10, 20]', ...
-    "version", [1, 3]');%tol = 5e-5
+sigma = 20.5; rho = 0.96; Ro = 0.0203;
+V = 10.^([-3, -2, -1, 0]);
+velocities = -sqrt(sigma/(rho*Ro) .* [V, 3*V, 5*V, 7*V, 9*V]);
+
+vars = struct(...  
+    "rhoS", rho, ... % Droplet density in cgs
+    "sigmaS", sigma, ... % Surface tension in cgs
+    "nu", 0.0151883e-2 * [1, 2, 5, 20, 50]', ... % Viscocity in cgs
+    "undisturbed_radius", Ro, ... % (cgs)
+    "initial_velocity", velocities', ... %(cgs)
+    "harmonics_qtt", [30, 60, 120]', ...
+    "version", [1]')%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -57,8 +61,9 @@ end
 
 root = pwd;
 parentDir = fileparts(fileparts(mfilename('fullpath')));
-a=rowfun(@(a, b, c) fullfile(parentDir, '2_output', sprintf("Version v%d (%g)", a, b*c)), ...
-    simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS'}, 'OutputVariableName', 'folder');
+
+a=rowfun(@(a, b, c, d) fullfile(parentDir, '2_output', sprintf("Version v%d (rhoS=%.2e, sigmaS=%.2e, R=%.2e)", a, b, c, d)), ...
+    simulations_cgs, 'InputVariables', {'version' 'rhoS', 'sigmaS', 'undisturbed_radius'}, 'OutputVariableName', 'folder');
 simulations_cgs.folder = a.folder;
 
 % STEP 3: Actually run the simulations. 
@@ -81,10 +86,11 @@ harmonics_qtt = simulations_cgs.harmonics_qtt;
 version = simulations_cgs.version;
 rhoS = simulations_cgs.rhoS;
 sigmaS = simulations_cgs.sigmaS;
+nu = simulations_cgs.nu;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
-for ii = 1:height(simulations_cgs)
+parfor ii = 1:height(simulations_cgs)
     %Check if etaOri exists (the center of the bath)
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))
@@ -96,14 +102,13 @@ for ii = 1:height(simulations_cgs)
         
         numerical_parameters = struct("harmonics_qtt", harmonics_qtt(ii),...
             "simulation_time", inf, "version", version(ii));
-        options = struct('version', version(ii), ...
-            'folder', final_folders(ii));
+        options = struct('version', version(ii));
 
         physical_parameters = struct("undisturbed_radius", undisturbed_radius(ii), ...
             "initial_height", nan, "initial_velocity", initial_velocity(ii), ...
             "initial_amplitudes", zeros(1, harmonics_qtt(ii)), ...
             "pressure_amplitudes", zeros(1, harmonics_qtt(ii)+1), "initial_contact_points", 0, ...
-            "rhoS", rhoS(ii), "sigmaS", sigmaS(ii));
+            "rhoS", rhoS(ii), "sigmaS", sigmaS(ii), "nu", nu(ii));
         
         %solve_motion_v2(physical_parameters, numerical_parameters);
 
@@ -113,6 +118,8 @@ for ii = 1:height(simulations_cgs)
                 initial_velocity(ii), harmonics_qtt(ii), version(ii));
             solve_motion_v2(physical_parameters, numerical_parameters, options);
             completed_simulations(ii) = true; % To attest that the simulation has been finished
+            fprintf("Finished simulation with velocity %g, modes %d, version v%d ... \n", ...
+                initial_velocity(ii), harmonics_qtt(ii), version(ii));
         catch ME
             cd(final_folders(ii))
             fprintf("---------\n");
