@@ -7,7 +7,7 @@ root_folder = fileparts(fileparts(mfilename('fullpath')));
 diary(fullfile(root_folder, '0_data', 'manual', 'Logger', 'sweeper_postprocessing_logger.txt'));
 
 disp("-------");
-fprintf("%s \n %s", datestr(datetime()), mfilename('fullpath'));
+fprintf("%s \n %s \n", datestr(datetime()), mfilename('fullpath'));
 
 % Add functions to calculate maximum width
 safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
@@ -18,10 +18,11 @@ files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 
 %<<<<<<< HEAD
 % Create table to fill values (adimensional unless stated in the title)
-varNames=["file_name", "initial_velocity_cgs", "weber", "ohnesorge", "parent_folder", "number_of_harmonics", ...
-    "max_width", "contact_time_ms", "coef_restitution", "north_pole_min_height", "max_contact_radius", "spread_time_ms"];
-varTypes=["string", "double", "double", "double", "string", "double", "double", "double", "double", ...
-    "double", "double", "double"];
+varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "parent_folder", "number_of_harmonics", ...
+    "max_width", "contact_time_ms", "coef_restitution", "north_pole_min_height", "north_pole_exp_min_height", ...
+    "max_contact_radius", "spread_time_ms"];
+varTypes=["string", "double", "double", "double", "double", "string", "double", "double", "double", "double", ...
+    "double", "double", "double", "double"];
 %=======
 % Create table to fill values
 %varNames=["fileName", "initialVelocity", "Weber*", "Ohnesorge", "dropLiquid", "nb_harmonics", ...
@@ -43,7 +44,8 @@ end
 for ii = 1:length(files_folder)
     try
         if ismember(files_folder(ii).name, data.(varNames(1))) || ...
-                contains(files_folder(ii).name, "postprocessing"); continue; end
+                contains(files_folder(ii).name, "postprocessing") || ...
+                contains(lower(files_folder(ii).name), "error"); continue; end
         lastwarn('', ''); clear recorded_conditions recorded_times default_physical length_unit theta_vector
         load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
             "recorded_conditions", "recorded_times", "default_physical", ...
@@ -53,6 +55,7 @@ for ii = 1:length(files_folder)
         recorded_times = recorded_times * 1e+3; % To miliseconds
         sigmaS = default_physical.sigmaS; rhoS = default_physical.rhoS; Ro = default_physical.undisturbed_radius;
         Westar = rhoS * default_physical.initial_velocity^2 * Ro/sigmaS;
+        
         if isfield(default_physical, 'nu'); Oh = default_physical.nu / sqrt(sigmaS * Ro * rhoS); else; Oh = 0; end
         g = default_physical.g;
         theta_vector = PROBLEM_CONSTANTS.theta_vector;
@@ -60,11 +63,12 @@ for ii = 1:length(files_folder)
             default_physical.undisturbed_radius / default_physical.sigmaS;
         Oh = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
             * default_physical.undisturbed_radius));
+        Bo = rhoS * default_physical.g * Ro^2 / sigmaS;
 
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
         coef_restitution = nan; Vin = nan; Vout = nan;
-        north_pole_min_height = inf;
+        north_pole_min_height = inf; north_pole_exp_min_height = nan;
         max_contact_radius = -inf; spread_time = nan;
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
@@ -103,7 +107,22 @@ for ii = 1:length(files_folder)
 
             % Min_height (north pole)
             current_height = drop_radius(0) + adim_CM;
+            next_height = drop_radius(pi/100) + adim_CM;
             if current_height < north_pole_min_height; north_pole_min_height = current_height; end
+            if next_height < current_height %&& current_height < north_pole_exp_min_height
+                %north_pole_exp_min_height = current_height;
+                if current_height < north_pole_exp_min_height; north_pole_exp_min_height = current_height; end
+            else
+                currang = pi/200; dth = pi/200;
+                next_next_height = drop_radius(currang + dth) + adim_CM;
+                while next_next_height >= next_height && currang < pi/3
+                    currang = currang + dth;
+                    next_height = next_next_height;
+                    next_next_height = drop_radius(currang + dth) + adim_CM;
+                end
+                if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
+            end
+                
 
             % max_contact_radius calculation
             current_contact_points = recorded_conditions{jj}.contact_points;
@@ -120,8 +139,9 @@ for ii = 1:length(files_folder)
         end
         % Add value to tables
         [~, dropLiquid, lol] = fileparts(files_folder(ii).folder); dropLiquid = strcat(dropLiquid, lol);
-        data(ii, :) = {files_folder(ii).name, Vin, Westar, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
-            max_width, contact_time, coef_restitution, north_pole_min_height, max_contact_radius, spread_time};
+        data(ii, :) = {files_folder(ii).name, Vin, Westar, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
+            max_width, contact_time, coef_restitution, north_pole_min_height, ...
+            north_pole_exp_min_height, max_contact_radius, spread_time};
 
     catch me
         if contains(files_folder(ii).name, "error"); continue; end
