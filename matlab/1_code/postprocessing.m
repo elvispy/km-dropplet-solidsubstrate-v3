@@ -68,7 +68,7 @@ for ii = 1:length(files_folder)
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
         coef_restitution = nan; Vin = nan; Vout = nan;
-        north_pole_min_height = inf; north_pole_exp_min_height = nan;
+        north_pole_min_height = inf; north_pole_exp_min_height = inf;
         max_contact_radius = -inf; spread_time = nan;
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
