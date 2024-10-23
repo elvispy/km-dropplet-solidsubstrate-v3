@@ -1,0 +1,656 @@
+------------
+23-Oct-2024 10:23:18 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: [5×1 double]
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: [20×1 double]
+         harmonics_qtt: [3×1 double]
+               version: 1
+
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 19)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',19,0)">line 19</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 11)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',11,0)">line 11</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 57)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',57,0)">line 57</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 19)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',19,0)">line 19</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 11)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',11,0)">line 11</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 57)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',57,0)">line 57</a>)] 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+sum(simulations_cgs.done)
+
+ans =
+
+   295
+
+sum(~simulations_cgs.done)
+
+ans =
+
+     5
+
+simulations_cgs.done
+
+ans =
+
+  300×1 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   0
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   0
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   0
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   0
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   0
+   1
+   1
+   1
+   1
+
+simulations_cgs
+
+simulations_cgs =
+
+  300×9 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>     <strong>nu</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>     <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                                         <strong>folder</strong>                                                                     
+    <strong>____</strong>    <strong>______</strong>    <strong>____</strong>    <strong>__________________</strong>    <strong>_________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>_______________________________________________________________________________________________________________________________________________</strong>
+
+    0.96     20.5     0.01          0.0203          -1.02563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -1.02563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -1.02563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -1.02563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -1.02563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -3.24334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -3.24334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -3.24334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -3.24334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -3.24334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -10.2563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -10.2563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -10.2563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -10.2563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -10.2563609162638         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -32.4334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -32.4334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -32.4334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -32.4334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -32.4334610001251         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -1.77645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -1.77645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -1.77645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -1.77645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -1.77645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -5.61764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -5.61764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -5.61764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -5.61764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -5.61764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -17.7645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -17.7645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -17.7645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -17.7645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -17.7645382077326         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -56.1764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -56.1764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -56.1764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -56.1764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -56.1764023175203         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -2.29339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -2.29339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -2.29339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -2.29339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -2.29339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203           -7.2523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203           -7.2523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203           -7.2523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203           -7.2523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203           -7.2523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -22.9339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -22.9339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -22.9339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -22.9339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -22.9339202105379         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203           -72.523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203           -72.523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203           -72.523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203           -72.523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203           -72.523423541868         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -2.71357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -2.71357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -2.71357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -2.71357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -2.71357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -8.58108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -8.58108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -8.58108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -8.58108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -8.58108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -27.1357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -27.1357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -27.1357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -27.1357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -27.1357803409565         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -85.8108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -85.8108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -85.8108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -85.8108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -85.8108719634432         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -3.07690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -3.07690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -3.07690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -3.07690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -3.07690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -9.73003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -9.73003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -9.73003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -9.73003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -9.73003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -30.7690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -30.7690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -30.7690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -30.7690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -30.7690827487914         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -97.3003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -97.3003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -97.3003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -97.3003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -97.3003830003752         30             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -1.02563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -1.02563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -1.02563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -1.02563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -1.02563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -3.24334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -3.24334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -3.24334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -3.24334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -3.24334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -10.2563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -10.2563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -10.2563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -10.2563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -10.2563609162638         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -32.4334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -32.4334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -32.4334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -32.4334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -32.4334610001251         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -1.77645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -1.77645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -1.77645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -1.77645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -1.77645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -5.61764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -5.61764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -5.61764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -5.61764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -5.61764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -17.7645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -17.7645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -17.7645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -17.7645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -17.7645382077326         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -56.1764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -56.1764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -56.1764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -56.1764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -56.1764023175203         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -2.29339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -2.29339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -2.29339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -2.29339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -2.29339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203           -7.2523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203           -7.2523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203           -7.2523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203           -7.2523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203           -7.2523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -22.9339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -22.9339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -22.9339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -22.9339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -22.9339202105379         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203           -72.523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203           -72.523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203           -72.523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203           -72.523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203           -72.523423541868         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -2.71357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -2.71357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -2.71357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -2.71357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -2.71357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -8.58108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -8.58108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -8.58108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -8.58108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -8.58108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -27.1357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -27.1357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -27.1357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -27.1357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -27.1357803409565         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -85.8108719634432         60             1       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -85.8108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -85.8108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -85.8108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -85.8108719634432         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -3.07690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -3.07690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -3.07690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -3.07690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -3.07690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -9.73003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -9.73003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -9.73003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -9.73003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -9.73003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -30.7690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -30.7690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -30.7690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -30.7690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -30.7690827487914         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -97.3003830003752         60             1       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -97.3003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -97.3003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -97.3003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -97.3003830003752         60             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -1.02563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -1.02563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -1.02563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -1.02563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -1.02563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -3.24334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -3.24334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -3.24334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -3.24334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -3.24334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -10.2563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -10.2563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -10.2563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -10.2563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -10.2563609162638         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -32.4334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -32.4334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -32.4334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -32.4334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -32.4334610001251         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -1.77645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -1.77645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -1.77645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -1.77645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -1.77645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -5.61764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -5.61764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -5.61764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -5.61764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -5.61764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -17.7645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -17.7645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -17.7645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -17.7645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -17.7645382077326         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -56.1764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -56.1764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -56.1764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -56.1764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -56.1764023175203         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -2.29339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -2.29339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -2.29339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -2.29339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -2.29339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203           -7.2523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203           -7.2523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203           -7.2523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203           -7.2523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203           -7.2523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -22.9339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -22.9339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -22.9339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -22.9339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -22.9339202105379         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203           -72.523423541868         90             1       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203           -72.523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203           -72.523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203           -72.523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203           -72.523423541868         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -2.71357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -2.71357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -2.71357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -2.71357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -2.71357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -8.58108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -8.58108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -8.58108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -8.58108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -8.58108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -27.1357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -27.1357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -27.1357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -27.1357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -27.1357803409565         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -85.8108719634432         90             1       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -85.8108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -85.8108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -85.8108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -85.8108719634432         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -3.07690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -3.07690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -3.07690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -3.07690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -3.07690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -9.73003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -9.73003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -9.73003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -9.73003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -9.73003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -30.7690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -30.7690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -30.7690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -30.7690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -30.7690827487914         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01          0.0203          -97.3003830003752         90             1       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02          0.0203          -97.3003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.05          0.0203          -97.3003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.2          0.0203          -97.3003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5      0.5          0.0203          -97.3003830003752         90             1       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v1 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing
