@@ -20,9 +20,9 @@ files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 % Create table to fill values (adimensional unless stated in the title)
 varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "parent_folder", "number_of_harmonics", ...
     "max_width", "contact_time_ms", "coef_restitution", "north_pole_min_height", "north_pole_exp_min_height", ...
-    "max_contact_radius", "spread_time_ms"];
+    "max_contact_radius", "spread_time_ms", "spread_time_width_ms"];
 varTypes=["string", "double", "double", "double", "double", "string", "double", "double", "double", "double", ...
-    "double", "double", "double", "double"];
+    "double", "double", "double", "double", "double"];
 %=======
 % Create table to fill values
 %varNames=["fileName", "initialVelocity", "Weber*", "Ohnesorge", "dropLiquid", "nb_harmonics", ...
@@ -69,17 +69,14 @@ for ii = 1:length(files_folder)
         contact_time = nan; touch_time = nan; liftoff_time = nan;
         coef_restitution = nan; Vin = nan; Vout = nan;
         north_pole_min_height = inf; north_pole_exp_min_height = inf;
-        max_contact_radius = -inf; spread_time = nan;
+        max_contact_radius = -inf; spread_time = nan; spread_time_width = nan;
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
             drop_radius = zeta_generator(adim_deformations);
             drop_radius = @(theta) 1 + drop_radius(theta);
 
-            % Max width calculation
-            current_width = maximum_contact_radius(adim_deformations);
-            if current_width > max_width; max_width = current_width; end
-
+            
             % contact_time and coef_res
             if isnan(touch_time)
                 if recorded_conditions{jj}.contact_points == 0 && ...
@@ -123,6 +120,13 @@ for ii = 1:length(files_folder)
                 if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
             end
                 
+            % Max width calculation & spread time of width
+            current_width = maximum_contact_radius(adim_deformations);
+            if current_width > max_width
+                max_width = current_width; 
+                spread_time_width = recorded_times(jj) - touch_time;
+            end
+
 
             % max_contact_radius calculation
             current_contact_points = recorded_conditions{jj}.contact_points;
@@ -141,7 +145,7 @@ for ii = 1:length(files_folder)
         [~, dropLiquid, lol] = fileparts(files_folder(ii).folder); dropLiquid = strcat(dropLiquid, lol);
         data(ii, :) = {files_folder(ii).name, Vin, Westar, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
             max_width, contact_time, coef_restitution, north_pole_min_height, ...
-            north_pole_exp_min_height, max_contact_radius, spread_time};
+            north_pole_exp_min_height, max_contact_radius, spread_time, spread_time_width};
 
     catch me
         if contains(files_folder(ii).name, "error"); continue; end

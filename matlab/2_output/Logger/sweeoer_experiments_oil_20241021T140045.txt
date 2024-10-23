@@ -1,0 +1,505 @@
+------------
+21-Oct-2024 14:00:45 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: [5×1 double]
+    undisturbed_radius: 0.0203
+      initial_velocity: [20×1 double]
+         harmonics_qtt: [3×1 double]
+               version: 1
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+nu
+{Unrecognized function or variable 'nu'.
+} 
+var
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('var', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datafun/var.m', 78)" style="font-weight:bold">var</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datafun/var.m',78,0)">line 78</a>)
+if isinteger(x)
+             ^
+} 
+vars
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: [5×1 double]
+    undisturbed_radius: 0.0203
+      initial_velocity: [20×1 double]
+         harmonics_qtt: [3×1 double]
+               version: 1
+
+vars.nu
+
+ans =
+
+    0.0002
+    0.0003
+    0.0008
+    0.0030
+    0.0076
+
+mu = 0.00096;
+sigma = 0.0205;
+rho = 960;
+R = 0.000203;
+mu/sqrt(rho*sigma*R)
+
+ans =
+
+    0.0152
+
+vars.nu
+
+ans =
+
+    0.0002
+    0.0003
+    0.0008
+    0.0030
+    0.0076
+
+mu/rho
+
+ans =
+
+   1.0000e-06
+
+data
+{Unrecognized function or variable 'data'.
+} 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+[Warning: No video frames were written to this file. The file may be invalid.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('VideoWriter/close', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m', 282)" style="font-weight:bold">VideoWriter/close</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m',282,0)">line 282</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('VideoWriter/delete', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m', 217)" style="font-weight:bold">VideoWriter/delete</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m',217,0)">line 217</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 2)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',2,0)">line 2</a>)] 
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fill')" style="font-weight:bold">fill</a>
+Not enough input arguments.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plot_condition', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m', 68)" style="font-weight:bold">plot_condition</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m',68,0)">line 68</a>)
+    fill( EtaX,EtaY, 'LineWidth',1.5 , 'Color', [135, 206, 235]/256, 'FaceAlpha', 0.3);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 28)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',28,0)">line 28</a>)
+            plot_condition(1, adim_conditions, 1.5);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m',68,0)
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('getframe', '/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/printing/getframe.m', 61)" style="font-weight:bold">getframe</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/printing/getframe.m',61,0)">line 61</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 36)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',36,0)">line 36</a>)
+            writeVideo(vidObj, getframe(gcf));
+                               ^^^^^^^^^^^^^
+} 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+[Warning: No video frames were written to this file. The file may be invalid.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('VideoWriter/close', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m', 282)" style="font-weight:bold">VideoWriter/close</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m',282,0)">line 282</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('VideoWriter/delete', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m', 217)" style="font-weight:bold">VideoWriter/delete</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m',217,0)">line 217</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 2)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',2,0)">line 2</a>)] 
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('fill')" style="font-weight:bold">fill</a>
+Value should be a finite number greater than 0
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plot_condition', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m', 68)" style="font-weight:bold">plot_condition</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m',68,0)">line 68</a>)
+    fill( EtaX,EtaY, [135, 206, 235]/256, 'LineWidth',0 ,'FaceAlpha', 0.1);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 28)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',28,0)">line 28</a>)
+            plot_condition(1, adim_conditions, 1.5);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+plot_condition
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plot_condition', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m', 20)" style="font-weight:bold">plot_condition</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m',20,0)">line 20</a>)
+    h = figure(idx);
+               ^^^
+} 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('getframe', '/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/printing/getframe.m', 61)" style="font-weight:bold">getframe</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/printing/getframe.m',61,0)">line 61</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 36)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',36,0)">line 36</a>)
+            writeVideo(vidObj, getframe(gcf));
+                               ^^^^^^^^^^^^^
+} 
+plot_condition
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plot_condition', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m', 20)" style="font-weight:bold">plot_condition</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m',20,0)">line 20</a>)
+    h = figure(idx);
+               ^^^
+} 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('getframe', '/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/printing/getframe.m', 61)" style="font-weight:bold">getframe</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/printing/getframe.m',61,0)">line 61</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 36)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',36,0)">line 36</a>)
+            writeVideo(vidObj, getframe(gcf));
+                               ^^^^^^^^^^^^^
+} 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlabshared.asyncio.internal.OutputStream/writePackets', '/Applications/MATLAB_R2024b.app/toolbox/shared/asynciolib/+matlabshared/+asyncio/+internal/OutputStream.m', 183)" style="font-weight:bold">matlabshared.asyncio.internal.OutputStream/writePackets</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/shared/asynciolib/+matlabshared/+asyncio/+internal/OutputStream.m',183,0)">line 183</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlabshared.asyncio.internal.OutputStream/write', '/Applications/MATLAB_R2024b.app/toolbox/shared/asynciolib/+matlabshared/+asyncio/+internal/OutputStream.m', 159)" style="font-weight:bold">matlabshared.asyncio.internal.OutputStream/write</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/shared/asynciolib/+matlabshared/+asyncio/+internal/OutputStream.m',159,0)">line 159</a>)
+        count = obj.writePackets(packetsToWrite);
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('audiovideo.internal.writer.plugin.IPlugin/writeVideoFrame', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+internal/+writer/+plugin/IPlugin.m', 68)" style="font-weight:bold">audiovideo.internal.writer.plugin.IPlugin/writeVideoFrame</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+internal/+writer/+plugin/IPlugin.m',68,0)">line 68</a>)
+                obj.Channel.OutputStream.write(data);
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('audiovideo.internal.writer.plugin.MP4AVFoundationPlugin/writeVideoFrame', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+internal/+writer/+plugin/MP4AVFoundationPlugin.m', 67)" style="font-weight:bold">audiovideo.internal.writer.plugin.MP4AVFoundationPlugin/writeVideoFrame</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+internal/+writer/+plugin/MP4AVFoundationPlugin.m',67,0)">line 67</a>)
+            obj.writeVideoFrame@audiovideo.internal.writer.plugin.IPlugin(data);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('audiovideo.writer.profile.IProfile/writeVideoFrame', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+writer/+profile/IProfile.m', 81)" style="font-weight:bold">audiovideo.writer.profile.IProfile/writeVideoFrame</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+writer/+profile/IProfile.m',81,0)">line 81</a>)
+            obj.Plugin.writeVideoFrame(frame);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('audiovideo.writer.profile.MPEG4/writeVideoFrame', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+writer/+profile/MPEG4.m', 101)" style="font-weight:bold">audiovideo.writer.profile.MPEG4/writeVideoFrame</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/+audiovideo/+writer/+profile/MPEG4.m',101,0)">line 101</a>)
+            obj.writeVideoFrame@audiovideo.writer.profile.IProfile(frame);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('VideoWriter/writeVideo', '/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m', 388)" style="font-weight:bold">VideoWriter/writeVideo</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/audiovideo/VideoWriter.m',388,0)">line 388</a>)
+                        obj.Profile.writeVideoFrame(outputFrames(:,:,:,ii))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 36)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',36,0)">line 36</a>)
+            writeVideo(vidObj, getframe(gcf));
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+export_animation
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('load')" style="font-weight:bold">load</a>
+Unable to read file ' / '. Input cannot be a directory.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)
+        load(fullfilepath, "recorded_conditions", "is_adim", "default_physical");
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+export_animation
+[Warning: Variable 'is_adim' not found.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('export_animation', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m', 11)" style="font-weight:bold">export_animation</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m',11,0)">line 11</a>)] 
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('height', '/Applications/MATLAB_R2024b.app/toolbox/matlab/elmat/height.m', 10)" style="font-weight:bold">height</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/elmat/height.m',10,0)">line 10</a>)
+H = size(X,1);
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('untitled', 'untitled', 20)" style="font-weight:bold">untitled</a> (<a href="matlab: opentoline('untitled',20,0)">line 20</a>)
+EtaY = height + arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), sample);
+}
+clc
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('plot')" style="font-weight:bold">plot</a>
+Unrecognized property FaceAlpha for class Line.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('untitled', 'untitled', 23)" style="font-weight:bold">untitled</a> (<a href="matlab: opentoline('untitled',23,0)">line 23</a>)
+plot( EtaX,EtaY, 'Color', [135, 206, 235]/256, 'LineWidth',1.5 ,'FaceAlpha', 0.3);
+}
+{Error: <a href="matlab: opentoline('untitled',30,79)">File: untitled Line: 30 Column: 79</a>
+Unexpected ')'. Remove trailing comma or add an expression after the comma.
+}
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('rectangle')" style="font-weight:bold">rectangle</a>
+Unrecognized property Color for class Rectangle.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('untitled', 'untitled', 30)" style="font-weight:bold">untitled</a> (<a href="matlab: opentoline('untitled',30,0)">line 30</a>)
+rectangle('Position', pos, 'Curvature', [1, 1], 'Color', [0.1 0.1 0.1], 'LineStyle','--', 'LineWidth',1);
+}
+help rectangle
+ <strong>rectangle</strong> - Create rectangle with sharp or curved corners
+    This MATLAB function creates a rectangle in 2-D coordinates.
+
+    Syntax
+      <strong>rectangle</strong>('Position',pos)
+      <strong>rectangle</strong>('Position',pos,'Curvature',cur)
+      <strong>rectangle</strong>(___,Name,Value)
+      <strong>rectangle</strong>(ax,___)
+      r = <strong>rectangle</strong>(___)
+
+    Input Arguments
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/rectangle.html#f66-515573-pos">pos</a> - Size and location of rectangle
+        four-element vector of the form [x y w h]
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/rectangle.html#f66-515573-cur">cur</a> - Amount of horizontal and vertical curvature
+        [0 0] (default) | two-element vector | scalar
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/rectangle.html#f66-515573-ax">ax</a> - Axes object
+        axes object
+
+    Name-Value Arguments
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/rectangle.html#f66-515573_sep_shared-FaceColor">FaceColor</a> - Fill color
+        "none" (default) | RGB triplet | hexadecimal color code | "r" |
+        "g" | "b" | ...
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/rectangle.html#f66-515573-EdgeColor">EdgeColor</a> - Outline color
+        [0 0 0] (default) | RGB triplet | hexadecimal color code | 'r' |
+        'g' | 'b' | ...
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/rectangle.html#f66-515573-LineWidth">LineWidth</a> - Line width
+        0.5 (default) | positive value
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/rectangle.html#f66-515573_sep_shared-LineStyle">LineStyle</a> - Line style
+        "-" (default) | "--" | ":" | "-." | "none"
+
+    Examples
+      <a href="matlab:openExample('graphics/DrawRectangleExample')">Draw Rectangle</a>
+      <a href="matlab:openExample('graphics2/RectangleWithDifferentCurvaturesExample')">Draw Rectangle with Curved Edges</a>
+      <a href="matlab:openExample('graphics/DrawCircleExample')">Draw Circle</a>
+      <a href="matlab:openExample('graphics2/CreateRedEllipseExample')">Specify Rectangle Outline and Fill Color</a>
+      <a href="matlab:openExample('graphics/ModifyRectangleAfterCreationExample')">Modify Rectangle After Creation</a>
+
+    See also <a href="matlab:help line -displayBanner">line</a>, <a href="matlab:help patch -displayBanner">patch</a>, <a href="matlab:help annotation -displayBanner">annotation</a>, <a href="matlab:help matlab.graphics.primitive.Rectangle -displayBanner">Rectangle</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc rectangle">Documentation for rectangle</a>
+
+help scatter
+ <strong>scatter</strong> - Scatter plot
+    This MATLAB function creates a scatter plot with circular markers at the
+    locations specified by the vectors x and y.
+
+    Vector and Matrix Data
+      <strong>scatter</strong>(x,y)
+      <strong>scatter</strong>(x,y,sz)
+      <strong>scatter</strong>(x,y,sz,c)
+      <strong>scatter</strong>(___,"filled")
+      <strong>scatter</strong>(___,mkr)
+
+    Table Data
+      <strong>scatter</strong>(tbl,xvar,yvar)
+      <strong>scatter</strong>(tbl,xvar,yvar,"filled")
+
+    Additional Options
+      <strong>scatter</strong>(ax,___)
+      <strong>scatter</strong>(___,Name,Value)
+      s = <strong>scatter</strong>(___)
+
+    Input Arguments
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1-x">x</a> - x-coordinates
+        scalar | vector | matrix
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1-y">y</a> - y-coordinates
+        scalar | vector | matrix
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1-sz">sz</a> - Marker size
+        36 (default) | numeric scalar | row or column vector | matrix | []
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1-c">c</a> - Marker color
+        color name | RGB triplet | matrix of RGB triplets |
+        vector of colormap indices
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1-mkr">mkr</a> - Marker symbol
+        "o" (default) | "+" | "*" | "." | "x" | ...
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1-filled">"filled"</a> - Option to fill interior of markers
+        "filled"
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1_sep_mw_1f5b8358-45d8-4c4d-8a0d-17e2da07c841">tbl</a> - Source table
+        table | timetable
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#mw_07b8b6d3-e368-4c11-8445-83aae6f90fb3">xvar</a> - Table variables containing x-coordinates
+        one or more table variable indices
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#mw_a7ecdf1c-6b05-4604-b249-f8ee9117edb6">yvar</a> - Table variables containing y-coordinates
+        one or more table variable indices
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#mw_c01508e4-c651-4e65-906c-968841b02156">ax</a> - Target axes
+        Axes object | PolarAxes object | GeographicAxes object
+
+    Name-Value Arguments
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1_sep_shared-MarkerEdgeColor">MarkerEdgeColor</a> - Marker outline color
+        "flat" (default) | RGB triplet | hexadecimal color code | "r" |
+        "g" | "b" | ...
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1_sep_shared-MarkerFaceColor">MarkerFaceColor</a> - Marker fill color
+        "none" (default) | "flat" | "auto" | RGB triplet |
+        hexadecimal color code | "r" | "g" | "b" | ...
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1_sep_shared-LineWidth">LineWidth</a> - Width of marker edge
+        0.5 (default) | positive value
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1_sep_mw_53ba6944-ffbb-4596-bc60-98965cdb9dd1">ColorVariable</a> - Table variable containing color data
+        table variable index
+
+    Output Arguments
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/scatter.html#btrj9jn-1-s">s</a> - Scatter object
+        Scatter object | array of Scatter objects
+
+    Examples
+      <a href="matlab:openExample('graphics/CreateScatterPlotExample')">Create Scatter Plot</a>
+      <a href="matlab:openExample('graphics/VaryCircleSizeExample')">Vary Circle Size</a>
+      <a href="matlab:openExample('graphics/VaryCircleColorExample')">Vary Circle Color</a>
+      <a href="matlab:openExample('graphics/ScatterColorPaletteExample')">Vary Color Palette</a>
+      <a href="matlab:openExample('graphics/VaryCircleSizeandColorExample')">Fill the Markers</a>
+      <a href="matlab:openExample('graphics/SpecifyMarkerSymbolExample')">Specify Marker Symbol</a>
+      <a href="matlab:openExample('graphics/SpecifyMarkerPropertiesExample')">Change Marker Color and Line Width</a>
+      <a href="matlab:openExample('graphics/ScatterAlphaDataExample')">Vary Transparency Across Data Points</a>
+      <a href="matlab:openExample('graphics/ScatterTableExample')">Plot Data from a Table</a>
+      <a href="matlab:openExample('graphics/ScatterTableSizeColorExample')">Plot Table Data with Custom Colors and Marker Sizes</a>
+      <a href="matlab:openExample('graphics/ScatterSpecifyAxes19bExample')">Specify Target Axes and Marker Type</a>
+      <a href="matlab:openExample('graphics2/SetScatterObjectPropertiesExample')">Modify Scatter Series After Creation</a>
+
+    See also <a href="matlab:help hold -displayBanner">hold</a>, <a href="matlab:help plot -displayBanner">plot</a>, <a href="matlab:help scatter3 -displayBanner">scatter3</a>, <a href="matlab:help bubblechart -displayBanner">bubblechart</a>, <a href="matlab:help swarmchart -displayBanner">swarmchart</a>, <a href="matlab:help matlab.graphics.chart.primitive.Scatter -displayBanner">Scatter</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc scatter">Documentation for scatter</a>
+    <a href="matlab:matlab.lang.internal.introspective.overloads.displayOverloads('scatter')">Other uses of scatter</a>
+
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('scatter', '/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/scatter.m', 68)" style="font-weight:bold">scatter</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/graphics/graphics/scatter.m',68,0)">line 68</a>)
+Unrecognized property MarkerSize for class Scatter.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('untitled', 'untitled', 32)" style="font-weight:bold">untitled</a> (<a href="matlab: opentoline('untitled',32,0)">line 32</a>)
+scatter(center_x, center_y, 'k.', 'MarkerSize', 50)
+}
+{<a href="matlab: opentoline('untitled',32,32)">File: untitled Line: 32 Column: 32</a>
+Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax
+error. To construct matrices, use brackets instead of parentheses.
+}
+randint
+{'randint' has been removed. With appropriate code changes, use 'randi' instead.
+
+Caused by:
+    Unrecognized function or variable 'randint'.
+} 
+randi
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('randi')" style="font-weight:bold">randi</a>
+Not enough input arguments.
+} 
+help randi
+ <strong>randi</strong> - Uniformly distributed random integers
+    This MATLAB function returns a random scalar integer between 1 and imax.
+
+    Syntax
+      X = <strong>randi</strong>(imax)
+      X = <strong>randi</strong>(imax,n)
+      X = <strong>randi</strong>(imax,sz1,...,szN)
+      X = <strong>randi</strong>(imax,sz)
+
+      X = <strong>randi</strong>(___,typename)
+      X = <strong>randi</strong>(___,"like",p)
+
+      X = <strong>randi</strong>([imin,imax],___)
+
+      X = <strong>randi</strong>(s,___)
+
+    Input Arguments
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#buf2csg-imax">imax</a> - Largest integer in sample interval
+        positive integer
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#buf2csg-imin">imin</a> - Smallest integer in sample interval
+        1 (default) | scalar integer
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#buf2csg-n">n</a> - Size of square matrix
+        integer value
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#buf2csg-sz1szN">sz1,...,szN</a> - Size of each dimension (as separate arguments)
+        integer values
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#buf2csg-sz">sz</a> - Size of each dimension (as a row vector)
+        integer values
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#buf2csg-classname">typename</a> - Data type (class) to create
+        "double" (default) | "single" | "int8" | "uint8" | "int16" |
+        "uint16" | "int32" | "uint32" | "logical"
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#buf2csg-p">p</a> - Prototype of array to create
+        numeric array | logical array
+      <a href="matlab:web /Applications/MATLAB_R2024b.app/help/matlab/ref/randi.html#mw_3f3e135a-0842-44f9-989f-5004615a9bb7">s</a> - Random number stream
+        RandStream object
+
+    Examples
+      <a href="matlab:openExample('matlab/SquareMatrixofRandomIntegersExample')">Square Matrix of Random Integers</a>
+      <a href="matlab:openExample('matlab/RandomIntegersWithinSpecifiedIntervalExample')">Random Integers Within Specified Interval</a>
+      <a href="matlab:openExample('matlab/ControlRandomNumberGenerationExample')">Control Random Number Generation</a>
+      <a href="matlab:openExample('matlab/ThreeDArrayOfRandomIntegersExample')">3-D Array of Random Integers</a>
+      <a href="matlab:openExample('matlab/RandomIntegersofOtherDataTypesExample')">Random Integers of Other Data Types</a>
+      <a href="matlab:openExample('matlab/SizeDefinedByExistingArrayrandiExample')">Size Defined by Existing Array</a>
+      <a href="matlab:openExample('matlab/SizeAndNumericDataTypeDefinedByExistingArrayrandiExample')">Size and Numeric Data Type Defined by Existing Array</a>
+      <a href="matlab:openExample('matlab/RandomComplexIntegersExample')">Random Complex Integers</a>
+      <a href="matlab:openExample('matlab/RandomLogicalArrayExample')">Random Logical Array</a>
+
+    See also <a href="matlab:help rand -displayBanner">rand</a>, <a href="matlab:help randn -displayBanner">randn</a>, <a href="matlab:help rng -displayBanner">rng</a>, <a href="matlab:help RandStream -displayBanner">RandStream</a>, <a href="matlab:help randperm -displayBanner">randperm</a>
+
+    Introduced in MATLAB in R2008b
+    <a href="matlab:doc randi">Documentation for randi</a>
+    <a href="matlab:matlab.lang.internal.introspective.overloads.displayOverloads('randi')">Other uses of randi</a>
+
+randi(1, 3)
+
+ans =
+
+     1     1     1
+     1     1     1
+     1     1     1
+
+randi(1, 1, 3)
+
+ans =
+
+     1     1     1
+
+randi(1, 1, 10)
+
+ans =
+
+     1     1     1     1     1     1     1     1     1     1
+
+randi(2, 1, 10)
+
+ans =
+
+     2     2     2     2     2     1     2     1     2     1
+
+(randi(2, 1, 10)-1)* 2
+
+ans =
+
+     0     0     0     2     2     0     2     0     0     0
+
+(randi(2, 1, 10)-1)
+
+ans =
+
+     1     1     0     0     0     1     1     1     0     1
+
+(randi(3, 1, 10)-2)*0.1
+
+ans =
+
+         0   -0.1000   -0.1000         0    0.1000         0         0   -0.1000    0.1000   -0.1000
+
+amplitudes
+
+amplitudes =
+
+   -0.1000         0         0         0    0.1000
+
+amplitudes
+
+amplitudes =
+
+   -0.1000   -0.1000   -0.1000   -0.1000    0.1000         0
+
+amplitudes
+
+amplitudes =
+
+         0   -0.1000    0.1000         0         0         0
+
+
+amplitudes =
+
+         0    0.2000
+
+
+amplitudes =
+
+         0         0   -0.2000
+
+
+amplitudes =
+
+         0         0         0   -0.2000
+
+exit
