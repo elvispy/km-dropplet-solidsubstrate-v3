@@ -1,0 +1,21 @@
+------------
+24-Oct-2024 16:04:05 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: [5×1 double]
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: [5×1 double]
+         harmonics_qtt: [3×1 double]
+               version: 1
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 59)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',59,0)">line 59</a>)
+To assign to or create a variable in a table, the number of rows must match the height of the table.
+} 
+opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',59,0)
+sweeoer_experiments_oil

@@ -9,13 +9,13 @@ ddate = datestr(datetime(), 30); % 30 = ISO 8601
 diary(sprintf("../2_output/Logger/%s_%s.txt", mfilename, ddate));
 disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
-
+force_sweep = true;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-V = 10.^([-3, -2, -1, 0]);
-velocities = -sqrt(sigma/(rho*Ro) .* [V, 3*V, 5*V, 7*V, 9*V]);
+V = 10.^([0]);
+velocities = -sqrt(sigma/(rho*Ro) .* [2*V, 2.5*V, 3*V, 3.5*V, 4*V]);
 
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
@@ -45,7 +45,7 @@ cartesian_product = cell2mat( ...
 if isempty(cartesian_product) == true; cartesian_product = double.empty(0, length(fieldnames(vars))); end
 simulations_cgs = array2table(cartesian_product, "VariableNames", fnames);
 
-force_sweep = false;
+
 
 % Now you can manually add any simulations that you would like to run, such
 % as:
@@ -56,7 +56,7 @@ force_sweep = false;
 if force_sweep == false
     simulations_cgs.done = ismember(simulations_cgs, pull_done_experiments(simulations_cgs)); 
 else
-    simulations_cgs.done = false;
+    simulations_cgs.done = zeros(height(simulations_cgs), 1);
 end
 
 root = pwd;

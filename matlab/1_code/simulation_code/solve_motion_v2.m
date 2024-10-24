@@ -332,14 +332,14 @@ function solve_motion_v2(varargin)
             else
                 % Progressively increase order of method until desired
                 % length of previous conditions have been attained
-                if default_numerical.order > length(previous_conditions) && current_time/dt >= 10
+                if default_numerical.order > length(previous_conditions) && current_time/dt(end) >= 10
                     previous_conditions = {previous_conditions{1:end} current_conditions};
                 else
                     previous_conditions = {previous_conditions{2:end} current_conditions};
                 end
 
                 current_time = current_time + dt(end); jjj = jjj + 1;
-                dt = dt(1:max(1, end-1));
+                dt = dt(1:max(1, end-1)); if size(dt, 1) == 1; dt = max_dt; end
                 % if mod(jjj, 2) == 0 && grow_dt == true
                 %     jjj = floor(jjj/2); 
                 %     iii = iii - 1;

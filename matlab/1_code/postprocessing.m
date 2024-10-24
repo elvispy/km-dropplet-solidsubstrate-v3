@@ -156,7 +156,7 @@ end
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name');
 s = fullfile(root_folder, "2_output", "postprocessing.mat");
-if exist(s, "file")
+if ~exist(s, "file")
     save(s, "data");
 else
     warning('Did not save the postprocessing file. There is one in the directory already');
