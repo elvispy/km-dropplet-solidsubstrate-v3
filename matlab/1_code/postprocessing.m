@@ -155,6 +155,8 @@ for ii = 1:length(files_folder)
 end
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name');
-save(fullfile(root_folder, "2_output", "postprocessing.mat"), "data");
-
+s = fullfile(root_folder, "2_output", "postprocessing.mat");
+if exist(s, "file")
+    save(s, "data");
+end
 diary off
