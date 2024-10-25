@@ -14,8 +14,8 @@ force_sweep = true;
 %% Setting simulation parameters
 %#ok<*NOPTS>
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-V = 10.^([0]);
-velocities = -sqrt(sigma/(rho*Ro) .* [5*V, 6*V, 7*V, 8*V, 9*V, 10*V]);
+V = 10.^([-3, -2, -1, 0]);
+velocities = -sqrt(sigma/(rho*Ro) .* [V, 3*V, 5*V, 7*V, 9*V]);
 
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
@@ -24,7 +24,7 @@ vars = struct(...
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
     "harmonics_qtt", [30, 60, 90]', ...
-    "version", [1]')%tol = 5e-5
+    "version", [3]')%tol = 5e-5
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
