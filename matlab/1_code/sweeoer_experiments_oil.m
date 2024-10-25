@@ -15,7 +15,7 @@ force_sweep = true;
 %#ok<*NOPTS>
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
 V = 10.^([0]);
-velocities = -sqrt(sigma/(rho*Ro) .* [2*V, 2.5*V, 3*V, 3.5*V, 4*V]);
+velocities = -sqrt(sigma/(rho*Ro) .* [5*V, 6*V, 7*V, 8*V, 9*V, 10*V]);
 
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs

@@ -40,7 +40,7 @@ end
 if size(data, 2) ~= length(varNames) || sum(data.Properties.VariableNames ~= varNames) > 2
     data = table('Size', sz, 'VariableTypes', varTypes, 'VariableNames', varNames);
 end
-
+data = data(~isnan(data.initial_velocity_cgs), :);
 for ii = 1:length(files_folder)
     try
         if ismember(files_folder(ii).name, data.(varNames(1))) || ...
