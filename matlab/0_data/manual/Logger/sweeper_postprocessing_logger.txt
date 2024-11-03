@@ -27034,3 +27034,216 @@ if system_dependent('IsDebugMode')==1, dbstep; end
 if system_dependent('IsDebugMode')==1, dbcont; end
 [Warning: Did not save the postprocessing file. There is one in the directory already] 
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 162)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',162,0)">line 162</a>)] 
+-------
+02-Nov-2024 23:38:19 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.88e-01, sigmaS=7.22e+01, R=5.00e-02) simulation 20241102T224907.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'liftoff_time_e'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) simulation 20241025T100351.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'liftoff_time_e'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 215)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',215,0)">line 215</a>)] 
+-------
+02-Nov-2024 23:39:02 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+files_folder
+
+files_folder = 
+
+  3×1 <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> array with fields:
+
+    name
+    folder
+    date
+    bytes
+    isdir
+    datenum
+
+files_folder.name
+
+ans =
+
+    'postprocessing.mat'
+
+
+ans =
+
+    'simulation 20241102T224907.mat'
+
+
+ans =
+
+    'simulation 20241025T100351.mat'
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+me
+
+me = 
+
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'liftoff_time_e'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+me.stack
+
+ans = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    file: '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m'
+    name: 'postprocessing'
+    line: 149
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+postprocessing
+-------
+02-Nov-2024 23:40:06 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 216)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',216,0)">line 216</a>)] 
+-------
+02-Nov-2024 23:43:08 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 216)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',216,0)">line 216</a>)] 
+-------
+02-Nov-2024 23:44:40 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 215)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',215,0)">line 215</a>)] 
+-------
+02-Nov-2024 23:45:07 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+drop_height(theta_2)
+{Unrecognized function or variable 'theta_2'.
+} 
+drop_height(theta2)
+
+ans =
+
+   9.0334e-04
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+theta_1
+{Unrecognized function or variable 'theta_1'.
+} 
+theta1
+
+theta1 =
+
+    3.1356
+
+theta_2
+{Unrecognized function or variable 'theta_2'.
+} 
+theta2
+
+theta2 =
+
+    3.1327
+
+drop_height(theta_1)
+{Unrecognized function or variable 'theta_1'.
+} 
+drop_height(theta1)
+
+ans =
+
+   1.2540e-05
+
+drop_height(theta1) - th/length_unit
+
+ans =
+
+  -7.4599e-06
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing
+-------
+02-Nov-2024 23:47:51 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 215)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',215,0)">line 215</a>)] 
+-------
+02-Nov-2024 23:49:02 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('postprocessing', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 215)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',215,0)">line 215</a>)] 
