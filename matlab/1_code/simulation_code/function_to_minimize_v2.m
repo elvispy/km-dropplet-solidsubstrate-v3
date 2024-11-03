@@ -56,16 +56,20 @@ function res = function_to_minimize_v2(Xn, previous_conditions, dt, contact_poin
     
     D1N = Aidx .* (Aidx + 2) .* (Aidx - 1);
     D1N2 = 2*settings.Oh*(Aidx-1) .* (2*Aidx+1);
-    
+    if contact_points == 0
+        pressure_submatrix = zeros(size(Aidx));
+    else
+        pressure_submatrix = Aidx;
+    end
     R2 =  (sum(coefs .* [previous_velocities, current_velocities], 2) ...
-         + dt * (Aidx .* current_pressures(3:end) ...
+         + dt * (pressure_submatrix .* current_pressures(3:end) ...
          + D1N2 .* current_velocities ... % Added viscocity term
          + D1N .* current_deformation));
      
     %if theta_contact < pi
         % Third ROW BLOCK (flat surface on contact angle condition)
         %L = 10; % This, too, must be unified.
-        theta_contact = theta_vector(1:contact_points); %theta_i2 = reshape(linspace(theta_contact, pi, Flat), Flat, 1); 
+        theta_contact = theta_vector(1:contact_points);
         
         cosines = cos(theta_contact);
         P2 = collectPl(M, cosines)';
@@ -76,7 +80,7 @@ function res = function_to_minimize_v2(Xn, previous_conditions, dt, contact_poin
         % fourth ROW BLOCK (No pressure outside condition)
         theta_i = theta_vector((contact_points+1):end);
         P1 = collectPl(M, cos(theta_i))';
-        P1 = [ones(size(theta_i)), P1];
+        P1 = [ones(size(theta_i)), P1]; %zeroth order is all ones
         R4 = sum(P1 * current_pressures, 2);
 
         
@@ -99,7 +103,7 @@ function res = function_to_minimize_v2(Xn, previous_conditions, dt, contact_poin
         
         
         R7 =  (sum(coefs .* [previous_COM_vel, center_of_mass_vel], 2) - ...
-            dt * (-1/Fr - current_pressures(2) + sum(current_deformation .* Xl)));
+            dt * (-1/Fr + (contact_points > 0) * (-current_pressures(2) + sum(current_deformation .* Xl))));
         
             % [-dt * 3 * (current_deformation + oneN) * B, ...
             %zeros(1, N-1), -dt*(3/2 * A) * Cl, 0, coefs(end)];

@@ -117,7 +117,7 @@ function solve_motion_v2(varargin)
     length_unit = undisturbed_radius;
     time_unit = sqrt(rhoS * length_unit^3 / sigmaS); %undisturbed_radius/velocity_unit; % Temporal dimensionless number
     velocity_unit = length_unit/time_unit; % abs(initial_velocity);    
-    pressure_unit = rhoS * velocity_unit^2;
+    pressure_unit = rhoS * velocity_unit^2; 
     froude_nb   = length_unit/(g*time_unit.^2);
     weber_nb    = rhoS * undisturbed_radius.^3/ (sigmaS*time_unit.^2); % Weber's number of the dropplet
     Oh = nu * sqrt(rhoS/(sigmaS*undisturbed_radius));% Ohnesorge number

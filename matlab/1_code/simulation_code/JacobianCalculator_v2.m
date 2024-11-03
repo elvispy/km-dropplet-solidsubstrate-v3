@@ -32,6 +32,7 @@ function res = JacobianCalculator_v2(Xn, previous_conditions, dt, contact_points
     %Bidx = 0:N;
     D1N = diag(Aidx .* (Aidx  + 2) .* (Aidx - 1));
     D2N = [zeros(M-1, 2), diag(Aidx)]; % B0 and B1 do not contribute to the motion of the drop
+    if contact_points == 0; D2N = zeros(size(D2N)); end % To avoid of Al and Bl interaction when there's no contact.
     R2 = [dt*D1N, diag(coefs(end)+2*dt*Oh*(2*Aidx+1) .* (Aidx-1)), dt * D2N, zeros(M-1, 2)];
 
 
@@ -50,7 +51,7 @@ function res = JacobianCalculator_v2(Xn, previous_conditions, dt, contact_points
         theta_i = theta_vector((contact_points+1):end);
         cosines = cos(theta_i);
         P1 = collectPl(M, cosines)';
-        B1 = [ones(size(cosines)), P1];
+        B1 = [ones(size(theta_i)), P1];
         R4 = [zeros(N-contact_points, 2*(M-1)), B1, zeros(N-contact_points, 2)];
 
 
@@ -68,8 +69,8 @@ function res = JacobianCalculator_v2(Xn, previous_conditions, dt, contact_points
         idx = 2:M;
         Cl = -3 * idx .* (idx-1) ./ (2.*idx - 1) ./ (2.*idx + 1);
         Dl = -3 * (idx + 2) .* (idx + 1) ./ (2 * idx + 3) ./ (2.*idx + 1);
-        Xl = Cl .* current_pressures(2:M) - Dl .* [current_pressures(4:(M+1)), 0];
-        Yl = [0, 1 + Cl(1) * current_amplitudes(1), [Cl(2:end) .* current_amplitudes(2:end), 0] - [0, Dl(1:(end-1)) .* current_amplitudes(1:(end-1))]];
+        Xl = (contact_points > 0) .* (Cl .* current_pressures(2:M) - Dl .* [current_pressures(4:(M+1)), 0]);
+        Yl = (contact_points > 0) .* ([0, 1+ Cl(1) * current_amplitudes(1), [Cl(2:end) .* current_amplitudes(2:end), 0] - [0, Dl(1:(end-1)) .* current_amplitudes(1:(end-1))]]);
         R7 = [dt * Xl, zeros(1, M-1), dt * Yl, 0, coefs(end)];
         
 
