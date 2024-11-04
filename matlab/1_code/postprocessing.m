@@ -47,10 +47,11 @@ data = data(~isnan(data.initial_velocity_cgs), :);
 pixel = 5e-4; %Threshold for experimental contact
 for ii = 1:length(files_folder)
     try
-        if ismember(files_folder(ii).name, data.(varNames(1))) || ...
-                contains(files_folder(ii).name, "postprocessing") || ...
+        %if ismember(files_folder(ii).name, data.(varNames(1))) || ...
+        if        contains(files_folder(ii).name, "postprocessing") || ...
                 contains(lower(files_folder(ii).name), "error"); continue; 
         end
+        if ~isnan(data{ii, "coef_rest_exp"}); continue; end
         lastwarn('', ''); clear recorded_conditions recorded_times default_physical length_unit theta_vector
         load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
             "recorded_conditions", "recorded_times", "default_physical", ...
@@ -131,11 +132,16 @@ for ii = 1:length(files_folder)
 
             % Experimental contact_radius
             if isnan(liftoff_time_exp)
-                if drop_height(pi) > pixel/length_unit
+                % If contact ended numerically but simulation ended, record lift off time anyways
+                if drop_height(pi) > pixel/length_unit ||((size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)))
                     liftoff_time_exp = recorded_times(jj);
                     Vout_exp = recorded_conditions{jj}.center_of_mass_velocity;
                     Eout_exp = 1/2*Vout_exp^2 + (recorded_conditions{jj}.center_of_mass ...
                         - CM_in)*g;
+                    if (size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)) 
+                        warning("Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul \n %s", files_folder(ii).name);
+                    end
+                    
                 end
             end
                 
@@ -145,10 +151,12 @@ for ii = 1:length(files_folder)
                 max_width = current_width; 
                 spread_time_width = recorded_times(jj) - touch_time;
             end
-            if ~isnan(touch_time) && ~isnan(liftoff_time_exp)
+            % We will record experimental touch time 
+            if ~isnan(touch_time) && ~isnan(liftoff_time_exp) 
                 contact_time_exp = liftoff_time_exp - touch_time;
                 coef_restitution_exp = sqrt(abs(Eout_exp/Ein));
             end
+            
 
 
             % max_contact_radius calculation
