@@ -44,7 +44,7 @@ if size(data, 2) ~= length(varNames) || sum(data.Properties.VariableNames ~= var
 end
 
 data = data(~isnan(data.initial_velocity_cgs), :);
-pixel = 5e-6; %Threshold for experimental contact
+pixel = 5e-4; %Threshold for experimental contact
 for ii = 1:length(files_folder)
     try
         if ismember(files_folder(ii).name, data.(varNames(1))) || ...
