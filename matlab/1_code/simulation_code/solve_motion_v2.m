@@ -367,7 +367,7 @@ function solve_motion_v2(varargin)
                 end
 
                 if simulation_time == inf && contact_points == 0 && current_conditions.center_of_mass_velocity > 0
-                    final_time = current_time*1.2;
+                    final_time = current_time*1.5;
                     simulation_time = 1e+6; % So as not to enter to this if ever again
                     if PROBLEM_CONSTANTS.DEBUG_FLAG==true
                         fprintf("Changed final time. Current progress: %.0f%%\n", ...
