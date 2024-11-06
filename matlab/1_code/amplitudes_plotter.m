@@ -3,25 +3,43 @@ function amplitudes_plotter(varargin)
     close all;
     safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
     addpath(safe_folder, '-begin');
-    [file, path] = uigetfile("*.mat");
+    filepathh = fullfile(pwd, '..', '..');
+    [file, path] = uigetfile(filepathh);
     fullfilepath = fullfile(path, file);
     %clear is_adim
     load(fullfilepath, "recorded_conditions", "default_physical");
     load(fullfilepath, "time_unit", "length_unit");
+    postprocessingfile = fullfile(path, '..', 'postprocessing.mat');
+    load(postprocessingfile, "data");
     %MM = 200; 
     %H = floor(linspace(1, recorded_conditions{1}.nb_harmonics, 20));
     %pressure_amplitudes = zeros(length(H), MM);
     %deformation_amplitudes = zeros(length(H), MM);
     %times = zeros(MM, 1);
+
     nb_harmonics = recorded_conditions{1}.nb_harmonics;
     pressure_unit = default_physical.rhoS * default_physical.initial_velocity.^2;
     pressure_amplitudes = cell2mat(cellfun(@(x) x.pressure_amplitudes, ...
         recorded_conditions, 'UniformOutput',false))'/pressure_unit;
     deformation_amplitudes = cell2mat(cellfun(@(x) x.deformation_amplitudes, ...
         recorded_conditions, 'UniformOutput',false))'/length_unit;
+    deformation_velocities = cell2mat(cellfun(@(x) x.deformation_velocities, ...
+        recorded_conditions, 'UniformOutput',false))'/(length_unit/time_unit);
+
     times = cellfun(@(x) x.current_time, recorded_conditions)'/time_unit;
-
-
+    % To find maximum contact points
+    %[~, cidx] = max(cellfun(@(x) x.contact_points, recorded_conditions)); 
+    % To find contact time
+    cidx = find(cellfun(@(x) x.contact_points, recorded_conditions), 1, 'last'); 
+    tidx = min(length(times), floor(1.5*cidx));
+    times = times(1:tidx);
+    deformation_velocities = deformation_velocities(:, 1:tidx);
+    deformation_amplitudes = deformation_amplitudes(:, 1:tidx);
+    pressure_amplitudes    = pressure_amplitudes(:, 1:tidx);
+    
+    
+    
+    % Plotting amplitudes
     saving_figure = figure('Position', [100, 300, 1000, 300]); % Wider than tall
     hold on;
     %recorded_conditions{ii}.amplitude_defor = 1;
@@ -33,6 +51,7 @@ function amplitudes_plotter(varargin)
     colororder(flipud(lol(3:end, :)));%cmap(floor(linspace(1, numColors, length(idxs))), :));
     %disp(size(times)); disp(size(deformation_amplitudes));
     plot(times, (deformation_amplitudes(idxs, :)), 'LineWidth',2);
+    %xline(times(cidx), 'LineWidth', 2);
     % Only show a subset of 
     set(gca, 'FontSize', 16);
     legend(arrayfun(@(i) string(i), idxs), 'FontSize', 12);
@@ -50,12 +69,12 @@ function amplitudes_plotter(varargin)
     set(gca, 'YLim', yl); set(gca, 'XLim', 1.05*get(gca, 'XLim'))
   
 
-
+    % Plotting pressures
     saving_figure_pressure = figure('Position', [100, 50, 1000, 300]); % Wider than tall
     hold on;
     %recorded_conditions{ii}.amplitude_defor = 1;
     idxs = 1:(nb_harmonics+1);
-    idxs = idxs(max(abs(pressure_amplitudes), [] , 2) < 5); %2.^(1:floor(log2(nb_harmonics)));
+    %idxs = idxs(max(abs(pressure_amplitudes), [] , 2) < 5); %2.^(1:floor(log2(nb_harmonics)));
     %cmap = colormap('spring'); %disp(size(cmap));
     %numColors = size(cmap, 1);
     lol = jet(length(idxs)+2);
@@ -77,6 +96,40 @@ function amplitudes_plotter(varargin)
     title(sprintf("Deformation Amplitudes with We = %.3g, Oh = %.3g, Bo = %.3g", Westar, Oh, Bo));
     yl = get(gca, 'YLim'); yl = [-max(abs(yl)), max(abs(yl))];
     set(gca, 'YLim', yl); set(gca, 'XLim', 1.05*get(gca, 'XLim'))
+
+    %cd(curr);
+    %saveas(saving_figure, "../../0_data/manual/pressure_plotter", 'fig');
+    %print(saving_figure, '-depsc', '-r300', "../../0_data/manual/pressure_plotter.eps");
+
+
+    %% Plotting energy contributions
+    C = sigmaS/(rhoS * Ro * default_physical.initial_velocity^2);
+    saving_figure_energy = figure('Position', [100, 500, 1000, 300]); % Wider than tall
+    hold on;
+    %recorded_conditions{ii}.amplitude_defor = 1;
+    idxs = 1:10;
+    %idxs = idxs(max(abs(deformation_amplitudes), [] , 2) > 5e-3); %2.^(1:floor(log2(nb_harmonics)));
+    %cmap = colormap('spring'); %disp(size(cmap));
+    %numColors = size(cmap, 1);
+    lol = jet(length(idxs)+2);
+    colororder(flipud(lol(3:end, :)));%cmap(floor(linspace(1, numColors, length(idxs))), :));
+    %disp(size(times)); disp(size(deformation_amplitudes));
+    Xl = (2*pi./(idxs .* (2 * idxs + 1)))'; Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1))';
+    deformation_energies = Xl .* deformation_velocities(idxs, :).^2 + ...
+        C * Yl .* deformation_amplitudes(idxs, :).^2;
+    plot(times, (deformation_energies(idxs, :)), 'LineWidth',2);
+    xline(times(cidx), 'LineWidth', 2);
+    % Only show a subset of 
+    set(gca, 'FontSize', 16);
+    legend(arrayfun(@(i) string(i), idxs), 'FontSize', 12);
+    xlabel('$ t/t_s $', 'Interpreter','Latex', 'FontSize', 20);
+    ylabel('$ E/(\rho R_o V_o^2) $', 'Interpreter','Latex', 'FontSize', 20);
+   
+    title(sprintf("Energy contribution per mode with We = %.3g, Oh = %.3g, Bo = %.3g", Westar, Oh, Bo));
+    yl = get(gca, 'YLim'); yl = [-max(abs(yl)), max(abs(yl))];
+    set(gca, 'YLim', yl); set(gca, 'XLim', 1.05*get(gca, 'XLim'))
+  
+
     
 end
 
