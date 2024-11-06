@@ -9,13 +9,13 @@ ddate = datestr(datetime(), 30); % 30 = ISO 8601
 diary(sprintf("../2_output/Logger/%s_%s.txt", mfilename, ddate));
 disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
-force_sweep = true;
+force_sweep = false;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-V = 10.^([-3, -2, -1, 0]);
-velocities = -sqrt(sigma/(rho*Ro) .* [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
+V = logspace(-3, 1, 41); %10.^([-3, -2, -1, 0]);
+velocities = -sqrt(sigma/(rho*Ro) .* V); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
 
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
