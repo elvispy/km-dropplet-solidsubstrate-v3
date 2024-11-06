@@ -1,0 +1,26 @@
+------------
+06-Nov-2024 16:39:58 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.0100
+    undisturbed_radius: 0.0203
+      initial_velocity: -64.8669
+         harmonics_qtt: 90
+               version: 3
+
+---------
+Starting simulation with velocity -64.8669, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -64.8669, modes = 90, version = 3 
+Se dividio dt por 2, dt=9.149128e-05 U = -64.8669, modes = 90, version = 3 
+Finished simulation with velocity -64.8669, modes 90, version v3 ... 
+Python 3.9.6
+Traceback (most recent call last):
+  File "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sending_email.py", line 15, in <module>
+    with open(path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/0_data/credentials/lol.txt'

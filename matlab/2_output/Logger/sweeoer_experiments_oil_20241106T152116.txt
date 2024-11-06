@@ -1,0 +1,20 @@
+------------
+06-Nov-2024 15:21:16 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.2000
+    undisturbed_radius: 0.0203
+      initial_velocity: -97.3004
+         harmonics_qtt: 90
+               version: 3
+
+Starting parallel pool (parpool) using the 'Processes' profile ...
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+sweeoer_experiments_oil
