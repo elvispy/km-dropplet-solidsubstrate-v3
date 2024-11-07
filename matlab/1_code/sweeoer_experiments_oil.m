@@ -13,18 +13,21 @@ force_sweep = false;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
+prefix = 'pureIC';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-V = logspace(-3, 1, 41); %10.^([-3, -2, -1, 0]);
-velocities = -sqrt(sigma/(rho*Ro) .* V); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
-
+We = logspace(-4, 1, 51); %10.^([-3, -2, -1, 0]);
+Bo = 0;
+velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
+g = Bo.* sigma ./(rho .* Ro^2);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [1, 2, 5, 20, 50]', ... % Viscocity in cgs
+    "nu", 0.01 * [0]', ... % Viscocity in cgs
+    "g", g, ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
     "harmonics_qtt", [90]', ...
-    "version", [2, 3]')%tol = 5e-5
+    "version", [3]')
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -86,12 +89,12 @@ harmonics_qtt = simulations_cgs.harmonics_qtt;
 version = simulations_cgs.version;
 rhoS = simulations_cgs.rhoS;
 sigmaS = simulations_cgs.sigmaS;
-nu = simulations_cgs.nu;
+nu = simulations_cgs.nu; g = simulations_cgs.g;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulation
 parfor ii = 1:height(simulations_cgs)
-    %Check if etaOri exists (the center of the bath)
+    %Check if the final folder exists
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))
     else
@@ -102,13 +105,13 @@ parfor ii = 1:height(simulations_cgs)
         
         numerical_parameters = struct("harmonics_qtt", harmonics_qtt(ii),...
             "simulation_time", inf, "version", version(ii));
-        options = struct('version', version(ii));
+        options = struct('version', version(ii), 'prefix', prefix);
 
         physical_parameters = struct("undisturbed_radius", undisturbed_radius(ii), ...
             "initial_height", nan, "initial_velocity", initial_velocity(ii), ...
             "initial_amplitudes", zeros(1, harmonics_qtt(ii)), ...
             "pressure_amplitudes", zeros(1, harmonics_qtt(ii)+1), "initial_contact_points", 0, ...
-            "rhoS", rhoS(ii), "sigmaS", sigmaS(ii), "nu", nu(ii));
+            "rhoS", rhoS(ii), "sigmaS", sigmaS(ii), "nu", nu(ii), "g", g(ii));
         
         %solve_motion_v2(physical_parameters, numerical_parameters);
 

@@ -39,11 +39,14 @@ function solve_motion_v2(varargin)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
     %      3) folder                 (string, ") .    = Folder whre the
     %                                 results will be stored. Default is current directory
+    %      4) prefix                 (sttring, '')    = Prefix to be put in
+    %      the name of the file
     
     %% Defining default Arguments
     
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
-            'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'));
+            'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'), ...
+            'prefix', '');
     default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 20, ...
         'angular_sampling', nan, 'version', 3, 'order', 1);
     
@@ -111,6 +114,7 @@ function solve_motion_v2(varargin)
     nu = default_physical.nu;
     debug_flag = default_options.debug_flag;
     live_plotting = default_options.live_plotting;
+    prefix = default_options.prefix;
     
 
     % Dimensionless Units
@@ -181,8 +185,8 @@ function solve_motion_v2(varargin)
     maximum_index = ceil((final_time - initial_time)/dt) + 4;
     number_of_extra_indexes = 0;
 
-    grow_dt = false;%  THis variable controls how fast dt can grow
-    iii = 0; jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
+    %grow_dt = false;%  THis variable controls how fast dt can grow
+    %iii = 0; jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
 
       
     legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
@@ -400,11 +404,11 @@ function solve_motion_v2(varargin)
             end
     
         end
-        file_name = fullfile(file_path, sprintf("simulation %s.mat", ...
-           datestring));
+        file_name = fullfile(file_path, sprintf("%s%s.mat", ...
+           prefix, datestring));
     catch me
-        file_name = fullfile(file_path, sprintf("simulation %s (Errored).mat", ...
-            datestring));
+        file_name = fullfile(file_path, sprintf("%s%s (Errored).mat", ...
+            prefix, datestring));
         PROBLEM_CONSTANTS.error = me;
     end
     
