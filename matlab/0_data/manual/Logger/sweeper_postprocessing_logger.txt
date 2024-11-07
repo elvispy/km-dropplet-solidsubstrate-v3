@@ -47643,3 +47643,125 @@ if system_dependent('IsDebugMode')==1, dbcont; end
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
 [Warning: Did not save the postprocessing file. There is one in the directory already] 
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 223)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',223,0)">line 223</a>)] 
+-------
+07-Nov-2024 15:00:33 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ pureIC20241107T105930-2.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100214.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100218.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100229.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100231.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100319.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100450.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100452.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100516.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100559.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100609-6.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100650.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T100746.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T102005.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T102019.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T105940.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T120524.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241025T120551.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241105T222543.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241105T222958.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241105T223328.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T012635.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T113529.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T125748.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T130049.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T130402.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T130955.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T131027.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T131052.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T133103.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T133200.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T133837.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T133928.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T134110.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T134913.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T135926.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T140501.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T143526.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul
+ simulation 20241106T144140.mat] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 142)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',142,0)">line 142</a>)] 
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m', 223)" style="font-weight:bold">postprocessing</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m',223,0)">line 223</a>)] 

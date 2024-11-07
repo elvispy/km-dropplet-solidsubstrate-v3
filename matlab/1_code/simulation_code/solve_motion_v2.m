@@ -186,7 +186,7 @@ function solve_motion_v2(varargin)
     number_of_extra_indexes = 0;
 
     %grow_dt = false;%  THis variable controls how fast dt can grow
-    %iii = 0; jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
+    jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
 
       
     legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
