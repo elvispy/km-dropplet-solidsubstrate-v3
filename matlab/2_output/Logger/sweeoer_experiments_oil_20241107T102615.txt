@@ -1,0 +1,10 @@
+------------
+07-Nov-2024 10:26:15 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+{Unrecognized function or variable 'sigmaS'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sweeoer_experiments_oil', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 21)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',21,0)">line 21</a>)
+g = Bo.* sigmaS ./(rhoS .* Ro^2);
+         ^^^^^^
+} 
+sweeoer_experiments_oil
