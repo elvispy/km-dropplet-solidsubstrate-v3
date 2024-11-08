@@ -15,7 +15,7 @@ force_sweep = false;
 %#ok<*NOPTS>
 prefix = 'pureIC';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We = logspace(-4, 1, 51); %10.^([-3, -2, -1, 0]);
+We = logspace(-5, -1, 41); %10.^([-3, -2, -1, 0]);
 Bo = 0;
 velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
 g = Bo.* sigma ./(rho .* Ro^2);

@@ -330,7 +330,7 @@ function solve_motion_v2(varargin)
                     error("Time step too small (%e). U = %g, modes = %g, version = %d \n", dt(end), initial_velocity, harmonics_qtt, version);
                 end
                 % If one hour has elapsed, close this simulation
-                if etime(clock, init) > 60 * 60
+                if etime(clock, init) > 60 * 120
                     error("Too much time has elapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
                 end
             else

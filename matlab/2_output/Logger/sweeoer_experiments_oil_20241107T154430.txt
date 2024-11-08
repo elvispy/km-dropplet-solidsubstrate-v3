@@ -1,0 +1,267 @@
+------------
+07-Nov-2024 15:44:30 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0
+                     g: 0
+    undisturbed_radius: 0.0203
+      initial_velocity: [41×1 double]
+         harmonics_qtt: 90
+               version: 3
+
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 60)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',60,0)">line 60</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 60)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',60,0)">line 60</a>)] 
+Could not load simulation on /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+simulations_cgs
+
+simulations_cgs =
+
+  41×10 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>    <strong>nu</strong>    <strong>g</strong>    <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                                         <strong>folder</strong>                                                                     
+    <strong>____</strong>    <strong>______</strong>    <strong>__</strong>    <strong>_</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>_______________________________________________________________________________________________________________________________________________</strong>
+
+    0.96     20.5     0     0          0.0203              -0.10256             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.11508             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.12912             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.14487             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.16255             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.18239             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.20464             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.22961             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.25763             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.28906             90             3       false    "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.32433             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.36391             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.40831             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.45813             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.51404             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.57676             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.64713             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.72609             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203              -0.81469             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -0.9141             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -1.0256             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -1.1508             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -1.2912             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -1.4487             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -1.6255             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -1.8239             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -2.0464             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -2.2961             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -2.5763             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -2.8906             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -3.2433             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -3.6391             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -4.0831             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -4.5813             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -5.1404             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -5.7676             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -6.4713             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -7.2609             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -8.1469             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203                -9.141             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0     0          0.0203               -10.256             90             3       true     "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+---------
+---------
+---------
+---------
+Starting simulation with velocity -0.12912, modes 90, version v3 ... 
+Finished simulation with velocity -0.12912, modes 90, version v3 ... 
+Starting simulation with velocity -0.102564, modes 90, version v3 ... 
+Finished simulation with velocity -0.102564, modes 90, version v3 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.814692 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.726095 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.647133 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.576758 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.514036 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -1.82387 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -1.62552 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -2.29611 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -2.04641 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -2.89064 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -2.57628 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10.2564 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 90 
+ Version: 3 
+Starting simulation with velocity -0.144875, modes 90, version v3 ... 
+Finished simulation with velocity -0.144875, modes 90, version v3 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -1.44875 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -1.2912 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -1.15078 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -1.02564 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.914099 
+ Modes: 90 
+ Version: 3 
+Starting simulation with velocity -0.115078, modes 90, version v3 ... 
+Finished simulation with velocity -0.115078, modes 90, version v3 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.458135 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.408313 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.363909 
+ Modes: 90 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -0.324335 
+ Modes: 90 
+ Version: 3 
+---------
+Starting simulation with velocity -0.289064, modes 90, version v3 ... 
+Finished simulation with velocity -0.289064, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -0.257628, modes 90, version v3 ... 
+Finished simulation with velocity -0.257628, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -0.229611, modes 90, version v3 ... 
+Finished simulation with velocity -0.229611, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -0.204641, modes 90, version v3 ... 
+Finished simulation with velocity -0.204641, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -0.182387, modes 90, version v3 ... 
+Finished simulation with velocity -0.182387, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -0.162552, modes 90, version v3 ... 
+Finished simulation with velocity -0.162552, modes 90, version v3 ... 
+Parallel pool using the 'local' profile is shutting down.
+Python 3.9.5
