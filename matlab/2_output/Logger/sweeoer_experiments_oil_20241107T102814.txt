@@ -118,3 +118,50 @@ simulations_cgs =
     0.96     20.5     0.01    981          0.0203                -91.41             90             3       false    "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
     0.96     20.5     0.01    981          0.0203               -102.56             90             3       false    "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
 
+if system_dependent('IsDebugMode')==1, dbquit; end
+editorLayout.SessionEditor.manageSessions()
+
+Session Manager
+ [s] Save session
+ [o] Open session
+ [r] Rename session
+ [v] View session files and details
+ [d] Delete session
+ [e] Exit session manager
+What would you like to do? o
+    <strong>index</strong>            <strong>name</strong>             <strong>numFiles</strong>                                                         <strong>currentFolder</strong>                                                          <strong>addPaths</strong>             <strong>lastUsed</strong>                   <strong>lastSaved</strong>        
+    <strong>_____</strong>    <strong>_____________________</strong>    <strong>________</strong>    <strong>________________________________________________________________________________________________________________________</strong>    <strong>_________</strong>    <strong>________________________</strong>    <strong>________________________</strong>
+
+      1      {'disk-vibrating'   }     {[ 4]}     {'/Users/eaguerov/Documents/Github/km-disk-vibrating/matlab/1_code/D50Quant100/rho1.00gcm3sigma72.20dynecm/diskRadius1'}    {'false'}    {'05-Nov-2024 16:19:19'}    {'26-Sep-2024 16:16:20'}
+      2      {'km-drop-onto-bath'}     {[ 6]}     {'/Users/eaguerov/Documents/Github/km-dropplet-onto-bath/matlab/1_code/Figures'                                        }    {'false'}    {'05-Nov-2024 20:02:33'}    {'02-Nov-2024 13:03:50'}
+      3      {'km-solid'         }     {[11]}     {'/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code'                                        }    {'false'}    {'06-Nov-2024 09:24:59'}    {'02-Nov-2024 23:50:20'}
+
+Please enter option index or name (hit enter without entering anything to cancel):1
+The following files are in the editor, but not in the opened session:
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/export_animation.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/plot_condition.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/pressure_plotter_2.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/amplitudes_plotter.m
+/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m
+Should these files be closed [c], or keep them open with the loaded session files [k], or decide for individual files [i]? c
+
+Session Manager
+ [s] Save session
+ [o] Open session
+ [r] Rename session
+ [v] View session files and details
+ [d] Delete session
+ [e] Exit session manager
+What would you like to do? e
+solve_motion
+[Warning: The format 'yyyyMMddmmss' contains a field for minute (m) in what appears to be a date portion. You might have intended to use the symbol for
+month (M) rather than for minute (m). See the <a href="matlab:doc('datetime.Format')">datetime.Format property</a> for a complete description of the identifiers used in datetime formats.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('verifyFormat', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/datetime/@datetime/private/verifyFormat.m', 34)" style="font-weight:bold">verifyFormat</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/datetime/@datetime/private/verifyFormat.m',34,0)">line 34</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('datetime/subsasgnDot', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgnDot.m', 25)" style="font-weight:bold">datetime/subsasgnDot</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgnDot.m',25,0)">line 25</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('datetime/subsasgn', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgn.m', 23)" style="font-weight:bold">indexing</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/datetime/@datetime/subsasgn.m',23,0)">line 23</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('solve_motion', '/Users/eaguerov/Documents/Github/km-disk-vibrating/matlab/1_code/simulation_code/solve_motion.m', 64)" style="font-weight:bold">solve_motion</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-disk-vibrating/matlab/1_code/simulation_code/solve_motion.m',64,0)">line 64</a>)
+] 

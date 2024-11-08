@@ -107,7 +107,7 @@ function amplitudes_plotter(varargin)
     saving_figure_energy = figure('Position', [100, 500, 1000, 300]); % Wider than tall
     hold on;
     %recorded_conditions{ii}.amplitude_defor = 1;
-    idxs = 1:10;
+    idxs = 1:2;
     %idxs = idxs(max(abs(deformation_amplitudes), [] , 2) > 5e-3); %2.^(1:floor(log2(nb_harmonics)));
     %cmap = colormap('spring'); %disp(size(cmap));
     %numColors = size(cmap, 1);
@@ -123,7 +123,7 @@ function amplitudes_plotter(varargin)
     set(gca, 'FontSize', 16);
     legend(arrayfun(@(i) string(i), idxs), 'FontSize', 12);
     xlabel('$ t/t_s $', 'Interpreter','Latex', 'FontSize', 20);
-    ylabel('$ E/(\rho R_o V_o^2) $', 'Interpreter','Latex', 'FontSize', 20);
+    ylabel('$ E/(\rho R_o^3 V_o^2) $', 'Interpreter','Latex', 'FontSize', 20);
    
     title(sprintf("Energy contribution per mode with We = %.3g, Oh = %.3g, Bo = %.3g", Westar, Oh, Bo));
     yl = get(gca, 'YLim'); yl = [-max(abs(yl)), max(abs(yl))];
