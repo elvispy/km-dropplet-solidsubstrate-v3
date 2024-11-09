@@ -1,0 +1,26 @@
+------------
+08-Nov-2024 11:16:50 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0
+                     g: [51.8192 518.1918 5.1819e+03 5.1819e+04]
+    undisturbed_radius: 0.0203
+      initial_velocity: [41×1 double]
+         harmonics_qtt: 90
+               version: 3
+
+{Index in position 1 exceeds array bounds (must not exceed 1).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil>@(varidx)vars.(fnames{varidx})(idxs{varidx},:)', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 43)" style="font-weight:bold">sweeoer_experiments_oil>@(varidx)vars.(fnames{varidx})(idxs{varidx},:)</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',43,0)">line 43</a>)
+    arrayfun(@(varidx) vars.(fnames{varidx})(idxs{varidx}, :), 1:numOutputs, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 43)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',43,0)">line 43</a>)
+    arrayfun(@(varidx) vars.(fnames{varidx})(idxs{varidx}, :), 1:numOutputs, ...
+} 
+sweeoer_experiments_oil
