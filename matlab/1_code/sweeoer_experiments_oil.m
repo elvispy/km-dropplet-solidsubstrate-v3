@@ -13,16 +13,16 @@ force_sweep = false;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'sweepFix';
+prefix = 'WeOhSweep';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We = [0.01, 0.1, 1]%; logspace(-5, -1, 41); %10.^([-3, -2, -1, 0]);
+We = logspace(-5, 0, 51); %10.^([-3, -2, -1, 0]);
 Bo = 10.^([-3, -2, -1, 0]);
 velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
-g = 981; %Bo.* sigma ./(rho .* Ro^2);
+g = [0, 981]; %Bo.* sigma ./(rho .* Ro^2);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [20, 50]', ... % Viscocity in cgs
+    "nu", 0.01 * [0, 1, 2, 5, 20, 50]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)

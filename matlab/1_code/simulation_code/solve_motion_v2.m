@@ -370,8 +370,9 @@ function solve_motion_v2(varargin)
                     number_of_extra_indexes = number_of_extra_indexes + 1;
                 end
 
-                if simulation_time == inf && contact_points == 0 && current_conditions.center_of_mass_velocity < 0 && current_time > 10*max_dt
-                    final_time = current_time*1.02;
+                if simulation_time == inf &&  ...
+                        ((current_conditions.center_of_mass_velocity < 0 && current_time > 10*max_dt) || current_conditions.center_of_mass > 1.1)
+                    final_time = current_time*1.1;
                     simulation_time = 1e+6; % So as not to enter to this if ever again
                     if PROBLEM_CONSTANTS.DEBUG_FLAG==true
                         fprintf("Changed final time. Current progress: %.0f%%\n", ...
