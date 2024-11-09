@@ -133,14 +133,14 @@ for ii = 1:length(files_folder)
             % Experimental contact_radius
             if isnan(liftoff_time_exp)
                 % If contact ended numerically but simulation ended, record lift off time anyways
-                if drop_height(pi) > pixel/length_unit ||((size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)))
+                if drop_height(pi) > pixel/length_unit %||((size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)))
                     liftoff_time_exp = recorded_times(jj);
                     Vout_exp = recorded_conditions{jj}.center_of_mass_velocity;
                     Eout_exp = 1/2*Vout_exp^2 + (recorded_conditions{jj}.center_of_mass ...
                         - CM_in)*g;
-                    if (size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)) 
-                        warning("Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul \n %s", files_folder(ii).name);
-                    end
+                    % if (size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)) 
+                    %     warning("Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul \n %s", files_folder(ii).name);
+                    % end
                     
                 end
             end
