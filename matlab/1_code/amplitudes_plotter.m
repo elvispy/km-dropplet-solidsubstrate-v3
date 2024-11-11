@@ -3,8 +3,8 @@ function amplitudes_plotter(varargin)
     close all;
     safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
     addpath(safe_folder, '-begin');
-    filepathh = fullfile(pwd, '..', '..');
-    [file, path] = uigetfile(filepathh);
+    filepathh = fullfile(fileparts(pwd), "2_output");
+    [file, path] = uigetfile(filepathh, "*.m");
     fullfilepath = fullfile(path, file);
     %clear is_adim
     load(fullfilepath, "recorded_conditions", "default_physical");
@@ -16,7 +16,7 @@ function amplitudes_plotter(varargin)
     %pressure_amplitudes = zeros(length(H), MM);
     %deformation_amplitudes = zeros(length(H), MM);
     %times = zeros(MM, 1);
-
+    velocity_unit = length_unit/time_unit;
     nb_harmonics = recorded_conditions{1}.nb_harmonics;
     pressure_unit = default_physical.rhoS * default_physical.initial_velocity.^2;
     pressure_amplitudes = cell2mat(cellfun(@(x) x.pressure_amplitudes, ...
@@ -38,23 +38,24 @@ function amplitudes_plotter(varargin)
     pressure_amplitudes    = pressure_amplitudes(:, 1:tidx);
     
     
-    
     % Plotting amplitudes
     saving_figure = figure('Position', [100, 300, 1000, 300]); % Wider than tall
     hold on;
     %recorded_conditions{ii}.amplitude_defor = 1;
-    idxs = 1:nb_harmonics;
-    idxs = idxs(max(abs(deformation_amplitudes), [] , 2) > 5e-3); %2.^(1:floor(log2(nb_harmonics)));
+    idxs = 1:15;
+    idxs = idxs(max(abs(deformation_amplitudes(1:idxs(end), :)), [] , 2) > 5e-3); %2.^(1:floor(log2(nb_harmonics)));
     %cmap = colormap('spring'); %disp(size(cmap));
     %numColors = size(cmap, 1);
     lol = jet(length(idxs)+2);
     colororder(flipud(lol(3:end, :)));%cmap(floor(linspace(1, numColors, length(idxs))), :));
     %disp(size(times)); disp(size(deformation_amplitudes));
     plot(times, (deformation_amplitudes(idxs, :)), 'LineWidth',2);
+    %plot(times, (deformation_velocities(idxs, :)), 'LineWidth',2);
     %xline(times(cidx), 'LineWidth', 2);
     % Only show a subset of 
     set(gca, 'FontSize', 16);
     legend(arrayfun(@(i) string(i), idxs), 'FontSize', 12);
+    %grid on;
     xlabel('$ t/t_s $', 'Interpreter','Latex', 'FontSize', 20);
     ylabel('$ r/R_o $', 'Interpreter','Latex', 'FontSize', 20);
     sigmaS = default_physical.sigmaS; rhoS = default_physical.rhoS; Ro = default_physical.undisturbed_radius;
@@ -103,11 +104,11 @@ function amplitudes_plotter(varargin)
 
 
     %% Plotting energy contributions
-    C = sigmaS/(rhoS * Ro * default_physical.initial_velocity^2);
+    C = sigmaS/(rhoS * Ro * velocity_unit^2);
     saving_figure_energy = figure('Position', [100, 500, 1000, 300]); % Wider than tall
     hold on;
     %recorded_conditions{ii}.amplitude_defor = 1;
-    idxs = 1:2;
+    idxs = 1:15;
     %idxs = idxs(max(abs(deformation_amplitudes), [] , 2) > 5e-3); %2.^(1:floor(log2(nb_harmonics)));
     %cmap = colormap('spring'); %disp(size(cmap));
     %numColors = size(cmap, 1);
@@ -117,18 +118,19 @@ function amplitudes_plotter(varargin)
     Xl = (2*pi./(idxs .* (2 * idxs + 1)))'; Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1))';
     deformation_energies = Xl .* deformation_velocities(idxs, :).^2 + ...
         C * Yl .* deformation_amplitudes(idxs, :).^2;
-    plot(times, (deformation_energies(idxs, :)), 'LineWidth',2);
+    A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
+    plot(times, A*(deformation_energies(idxs, :)), 'LineWidth',2);
     xline(times(cidx), 'LineWidth', 2);
     % Only show a subset of 
     set(gca, 'FontSize', 16);
     legend(arrayfun(@(i) string(i), idxs), 'FontSize', 12);
     xlabel('$ t/t_s $', 'Interpreter','Latex', 'FontSize', 20);
-    ylabel('$ E/(\rho R_o^3 V_o^2) $', 'Interpreter','Latex', 'FontSize', 20);
+    ylabel('$ (\Delta K + \Delta SE)/(4\pi \rho R_o^3 V^2/3) $', 'Interpreter','Latex', 'FontSize', 20);
    
     title(sprintf("Energy contribution per mode with We = %.3g, Oh = %.3g, Bo = %.3g", Westar, Oh, Bo));
-    yl = get(gca, 'YLim'); yl = [-max(abs(yl)), max(abs(yl))];
+    yl = get(gca, 'YLim'); yl = [-.1, max(abs(yl))];
     set(gca, 'YLim', yl); set(gca, 'XLim', 1.05*get(gca, 'XLim'))
-  
+    saveas(saving_figure_energy, fullfile(path, replace(file, ".mat", "_energy.png")));
 
     
 end
