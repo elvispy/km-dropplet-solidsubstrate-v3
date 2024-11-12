@@ -13,9 +13,9 @@ force_sweep = false;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'WeOhSweep';
+prefix = 'HighWeSweep';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We = logspace(-5, 0, 51); %10.^([-3, -2, -1, 0]);
+We = logspace(0, 1, 11); %10.^([-3, -2, -1, 0]);
 Bo = 10.^([-3, -2, -1, 0]);
 velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
 g = [0, 981]; %Bo.* sigma ./(rho .* Ro^2);

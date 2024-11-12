@@ -98,7 +98,8 @@ function A = addSimulation(A, stru)
             case 'MATLAB:UndefinedFunction'
                 fprintf("Could not load simulation on %s, %s, undefined function or variable \n", stru.folder, stru.name);
             case 'MATLAB:load:unableToReadMatFile'
-                fprintf("Possible corrupt file: %s/%s \n",  stru.folder, stru.name);
+                warning("Possible corrupt file: %s/%s. It's going to be deleted \n",  stru.folder, stru.name);
+                delete(fullfile(stru.folder, stru.name));
              otherwise
                 rethrow(me)
         end

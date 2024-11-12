@@ -212,10 +212,16 @@ for ii = 1:length(files_folder)
         if contains(files_folder(ii).name, "error"); continue; end
         fprintf("%s %s \n", files_folder(ii).folder, files_folder(ii).name)
         disp(me);
+        switch me.identifier
+            case 'MATLAB:load:unableToReadMatFile'
+                delete(fullfile(iles_folder(ii).folder, files_folder(ii).name));
+        end
     end
 end
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name');
+
+writetable(data, sfullfile(root_folder, "2_output", "postprocessing.csv"));
 s = fullfile(root_folder, "2_output", "postprocessing.mat");
 if ~exist(s, "file")
     save(s, "data");
