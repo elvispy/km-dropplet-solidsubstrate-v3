@@ -221,7 +221,7 @@ end
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name');
 
-writetable(data, sfullfile(root_folder, "2_output", "postprocessing.csv"));
+writetable(data, fullfile(root_folder, "2_output", "postprocessing.csv"));
 s = fullfile(root_folder, "2_output", "postprocessing.mat");
 if ~exist(s, "file")
     save(s, "data");
