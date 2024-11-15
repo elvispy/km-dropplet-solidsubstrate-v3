@@ -13,21 +13,21 @@ force_sweep = true;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'WeBoSweep';
+prefix = 'directComparison';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We = logspace(-5, 0, 41); %10.^([-3, -2, -1, 0]);
+We = [0.25459, 0.15591, 0.095856, 0.062007, 0.023778, 0.81868, 1.4044, 2.3001, 3.5801];%logspace(-5, 0, 41);
 Bo = 10.^([-inf, -3, -2, -1, 0]);
 velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
-g = Bo.* sigma ./(rho .* Ro^2);
+g = [981]; %Bo.* sigma ./(rho .* Ro^2);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [1, 20]', ... % Viscocity in cgs
+    "nu", 0.01 * [2]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
-    "harmonics_qtt", [90]', ...
-    "version", [3]')
+    "harmonics_qtt", [90, 120]', ...
+    "version", [2, 3]')
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));

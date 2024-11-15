@@ -38,9 +38,9 @@ function rmax = maximum_contact_radius(amplitudes)
 
     theta = pi/2 + pi/4;
     tol_theta = 1e-7;
-    n = 1;
+    n = 1; rmax = 0;
     % Newton Method!
-    while abs(drdtheta(theta)) >= tol_theta && n < 150
+    while abs(drdtheta(theta)) >= tol_theta && n < 150 && false
         theta = mod(theta - drdtheta(theta)/dr2dtheta2(theta) - 1e-4, pi) + 1e-4; % If solution is close to pi, theta is unstable with mod function (therefore 1e-4 added)
         n = n + 1;
         if n == 50
@@ -48,17 +48,21 @@ function rmax = maximum_contact_radius(amplitudes)
         elseif n == 100
             theta = rand()/100 + pi/2;
         end
-        if n== 149
-            % We will calculate it manually
-            theta_min = pi/3;
-            theta_max = 4*pi/5;
-            thetas = linspace(theta_min, theta_max, 1000);
-            rmax = max(r_from_spherical(thetas, amplitudes));
-            
-            return
+        r_current = r_from_spherical(theta, amplitudes);
+        
+        if r_current > rmax
+            rmax = r_current; 
         end
     end
+    if true
+            % We will calculate it manually
+            theta_min = 0;
+            theta_max = pi;
+            thetas = linspace(theta_min, theta_max, 1000);
+            rmax = max(rmax, max(r_from_spherical(thetas, amplitudes)));
+            
+    end
 
-    rmax = r_from_spherical(theta, amplitudes);
+    %rmax = r_from_spherical(theta, amplitudes);
 
 end
