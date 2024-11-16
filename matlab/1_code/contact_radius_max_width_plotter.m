@@ -126,7 +126,7 @@ cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
 ylabel(cb, 'We');
 xlim([0 3]);
-set(gca, 'FontSize', 18);
+set(gca, 'FontSize', 24);
 h1 = plot(NaN, NaN, 'ko-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
 h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
 legend([h1, h2], 'Experiments', 'Simulation')
