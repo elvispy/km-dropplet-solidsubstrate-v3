@@ -39,5 +39,7 @@ set(gca, 'YTick', yticks, 'YTickLabel', yticks);  % Apply linear tick labels
 % Customize x-axis tick appearance
 set(gca, 'TickDir', 'in', 'TickLength', [0.03, 0.01]);  % Increase tick length on x-axis
 
-colorbar;
-title('Contour plot $\varepsilon_{exp}$', 'Interpreter','latex', 'FontSize',24);
+c = colorbar;
+ylabel(c, '$\varepsilon$', 'Interpreter','latex', 'FontSize', 24);
+
+title('Coefficient of restitution ($\varepsilon$)', 'Interpreter','latex', 'FontSize',24);
