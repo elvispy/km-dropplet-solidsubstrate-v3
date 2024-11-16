@@ -111,10 +111,10 @@ colormap jet;  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot
 cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
 ylabel(cb, 'We');
-set(gca, 'FontSize', 15);
-h1 = plot(NaN, NaN, 'ko-');  % Dummy plot for first legend entry
-h2 = plot(NaN, NaN, 'k-');  % Dummy plot for second legend entry
-legend([h1, h2], 'Experimental', 'Simulation');
+set(gca, 'FontSize', 18);
+h1 = plot(NaN, NaN, 'ko-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
+h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
+legend([h1, h2], 'Experiments', 'Simulation');
 
 figure(2); grid on;
 xlabel('$t/t_{ic}$', 'Interpreter', ' latex');
@@ -125,7 +125,11 @@ colormap jet;  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot
 cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
 ylabel(cb, 'We');
-set(gca, 'FontSize', 15);
+xlim([0 3]);
+set(gca, 'FontSize', 18);
+h1 = plot(NaN, NaN, 'ko-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
+h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
+legend([h1, h2], 'Experiments', 'Simulation')
 
 %filtered_data = rmfield(data, fieldnames(data(cellfun(@(f) ~contains(f, 'Bounce'), fieldnames(data))))');
 
