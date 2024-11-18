@@ -14,7 +14,7 @@ output_data = data.coef_rest_exp;
 bond = data.bond;
 
 % Remove rows where contact_time_ms has NaN values
-valid_indices = (~isnan(output_data) & ohnesorge >= 0 & bond == 0);
+valid_indices = (~isnan(output_data) & ohnesorge >= 0 & abs(bond - 0.0189) < 1e-3);
 weber = weber(valid_indices); 
 ohnesorge = ohnesorge(valid_indices);
 ohnesorge(ohnesorge == 0) = 1e-9;
@@ -38,7 +38,7 @@ ylim([0.015, max(ohnesorge)])
 set(gca, 'YTick', yticks, 'YTickLabel', yticks);  % Apply linear tick labels
 % Customize x-axis tick appearance
 set(gca, 'TickDir', 'in', 'TickLength', [0.03, 0.01]);  % Increase tick length on x-axis
-
+colormap("copper"); % Choose a colormap
 c = colorbar;
 ylabel(c, '$\varepsilon$', 'Interpreter','latex', 'FontSize', 24);
 
