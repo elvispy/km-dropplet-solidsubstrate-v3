@@ -83,7 +83,7 @@ function h = plot_condition(idx, conditions, varargin)
         mps = ps(sample)/pressure_unit;
 
         %mps(5) = 1;
-        arrY(1:conditions.contact_points) = 0;
+        arrX((end-conditions.contact_points-5):end) = 0;
         quiver(EtaX, EtaY, mps .* (-arrX), mps .* (-arrY), 'AutoScaleFactor',1);
 
         if idx ~= 1
