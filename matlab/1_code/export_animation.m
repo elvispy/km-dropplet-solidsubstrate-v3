@@ -25,7 +25,7 @@ function export_animation(varargin)
             end
             tic = sqrt(default_physical.rhoS* default_physical.undisturbed_radius^3/default_physical.sigmaS);
             %recorded_conditions{ii}.amplitude_defor = 1;
-            plot_condition(1, adim_conditions, 1.25);
+            plot_condition(1, adim_conditions, 1.45);
             fill([-10, 10, 10, -10], [0, 0, -1, -1] * 1e6, [235 176 0]./256, 'EdgeColor', 'none', 'FaceAlpha',0.3);
 
             % title(sprintf('t = %.4f (ms), CM velocity = %.2f (cm/s), Contact Points = %g',...
