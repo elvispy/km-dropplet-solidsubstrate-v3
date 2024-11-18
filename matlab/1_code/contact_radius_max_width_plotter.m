@@ -17,7 +17,8 @@ sheets = sheetnames(filename);
 sheets = sheets(contains(sheets, 'Bounce'));
 sheets2 = matlab.lang.makeValidName(sheets);
 data = struct();
-close all; cmap = jet(10*length(sheets)); ss = size(cmap, 1);
+cmp = "copper";
+close all; cmap = copper(100*length(sheets)); ss = size(cmap, 1);
 for i = 1:numel(sheets)
     tbl = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 1);
     
@@ -30,8 +31,8 @@ for i = 1:numel(sheets)
     figure(1); hold on; set(gcf, 'Position', [734 223 646 451]);
     color_vector = repmat(bnc.We, size(bnc.Time_s_));
     idx = ceil(ss*(bnc.We)/4);
-    plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', 1, 'DisplayName',"", 'Color', cmap(idx, :));
-    scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
+    plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
+    %scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
     
     % Plot Contact Time vs Time_s_ (SIMULATIONS)
     [~, idx2] = min(abs(alldata.weber - bnc.We));  % idx is the index of the closest value
@@ -97,8 +98,8 @@ for i = 1:numel(sheets)
 
     % Plot Maximum Radius vs Time_s_
     figure(2); hold on; set(gcf, 'Position', [77 224 1800 450]);
-    plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', 1, 'DisplayName',"");
-    scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
+    plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
+    %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
     plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
 end
 
@@ -107,12 +108,12 @@ xlabel('$t/t_{ic}$', 'Interpreter','latex');
 ylabel('Contact Radius $r/R_o$', 'Interpreter','latex');
 title('Contact Radius vs Time');
 %legend('Interpreter','latex');
-colormap jet;  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
+colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
 cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
 ylabel(cb, 'We');
 set(gca, 'FontSize', 18);
-h1 = plot(NaN, NaN, 'ko-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
+h1 = plot(NaN, NaN, 'k-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
 h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
 legend([h1, h2], 'Experiments', 'Simulation');
 
@@ -121,13 +122,14 @@ xlabel('$t/t_{ic}$', 'Interpreter', ' latex');
 ylabel('Maximum Radius ($r/R_o$)', 'Interpreter', 'latex');
 title('Maximum Radius vs Time');
 %legend('Interpreter','latex');
-colormap jet;  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
+colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
 cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
 ylabel(cb, 'We');
 xlim([0 3]);
 set(gca, 'FontSize', 24);
-h1 = plot(NaN, NaN, 'ko-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
+%set(gca,'ColorScale','log')
+h1 = plot(NaN, NaN, 'k-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
 h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
 legend([h1, h2], 'Experiments', 'Simulation')
 
