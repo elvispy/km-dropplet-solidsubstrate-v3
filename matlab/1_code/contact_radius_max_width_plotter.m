@@ -28,7 +28,7 @@ for i = 1:numel(sheets)
     bnc = data.(sheets2{i});
     % Plotting
     % Plot Contact Time vs Time_s_ (EXPERIMENTAL)
-    figure(1); hold on; set(gcf, 'Position', [734 223 646 451]);
+    figure(1); hold on; set(gcf, 'Position', [734 223 ceil(451*16/9) 451]);
     color_vector = repmat(bnc.We, size(bnc.Time_s_));
     idx = ceil(ss*(bnc.We)/4);
     plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
@@ -97,7 +97,7 @@ for i = 1:numel(sheets)
     end
 
     % Plot Maximum Radius vs Time_s_
-    figure(2); hold on; set(gcf, 'Position', [77 224 1800 450]);
+    figure(2); hold on; set(gcf, 'Position', [77 224 ceil(450*17/9) 450]);
     plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
     %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
     plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
@@ -112,7 +112,7 @@ colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'ho
 cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
 ylabel(cb, 'We');
-set(gca, 'FontSize', 18);
+set(gca, 'FontSize', 24);
 h1 = plot(NaN, NaN, 'k-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
 h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
 legend([h1, h2], 'Experiments', 'Simulation');
