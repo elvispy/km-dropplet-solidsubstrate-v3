@@ -16,24 +16,27 @@ sheets = sheetnames(filename);
 %sheets = sheets(contains(sheets, 'Bounce'));
 %sheets = matlab.lang.makeValidName(sheets);
 expData = readtable(filename, 'Sheet', sheets, 'ReadVariableNames', true, 'HeaderLines', 2);
-sampled_values = @(data, bins, per_bin) reshape(randsample(data, bins*per_bin, true, histcounts(data, linspace(min(data), max(data), bins+1))), [], 1);
+%sampled_values = @(data, bins, per_bin) reshape(randsample(data, bins*per_bin, true, histcounts(data, linspace(min(data), max(data), bins+1))), [], 1);
 %expData = sortrows(expData, 'We');
 expData = expData(expData.Oh > 0.2 | (mod(1:height(expData), 4)==0)', :);
 % Error propagation
 g = 9.81;
-syms hout vin vout r0 ssigma rrho 
-epsilon_error = error_prop((g*(hout-r0) + 0.5 * vout^2)/(0.5* vin^2), [hout, r0, vin vout]);
+syms hout vin vout r0 ssigma rrho tc
+epsilon_error = error_prop(sqrt((g*(hout-r0) + 0.5 * vout^2)/(0.5* vin^2)), [hout, r0, vin vout]);
 expData.epsilon_error = epsilon_error(expData.h_t_c__m_,  expData.r_0_m_, ...
     expData.v_0__m_s_, expData.v_t_c__m_s_, expData.m_Pixel, expData.r_0Std, expData.v_0_Stdev, expData.v_t_c_Stdev);
 expData.tic = sqrt(expData.m_kg_./expData.V_m3_ .* expData.r_0_m_.^3./expData.sigma_N_m_);
-tic_error = error_prop(sqrt(rrho*r0^3/ssigma), [rrho, r0, ssigma]);
-expData.tic_error = tic_error(expData.rho_kg_m3_, expData.r_0_m_, expData.sigma_N_m_, ...
-    zeros(size(expData.rho_kg_m3_)), expData.r_0Std, zeros(size(expData.sigma_N_m_)));
+tic = sqrt(expData.rho_kg_m3_ .* expData.r_0_m_.^3./expData.sigma_N_m_);
+tc_tic_error = error_prop(tc/sqrt(rrho*r0^3/ssigma), [tc, rrho, r0, ssigma]);
+expData.tc_tic_error = tc_tic_error(expData.t_c_s_, expData.rho_kg_m3_, expData.r_0_m_, expData.sigma_N_m_, ...
+    expData.deltaT_s_, zeros(size(expData.rho_kg_m3_)), expData.r_0Std, zeros(size(expData.sigma_N_m_)));
 We_error = error_prop(rrho * vin^2 * r0/ssigma, [rrho, vin, r0, ssigma]);
 expData.We_error = We_error(expData.rho_kg_m3_, expData.v_0__m_s_, expData.r_0_m_, expData.sigma_N_m_, ...
     zeros(size(expData.rho_kg_m3_)), ...
     expData.v_0_Stdev,  expData.r_0Std, zeros(size(expData.sigma_N_m_)));
-expData.tc_tic = expData.t_c_s_ ./ sqrt(expData.rho_kg_m3_ .* expData.r_0_m_.^3./expData.sigma_N_m_);
+expData.tc_tic = expData.t_c_s_ ./ tic;
+
+%% Reading linear model data
 alldata = readtable('../2_output/postprocessing.csv');
 alldata = alldata(contains(alldata.parent_folder,'v3') & alldata.number_of_harmonics == 90 ...
     & abs(alldata.bond - 0.0189) < 1e-3, :);
@@ -41,29 +44,44 @@ alldata = sortrows(alldata, ["weber", "ohnesorge", "bond"]);
 Ro = 0.0203;
 alldata.tic = sqrt(alldata.bond/981 * Ro);
 alldata.ct_adim = 1e-3 * alldata.contact_time_exp_ms./alldata.tic;
+
+%% Reading DNS
+filename = '../0_data/manual/Drop Parameter spreadsheet.xlsx';
+sheets = sheetnames(filename);
+sheets = sheets(contains(sheets, 'Level 12'));
+%sheets = matlab.lang.makeValidName(sheets);
+DNSData = readtable(filename, 'Sheet', sheets, 'ReadVariableNames', true, 'HeaderLines', 1);
+DNSData.tic = sqrt(DNSData.rho_kg_m3_ .* DNSData.r_0_m_.^3 ./ DNSData.sigma_N_m_);
+DNSData.tc_tic = DNSData.t_c_s_ ./ DNSData.tic;
+
+%% Plotting
 % Plotting contact time
-figure(1); title('Contact time vs We'); set(gcf, 'Position', [750 176 560 420])
-[ohs, colors] = plot_errorbars(expData.We, expData.tc_tic, expData.We_error, expData.tic_error, expData.Oh);
+f1 = figure(1); title('Contact time vs We'); set(gcf, 'Position', [950 176 ceil(420*13/9) 420])
+[ohs, colors] = plot_errorbars(expData.We, expData.tc_tic, expData.We_error, expData.tc_tic_error, expData.Oh);
 set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
 hold on; grid on;
 plotVarVsWeByOh(alldata, "ct_adim", ohs, colors);
+%scatterDNS(DNSData, "tc_tic", ohs, colors);
 xticks([0.01, 0.1, 1, 10]);               % Define tick positions
 xticklabels({'0.01', '0.1', '1', '10'}); 
 xlim([1e-3, 10.5]); ylim([0, 7]);
 ylabel('Non-dimensional contac time $t_c/t_{ic}$','Interpreter','latex', 'FontSize',20);
-xlabel('We','Interpreter','latex');
+xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
+saveas(f1, fullfile(safe_folder, "..", "..", "2_output", "Figures", "tcvsWeExp.png"));
 
 % plotting coef of restitution
-figure(2); title('Coef res vs We'); set(gcf, 'Position', [50 176 560 420])
+f2 = figure(2); title('Coef res vs We'); set(gcf, 'Position', [5 176 ceil(420*18/9) 420])
 [ohs, colors] = plot_errorbars(expData.We, expData.epsilon, expData.We_error, expData.epsilon_error, expData.Oh);
 set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
 hold on; grid on;
 plotVarVsWeByOh(alldata, "coef_rest_exp", ohs, colors);
+%scatterDNS(DNSData, "epsilon", ohs, colors);
 xticks([0.01, 0.1, 1, 10]);               % Define tick positions
 xticklabels({'0.01', '0.1', '1', '10'}); 
 xlim([1e-3, 10.5]); ylim([0, 1]);
-xlabel('We','Interpreter','latex');
-ylabel('Coefficient of restitution ($\varepsilon$)','Interpreter','latex', 'FontSize',20);
+xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
+ylabel('Coef. Restitution ($\varepsilon = \sqrt{E_{out}/E_{in}}$)','Interpreter','latex', 'FontSize',20);
+saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "epsilonvsWeExp.png"));
 
 %% Extra
 % data = struct();
@@ -226,8 +244,9 @@ function [zs, unique_colors] = plot_errorbars(x, y, ex, ey, z)
     colors = interp1(linspace(0, 1, size(cmap, 1)), cmap, z_norm);
     [zs, iid] = sort(z_norm);
     unique_colors = interp1(linspace(0, 1, size(cmap, 1)), cmap, zs);
-    
+    unique_colors = unique_colors(iid, :);
     % Add error bars with the same color as scatter points
+    %return
     for i = 1:length(x)
         errorbar(x(i), y(i), ey(i), ey(i), ex(i), ex(i), 'LineWidth', 1, ...
             'Color', colors(i, :))
@@ -240,7 +259,7 @@ function [zs, unique_colors] = plot_errorbars(x, y, ex, ey, z)
     end
 
     hold off;
-    unique_colors = unique_colors(iid, :);
+    
 end
 
 function plotVarVsWeByOh(table, var, ohs, colors)
@@ -261,6 +280,29 @@ function plotVarVsWeByOh(table, var, ohs, colors)
         % Plot epsilon vs We
         plot(filtered_table.weber, filtered_table.(var), 'Color', selected_color, ...
             'LineWidth', 3, 'LineStyle','--');
+        hold on;
+    end
+
+end
+
+function scatterDNS(table, var, ohs, colors)
+    % Get unique Oh values from the table
+    unique_ohs = unique(table.Oh);
+
+    % Loop through each unique Oh value
+    for i = 1:length(unique_ohs)
+        target_oh = unique_ohs(i);
+        
+        % Find the closest Oh index
+        [~, idx] = min(abs(ohs - target_oh));  
+        selected_color = colors(idx, :);  % Get corresponding color
+        
+        % Filter table for current Oh value
+        filtered_table = table(abs(table.Oh - target_oh) < 1e-4, :);  % Adjust tolerance if needed
+        
+        % Plot epsilon vs We
+        scatter(filtered_table.We, filtered_table.(var), 250, "hexagram", "filled", ...
+            'MarkerFaceColor', selected_color, 'MarkerEdgeColor','r', 'LineWidth',1.5);
         hold on;
     end
 
