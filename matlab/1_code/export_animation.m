@@ -32,14 +32,15 @@ function export_animation(varargin)
             %     adim_conditions.current_time*1000, recorded_conditions{ii}.center_of_mass_velocity, ...
             %     adim_conditions.contact_points), ...
             %     'FontSize', 14);
-            set(gca, 'FontSize', 16);
+            set(gca, 'FontSize', 20);
             title(sprintf('t = %.4f, CM velocity = %.2f (cm/s), Contact Points = %g',...
                 adim_conditions.current_time/tic, recorded_conditions{ii}.center_of_mass_velocity, ...
                 adim_conditions.contact_points), ...
                 'FontSize', 24);
-            
-            xlabel('$ x/R_o $', 'Interpreter','Latex', 'FontSize', 20);
-            ylabel('$ y/R_o $', 'Interpreter','Latex', 'FontSize', 20);
+            grid on;
+            set(gcf,'Color','white');
+            xlabel('$ x/R_o $', 'Interpreter','Latex', 'FontSize', 28);
+            ylabel('$ y/R_o $', 'Interpreter','Latex', 'FontSize', 28);
             writeVideo(vidObj, getframe(gcf));
             
         end

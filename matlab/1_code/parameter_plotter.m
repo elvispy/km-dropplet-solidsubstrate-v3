@@ -71,10 +71,15 @@ xticklabels({'0.01', '0.1', '1', '10'});
 xlim([1e-3, 12]); ylim([0, 1]);
 xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
 ylabel('Coef. Restitution ($\varepsilon = \sqrt{E_{out}/E_{in}}$)','Interpreter','latex', 'FontSize',20);
+h1 = scatter(nan, nan, 250, "^", "filled", ...
+            'MarkerFaceColor', 'black', 'MarkerEdgeColor','k', 'LineWidth',1.5);
+h2 = plot(NaN, NaN, 'k-', 'LineWidth', 2);  % Dummy plot for second legend entry
+h3 = plot(NaN, NaN, 'ko', 'LineWidth', 2);  % Dummy plot for second legend entry
+legend([h1, h2, h3], 'DNS', 'Kinematic Match', 'Experiments', 'Location','southwest', 'FontSize', 18);
 saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "epsilonvsWeExp+DNS.png"));
 
 % Plotting contact time
-f1 = figure(1); title('Contact time vs We'); set(gcf, 'Position', [950 176 ceil(420*13/9) 420])
+f1 = figure(1); set(gcf, 'Position', [950 176 ceil(420*13/9) 420])
 colormap("parula"); % Choose a colormap
 plot_errorbars(expData.We, expData.tc_tic, expData.We_error, expData.tc_tic_error, expData.Oh);
 set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
@@ -84,8 +89,13 @@ scatterDNS(DNSData, "tc_tic");
 xticks([0.01, 0.1, 1, 10]);               % Define tick positions
 xticklabels({'0.01', '0.1', '1', '10'}); 
 xlim([1e-3, 12]); ylim([0, 7]);
-ylabel('Non-dimensional contac time $t_c/t_{ic}$','Interpreter','latex', 'FontSize',20);
+ylabel('$t_c/t_{ic}$','Interpreter','latex', 'FontSize',20);
 xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
+h1 = scatter(nan, nan, 250, "^", "filled", ...
+            'MarkerFaceColor', 'black', 'MarkerEdgeColor','k', 'LineWidth',1.5);
+h2 = plot(NaN, NaN, 'k-', 'LineWidth', 2);  % Dummy plot for second legend entry
+h3 = plot(NaN, NaN, 'ko', 'LineWidth', 2);  % Dummy plot for second legend entry
+legend([h1, h2, h3], 'DNS', 'Kinematic Match', 'Experiments', 'Location','southwest', 'FontSize', 18);
 saveas(f1, fullfile(safe_folder, "..", "..", "2_output", "Figures", "tcvsWeExp+DNS.png"));
 
 
@@ -184,7 +194,7 @@ function scatterDNS(table, var)
         filtered_table = table(abs(table.Oh - target_oh) < 1e-4, :);  % Adjust tolerance if needed
         
         % Plot epsilon vs We
-        scatter(filtered_table.We, filtered_table.(var), 250, "hexagram", "filled", ...
+        scatter(filtered_table.We, filtered_table.(var), 250, "^", "filled", ...
             'MarkerFaceColor', target_color, 'MarkerEdgeColor','k', 'LineWidth',1.5);
         hold on;
     end

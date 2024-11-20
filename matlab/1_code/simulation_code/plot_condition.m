@@ -84,7 +84,9 @@ function h = plot_condition(idx, conditions, varargin)
 
         %mps(5) = 1;
         arrX((end-conditions.contact_points-5):end) = 0;
-        quiver(EtaX, EtaY, mps .* (-arrX), mps .* (-arrY), 'AutoScaleFactor',1);
+        quiver(EtaX(1:2:end), EtaY(1:2:end), mps(1:2:end) .* (-arrX(1:2:end)), ...
+            mps(1:2:end) .* (-arrY(1:2:end)), ...
+            'AutoScaleFactor',1, 'LineWidth',2);
 
         if idx ~= 1
             angle_tol = pi*2/nb_harmonics;
@@ -112,7 +114,7 @@ function h = plot_condition(idx, conditions, varargin)
     end
     x = 1;
     xlim([-N*x, N*x]);
-    ylim([-2*N/5 * x , 0.8*2*N*x ]);
+    ylim([-1*N/5 * x , 0.8*2*N*x ]);
     %axis equal;
     %ylim([-1.5, 1.5]);
     yline(0, 'k', 'LineWidth', 1.5);
