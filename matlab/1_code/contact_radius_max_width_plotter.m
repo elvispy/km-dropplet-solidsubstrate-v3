@@ -17,9 +17,9 @@ sheets = sheetnames(filename);
 sheets = sheets(contains(sheets, 'Bounce'));
 sheets2 = matlab.lang.makeValidName(sheets);
 data = struct();
-cmp = "copper";
-close all; cmap = copper(100*length(sheets)); ss = size(cmap, 1);
-for i = 1:numel(sheets)
+cmp = "parula";
+close all; cmap = parula(100*length(sheets)); ss = size(cmap, 1);
+for i = [2, 5, 6, 8, 9] %4:2:numel(sheets)
     tbl = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 1);
     
     data.(sheets2{i}) = table2struct(tbl, 'ToScalar', true);
@@ -106,7 +106,7 @@ end
 figure(1); grid on;
 xlabel('$t/t_{ic}$', 'Interpreter','latex');
 ylabel('Contact Radius $r/R_o$', 'Interpreter','latex');
-title('Contact Radius vs Time');
+%title('Contact Radius vs Time');
 %legend('Interpreter','latex');
 colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
 cb = colorbar;  % Show the color scale
@@ -120,7 +120,7 @@ legend([h1, h2], 'Experiments', 'Simulation');
 figure(2); grid on;
 xlabel('$t/t_{ic}$', 'Interpreter', ' latex');
 ylabel('Maximum Radius ($r/R_o$)', 'Interpreter', 'latex');
-title('Maximum Radius vs Time');
+%title('Maximum Radius vs Time');
 %legend('Interpreter','latex');
 colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
 cb = colorbar;  % Show the color scale
