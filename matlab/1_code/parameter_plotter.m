@@ -4,7 +4,7 @@ safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
 addpath(safe_folder, '-begin');
 
 
-warning('off', 'all');
+%warning('off', 'all');
 close all;
 Ro = 0.0203; % radius in cm
 rho = 0.96; %g/cm3
@@ -18,7 +18,7 @@ sheets = sheetnames(filename);
 expData = readtable(filename, 'Sheet', sheets, 'ReadVariableNames', true, 'HeaderLines', 2);
 %sampled_values = @(data, bins, per_bin) reshape(randsample(data, bins*per_bin, true, histcounts(data, linspace(min(data), max(data), bins+1))), [], 1);
 %expData = sortrows(expData, 'We');
-expData = expData(expData.Oh > 0.2 | (mod(1:height(expData), 4)==0)', :);
+%expData = expData(expData.Oh > 0.2 | (mod(1:height(expData), 1)==0)', :);
 % Error propagation
 g = 9.81;
 syms hout vin vout r0 ssigma rrho tc
@@ -55,150 +55,39 @@ DNSData.tic = sqrt(DNSData.rho_kg_m3_ .* DNSData.r_0_m_.^3 ./ DNSData.sigma_N_m_
 DNSData.tc_tic = DNSData.t_c_s_ ./ DNSData.tic;
 
 %% Plotting
-% Plotting contact time
-f1 = figure(1); title('Contact time vs We'); set(gcf, 'Position', [950 176 ceil(420*13/9) 420])
-[ohs, colors] = plot_errorbars(expData.We, expData.tc_tic, expData.We_error, expData.tc_tic_error, expData.Oh);
-set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
-hold on; grid on;
-plotVarVsWeByOh(alldata, "ct_adim", ohs, colors);
-%scatterDNS(DNSData, "tc_tic", ohs, colors);
-xticks([0.01, 0.1, 1, 10]);               % Define tick positions
-xticklabels({'0.01', '0.1', '1', '10'}); 
-xlim([1e-3, 10.5]); ylim([0, 7]);
-ylabel('Non-dimensional contac time $t_c/t_{ic}$','Interpreter','latex', 'FontSize',20);
-xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
-saveas(f1, fullfile(safe_folder, "..", "..", "2_output", "Figures", "tcvsWeExp.png"));
 
 % plotting coef of restitution
-f2 = figure(2); title('Coef res vs We'); set(gcf, 'Position', [5 176 ceil(420*18/9) 420])
-[ohs, colors] = plot_errorbars(expData.We, expData.epsilon, expData.We_error, expData.epsilon_error, expData.Oh);
-set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
+f2 = figure(2); set(gcf, 'Position', [5 176 ceil(420*18/9) 420])
+colormap("parula"); % Choose a colormap
+plot_errorbars(expData.We, expData.epsilon, expData.We_error, expData.epsilon_error, expData.Oh);
 hold on; grid on;
-plotVarVsWeByOh(alldata, "coef_rest_exp", ohs, colors);
-%scatterDNS(DNSData, "epsilon", ohs, colors);
+plotVarVsWeByOh(alldata, "coef_rest_exp");
+scatterDNS(DNSData, "epsilon");
+%custom_ticks = 0.2:0.2:0.8; % Specify desired tick positions
+%set(c, 'Ticks', custom_ticks, 'TickLabels', arrayfun(@num2str, custom_ticks, 'UniformOutput', false));
+set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
 xticks([0.01, 0.1, 1, 10]);               % Define tick positions
 xticklabels({'0.01', '0.1', '1', '10'}); 
-xlim([1e-3, 10.5]); ylim([0, 1]);
+xlim([1e-3, 12]); ylim([0, 1]);
 xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
 ylabel('Coef. Restitution ($\varepsilon = \sqrt{E_{out}/E_{in}}$)','Interpreter','latex', 'FontSize',20);
-saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "epsilonvsWeExp.png"));
+saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "epsilonvsWeExp+DNS.png"));
 
-%% Extra
-% data = struct();
-% close all; cmap = jet(10*length(sheets)); ss = size(cmap, 1);
-% for i = 1:numel(sheets)
-%     expData = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 2);
-% 
-%     data.(sheets{i}) = table2struct(expData, 'ToScalar', true);
-%     data.(sheets{i}).We = str2double(regexp(sheets{i}, '(?<=\(We\s*=\s*)\S+(?=\s*\))', 'match', 'once'));
-% 
-%     bnc = data.(sheets{i});
-%     % Plotting
-%     % Plot Contact Time vs Time_s_ (EXPERIMENTAL)
-%     figure(1); hold on; set(gcf, 'Position', [734 223 646 451]);
-%     color_vector = repmat(bnc.We, size(bnc.Time_s_));
-%     idx = ceil(ss*(bnc.We)/4);
-%     plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', 1, 'DisplayName',"", 'Color', cmap(idx, :));
-%     scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
-% 
-%     % Plot Contact Time vs Time_s_ (SIMULATIONS)
-%     [~, idx2] = min(abs(alldata.weber - bnc.We));  % idx is the index of the closest value
-%     file = fullfile(pwd, "..", "2_output", alldata.parent_folder(idx2), alldata.file_name(idx2)); 
-%     values = load(file);
-%     %alldata = alldata(values.PROBLEM_CONSTANTS.weber == bnc.We, :);
-%     if  abs(alldata.weber - bnc.We) > 1e-3
-%         disp('couldnt find simulation with value We=', bnc.We);
-%     else
-%         length_unit = values.length_unit;
-%         recorded_conditions = values.recorded_conditions;
-%         pixel = 5e-4; %Threshold for experimental contact
-%         theta_vector = values.PROBLEM_CONSTANTS.theta_vector;
-%         times_vector_adim = values.recorded_times/t_ic;
-%         times_simul    = zeros(size(recorded_conditions, 1), 1);
-%         max_width_adim      = zeros(size(recorded_conditions, 1), 1);
-%         contact_radius_adim = zeros(size(recorded_conditions, 1), 1);
-%         for jj = 1:(size(recorded_conditions, 1))
-%             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
-%             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
-%             drop_radius = zeta_generator(adim_deformations);
-%             drop_radius = @(theta) 1 + drop_radius(theta);
-%             drop_height = @(theta) cos(theta) .* drop_radius(theta) + adim_CM;
-% 
-%             % Max width calculation & spread time of width
-%             max_width_adim(jj) = maximum_contact_radius(adim_deformations);
-%             % if current_width > max_width
-%             %     max_width = current_width; 
-%             %     spread_time_width = recorded_times(jj) - touch_time;
-%             % end
-%             % EXPERIMENTAL max_contact_radius calculation
-%             current_contact_points_exp = recorded_conditions{jj}.contact_points;
-%             if current_contact_points_exp == 0
-%                 current_contact_radius_exp = 0;
-%             else 
-%                 kk = 1;
-%                 theta2 = theta_vector(current_contact_points_exp+kk);
-%                 while drop_height(theta2) < pixel/length_unit
-%                     kk = kk + 1;
-%                     theta2 = theta_vector(current_contact_points_exp + kk);
-%                 end
-%                 theta1 = theta_vector(current_contact_points_exp + kk - 1);
-%                 while abs(theta1-theta2) > pi/1e+3
-%                     theta_middle = (theta1+theta2)/2;
-%                     if drop_height(theta_middle) < pixel/length_unit
-%                         theta1 = theta_middle;
-%                     else
-%                         theta2 = theta_middle;
-%                     end
-%                 end
-%                 current_contact_radius_exp = sin(theta1) ...
-%                     * drop_radius(theta1);
-%             end
-%             contact_radius_adim(jj) = current_contact_radius_exp;
-%             % if current_contact_radius_exp > max_contact_radius_exp
-%             %     max_contact_radius_exp = current_contact_radius_exp;
-%             %     spread_time_exp = recorded_times(jj) - touch_time;
-%             % end
-%         end
-%         plot(times_vector_adim, contact_radius_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
-% 
-%     end
-% 
-%     % Plot Maximum Radius vs Time_s_
-%     figure(2); hold on; set(gcf, 'Position', [77 224 1800 450]);
-%     plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', 1, 'DisplayName',"");
-%     scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
-%     plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
-% end
-% 
-% figure(1); grid on;
-% xlabel('$t/t_{ic}$', 'Interpreter','latex');
-% ylabel('Contact Radius $r/R_o$', 'Interpreter','latex');
-% title('Contact Radius vs Time');
-% %legend('Interpreter','latex');
-% colormap jet;  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
-% cb = colorbar;  % Show the color scale
-% caxis([0 3.58]);
-% ylabel(cb, 'We');
-% set(gca, 'FontSize', 15);
-% h1 = plot(NaN, NaN, 'ko-');  % Dummy plot for first legend entry
-% h2 = plot(NaN, NaN, 'k-');  % Dummy plot for second legend entry
-% legend([h1, h2], 'Experimental', 'Simulation');
-% 
-% figure(2); grid on;
-% xlabel('$t/t_{ic}$', 'Interpreter', ' latex');
-% ylabel('Maximum Radius ($r/R_o$)', 'Interpreter', 'latex');
-% title('Maximum Radius vs Time');
-% %legend('Interpreter','latex');
-% colormap jet;  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
-% cb = colorbar;  % Show the color scale
-% caxis([0 3.58]);
-% ylabel(cb, 'We');
-% set(gca, 'FontSize', 15);
+% Plotting contact time
+f1 = figure(1); title('Contact time vs We'); set(gcf, 'Position', [950 176 ceil(420*13/9) 420])
+colormap("parula"); % Choose a colormap
+plot_errorbars(expData.We, expData.tc_tic, expData.We_error, expData.tc_tic_error, expData.Oh);
+set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
+hold on; grid on;
+plotVarVsWeByOh(alldata, "ct_adim");
+scatterDNS(DNSData, "tc_tic");
+xticks([0.01, 0.1, 1, 10]);               % Define tick positions
+xticklabels({'0.01', '0.1', '1', '10'}); 
+xlim([1e-3, 12]); ylim([0, 7]);
+ylabel('Non-dimensional contac time $t_c/t_{ic}$','Interpreter','latex', 'FontSize',20);
+xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
+saveas(f1, fullfile(safe_folder, "..", "..", "2_output", "Figures", "tcvsWeExp+DNS.png"));
 
-%filtered_data = rmfield(data, fieldnames(data(cellfun(@(f) ~contains(f, 'Bounce'), fieldnames(data))))');
-
-
-%x = regexp(str, '(?<=\(We\s*=\s*)\S+(?=\s*\))', 'match', 'once');
 
 %% Aux functions
 function sigma_f_func = error_prop(expr, variables)
@@ -231,79 +120,130 @@ function [zs, unique_colors] = plot_errorbars(x, y, ex, ey, z)
     % Example:
     %   plot_errorbars([1, 2, 3], [2, 3, 1], [0.1, 0.2, 0.1], [0.2, 0.1, 0.2], [10, 20, 30]);
 
-    % Create scatter plot
-    scatter(x, y, 20, z, 'filled'); % Size 100, color by z
-    colormap("copper"); % Choose a colormap
-    c = colorbar; % Add a colorbar
-    ylabel(c, 'Oh');
     hold on;
-
+    zs = nan; unique_colors = nan;
     % Get the colormap and normalize z to map colors correctly
-    cmap = colormap;
-    z_norm = (z - min(z)) / (max(z) - min(z)); % Normalize z to [0, 1]
-    colors = interp1(linspace(0, 1, size(cmap, 1)), cmap, z_norm);
-    [zs, iid] = sort(z_norm);
-    unique_colors = interp1(linspace(0, 1, size(cmap, 1)), cmap, zs);
-    unique_colors = unique_colors(iid, :);
+    % z_trans = log10(z+1e-2 * (z <=0));
+    % z_norm = (z_trans - min(z_trans)) / (max(z_trans) - min(z_trans)); % Normalize z to [0, 1]
+    % colors = interp1(linspace(0, 1, size(cmap, 1)), cmap, z_norm);
+    % [zs, iid] = sort(z_norm);
+    % unique_colors = interp1(linspace(0, 1, size(cmap, 1)), cmap, zs);
+    % unique_colors = unique_colors(iid, :);
+    % 
+    % Create scatter plot
+    colors = mapOhToColor(z);
+    scatter(x, y, 20, colors, 'filled'); % Size 100, color by z
     % Add error bars with the same color as scatter points
     %return
     for i = 1:length(x)
+        if 2*ey(i) >0.6; continue; end 
         errorbar(x(i), y(i), ey(i), ey(i), ex(i), ex(i), 'LineWidth', 1, ...
             'Color', colors(i, :))
-        % Horizontal error bar
-        %line([x(i)-ex(i), x(i)+ex(i)], [y(i), y(i)], ...
-        %     'Color', colors(i, :), 'LineWidth', 1);
-        % Vertical error bar
-        %line([x(i), x(i)], [y(i)-ey(i), y(i)+ey(i)], ...
-        %     'Color', colors(i, :), 'LineWidth', 1);
     end
 
     hold off;
     
 end
 
-function plotVarVsWeByOh(table, var, ohs, colors)
+function plotVarVsWeByOh(table, var)
     % Get unique Oh values from the table
     unique_ohs = unique(table.ohnesorge);
 
     % Loop through each unique Oh value
     for i = 1:length(unique_ohs)
         target_oh = unique_ohs(i);
-        
+        target_color = mapOhToColor(target_oh);
         % Find the closest Oh index
-        [~, idx] = min(abs(ohs - target_oh));  
-        selected_color = colors(idx, :);  % Get corresponding color
+        %[~, idx] = min(abs(ohs - target_oh));  
+        %selected_color = colors(idx, :);  % Get corresponding color
         
         % Filter table for current Oh value
-        filtered_table = table(abs(table.ohnesorge - target_oh) < 1e-6, :);  % Adjust tolerance if needed
+        filtered_table = table(table.ohnesorge == target_oh, :);  % Adjust tolerance if needed
         
         % Plot epsilon vs We
-        plot(filtered_table.weber, filtered_table.(var), 'Color', selected_color, ...
-            'LineWidth', 3, 'LineStyle','--');
+        plot(filtered_table.weber, filtered_table.(var), 'Color', target_color, ...
+            'LineWidth', 5, 'LineStyle','-');
         hold on;
     end
 
 end
 
-function scatterDNS(table, var, ohs, colors)
+function scatterDNS(table, var)
     % Get unique Oh values from the table
     unique_ohs = unique(table.Oh);
 
     % Loop through each unique Oh value
     for i = 1:length(unique_ohs)
         target_oh = unique_ohs(i);
-        
+        target_color = mapOhToColor(target_oh);
         % Find the closest Oh index
-        [~, idx] = min(abs(ohs - target_oh));  
-        selected_color = colors(idx, :);  % Get corresponding color
+        %[~, idx] = min(abs(ohs - target_oh));  
+        %selected_color = colors(idx, :);  % Get corresponding color
         
         % Filter table for current Oh value
         filtered_table = table(abs(table.Oh - target_oh) < 1e-4, :);  % Adjust tolerance if needed
         
         % Plot epsilon vs We
         scatter(filtered_table.We, filtered_table.(var), 250, "hexagram", "filled", ...
-            'MarkerFaceColor', selected_color, 'MarkerEdgeColor','r', 'LineWidth',1.5);
+            'MarkerFaceColor', target_color, 'MarkerEdgeColor','k', 'LineWidth',1.5);
         hold on;
     end
 
+end
+
+function [colors, values] = mapOhToColor(oh_query)
+    % Maps a vector of Ohnesorge numbers (oh_query) to indices in the colormap (cmap)
+    % on a logarithmic scale between oh_low and oh_high.
+    %
+    % Inputs:
+    %   oh_low   - Minimum Ohnesorge value (lower bound)
+    %   oh_high  - Maximum Ohnesorge value (upper bound)
+    %   oh_query - Vector of Ohnesorge values to query
+    %   cmap     - Colormap matrix (Nx3)
+    %
+    % Output:
+    %   color_indices - Array of indices corresponding to oh_query in cmap
+    
+    cmap = colormap;
+    oh_low = 1e-3;
+    oh_high = 0.8;
+    c = colorbar;
+    % Define log-spaced ticks in the original Oh range
+    num_ticks = 5; % Including oh_low and oh_high
+    oh_ticks = round(logspace(log10(oh_low), log10(oh_high), num_ticks), 3);
+    
+    % Map Oh ticks to the normalized range [0, 1] (for the colorbar)
+    log_oh_low = log10(oh_low);
+    log_oh_high = log10(oh_high);
+    normalized_ticks = (log10(oh_ticks) - log_oh_low) / (log_oh_high - log_oh_low);
+    
+    % Set the colorbar ticks and labels
+    set(c, 'Ticks', normalized_ticks, 'TickLabels', ...
+        arrayfun(@(s) sprintf("%.2g", s*(s>oh_low)), oh_ticks, 'UniformOutput', false), ...
+        'FontSize', 16);
+    ylabel(c, 'Oh', 'FontSize',18);
+
+    % Validate inputs
+    if any(oh_query < oh_low | oh_query > oh_high)
+        warning('All values in oh_query must be within the range [oh_low, oh_high].');
+        oh_query(oh_query < oh_low)  = oh_low;
+        oh_query(oh_query > oh_high) = oh_high;
+    end
+
+    % Transform Oh values to logarithmic scale
+    log_oh_low = log10(oh_low);
+    log_oh_high = log10(oh_high);
+    log_oh_query = log10(oh_query);
+
+    % Normalize log-scaled oh_query to [0, 1]
+    normalized_oh = (log_oh_query - log_oh_low) / (log_oh_high - log_oh_low);
+
+    % Map normalized values to colormap indices
+    cmap_size = size(cmap, 1);
+    color_indices = round(normalized_oh * (cmap_size - 1)) + 1;
+
+    % Ensure indices are within valid range
+    color_indices = max(1, min(cmap_size, color_indices));
+    colors = cmap(color_indices, :);
+    values = log_oh_query;
 end

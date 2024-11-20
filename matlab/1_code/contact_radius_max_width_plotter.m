@@ -137,3 +137,60 @@ legend([h1, h2], 'Experiments', 'Simulation')
 
 
 %x = regexp(str, '(?<=\(We\s*=\s*)\S+(?=\s*\))', 'match', 'once');
+
+function [colors, values] = mapWeToColor(we_query)
+    % Maps a vector of Ohnesorge numbers (oh_query) to indices in the colormap (cmap)
+    % on a logarithmic scale between oh_low and oh_high.
+    %
+    % Inputs:
+    %   oh_low   - Minimum Ohnesorge value (lower bound)
+    %   oh_high  - Maximum Ohnesorge value (upper bound)
+    %   oh_query - Vector of Ohnesorge values to query
+    %   cmap     - Colormap matrix (Nx3)
+    %
+    % Output:
+    %   color_indices - Array of indices corresponding to oh_query in cmap
+    
+    cmap = colormap;
+    we_low = 1e-2;
+    we_high = 4;
+    c = colorbar;
+    % Define log-spaced ticks in the original Oh range
+    num_ticks = 5; % Including oh_low and oh_high
+    we_ticks = round(logspace(log10(we_low), log10(we_high), num_ticks), 3);
+    
+    % Map Oh ticks to the normalized range [0, 1] (for the colorbar)
+    log_we_low = log10(we_low);
+    log_we_high = log10(we_high);
+    normalized_ticks = (log10(we_ticks) - log_we_low) / (log_we_high - log_we_low);
+    
+    % Set the colorbar ticks and labels
+    set(c, 'Ticks', normalized_ticks, 'TickLabels', ...
+        arrayfun(@(s) sprintf("%.2g", s*(s>we_low)), we_ticks, 'UniformOutput', false), ...
+        'FontSize', 16);
+    ylabel(c, 'Oh', 'FontSize',18);
+
+    % Validate inputs
+    if any(we_query < we_low | we_query > we_high)
+        warning('All values in oh_query must be within the range [oh_low, oh_high].');
+        we_query(we_query < we_low)  = we_low;
+        we_query(we_query > we_high) = we_high;
+    end
+
+    % Transform Oh values to logarithmic scale
+    log_we_low = log10(we_low);
+    log_we_high = log10(we_high);
+    log_we_query = log10(we_query);
+
+    % Normalize log-scaled oh_query to [0, 1]
+    normalized_oh = (log_we_query - log_we_low) / (log_we_high - log_we_low);
+
+    % Map normalized values to colormap indices
+    cmap_size = size(cmap, 1);
+    color_indices = round(normalized_oh * (cmap_size - 1)) + 1;
+
+    % Ensure indices are within valid range
+    color_indices = max(1, min(cmap_size, color_indices));
+    colors = cmap(color_indices, :);
+    values = log_we_query;
+end
