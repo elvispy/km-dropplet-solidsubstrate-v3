@@ -76,7 +76,7 @@ h1 = scatter(nan, nan, 250, "^", "filled", ...
 h2 = plot(NaN, NaN, 'k-', 'LineWidth', 2);  % Dummy plot for second legend entry
 h3 = plot(NaN, NaN, 'ko', 'LineWidth', 2);  % Dummy plot for second legend entry
 legend([h1, h2, h3], 'DNS', 'Kinematic Match', 'Experiments', 'Location','southwest', 'FontSize', 18);
-saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "epsilonvsWeExp+DNS.png"));
+saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "epsilonvsWeExp+DNS+KM.png"));
 
 % Plotting contact time
 f1 = figure(1); set(gcf, 'Position', [950 176 ceil(420*13/9) 420])
@@ -96,7 +96,7 @@ h1 = scatter(nan, nan, 250, "^", "filled", ...
 h2 = plot(NaN, NaN, 'k-', 'LineWidth', 2);  % Dummy plot for second legend entry
 h3 = plot(NaN, NaN, 'ko', 'LineWidth', 2);  % Dummy plot for second legend entry
 legend([h1, h2, h3], 'DNS', 'Kinematic Match', 'Experiments', 'Location','southwest', 'FontSize', 18);
-saveas(f1, fullfile(safe_folder, "..", "..", "2_output", "Figures", "tcvsWeExp+DNS.png"));
+saveas(f1, fullfile(safe_folder, "..", "..", "2_output", "Figures", "tcvsWeExp+DNS+KM.png"));
 
 
 %% Aux functions
@@ -172,7 +172,7 @@ function plotVarVsWeByOh(table, var)
         
         % Plot epsilon vs We
         plot(filtered_table.weber, filtered_table.(var), 'Color', target_color, ...
-            'LineWidth', 5, 'LineStyle','-');
+            'LineWidth', 4, 'LineStyle','-');
         hold on;
     end
 
