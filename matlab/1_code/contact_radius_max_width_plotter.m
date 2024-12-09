@@ -19,7 +19,7 @@ sheets2 = matlab.lang.makeValidName(sheets);
 data = struct();
 cmp = "parula";
 close all; cmap = parula(100*length(sheets)); ss = size(cmap, 1);
-for i = [2, 5, 6, 8, 9] %4:2:numel(sheets)
+for i = 1:numel(sheets)
     tbl = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 1);
     
     data.(sheets2{i}) = table2struct(tbl, 'ToScalar', true);
@@ -44,7 +44,7 @@ for i = [2, 5, 6, 8, 9] %4:2:numel(sheets)
     else
         length_unit = values.length_unit;
         recorded_conditions = values.recorded_conditions;
-        pixel = 5e-4; %Threshold for experimental contact
+        pixel = 0.02*length_unit;%5e-4; % 5e-4 cm %Threshold for experimental contact
         theta_vector = values.PROBLEM_CONSTANTS.theta_vector;
         times_vector_adim = values.recorded_times/t_ic;
         times_simul    = zeros(size(recorded_conditions, 1), 1);
@@ -93,6 +93,7 @@ for i = [2, 5, 6, 8, 9] %4:2:numel(sheets)
             % end
         end
         plot(times_vector_adim, contact_radius_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
+       
 
     end
 
@@ -101,6 +102,8 @@ for i = [2, 5, 6, 8, 9] %4:2:numel(sheets)
     plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
     %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
     plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
+     T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), 'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)'});
+        writetable(T, 'directComparison.xlsx', 'Sheet', sheets{i});
 end
 
 figure(1); grid on;
