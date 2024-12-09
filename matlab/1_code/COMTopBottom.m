@@ -112,7 +112,7 @@ for i = 1:numel(sheets)
     %plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
      T = table(times_vector_adim(:)*t_ic, adim_CM(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
          'VariableNames', {'Time (s)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
-        writetable(T, 'directComparisonCOM+Top+Bottom.xlsx', 'Sheet', sheets{i});
+        writetable(T, '../2_output/directComparisonCOM+Top+Bottom.xlsx', 'Sheet', sheets{i});
 end
 
 % figure(1); grid on;

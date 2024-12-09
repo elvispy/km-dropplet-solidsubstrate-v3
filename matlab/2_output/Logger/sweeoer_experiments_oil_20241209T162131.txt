@@ -1,0 +1,105 @@
+------------
+09-Dec-2024 16:21:31 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.0200
+                     g: 981
+    undisturbed_radius: 0.0203
+      initial_velocity: [9×1 double]
+         harmonics_qtt: [2×1 double]
+               version: [2×1 double]
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+simulations_cgs
+
+simulations_cgs =
+
+  36×8 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>     <strong>nu</strong>      <strong>g</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>
+    <strong>____</strong>    <strong>______</strong>    <strong>____</strong>    <strong>___</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>
+
+    0.96     20.5     0.02    981          0.0203              -16.365               90            2   
+    0.96     20.5     0.02    981          0.0203              -12.806               90            2   
+    0.96     20.5     0.02    981          0.0203              -10.042               90            2   
+    0.96     20.5     0.02    981          0.0203              -8.0763               90            2   
+    0.96     20.5     0.02    981          0.0203              -5.0013               90            2   
+    0.96     20.5     0.02    981          0.0203              -29.346               90            2   
+
+     :        :        :       :             :                    :                  :             :   
+
+    0.96     20.5     0.02    981          0.0203              -8.0763              120            3   
+    0.96     20.5     0.02    981          0.0203              -5.0013              120            3   
+    0.96     20.5     0.02    981          0.0203              -29.346              120            3   
+    0.96     20.5     0.02    981          0.0203              -38.436              120            3   
+    0.96     20.5     0.02    981          0.0203              -49.189              120            3   
+    0.96     20.5     0.02    981          0.0203              -61.368              120            3   
+
+	<a href="matlab:if exist('simulations_cgs','var') && istabular(simulations_cgs),displayWholeObj(simulations_cgs,'simulations_cgs'),else,fprintf('Unable to display table variable ''simulations_cgs'' because it no longer exists.\n');end">Display all 36 rows.</a>
+
+simulations_cgs = struct2table(vars, 'AsArray', true);
+vars = 
+ vars = 
+        ↑
+{Error: Invalid expression. Check for missing or extra characters.
+} 
+simulations_cgs
+
+simulations_cgs =
+
+  1×8 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>     <strong>nu</strong>      <strong>g</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>      <strong>version</strong>   
+    <strong>____</strong>    <strong>______</strong>    <strong>____</strong>    <strong>___</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>____________</strong>
+
+    0.96     20.5     0.02    981          0.0203            {9×1 double}      {2×1 double}     {2×1 double}
+
+simulations_gs.g(1:10) = 981
+
+simulations_gs = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+    g: [981 981 981 981 981 981 981 981 981 981]
+
+simulations_cgs
+
+simulations_cgs =
+
+  1×8 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>     <strong>nu</strong>      <strong>g</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>      <strong>version</strong>   
+    <strong>____</strong>    <strong>______</strong>    <strong>____</strong>    <strong>___</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>____________</strong>
+
+    0.96     20.5     0.02    981          0.0203            {9×1 double}      {2×1 double}     {2×1 double}
+
+simulations_cgs.g(1:10) = 981
+[Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables. Those
+variables are extended with rows containing default values.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tabular/dotAssign', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m', 485)" style="font-weight:bold"> . </a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m',485,0)">line 485</a>)] 
+
+simulations_cgs =
+
+  10×8 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>     <strong>nu</strong>      <strong>g</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>      <strong>version</strong>   
+    <strong>____</strong>    <strong>______</strong>    <strong>____</strong>    <strong>___</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>____________</strong>
+
+    0.96     20.5     0.02    981          0.0203            {9×1 double}      {2×1 double}     {2×1 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+       0        0        0    981               0            {0×0 double}      {0×0 double}     {0×0 double}
+
+sweeper_experiments_direct_comparison

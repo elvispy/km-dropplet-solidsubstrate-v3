@@ -103,7 +103,7 @@ for i = 1:numel(sheets)
     %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
     plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
      T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), 'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)'});
-        writetable(T, 'directComparison.xlsx', 'Sheet', sheets{i});
+        writetable(T, '../2_output/directComparison.xlsx', 'Sheet', sheets{i});
 end
 
 figure(1); grid on;

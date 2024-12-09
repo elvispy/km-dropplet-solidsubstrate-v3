@@ -1,0 +1,133 @@
+------------
+09-Dec-2024 16:33:10 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.0200
+                     g: 981
+    undisturbed_radius: 0.0203
+      initial_velocity: [-60.9369 -13.7604 -61.2812 -10.9987 -54.5615 -11.6941 -99.1743 -101.0655 -96.3225]
+         harmonics_qtt: 90
+               version: 3
+
+[Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables. Those
+variables are extended with rows containing default values.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tabular/dotAssign', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m', 485)" style="font-weight:bold"> . </a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m',485,0)">line 485</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sweeper_experiments_direct_comparison', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m', 61)" style="font-weight:bold">sweeper_experiments_direct_comparison</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m',61,0)">line 61</a>)] 
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tabular/dotAssign', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m', 507)" style="font-weight:bold"> . </a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m',507,0)">line 507</a>)
+Unable to perform assignment because the left and right sides have a different number of elements.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sweeper_experiments_direct_comparison', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m', 67)" style="font-weight:bold">sweeper_experiments_direct_comparison</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m',67,0)">line 67</a>)
+simulations_cgs.initial_velocity(1:numel(sheets)) = - sqrt(Wes .* sigma/(rho * Ros));
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/ensureRtcReady', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 72)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/ensureRtcReady</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',72,0)">line 72</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Opened', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 398)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Opened</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',398,0)">line 398</a>)
+            obj.ensureRtcReady;
+            ^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 329)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',329,0)">line 329</a>)
+            if obj.Opened
+               ^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.Document/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m', 747)" style="font-weight:bold">matlab.desktop.editor.Document/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m',747,0)">line 747</a>)
+            filename = obj.Editor.Filename;
+                       ^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline>findOpenDocument', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 86)" style="font-weight:bold">opentoline>findOpenDocument</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',86,0)">line 86</a>)
+                || strcmp(fileName, docs(c).Filename)
+                                    ^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 45)" style="font-weight:bold">opentoline</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',45,0)">line 45</a>)
+    foundEditor = findOpenDocument(fileName);
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/ensureRtcReady', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 72)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/ensureRtcReady</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',72,0)">line 72</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Opened', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 398)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Opened</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',398,0)">line 398</a>)
+            obj.ensureRtcReady;
+            ^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 329)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',329,0)">line 329</a>)
+            if obj.Opened
+               ^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.Document/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m', 747)" style="font-weight:bold">matlab.desktop.editor.Document/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m',747,0)">line 747</a>)
+            filename = obj.Editor.Filename;
+                       ^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline>findOpenDocument', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 86)" style="font-weight:bold">opentoline>findOpenDocument</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',86,0)">line 86</a>)
+                || strcmp(fileName, docs(c).Filename)
+                                    ^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 45)" style="font-weight:bold">opentoline</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',45,0)">line 45</a>)
+    foundEditor = findOpenDocument(fileName);
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/ensureRtcReady', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 72)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/ensureRtcReady</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',72,0)">line 72</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Opened', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 398)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Opened</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',398,0)">line 398</a>)
+            obj.ensureRtcReady;
+            ^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 329)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',329,0)">line 329</a>)
+            if obj.Opened
+               ^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.Document/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m', 747)" style="font-weight:bold">matlab.desktop.editor.Document/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m',747,0)">line 747</a>)
+            filename = obj.Editor.Filename;
+                       ^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline>findOpenDocument', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 86)" style="font-weight:bold">opentoline>findOpenDocument</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',86,0)">line 86</a>)
+                || strcmp(fileName, docs(c).Filename)
+                                    ^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 45)" style="font-weight:bold">opentoline</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',45,0)">line 45</a>)
+    foundEditor = findOpenDocument(fileName);
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+{Operation terminated by user during <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/ensureRtcReady', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 72)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/ensureRtcReady</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',72,0)">line 72</a>)
+
+
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Opened', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 398)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Opened</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',398,0)">line 398</a>)
+            obj.ensureRtcReady;
+            ^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.RtcEditorDocument/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m', 329)" style="font-weight:bold">matlab.desktop.editor.RtcEditorDocument/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@RtcEditorDocument/RtcEditorDocument.m',329,0)">line 329</a>)
+            if obj.Opened
+               ^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('matlab.desktop.editor.Document/get.Filename', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m', 747)" style="font-weight:bold">matlab.desktop.editor.Document/get.Filename</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/+matlab/+desktop/+editor/@Document/Document.m',747,0)">line 747</a>)
+            filename = obj.Editor.Filename;
+                       ^^^^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline>findOpenDocument', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 86)" style="font-weight:bold">opentoline>findOpenDocument</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',86,0)">line 86</a>)
+                || strcmp(fileName, docs(c).Filename)
+                                    ^^^^^^^^^^^^^^^^
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('opentoline', '/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m', 45)" style="font-weight:bold">opentoline</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/codetools/opentoline.m',45,0)">line 45</a>)
+    foundEditor = findOpenDocument(fileName);
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+clc
+sweeper_experiments_direct_comparison

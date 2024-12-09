@@ -1,0 +1,94 @@
+------------
+09-Dec-2024 16:33:58 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.0200
+                     g: 981
+    undisturbed_radius: 0.0203
+      initial_velocity: [-60.9369 -13.7604 -61.2812 -10.9987 -54.5615 -11.6941 -99.1743 -101.0655 -96.3225]
+         harmonics_qtt: 90
+               version: 3
+
+[Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables. Those
+variables are extended with rows containing default values.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tabular/dotAssign', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m', 485)" style="font-weight:bold"> . </a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m',485,0)">line 485</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sweeper_experiments_direct_comparison', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m', 61)" style="font-weight:bold">sweeper_experiments_direct_comparison</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m',61,0)">line 61</a>)] 
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m',96,1)">96  </a>if force_sweep == false
+simulations_cgs
+
+simulations_cgs =
+
+  9×8 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>       <strong>nu</strong>        <strong>g</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>
+    <strong>____</strong>    <strong>______</strong>    <strong>________</strong>    <strong>___</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>
+
+    0.96     20.5     0.050061    981         0.019794              -61.71              90             3   
+    0.96     20.5     0.050061    981         0.019794             -13.935              90             3   
+    0.96     20.5      0.50182    981         0.023328             -57.166              90             3   
+    0.96     20.5      0.50182    981         0.023328              -10.26              90             3   
+    0.96     20.5       0.3551    981         0.062247             -31.158              90             3   
+    0.96     20.5      0.19993    981         0.020122             -11.746              90             3   
+    0.96     20.5       0.1998    981          0.04199             -68.956              90             3   
+    0.96     20.5      0.49931    981         0.048035             -65.701              90             3   
+    0.96     20.5     0.049974    981          0.04871             -62.182              90             3   
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+simulations_cgs
+
+simulations_cgs =
+
+  9×10 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>       <strong>nu</strong>        <strong>g</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                                     <strong>folder</strong>                                                                 
+    <strong>____</strong>    <strong>______</strong>    <strong>________</strong>    <strong>___</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>____</strong>    <strong>________________________________________________________________________________________________________________________________________</strong>
+
+    0.96     20.5     0.050061    981         0.019794              -61.71              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=1.98e-02)"
+    0.96     20.5     0.050061    981         0.019794             -13.935              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=1.98e-02)"
+    0.96     20.5      0.50182    981         0.023328             -57.166              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.33e-02)"
+    0.96     20.5      0.50182    981         0.023328              -10.26              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.33e-02)"
+    0.96     20.5       0.3551    981         0.062247             -31.158              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=6.22e-02)"
+    0.96     20.5      0.19993    981         0.020122             -11.746              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02)"
+    0.96     20.5       0.1998    981          0.04199             -68.956              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.20e-02)"
+    0.96     20.5      0.49931    981         0.048035             -65.701              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.80e-02)"
+    0.96     20.5     0.049974    981          0.04871             -62.182              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.87e-02)"
+

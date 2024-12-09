@@ -1,0 +1,71 @@
+------------
+09-Dec-2024 16:30:28 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the
+table. The original column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+
+vars = 
+
+  <a href="matlab:helpPopup('struct')" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.0200
+                     g: 981
+    undisturbed_radius: 0.0203
+      initial_velocity: [-60.9369 -13.7604 -61.2812 -10.9987 -54.5615 -11.6941 -99.1743 -101.0655 -96.3225]
+         harmonics_qtt: 90
+               version: 3
+
+[Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables. Those
+variables are extended with rows containing default values.] 
+[> In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('tabular/dotAssign', '/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m', 485)" style="font-weight:bold"> . </a> (<a href="matlab: opentoline('/Applications/MATLAB_R2024b.app/toolbox/matlab/datatypes/tabular/@tabular/dotAssign.m',485,0)">line 485</a>)
+In <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('sweeper_experiments_direct_comparison', '/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m', 61)" style="font-weight:bold">sweeper_experiments_direct_comparison</a> (<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m',61,0)">line 61</a>)] 
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison.m',95,1)">95  </a>if force_sweep == false
+simulations_cgs
+
+simulations_cgs =
+
+  9×8 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>       <strong>nu</strong>         <strong>g</strong>       <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>
+    <strong>____</strong>    <strong>______</strong>    <strong>________</strong>    <strong>______</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>
+
+    0.96     20.5     0.050697    932.75          0.0203              -60.937              90             3   
+    0.96     20.5     0.050697    932.75          0.0203               -13.76              90             3   
+    0.96     20.5      0.46812    1295.5          0.0203              -61.281              90             3   
+    0.96     20.5      0.46812    1295.5          0.0203              -10.999              90             3   
+    0.96     20.5      0.20279    9223.8          0.0203              -54.562              90             3   
+    0.96     20.5      0.20081    963.84          0.0203              -11.694              90             3   
+    0.96     20.5      0.13892    4197.4          0.0203              -99.174              90             3   
+    0.96     20.5      0.32459    5492.8          0.0203              -101.07              90             3   
+    0.96     20.5     0.032262    5648.3          0.0203              -96.322              90             3   
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeper_experiments_direct_comparison
