@@ -16,7 +16,7 @@ addpath(safe_folder, '-begin');
 % FInding all .mat files that correspond to simulations
 files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 
-%<<<<<<< HEAD
+
 % Create table to fill values (adimensional unless stated in the title)
 varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "parent_folder", "number_of_harmonics", ...
     "max_width", "contact_time_ms", "coef_restitution", "north_pole_min_height", "north_pole_exp_min_height", ...
@@ -24,13 +24,7 @@ varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "pa
     "contact_time_exp_ms", "coef_rest_exp", "max_contact_radius_exp", "spread_time_exp_ms"];
 varTypes=["string", "double", "double", "double", "double", "string", "double", "double", "double", "double", ...
     "double", "double", "double", "double", "double", "double", "double", "double", "double"];
-%=======
-% Create table to fill values
-%varNames=["fileName", "initialVelocity", "Weber*", "Ohnesorge", "dropLiquid", "nb_harmonics", ...
-%    "maxWidth", "contactTime", "coefRestitution", "northPoleminHeight", "maxContactRadius"];
-%varTypes=["string", "double", "double", "double", "string", "double", "double", "double", "double", ...
-%    "double", "double"];
-%>>>>>>> f7a5944 (added westar and Ohnesorge number to table + fixed bug)
+
 sz = [length(files_folder) length(varNames)];
 
 if isfile(fullfile(root_folder, "2_output", "postprocessing.mat"))
@@ -71,6 +65,7 @@ for ii = 1:length(files_folder)
             * default_physical.undisturbed_radius));
         Bo = rhoS * default_physical.g * Ro^2 / sigmaS;
 
+        pixel = 0.02 * length_unit;
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
         contact_time_exp = nan; liftoff_time_exp = nan;
