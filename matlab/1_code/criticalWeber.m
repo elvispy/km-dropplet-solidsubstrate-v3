@@ -14,7 +14,6 @@ physical_parameters = struct("undisturbed_radius", Ro, ...
             "initial_amplitudes", zeros(1, 90), ...
             "pressure_amplitudes", zeros(1, 90+1), "initial_contact_points", 0, ...
             "rhoS", rho, "sigmaS", sigma, "nu", nu, "g", g);
-
 [guesses, matrix] = load_previous_guesses(harmonics_qtt, version); 
 idx = find(and(matrix.Oh == Oh, matrix.Bo == Bo));
 if ~isempty(idx)
@@ -26,9 +25,13 @@ end
 
 while flag == true
     physical_parameters.initial_velocity = - sqrt(We .* sigma./(rho * Ro));
+    fprintf("Trying Guess We=%g\n", We);
     [recorded_conditions, ~, ~] = ...
         solve_motion_v2(physical_parameters, numerical_parameters, options);
+    disp("Simulation done.");
     bounce = is_there_bounce(recorded_conditions, Ro);
+    fprintf("Bounce analysis = %d\n", bounce);
+    disp('--------');
     guesses(end+1, :) = {bounce, We, Oh, Bo, ''};
     [We, flag] = next_guess(guesses, Oh, Bo);
 end
@@ -44,6 +47,7 @@ system('python3 sending_email.py'); % Sending email to notify that's finished
 end % end main function
 
 function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
+    fprintf("Loading previous guesses...");
     try
         matrix = readtable('../2_output/criticalWeEvals.csv');
     catch
@@ -55,9 +59,8 @@ function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
     root_folder = fileparts(fileparts(mfilename('fullpath')));
     files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 
-    data = array2table(nan(length(files_folder),5),...
-        'VariableNames', {'bounce', 'We', 'Oh', 'Bo', 'file_name'});
-    data.Properties.VariableTypes(end) = "string";
+    data = table('Size', [0, 5], 'VariableTypes', {'double', 'double', 'double', 'double', 'string'}, 'VariableNames', {'bounce', 'We', 'Oh', 'Bo', 'file_name'});
+    %data.Properties.VariableTypes(end) = "string";
     %'VariableTypes', ["double", "double", "double", "double", "string"]);
     try
         data2 = readtable(sprintf('../2_output/bouncedataharm_qtt=%dversion%d.csv', harmonics_qtt, version));
@@ -100,8 +103,7 @@ function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
     end
     data = data(~isnan(data.bounce), :);
     writetable(data, sprintf('../2_output/bouncedataharm_qtt=%dversion%d.csv', harmonics_qtt, version));
-
-    
+    disp("Done.");
 end
 
 
@@ -120,7 +122,7 @@ function [We, flag] = next_guess(guesses, Oh, Bo)
         end
 
     elseif size(guesses, 2) >3
-        guesses_new = guesses(and(guesses.Bo == Bo, guesses.Oh == Oh), :);
+        guesses_new = guesses(and(abs(guesses.Bo - Bo) < 1e-5, abs(guesses.Oh - Oh)<1e-5), :);
         bounces = guesses_new.We(guesses_new.bounce == true);
         no_bounces = guesses_new.We(guesses_new.bounce == false);
         minyes = min(bounces);
@@ -132,7 +134,7 @@ function [We, flag] = next_guess(guesses, Oh, Bo)
             %svc = fitcsvm(guesses{:, {'We', 'Oh', 'Bo'}}, guesses.bounce, ...
             %    'KernelFunction', 'RBF', 'KernelScale', 'auto', 'Standardize', true);
             QDA = fitcdiscr(guesses{:, {'We', 'Oh', 'Bo'}}, guesses.bounce, 'DiscrimType', 'quadratic');
-            predictor = @(We) predict(QDA, reshape(We, [length(W), 1]));
+            predictor = @(We) predict(QDA, reshape(We, [length(We), 1]));
             We = logspace(-5, 0, 100);
             bounces = predictor(We);
             We = min(We(bounces == 1));
