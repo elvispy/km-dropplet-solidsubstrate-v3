@@ -1,0 +1,66 @@
+------------
+09-Dec-2024 16:40:39 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_experiments_direct_comparison
+simulations_cgs
+
+simulations_cgs =
+
+  9×10 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>       <strong>nu</strong>        <strong>g</strong>     <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                                        <strong>folder</strong>                                                                     
+    <strong>____</strong>    <strong>______</strong>    <strong>________</strong>    <strong>___</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>____</strong>    <strong>_______________________________________________________________________________________________________________________________________________</strong>
+
+    0.96     20.5     0.050061    981         0.019794              -61.71              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=1.98e-02)"
+    0.96     20.5     0.050061    981         0.019794             -13.935              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=1.98e-02)"
+    0.96     20.5      0.50182    981         0.023328             -57.166              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.33e-02)"
+    0.96     20.5      0.50182    981         0.023328              -10.26              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.33e-02)"
+    0.96     20.5       0.3551    981         0.062247             -31.158              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=6.22e-02)"
+    0.96     20.5      0.19993    981         0.020122             -11.746              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.01e-02)"
+    0.96     20.5       0.1998    981          0.04199             -68.956              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.20e-02)"
+    0.96     20.5      0.49931    981         0.048035             -65.701              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.80e-02)"
+    0.96     20.5     0.049974    981          0.04871             -62.182              90             3        0      "/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.87e-02)"
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+---------
+---------
+Warning: Directory already exists.
+  In parallel_function>make_general_channel/channel_general (line 832)
+  In remoteParallelFunction (line 67)
+---------
+Starting simulation with velocity -61.7102, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -61.7102, modes = 90, version = 3 
+---------
+Starting simulation with velocity -57.1659, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -57.1659, modes = 90, version = 3 
+Finished simulation with velocity -61.7102, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -31.1585, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -31.1585, modes = 90, version = 3 
+Starting simulation with velocity -13.935, modes 90, version v3 ... 
+Finished simulation with velocity -13.935, modes 90, version v3 ... 
+Finished simulation with velocity -57.1659, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -68.9561, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -68.9561, modes = 90, version = 3 
+Finished simulation with velocity -31.1585, modes 90, version v3 ... 
+Se dividio dt por 2, dt=9.149128e-05 U = -68.9561, modes = 90, version = 3 
+Finished simulation with velocity -68.9561, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -11.7458, modes 90, version v3 ... 
+Finished simulation with velocity -11.7458, modes 90, version v3 ... 
+Starting simulation with velocity -10.2601, modes 90, version v3 ... 
+Finished simulation with velocity -10.2601, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -62.1821, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -62.1821, modes = 90, version = 3 
+Se dividio dt por 2, dt=9.149128e-05 U = -62.1821, modes = 90, version = 3 
+Finished simulation with velocity -62.1821, modes 90, version v3 ... 
+---------
+Starting simulation with velocity -65.7009, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -65.7009, modes = 90, version = 3 
+Se dividio dt por 2, dt=9.149128e-05 U = -65.7009, modes = 90, version = 3 
+Finished simulation with velocity -65.7009, modes 90, version v3 ... 
+Parallel pool using the 'local' profile is shutting down.
+Python 3.9.5
