@@ -37,6 +37,10 @@ matrix(end+1, :) = {We, Oh, Bo};
 writetable(matrix, '../2_output/criticalWeEvals.csv');
 writetable(guesses, sprintf('../2_output/bouncedataharm_qtt=%dversion%d.csv', harmonics_qtt, version));
 
+% Load Python3 in MACOS based on https://www.mathworks.com/matlabcentral/answers/359408-trouble-with-a-command-in-matlab-s-system
+if ~ispc && system('python3 --version') ~= 0; setenv('PATH', [getenv('PATH') ':/usr/local/bin/']); end
+
+system('python3 sending_email.py'); % Sending email to notify that's finished
 end % end main function
 
 function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
@@ -96,6 +100,8 @@ function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
     end
     data = data(~isnan(data.bounce), :);
     writetable(data, sprintf('../2_output/bouncedataharm_qtt=%dversion%d.csv', harmonics_qtt, version));
+
+    
 end
 
 
