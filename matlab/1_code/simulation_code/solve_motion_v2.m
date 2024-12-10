@@ -186,8 +186,8 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
     number_of_extra_indexes = 0;
 
     %grow_dt = false;%  THis variable controls how fast dt can grow
-    jjj = 0;%  Indexes to keep track how small is dt compared to max_dt
-
+    jjj = 0; myflag = true;%  Indexes to keep track how small is dt compared to max_dt
+    flips = 0;
       
     legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
     function_to_minimize = eval(sprintf('@function_to_minimize_v%d', default_numerical.version));
@@ -370,10 +370,17 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
                     number_of_extra_indexes = number_of_extra_indexes + 1;
                 end
 
-                if simulation_time == inf &&  contact_points==0 && ...
-                        ((current_conditions.center_of_mass_velocity < 0 && current_time > 10*max_dt) || current_conditions.center_of_mass > 1.1)
+                if current_index > 5 && ...
+                        recorded_conditions{current_index-1}.center_of_mass_velocity * recorded_conditions{current_index-2}.center_of_mass_velocity <= 0
+                    flips = flips + 1;
+                end
+                velocity_down = (current_conditions.center_of_mass_velocity < 0 && current_time > 10*max_dt);
+                if (simulation_time == inf &&  contact_points==0 && ...
+                        (velocity_down || current_conditions.center_of_mass > 1.1)) || ...
+                        (default_options.optimize_for_bounce == true && velocity_down == true && flips > 0)
                     final_time = current_time*1.1;
                     simulation_time = 1e+6; % So as not to enter to this if ever again
+                    flips = -inf;
                     if PROBLEM_CONSTANTS.DEBUG_FLAG==true
                         fprintf("Changed final time. Current progress: %.0f%%\n", ...
                         current_time/final_time*100);
