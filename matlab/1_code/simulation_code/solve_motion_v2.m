@@ -2,7 +2,7 @@
 % email: elvisavfc65@gmail.com
 % Date: January 13th, 2023.
 
-function solve_motion_v2(varargin)
+function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion_v2(varargin)
     
     %
     %Tries to solve the full kinematic match between a dropplet
@@ -46,7 +46,7 @@ function solve_motion_v2(varargin)
     
     default_options = struct('live_plotting', false, 'debug_flag', false, ...
             'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'), ...
-            'prefix', '');
+            'prefix', '', 'save_results', true, 'optimize_for_bounce', false);
     default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 20, ...
         'angular_sampling', nan, 'version', 3, 'order', 1);
     
@@ -428,7 +428,10 @@ function solve_motion_v2(varargin)
             break;
         end
     end
+    if default_options.save_results == true
     save(file_name, 'recorded_conditions', 'recorded_times', 'length_unit', ...
         'velocity_unit', 'pressure_unit', 'time_unit', 'froude_nb', 'weber_nb', 'PROBLEM_CONSTANTS', ...
-        'default_numerical', 'default_physical');    
+        'default_numerical', 'default_physical'); 
+    end
+    
 end
