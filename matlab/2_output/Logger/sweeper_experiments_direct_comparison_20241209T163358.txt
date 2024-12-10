@@ -92,3 +92,7 @@ simulations_cgs =
     0.96     20.5      0.49931    981         0.048035             -65.701              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.80e-02)"
     0.96     20.5     0.049974    981          0.04871             -62.182              90             3        0      "/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=4.87e-02)"
 
+if system_dependent('IsDebugMode')==1, dbquit; end
+plotter_presentation
+schematicsdfd
+exit

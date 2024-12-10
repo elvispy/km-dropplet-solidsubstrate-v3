@@ -5,84 +5,7 @@ curr = pwd;
 %p = fullfile(pwd, "..", "D50Quant100", "rho1000sigma7220nu98muair0", "RhoS1000SigmaS7220", "R0350mm", "ImpDefCornerAng180U39", "N=20tol=5.00e-05"); % uigetdir();
 %cd(p);
 
-saving = true;
-% global errored
-% errored = ~isfile('z.mat');
-% try
-% 
-%     load('ProblemConditions.mat'); NN = N;
-%     disp("Starting impact panel for the following parameters:");
-%     fprintf("Re = %g\n", Re);
-%     fprintf("We = %g\n", We);
-%     fprintf("Fr = %g\n", Fr);
-%     fprintf("U0 = %g cm/s\n", U0);
-% catch
-%     load('U0.mat');
-%     load('Fr.mat');
-%     disp("Couldn't find Problem Conditions");
-% end
-% load_vars('vz.mat'); Vo = abs(vz(1));
-% 
-% 
-% try
-%     load_vars('etas.mat');
-%     etaMatPer = etas;
-% catch
-%     files = dir(fullfile(pwd, "etaMatPer*.mat"));
-%     N = length(files);
-%     etaAux = [];
-%     for i = 1:N
-%         load_vars(files(i).name);
-%         etaAux = [etaAux, etaMatPer];
-%     end
-%     etaMatPer = etaAux;
-% end
-% load_vars('z.mat')
-% load_vars('etaOri.mat')
-% load_vars('tvec.mat')
-% 
-% load_vars('oscillation_amplitudes.mat');
-% load_vars('pressure_amplitudes.mat');
-% load_vars('numl.mat');
-% Rv = zeros(1, size(oscillation_amplitudes, 2));
-% for ii = 1:size(oscillation_amplitudes, 2)
-%     Rv(ii) = zs_from_spherical(pi, oscillation_amplitudes(:, ii));
-% end
-% 
-% %%
-% 
-% cd ..
-% try
-%     load('Ro.mat','Ro')%Sphere's radius in CGS
-% catch
-%     cd ..
-%     load('Ro.mat','Ro')
-% end
-% cd ..
-% load('rhoS.mat','rhoS')%Sphere density
-% %load('sigmaS.mat')%Sphere's surface tension
-% 
-% cd ..
-% load('rho.mat','rho')
-% %load('sigma.mat','sigma')
-% load('nu.mat','nu')
-% load('muair.mat')
-% load('g.mat','g') %gravitational constant
-% 
-% cd ..
-% %load('D.mat')%Domain diameter in units of droplet radii
-% %load('quant.mat')%number of dr's contained in an undeformed dropelt radius
-% load('nr.mat','nr')
-% load('dr.mat','dr')
-% load('r.mat')
-% load('zs.mat','zs')
-% 
-% %xplot = dr*(0:nr-1); save('xplot.mat','xplot')%I might remove or relocate this
-% load('xplot.mat')
-% cd(curr);
-% %load('var.mat');
-%cd(p);
-
+saving = false;
 
 myFont = "Arial";
 n=8000;
@@ -152,16 +75,6 @@ annotation('doublearrow',xht, yht, ...
 text(sin(3*pi/4)*0.33, CENTER, "$\zeta(\theta, t)$", ...
     'Fontsize', 20, 'FontName', myFont, 'interpreter', 'latex')
 
-
-% Define coordinates for the two semi-axes (using annotation)
-% [xht1, yht1] = gca_to_Normalized(myax, [sin(0)*.99, ZERO], [(cos(0)+1)*.99 + CENTER, ZERO+1+CENTER]);
-% annotation('doublearrow', xht1, yht1, 'Head1Length', 0, 'Head2Length', 0, ...
-%     'Head1Style', 'vback3', 'Linewidth', .75);
-% 
-% [xht2, yht2] = gca_to_Normalized(myax, [sin(pi/4)*.99, ZERO], [(cos(pi/4)+1)*.99 + CENTER, ZERO+1+CENTER]);
-% annotation('doublearrow', xht2, yht2, 'Head1Length', 0, 'Head2Length', 0, ...
-%     'Head1Style', 'vback3', 'Linewidth', .75);
-
 % Plot angle arc using annotation for the angle (phi)
 theta = linspace(0, pi/3.1, 20);
 x_arc = 0.10*sin(theta);
@@ -175,43 +88,7 @@ text(ZERO +.05, ZERO + CENTER + 0.25, '$\theta$', 'FontSize', 20, 'Interpreter',
 [xht, yht] = gca_to_Normalized(myax, [sin(0)*.99, ZERO], [(cos(0))*.99 + CENTER - 0.15, ZERO+CENTER]);
 annotation('doublearrow',xht, yht, ...
     'Head1Length', 0, 'Head2Length', 0, ...
-    'Head1Style', 'vback3', 'Head2Style', 'vback3' ,'Linewidth',2.5 )
-%r_c(t)
-%plot([0 0],[0.07 0.16],'Color', [.7 .7 .7], 'LineWidth', 1.1);%bottom measure transporter for r_c(t)
-%[xrct, yrct] = gca_to_Normalized(myax, [0.01 -x1(end)-0.02], [.1,  .1]);
-%annotation('doublearrow',xrct, yrct, ...
-%    'Head1Length', 0, 'Head2Length', 7, ...
-%    'Head1Style', 'vback3', 'Head2Style', 'vback3' ,'Linewidth',1 );
-%[Xproyrct, Yproyrct] = gca_to_Normalized(myax, [-x1(end), -x1(end)] ...
-%    , [.16, ZERO+0.07]);
-%annotation('arrow', Xproyrct, Yproyrct, 'Color', [.7 .7 .7], ...
-%    'HeadLength', 15, 'HeadStyle', 'none', 'LineWidth', 1.5);
-
-%text(-x1(end)/3, .2, "$r_c(t)$", ...
-%    'Fontsize', 14, 'FontName', myFont, 'interpreter', 'latex');
-
-% C(t)
-%Ct = plot([x1(1)+.01, -x1(1)-0.01], [y1(1)-.05, y1(1)-.05], 'LineStyle', 'none', ...
-%    'Marker', 's', 'LineWidth', 1.5, 'Color', [.2 .2 .2], ...
-%    'MarkerSize', 13);
-
-% L(t)
-%Lt = plot([x1(1)+.01, -x1(1)-0.01], [ZERO, ZERO], 'LineStyle', 'none', ...
-%    'Marker', '^', 'LineWidth', 1.1, 'Color', [.2 .2 .2], ...
-%    'MarkerSize', 8);
-
-% x, z axis
-% [xht, yht] = gca_to_Normalized(myax, [ZERO ZERO], [ZERO, 0.15]);
-% annotation('arrow',xht, yht, ...
-%     'HeadLength', 7, 'HeadStyle', 'vback3','Linewidth', 2.5)
-% text(.04, 0.092, "$z$", ...
-%     'Fontsize', 16, 'FontName', myFont, 'interpreter', 'latex')
-% 
-% [xht, yht] = gca_to_Normalized(myax, [ZERO ZERO+0.15], [ZERO, ZERO]);
-% annotation('arrow',xht, yht, ...
-%     'HeadLength', 7, 'HeadStyle', 'vback3','Linewidth', 2)
-% text(0.04, -0.1, "$r$", ...
-%     'Fontsize', 16, 'FontName', myFont, 'interpreter', 'latex')
+    'Head1Style', 'vback3', 'Head2Style', 'vback3' ,'Linewidth',2.5 );
 
 
 % FLuid properties
@@ -250,18 +127,18 @@ function [X, Y] = gca_to_Normalized(ca, xs, ys)
        Y(i) = pos(2) + pctY * pos(4);
     end
 end
-
-function load_vars(str)
-    global errored
-    
-    if errored == true
-        str = "errored_" + str; 
-    end
-    
-    vars = load(str);
-    fn = fieldnames(vars);
-    for ii = 1:length(fn)
-        assignin('caller', fn{ii}, vars.(fn{ii}));
-    end
-    
-end
+% 
+% function load_vars(str)
+%     global errored
+% 
+%     if errored == true
+%         str = "errored_" + str; 
+%     end
+% 
+%     vars = load(str);
+%     fn = fieldnames(vars);
+%     for ii = 1:length(fn)
+%         assignin('caller', fn{ii}, vars.(fn{ii}));
+%     end
+% 
+% end
