@@ -17,8 +17,8 @@ sheets = sheetnames(filename);
 sheets = sheets(contains(sheets, 'Bounce'));
 sheets2 = matlab.lang.makeValidName(sheets);
 data = struct();
-cmp = "parula";
-close all; cmap = parula(100*length(sheets)); ss = size(cmap, 1);
+%cmp = "parula";
+%close all; cmap = parula(100*length(sheets)); ss = size(cmap, 1);
 for i = 1:numel(sheets)
     tbl = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 1);
     
@@ -28,10 +28,10 @@ for i = 1:numel(sheets)
     bnc = data.(sheets2{i});
     % Plotting
     % Plot Contact Time vs Time_s_ (EXPERIMENTAL)
-    %figure(1); hold on; set(gcf, 'Position', [734 223 ceil(451*16/9) 451]);
+    figure(1); hold on; set(gcf, 'Position', [734 223 ceil(451*16/9) 451]);
     color_vector = repmat(bnc.We, size(bnc.Time_s_));
     idx = ceil(ss*(bnc.We)/4);
-    %plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
+    plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
     %scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
     
     % Plot Contact Time vs Time_s_ (SIMULATIONS)
@@ -53,17 +53,17 @@ for i = 1:numel(sheets)
         drop_top_adim = zeros(size(recorded_conditions, 1), 1);
         drop_top_adim_exp = zeros(size(recorded_conditions, 1), 1);
         drop_bottom_adim = zeros(size(recorded_conditions, 1), 1);
-        adim_CM = zeros(size(recorded_conditions, 1), 1);
+        drop_CM_adim = zeros(size(recorded_conditions, 1), 1);
         for jj = 1:(size(recorded_conditions, 1))
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
-            adim_CM(jj) = recorded_conditions{jj}.center_of_mass/length_unit;
+            adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
             drop_radius = zeta_generator(adim_deformations);
             drop_radius = @(theta) 1 + drop_radius(theta);
-            drop_height = @(theta) cos(theta) .* drop_radius(theta) + adim_CM(jj);
+            drop_height = @(theta) cos(theta) .* drop_radius(theta) + adim_CM;
             drop_top_adim(jj)    = drop_height(0);
             drop_bottom_adim(jj) = drop_height(pi);
             drop_top_adim_exp(jj)    = max(drop_height(linspace(0, pi/2, 100)));
-            continue
+            drop_CM_adim(jj)     = adim_CM;
                 
             % Max width calculation & spread time of width
             max_width_adim(jj) = maximum_contact_radius(adim_deformations);
@@ -110,99 +110,9 @@ for i = 1:numel(sheets)
     %plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
     %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
     %plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
-     T = table(times_vector_adim(:)*t_ic, adim_CM(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
-         'VariableNames', {'Time (s)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
-        writetable(T, '../2_output/directComparisonCOM+Top+Bottom.xlsx', 'Sheet', sheets{i});
-end
-
-% figure(1); grid on;
-% xlabel('$t/t_{ic}$', 'Interpreter','latex');
-% ylabel('Contact Radius $r/R_o$', 'Interpreter','latex');
-% %title('Contact Radius vs Time');
-% %legend('Interpreter','latex');
-% colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
-% cb = colorbar;  % Show the color scale
-% caxis([0 3.58]);
-% ylabel(cb, 'We');
-% set(gca, 'FontSize', 24);
-% h1 = plot(NaN, NaN, 'k-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
-% h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
-% legend([h1, h2], 'Experiments', 'Simulation');
-% 
-% figure(2); grid on;
-% xlabel('$t/t_{ic}$', 'Interpreter', ' latex');
-% ylabel('Maximum Radius ($r/R_o$)', 'Interpreter', 'latex');
-% %title('Maximum Radius vs Time');
-% %legend('Interpreter','latex');
-% colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
-% cb = colorbar;  % Show the color scale
-% caxis([0 3.58]);
-% ylabel(cb, 'We');
-% xlim([0 3]);
-% set(gca, 'FontSize', 24);
-% %set(gca,'ColorScale','log')
-% h1 = plot(NaN, NaN, 'k-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
-% h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
-% legend([h1, h2], 'Experiments', 'Simulation')
-
-%filtered_data = rmfield(data, fieldnames(data(cellfun(@(f) ~contains(f, 'Bounce'), fieldnames(data))))');
-
-
-%x = regexp(str, '(?<=\(We\s*=\s*)\S+(?=\s*\))', 'match', 'once');
-
-function [colors, values] = mapWeToColor(we_query)
-    % Maps a vector of Ohnesorge numbers (oh_query) to indices in the colormap (cmap)
-    % on a logarithmic scale between oh_low and oh_high.
-    %
-    % Inputs:
-    %   oh_low   - Minimum Ohnesorge value (lower bound)
-    %   oh_high  - Maximum Ohnesorge value (upper bound)
-    %   oh_query - Vector of Ohnesorge values to query
-    %   cmap     - Colormap matrix (Nx3)
-    %
-    % Output:
-    %   color_indices - Array of indices corresponding to oh_query in cmap
     
-    cmap = colormap;
-    we_low = 1e-2;
-    we_high = 4;
-    c = colorbar;
-    % Define log-spaced ticks in the original Oh range
-    num_ticks = 5; % Including oh_low and oh_high
-    we_ticks = round(logspace(log10(we_low), log10(we_high), num_ticks), 3);
-    
-    % Map Oh ticks to the normalized range [0, 1] (for the colorbar)
-    log_we_low = log10(we_low);
-    log_we_high = log10(we_high);
-    normalized_ticks = (log10(we_ticks) - log_we_low) / (log_we_high - log_we_low);
-    
-    % Set the colorbar ticks and labels
-    set(c, 'Ticks', normalized_ticks, 'TickLabels', ...
-        arrayfun(@(s) sprintf("%.2g", s*(s>we_low)), we_ticks, 'UniformOutput', false), ...
-        'FontSize', 16);
-    ylabel(c, 'Oh', 'FontSize',18);
-
-    % Validate inputs
-    if any(we_query < we_low | we_query > we_high)
-        warning('All values in oh_query must be within the range [oh_low, oh_high].');
-        we_query(we_query < we_low)  = we_low;
-        we_query(we_query > we_high) = we_high;
-    end
-
-    % Transform Oh values to logarithmic scale
-    log_we_low = log10(we_low);
-    log_we_high = log10(we_high);
-    log_we_query = log10(we_query);
-
-    % Normalize log-scaled oh_query to [0, 1]
-    normalized_oh = (log_we_query - log_we_low) / (log_we_high - log_we_low);
-
-    % Map normalized values to colormap indices
-    cmap_size = size(cmap, 1);
-    color_indices = round(normalized_oh * (cmap_size - 1)) + 1;
-
-    % Ensure indices are within valid range
-    color_indices = max(1, min(cmap_size, color_indices));
-    colors = cmap(color_indices, :);
-    values = log_we_query;
+    T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
+        drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
+        'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
+        writetable(T, '../2_output/directComparison.xlsx', 'Sheet', sheets{i});
 end
