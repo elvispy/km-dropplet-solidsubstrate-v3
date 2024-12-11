@@ -39,17 +39,24 @@ end
 
 data = data(~isnan(data.initial_velocity_cgs), :);
 pixel = 5e-4; %Threshold for experimental contact
-for ii = 1:length(files_folder)
+fnames = data{:, 1};
+parfor ii = 1:length(files_folder)
     try
-        if ismember(files_folder(ii).name, data.(varNames(1))) || ...
+        if ismember(files_folder(ii).name, fnames) || ...
                 contains(files_folder(ii).name, "postprocessing") || ...
                 contains(lower(files_folder(ii).name), "error"); continue; 
         end
         %if ~isnan(data{ii, "coef_rest_exp"}); continue; end
-        lastwarn('', ''); clear recorded_conditions recorded_times default_physical length_unit theta_vector
-        load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
+        lastwarn('', ''); %clear recorded_conditions recorded_times default_physical length_unit theta_vector
+        val = load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
             "recorded_conditions", "recorded_times", "default_physical", ...
             "length_unit", "PROBLEM_CONSTANTS");
+        recorded_conditions = val.recorded_conditions;
+        recorded_times = val.recorded_times;
+        default_physical = val.default_physical;
+        length_unit = val.length_unit;
+        PROBLEM_CONSTANTS = val.PROBLEM_CONSTANTS;
+
         if contains(lastwarn, 'not found'); error(lastwarn);  end
         
         recorded_times = recorded_times * 1e+3; % To miliseconds
@@ -58,7 +65,7 @@ for ii = 1:length(files_folder)
         
         if isfield(default_physical, 'nu'); Oh = default_physical.nu / sqrt(sigmaS * Ro * rhoS); else; Oh = 0; end
         g = default_physical.g;
-        theta_vector = PROBLEM_CONSTANTS.theta_vector;
+        theta_vector = val.PROBLEM_CONSTANTS.theta_vector;
         Westar = default_physical.rhoS * default_physical.initial_velocity^2 * ...
             default_physical.undisturbed_radius / default_physical.sigmaS;
         Oh = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
