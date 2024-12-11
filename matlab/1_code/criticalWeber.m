@@ -1,4 +1,4 @@
-function We = criticalWeber(Oh, Bo)
+function [We, guesses, matrix] = criticalWeber(Oh, Bo, varargin)
 % Oh = 0.0151883524683513;
 % Bo = 0.0189312135804878;
 rho = 0.96; sigma = 20.5; g = 981;
@@ -14,40 +14,42 @@ physical_parameters = struct("undisturbed_radius", Ro, ...
             "initial_amplitudes", zeros(1, 90), ...
             "pressure_amplitudes", zeros(1, 90+1), "initial_contact_points", 0, ...
             "rhoS", rho, "sigmaS", sigma, "nu", nu, "g", g);
-[guesses, matrix] = load_previous_guesses(harmonics_qtt, version); 
+if nargin == 4 && ~isempty(varargin{1})
+    guesses = varargin{1};
+    matrix   = varargin{2};
+ else
+    [guesses, matrix] = load_previous_guesses(harmonics_qtt, version); 
+end
 idx = find(and(matrix.Oh == Oh, matrix.Bo == Bo));
 if ~isempty(idx)
-    flag = false;
+    %flag = false;
     We = matrix{idx(1), 'We'};
 else
     [We, flag] = next_guess(guesses, Oh, Bo);
+
+    while flag == true
+        physical_parameters.initial_velocity = - sqrt(We .* sigma./(rho * Ro));
+        fprintf("   Trying Guess We=%g\n", We);
+        [recorded_conditions, ~, ~] = ...
+            solve_motion_v2(physical_parameters, numerical_parameters, options);
+        disp("   Simulation done.");
+        bounce = is_there_bounce(recorded_conditions, Ro);
+        fprintf("   Bounce analysis = %d\n", bounce);
+        disp('-----------');
+        guesses(end+1, :) = {bounce, We, Oh, Bo, ''};
+        [We, flag] = next_guess(guesses, Oh, Bo);
+    end
+
+    matrix(end+1, :) = {We, Oh, Bo};
+    writetable(matrix, '../2_output/criticalWeEvals.csv');
+    writetable(guesses, sprintf('../2_output/bouncedataharm_qtt=%dversion%d.csv', harmonics_qtt, version));
+
 end
 
-while flag == true
-    physical_parameters.initial_velocity = - sqrt(We .* sigma./(rho * Ro));
-    fprintf("Trying Guess We=%g\n", We);
-    [recorded_conditions, ~, ~] = ...
-        solve_motion_v2(physical_parameters, numerical_parameters, options);
-    disp("Simulation done.");
-    bounce = is_there_bounce(recorded_conditions, Ro);
-    fprintf("Bounce analysis = %d\n", bounce);
-    disp('--------');
-    guesses(end+1, :) = {bounce, We, Oh, Bo, ''};
-    [We, flag] = next_guess(guesses, Oh, Bo);
-end
-
-matrix(end+1, :) = {We, Oh, Bo};
-writetable(matrix, '../2_output/criticalWeEvals.csv');
-writetable(guesses, sprintf('../2_output/bouncedataharm_qtt=%dversion%d.csv', harmonics_qtt, version));
-
-% Load Python3 in MACOS based on https://www.mathworks.com/matlabcentral/answers/359408-trouble-with-a-command-in-matlab-s-system
-if ~ispc && system('python3 --version') ~= 0; setenv('PATH', [getenv('PATH') ':/usr/local/bin/']); end
-
-system('python3 sending_email.py'); % Sending email to notify that's finished
 end % end main function
 
 function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
-    fprintf("Loading previous guesses...");
+    fprintf("   Loading previous guesses...");
     try
         matrix = readtable('../2_output/criticalWeEvals.csv');
     catch
@@ -77,11 +79,10 @@ function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
             continue; 
         end
         %if ~isnan(data{ii, "coef_rest_exp"}); continue; end
-        lastwarn('', ''); clear recorded_conditions recorded_times default_physical length_unit theta_vector
+        lastwarn('', ''); %clear recorded_conditions recorded_times default_physical length_unit theta_vector
         load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
-            "recorded_conditions", "default_physical", ...
-            'default_numerical', "length_unit");
-        if contains(lastwarn, 'not found'); error(lastwarn);  end
+            "default_physical", 'default_numerical');
+        %if contains(lastwarn, 'not found'); error(lastwarn);  end
 
         % Define parameters of bounce 
         Ro = default_physical.undisturbed_radius;
@@ -96,14 +97,17 @@ function [data, matrix] = load_previous_guesses(harmonics_qtt, version)
            min((data.We - We).^2 + (data.Oh - Oh).^2 + (data.Bo - Bo).^2) < 1e-10    %ismember([We, Oh, Bo], table2array(data(:, {'We', 'Oh', 'Bo'})), 'rows')
             continue;
         end
+        load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
+            "recorded_conditions", "length_unit");
 
         bounce = is_there_bounce(recorded_conditions, length_unit);
         % Adding results to table
         data(ii, :) = {bounce, We, Oh, Bo, files_folder(ii).name};
     end
     data = data(~isnan(data.bounce), :);
+    data = data(data.We + data.Bo + data.Oh ~= 0, :);
     writetable(data, sprintf('../2_output/bouncedataharm_qtt=%dversion%d.csv', harmonics_qtt, version));
-    disp("Done.");
+    disp(" Done.");
 end
 
 
@@ -134,8 +138,8 @@ function [We, flag] = next_guess(guesses, Oh, Bo)
             %svc = fitcsvm(guesses{:, {'We', 'Oh', 'Bo'}}, guesses.bounce, ...
             %    'KernelFunction', 'RBF', 'KernelScale', 'auto', 'Standardize', true);
             QDA = fitcdiscr(guesses{:, {'We', 'Oh', 'Bo'}}, guesses.bounce, 'DiscrimType', 'quadratic');
-            predictor = @(We) predict(QDA, reshape(We, [length(We), 1]));
-            We = logspace(-5, 0, 100);
+            predictor = @(We) predict(QDA, [We(:), repmat(Oh, size(We(:))), repmat(Bo, size(We(:)))]);
+            We = logspace(-6, 0, 100);
             bounces = predictor(We);
             We = min(We(bounces == 1));
             if isempty(We)
