@@ -50,12 +50,20 @@ for i = 1:numel(sheets)
         times_simul    = zeros(size(recorded_conditions, 1), 1);
         max_width_adim      = zeros(size(recorded_conditions, 1), 1);
         contact_radius_adim = zeros(size(recorded_conditions, 1), 1);
+        drop_top_adim = zeros(size(recorded_conditions, 1), 1);
+        drop_top_adim_exp = zeros(size(recorded_conditions, 1), 1);
+        drop_bottom_adim = zeros(size(recorded_conditions, 1), 1);
+        drop_CM_adim = zeros(size(recorded_conditions, 1), 1);
         for jj = 1:(size(recorded_conditions, 1))
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
             drop_radius = zeta_generator(adim_deformations);
             drop_radius = @(theta) 1 + drop_radius(theta);
             drop_height = @(theta) cos(theta) .* drop_radius(theta) + adim_CM;
+            drop_top_adim(jj)    = drop_height(0);
+            drop_bottom_adim(jj) = drop_height(pi);
+            drop_top_adim_exp(jj)    = max(drop_height(linspace(0, pi/2, 100)));
+            drop_CM_adim(jj)     = adim_CM;
                 
             % Max width calculation & spread time of width
             max_width_adim(jj) = maximum_contact_radius(adim_deformations);
@@ -102,7 +110,10 @@ for i = 1:numel(sheets)
     plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
     %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
     plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
-     T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), 'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)'});
+    
+    T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
+        drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
+        'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
         writetable(T, '../2_output/directComparison.xlsx', 'Sheet', sheets{i});
 end
 
