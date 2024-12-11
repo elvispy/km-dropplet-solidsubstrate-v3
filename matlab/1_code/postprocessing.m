@@ -220,6 +220,7 @@ parfor ii = 1:length(files_folder)
         end
     end
 end
+delete(gcp("nocreate")); % Deleting current parallel workers
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name');
 
