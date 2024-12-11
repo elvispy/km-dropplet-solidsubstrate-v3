@@ -9,12 +9,13 @@ Ro = 0.0203; % radius in cm
 rho = 0.96; %g/cm3
 sigma = 20.5; %dyne/m
 t_ic = sqrt(rho*Ro^3/sigma); % inertio-capillary time scale
-filename = '../0_data/manual/Low We comparison.xlsx';
+%filename = '../0_data/manual/Low We comparison.xlsx';
+filename = '../0_data/manual/Oh comparisons.xlsx';
 alldata = load('../2_output/postprocessing.mat', 'data');
 alldata = alldata.data;
-alldata = alldata(contains(alldata.file_name, 'directComparison') & contains(alldata.parent_folder,'v3') & alldata.number_of_harmonics == 90, :);
+alldata = alldata(contains(alldata.file_name, 'directComparisonOhSweep') & contains(alldata.parent_folder,'v3') & alldata.number_of_harmonics == 90, :);
 sheets = sheetnames(filename);
-sheets = sheets(contains(sheets, 'Bounce'));
+%sheets = sheets(contains(sheets, 'Bounce'));
 sheets2 = matlab.lang.makeValidName(sheets);
 data = struct();
 %cmp = "parula";
@@ -23,25 +24,31 @@ for i = 1:numel(sheets)
     tbl = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 1);
     
     data.(sheets2{i}) = table2struct(tbl, 'ToScalar', true);
-    data.(sheets2{i}).We = str2double(regexp(sheets{i}, '(?<=\(We\s*=\s*)\S+(?=\s*\))', 'match', 'once'));
+    data.(sheets2{i}).We = tbl.We(1);
+    data.(sheets2{i}).Oh = tbl.Oh(1);
+    data.(sheets2{i}).Bo = tbl.Bo(1);
 
     bnc = data.(sheets2{i});
     % Plotting
     % Plot Contact Time vs Time_s_ (EXPERIMENTAL)
-    figure(1); hold on; set(gcf, 'Position', [734 223 ceil(451*16/9) 451]);
-    color_vector = repmat(bnc.We, size(bnc.Time_s_));
+    %figure(1); hold on; set(gcf, 'Position', [734 223 ceil(451*16/9) 451]);
+    %color_vector = repmat(bnc.We, size(bnc.Time_s_));
     idx = ceil(ss*(bnc.We)/4);
-    plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
+    %plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
     %scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
     
     % Plot Contact Time vs Time_s_ (SIMULATIONS)
-    [~, idx2] = min(abs(alldata.weber - bnc.We));  % idx is the index of the closest value
-    file = fullfile(pwd, "..", "2_output", alldata.parent_folder(idx2), alldata.file_name(idx2)); 
-    values = load(file);
+    alldata2 = alldata(abs(alldata.weber - bnc.We) < 1e-3 &  ...
+        abs(alldata.ohnesorge - bnc.Oh) < 1e-3 &  ...
+        abs(alldata.bond - bnc.Bo) < 1e-3, :);
+    %[~, idx2] = min(abs(alldata2.weber - bnc.We));  % idx is the index of the closest value
+    
     %alldata = alldata(values.PROBLEM_CONSTANTS.weber == bnc.We, :);
-    if  abs(alldata.weber - bnc.We) > 1e-3
+    if  isempty(alldata2)
         disp('couldnt find simulation with value We=', bnc.We);
     else
+        file = fullfile(pwd, "..", "2_output", alldata2.parent_folder(1), alldata2.file_name(1)); 
+        values = load(file);
         length_unit = values.length_unit;
         recorded_conditions = values.recorded_conditions;
         pixel = 0.02*length_unit;%5e-4; % 5e-4 cm %Threshold for experimental contact
@@ -114,5 +121,5 @@ for i = 1:numel(sheets)
     T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
         drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
         'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
-        writetable(T, '../2_output/directComparison.xlsx', 'Sheet', sheets{i});
+        writetable(T, '../2_output/directComparisonOhSweep.xlsx', 'Sheet', sheets{i});
 end

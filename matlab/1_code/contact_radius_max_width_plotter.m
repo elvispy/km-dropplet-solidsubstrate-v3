@@ -9,7 +9,8 @@ Ro = 0.0203; % radius in cm
 rho = 0.96; %g/cm3
 sigma = 20.5; %dyne/m
 t_ic = sqrt(rho*Ro^3/sigma); % inertio-capillary time scale
-filename = '../0_data/manual/Low We comparison.xlsx';
+%filename = '../0_data/manual/Low We comparison.xlsx';
+filename = '../0_data/manual/Oh comparisons.xlsx';
 alldata = load('../2_output/postprocessing.mat', 'data');
 alldata = alldata.data;
 alldata = alldata(contains(alldata.file_name, 'directComparison') & contains(alldata.parent_folder,'v3') & alldata.number_of_harmonics == 90, :);
@@ -39,7 +40,7 @@ for i = 1:numel(sheets)
     file = fullfile(pwd, "..", "2_output", alldata.parent_folder(idx2), alldata.file_name(idx2)); 
     values = load(file);
     %alldata = alldata(values.PROBLEM_CONSTANTS.weber == bnc.We, :);
-    if  abs(alldata.weber - bnc.We) > 1e-3
+    if  abs(alldata.weber(idx2) - bnc.We) > 1e-3
         disp('couldnt find simulation with value We=', bnc.We);
     else
         length_unit = values.length_unit;
