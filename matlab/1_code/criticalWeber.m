@@ -161,6 +161,9 @@ function [We, flag] = next_guess(guesses, Oh, Bo)
         flag = true;
         We = (1 + rand()/2)/500;     
     end
+    if isnan(We)
+        warning("Nan value for %g %g", Oh, Bo);
+    end
 end
 
 function bounce = is_there_bounce(recorded_conditions, length_unit)
