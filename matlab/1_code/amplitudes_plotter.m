@@ -70,7 +70,7 @@ function amplitudes_plotter(varargin)
     set(gca, 'YLim', yl); set(gca, 'XLim', 1.05*get(gca, 'XLim'))
   
 
-    % Plotting pressures
+    %% Plotting pressures
     saving_figure_pressure = figure('Position', [100, 50, 1000, 300]); % Wider than tall
     hold on;
     %recorded_conditions{ii}.amplitude_defor = 1;

@@ -69,7 +69,7 @@ for i = 1:numel(sheets)
             drop_height = @(theta) cos(theta) .* drop_radius(theta) + adim_CM;
             drop_top_adim(jj)    = drop_height(0);
             drop_bottom_adim(jj) = drop_height(pi);
-            drop_top_adim_exp(jj)    = max(drop_height(linspace(0, pi/2, 100)));
+            drop_top_adim_exp(jj)= max(drop_height(linspace(0, pi/2, 100)));
             drop_CM_adim(jj)     = adim_CM;
                 
             % Max width calculation & spread time of width

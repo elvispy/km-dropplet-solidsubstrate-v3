@@ -5,7 +5,7 @@ function export_animation(varargin)
         % Add functions to calculate maximum width
         safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
         addpath(safe_folder, '-begin');
-        [file, path] = uigetfile("*.mat");
+        [file, path] = uigetfile("../2_output/*.mat", 'MultiSelect','on');
         fullfilepath = fullfile(path, file);
         clear is_adim
         load(fullfilepath, "recorded_conditions", "is_adim", "default_physical");
