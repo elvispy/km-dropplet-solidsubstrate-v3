@@ -56,6 +56,7 @@ parfor ii = 1:length(files_folder)
         recorded_times = val.recorded_times;
         default_physical = val.default_physical;
         length_unit = val.length_unit;
+        time_unit = val.time_unit;
         PROBLEM_CONSTANTS = val.PROBLEM_CONSTANTS;
 
         if contains(lastwarn, 'not found'); error(lastwarn);  end
@@ -87,7 +88,7 @@ parfor ii = 1:length(files_folder)
         energy_constant = sigmaS/(rhoS * Ro * velocity_unit);
         idxs = 1:PROBLEM_CONSTANTS.nb_harmonics;
         Xl = (2*pi./(idxs .* (2 * idxs + 1))); Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1));
-        
+        deformation_modes_energies = nan;
         A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
@@ -222,10 +223,11 @@ parfor ii = 1:length(files_folder)
 
     catch me
         if contains(files_folder(ii).name, "error"); continue; end
-        fprintf("%s %s \n", files_folder(ii).folder, files_folder(ii).name)
+        fprintf("Exception at: %s %s \n", files_folder(ii).folder, files_folder(ii).name)
         disp(me);
         switch me.identifier
             case 'MATLAB:load:unableToReadMatFile'
+                disp(" deletingfiles!");
                 delete(fullfile(iles_folder(ii).folder, files_folder(ii).name));
         end
     end
