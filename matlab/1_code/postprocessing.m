@@ -21,9 +21,10 @@ files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "parent_folder", "number_of_harmonics", ...
     "max_width", "contact_time_ms", "coef_restitution", "north_pole_min_height", "north_pole_exp_min_height", ...
     "max_contact_radius", "spread_time_ms", "spread_time_width_ms", ...
-    "contact_time_exp_ms", "coef_rest_exp", "max_contact_radius_exp", "spread_time_exp_ms"];
+    "contact_time_exp_ms", "coef_rest_exp", "max_contact_radius_exp", "spread_time_exp_ms", ...
+    "energy_modes"];
 varTypes=["string", "double", "double", "double", "double", "string", "double", "double", "double", "double", ...
-    "double", "double", "double", "double", "double", "double", "double", "double", "double"];
+    "double", "double", "double", "double", "double", "double", "double", "double", "double", 'cell'];
 
 sz = [length(files_folder) length(varNames)];
 
@@ -50,7 +51,7 @@ parfor ii = 1:length(files_folder)
         lastwarn('', ''); %clear recorded_conditions recorded_times default_physical length_unit theta_vector
         val = load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
             "recorded_conditions", "recorded_times", "default_physical", ...
-            "length_unit", "PROBLEM_CONSTANTS");
+            "length_unit", "PROBLEM_CONSTANTS", "time_unit");
         recorded_conditions = val.recorded_conditions;
         recorded_times = val.recorded_times;
         default_physical = val.default_physical;
@@ -71,7 +72,7 @@ parfor ii = 1:length(files_folder)
         Oh = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
             * default_physical.undisturbed_radius));
         Bo = rhoS * default_physical.g * Ro^2 / sigmaS;
-
+        
         pixel = 0.02 * length_unit;
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
@@ -81,6 +82,13 @@ parfor ii = 1:length(files_folder)
         north_pole_min_height = inf; north_pole_exp_min_height = inf;
         max_contact_radius = -inf; spread_time = nan; spread_time_width = nan;
         max_contact_radius_exp = -inf; spread_time_exp = nan; 
+        
+        velocity_unit = length_unit/time_unit;
+        energy_constant = sigmaS/(rhoS * Ro * velocity_unit);
+        idxs = 1:PROBLEM_CONSTANTS.nb_harmonics;
+        Xl = (2*pi./(idxs .* (2 * idxs + 1))); Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1));
+        
+        A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
@@ -132,7 +140,7 @@ parfor ii = 1:length(files_folder)
                 if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
             end
 
-            % Experimental contact_radius
+            % Experimental contact_radius && coef restitution
             if isnan(liftoff_time_exp)
                 % If contact ended numerically but simulation ended, record lift off time anyways
                 if drop_height(pi) > pixel/length_unit %||((size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)))
@@ -140,9 +148,11 @@ parfor ii = 1:length(files_folder)
                     Vout_exp = recorded_conditions{jj}.center_of_mass_velocity;
                     Eout_exp = 1/2*Vout_exp^2 + (recorded_conditions{jj}.center_of_mass ...
                         - CM_in)*g;
-                    % if (size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)) 
-                    %     warning("Simulation ended abruptly but numerical contact has ended. We recorded the experimental end of contact anyways for simul \n %s", files_folder(ii).name);
-                    % end
+
+                    A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
+                    deformation_modes_energies = Xl .* recorded_conditions{jj}.deformation_velocities(idxs).^2 + ...
+                        energy_constant * Yl .* recorded_conditions{jj}.deformation_amplitudes(idxs).^2;
+                    deformation_modes_energies = A*deformation_modes_energies;
                     
                 end
             end
@@ -208,7 +218,7 @@ parfor ii = 1:length(files_folder)
         data(ii, :) = {files_folder(ii).name, Vin, Westar, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
             max_width, contact_time, coef_restitution, north_pole_min_height, ...
             north_pole_exp_min_height, max_contact_radius, spread_time, spread_time_width, ...
-            contact_time_exp, coef_restitution_exp, max_contact_radius_exp, spread_time_exp};
+            contact_time_exp, coef_restitution_exp, max_contact_radius_exp, spread_time_exp, {deformation_modes_energies}};
 
     catch me
         if contains(files_folder(ii).name, "error"); continue; end
@@ -226,6 +236,7 @@ data = rmmissing(data, 'DataVariables','file_name');
 
 writetable(data, fullfile(root_folder, "2_output", "postprocessing.csv"));
 s = fullfile(root_folder, "2_output", "postprocessing.mat");
+warning ('on','all');
 if ~exist(s, "file")
     save(s, "data");
 else
