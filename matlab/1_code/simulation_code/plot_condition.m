@@ -23,8 +23,8 @@ function h = plot_condition(idx, conditions, varargin)
     else
         set(gcf, 'Position', [0   159 760 586]);
     end
-    clf;
-    hold on;  
+    if nargin < 4 || varargin{2} == true; hold off; end
+    
     cut = 0.75 * pi;
     sample = [linspace(0, cut, 30), linspace(cut, pi, 30)];
     arrX = sin(sample);
@@ -42,6 +42,10 @@ function h = plot_condition(idx, conditions, varargin)
     end
     EtaX = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), sample);
     EtaY = height + arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), sample);
+    fill( EtaX,EtaY, [135, 206, 235]/256, 'LineStyle','none' ,'FaceAlpha', 0.3);
+    hold on;
+    fill(-EtaX,EtaY, [135, 206, 235]/256, 'LineStyle','none', 'FaceAlpha', 0.3);
+    
     if nargin >= 5
         theta_vector = varargin{3}.theta_vector;
         pressure_unit = varargin{3}.pressure_unit;
@@ -65,8 +69,6 @@ function h = plot_condition(idx, conditions, varargin)
         %warning("Assuming pressure unit");
     end
     
-    fill( EtaX,EtaY, [135, 206, 235]/256, 'LineStyle','none' ,'FaceAlpha', 0.3);
-    fill(-EtaX,EtaY, [135, 206, 235]/256, 'LineStyle','none', 'FaceAlpha', 0.3);
     
 %     gr = -100:100;
 %     if nargin > 2
@@ -119,7 +121,7 @@ function h = plot_condition(idx, conditions, varargin)
     %ylim([-1.5, 1.5]);
     yline(0, 'k', 'LineWidth', 1.5);
     
-    if nargin > 3 && idx == 2 && isstruct(conditions)
+    if nargin == 3 && idx == 2 && isstruct(conditions)
         ss = varargin{2};
         
         %s = sprintf("Attempting to fit the solution with contact radius %.3f. \n Previous contact radius: %.3f. Iteration number: %d", ...
@@ -133,7 +135,7 @@ function h = plot_condition(idx, conditions, varargin)
         text(x, y, sprintf("v_{cm} = %.7g", conditions.center_of_mass_velocity), 'FontSize', 14);
         text(x, y - y/10, sprintf("z_{cm} = %.7g", conditions.center_of_mass), 'FontSize', 14);
         %pause(0);
-    elseif nargin >= 4
+    elseif nargin == 4 && ~islogical(varargin{2})
         
         title(varargin{2}, 'FontSize', 14);
         drawnow limitrate;
