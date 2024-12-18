@@ -41,7 +41,7 @@ end
 data = data(~isnan(data.initial_velocity_cgs), :);
 pixel = 5e-4; %Threshold for experimental contact
 fnames = data{:, 1};
-parfor ii = 1:length(files_folder)
+for ii = 1:length(files_folder)
     try
         if ismember(files_folder(ii).name, fnames) || ...
                 contains(files_folder(ii).name, "postprocessing") || ...
@@ -151,8 +151,8 @@ parfor ii = 1:length(files_folder)
                         - CM_in)*g;
 
                     A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
-                    deformation_modes_energies = Xl .* recorded_conditions{jj}.deformation_velocities(idxs).^2 + ...
-                        energy_constant * Yl .* recorded_conditions{jj}.deformation_amplitudes(idxs).^2;
+                    deformation_modes_energies = Xl .* (recorded_conditions{jj}.deformation_velocities(idxs)/velocity_unit).^2 + ...
+                        energy_constant * Yl .* (recorded_conditions{jj}.deformation_amplitudes(idxs)/length_unit).^2;
                     deformation_modes_energies = A*deformation_modes_energies;
                     
                 end
