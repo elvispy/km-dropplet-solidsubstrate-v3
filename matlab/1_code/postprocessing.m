@@ -85,7 +85,7 @@ parfor ii = 1:length(files_folder)
         max_contact_radius_exp = -inf; spread_time_exp = nan; 
         
         velocity_unit = length_unit/time_unit;
-        energy_constant = sigmaS/(rhoS * Ro * velocity_unit);
+        energy_constant = sigmaS/(rhoS * Ro * velocity_unit.^2);
         idxs = 1:PROBLEM_CONSTANTS.nb_harmonics;
         Xl = (2*pi./(idxs .* (2 * idxs + 1))); Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1));
         deformation_modes_energies = nan;

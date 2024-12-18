@@ -37,7 +37,7 @@ t_ic = sqrt(rho*Ro^3/sigma); % inertio-capillary time scale
 % expData.tc_tic = expData.t_c_s_ ./ tic;
 
 %% Reading linear model data
-alldata = readtable('../2_output/postprocessing.csv');
+alldata = load('../2_output/postprocessing.mat'); alldata = alldata.data;
 alldata = alldata(contains(alldata.parent_folder,'v3') & alldata.number_of_harmonics == 90 ...
     & abs(alldata.bond - 0.0189) < 1e-3, :);
 alldata = sortrows(alldata, ["weber", "ohnesorge", "bond"]);
