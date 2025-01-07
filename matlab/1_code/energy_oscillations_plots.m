@@ -10,36 +10,36 @@ Ro = 0.0203; % radius in cm
 rho = 0.96; %g/cm3
 sigma = 20.5; %dyne/m
 t_ic = sqrt(rho*Ro^3/sigma); % inertio-capillary time scale
-% filename = '../0_data/manual/CleanDataAll.xlsx';
+filename = '../0_data/manual/CleanDataAll.xlsx';
 % 
-% sheets = sheetnames(filename);
-% %sheets = sheets(contains(sheets, 'Bounce'));
-% %sheets = matlab.lang.makeValidName(sheets);
-% expData = readtable(filename, 'Sheet', sheets, 'ReadVariableNames', true, 'HeaderLines', 2);
-% %sampled_values = @(data, bins, per_bin) reshape(randsample(data, bins*per_bin, true, histcounts(data, linspace(min(data), max(data), bins+1))), [], 1);
-% %expData = sortrows(expData, 'We');
-% %expData = expData(expData.Oh > 0.2 | (mod(1:height(expData), 1)==0)', :);
-% % Error propagation
-% g = 9.81;
-% syms hout vin vout r0 ssigma rrho tc
-% epsilon_error = error_prop(sqrt((g*(hout-r0) + 0.5 * vout^2)/(0.5* vin^2)), [hout, r0, vin vout]);
-% expData.epsilon_error = epsilon_error(expData.h_t_c__m_,  expData.r_0_m_, ...
-%     expData.v_0__m_s_, expData.v_t_c__m_s_, expData.m_Pixel, expData.r_0Std, expData.v_0_Stdev, expData.v_t_c_Stdev);
-% expData.tic = sqrt(expData.m_kg_./expData.V_m3_ .* expData.r_0_m_.^3./expData.sigma_N_m_);
-% tic = sqrt(expData.rho_kg_m3_ .* expData.r_0_m_.^3./expData.sigma_N_m_);
-% tc_tic_error = error_prop(tc/sqrt(rrho*r0^3/ssigma), [tc, rrho, r0, ssigma]);
-% expData.tc_tic_error = tc_tic_error(expData.t_c_s_, expData.rho_kg_m3_, expData.r_0_m_, expData.sigma_N_m_, ...
-%     expData.deltaT_s_, zeros(size(expData.rho_kg_m3_)), expData.r_0Std, zeros(size(expData.sigma_N_m_)));
-% We_error = error_prop(rrho * vin^2 * r0/ssigma, [rrho, vin, r0, ssigma]);
-% expData.We_error = We_error(expData.rho_kg_m3_, expData.v_0__m_s_, expData.r_0_m_, expData.sigma_N_m_, ...
-%     zeros(size(expData.rho_kg_m3_)), ...
-%     expData.v_0_Stdev,  expData.r_0Std, zeros(size(expData.sigma_N_m_)));
-% expData.tc_tic = expData.t_c_s_ ./ tic;
+sheets = sheetnames(filename);
+%sheets = sheets(contains(sheets, 'Bounce'));
+%sheets = matlab.lang.makeValidName(sheets);
+expData = readtable(filename, 'Sheet', sheets, 'ReadVariableNames', true, 'HeaderLines', 2);
+%sampled_values = @(data, bins, per_bin) reshape(randsample(data, bins*per_bin, true, histcounts(data, linspace(min(data), max(data), bins+1))), [], 1);
+%expData = sortrows(expData, 'We');
+expData = expData(expData.Oh < 0.05 , :);
+% Error propagation
+g = 9.81;
+syms hout vin vout r0 ssigma rrho tc
+epsilon_error = error_prop(1 - ((g*(hout-r0) + 0.5 * vout^2)/(0.5* vin^2)), [hout, r0, vin vout]);
+expData.epsilon_error = epsilon_error(expData.h_t_c__m_,  expData.r_0_m_, ...
+     expData.v_0__m_s_, expData.v_t_c__m_s_, expData.m_Pixel, expData.r_0Std, expData.v_0_Stdev, expData.v_t_c_Stdev);
+expData.tic = sqrt(expData.m_kg_./expData.V_m3_ .* expData.r_0_m_.^3./expData.sigma_N_m_);
+tic = sqrt(expData.rho_kg_m3_ .* expData.r_0_m_.^3./expData.sigma_N_m_);
+tc_tic_error = error_prop(tc/sqrt(rrho*r0^3/ssigma), [tc, rrho, r0, ssigma]);
+expData.tc_tic_error = tc_tic_error(expData.t_c_s_, expData.rho_kg_m3_, expData.r_0_m_, expData.sigma_N_m_, ...
+     expData.deltaT_s_, zeros(size(expData.rho_kg_m3_)), expData.r_0Std, zeros(size(expData.sigma_N_m_)));
+We_error = error_prop(rrho * vin^2 * r0/ssigma, [rrho, vin, r0, ssigma]);
+expData.We_error = We_error(expData.rho_kg_m3_, expData.v_0__m_s_, expData.r_0_m_, expData.sigma_N_m_, ...
+     zeros(size(expData.rho_kg_m3_)), ...
+     expData.v_0_Stdev,  expData.r_0Std, zeros(size(expData.sigma_N_m_)));
+ expData.tc_tic = expData.t_c_s_ ./ tic;
 
 %% Reading linear model data
 alldata = load('../2_output/postprocessing.mat'); alldata = alldata.data;
 alldata = alldata(contains(alldata.parent_folder,'v3') & alldata.number_of_harmonics == 90 ...
-    & abs(alldata.bond - 0.0189) < 1e-3, :);
+    & abs(alldata.bond) < 1e-3 & abs(alldata.ohnesorge) < 1e-3, :); 
 alldata = sortrows(alldata, ["weber", "ohnesorge", "bond"]);
 
 alldata.tic = sqrt(alldata.bond/981 * Ro);
@@ -57,25 +57,50 @@ alldata.ct_adim = 1e-3 * alldata.contact_time_exp_ms./alldata.tic;
 %% Plotting coef of restitution
 f2 = figure(2); set(gcf, 'Position', [5 176 ceil(420*18/9) 420])
 colormap("parula"); % Choose a colormap
-%plot_errorbars(expData.We, expData.epsilon, expData.We_error, expData.epsilon_error, expData.Oh);
-
-plotVarVsWeByOh(alldata, "coef_rest_exp");
+%plot_errorbars(expData.We, 1- expData.epsilon.^2, expData.We_error, expData.epsilon_error, expData.Oh);
+%hold on;
+alldata.energy_lost = 1- alldata.coef_rest_exp.^2;
+alldata.energy_modes_total = cellfun(@(x) sum(x), alldata.energy_modes);
+c1 = plotVarVsWeByOh(alldata, "energy_lost");
 hold on; grid on;
+c2 = plotVarVsWeByOh(alldata, "energy_modes_total");
+
+% Get unique Oh values from the table
+
+ith_mode = @(ii) arrayfun(@(jj) alldata.energy_modes{jj}(min(ii, length(alldata.energy_modes{jj}))), 1:height(alldata));
+% Loop through each unique Oh value
+for ii = 1:5
+    target_color = mapOhToColor(ii/12);
+    
+    % Find the closest Oh index
+    %[~, idx] = min(abs(ohs - target_oh));  
+    %selected_color = colors(idx, :);  % Get corresponding color
+    
+    % Filter table for current Oh value
+    %filtered_table = table(table.ohnesorge == target_oh, :);  % Adjust tolerance if needed
+    
+    % Plot epsilon vs We
+    plot(alldata.weber, ith_mode(ii), 'LineWidth', ii, 'LineStyle','--');
+
+end
+colorbar('delete');
 %scatterDNS(DNSData, "epsilon");
 %custom_ticks = 0.2:0.2:0.8; % Specify desired tick positions
 %set(c, 'Ticks', custom_ticks, 'TickLabels', arrayfun(@num2str, custom_ticks, 'UniformOutput', false));
 set(gca, 'XScale', 'log', 'FontSize', 16); %, 'YScale', 'log', 'FontSize', 14);
-xticks([0.01, 0.1, 1, 10]);               % Define tick positions
-xticklabels({'0.01', '0.1', '1', '10'}); 
-xlim([1e-3, 12]); ylim([0, 1]);
+xticks([1e-4, 1e-3, 0.01, 0.1, 1, 10]);               % Define tick positions
+xticklabels({'0.0001', '0.001', '0.01', '0.1', '1', '10'}); 
+xlim([5e-5, .5]); ylim([0, .2]);
 % xlabel('$We = \rho V_0^2 R_0 / \sigma$','Interpreter','latex');
 % ylabel('Coef. Restitution ($\varepsilon = \sqrt{E_{out}/E_{in}}$)','Interpreter','latex', 'FontSize',20);
 % h1 = scatter(nan, nan, 250, "^", "filled", ...
 %             'MarkerFaceColor', 'black', 'MarkerEdgeColor','k', 'LineWidth',1.5);
-% h2 = plot(NaN, NaN, 'k-', 'LineWidth', 2);  % Dummy plot for second legend entry
-% h3 = plot(NaN, NaN, 'ko', 'LineWidth', 2);  % Dummy plot for second legend entry
-%legend([h1, h2, h3], 'DNS', 'Kinematic Match', 'Experiments', 'Location','southwest', 'FontSize', 18);
-%%%saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "epsilonvsWeExp+DNS+KM.png"));
+h1 = plot(NaN, NaN, 'Color', c1, 'LineWidth', 2);  % Dummy plot for second legend entry
+h2 = plot(NaN, NaN, 'Color', c2, 'LineWidth', 2);  % Dummy plot for second legend entry
+h3 = plot(NaN, NaN, 'k--', 'LineWidth', 3);  % Dummy plot for second legend entry
+legend([h1, h2, h3], '$1-\epsilon^2$ (Simulations)', 'Total energy', 'Mode Energies breakdown', 'Location','northwest', 'FontSize', 18, 'Interpreter', 'latex');
+title('Energy distribution per mode and total energy for $Oh = 0, Bo = 0$', 'interpreter', 'latex');
+saveas(f2, fullfile(safe_folder, "..", "..", "2_output", "Figures", "1-epsilon2.png"));
 
 %% Plotting contact time
 % f1 = figure(1); set(gcf, 'Position', [950 176 ceil(420*13/9) 420])
@@ -154,7 +179,7 @@ function [zs, unique_colors] = plot_errorbars(x, y, ex, ey, z)
     
 end
 
-function plotVarVsWeByOh(table, var)
+function c = plotVarVsWeByOh(table, var)
     % Get unique Oh values from the table
     unique_ohs = unique(table.ohnesorge);
 
@@ -162,6 +187,7 @@ function plotVarVsWeByOh(table, var)
     for i = 1:length(unique_ohs)
         target_oh = unique_ohs(i);
         target_color = mapOhToColor(target_oh);
+        if isscalar(unique_ohs); target_color = mapOhToColor(rand() * .8); end
         % Find the closest Oh index
         %[~, idx] = min(abs(ohs - target_oh));  
         %selected_color = colors(idx, :);  % Get corresponding color
@@ -173,7 +199,9 @@ function plotVarVsWeByOh(table, var)
         plot(filtered_table.weber, filtered_table.(var), 'Color', target_color, ...
             'LineWidth', 4, 'LineStyle','-');
         hold on;
+        if isscalar(unique_ohs); colorbar('delete'); end
     end
+    c = target_color;
 
 end
 
