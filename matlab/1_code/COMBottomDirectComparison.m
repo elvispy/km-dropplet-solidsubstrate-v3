@@ -70,11 +70,14 @@ for ii = 1:length(Ohs)
         drop_top_adim_exp = zeros(size(recorded_conditions, 1), 1);
         drop_bottom_adim = zeros(size(recorded_conditions, 1), 1);
         drop_CM_adim = zeros(size(recorded_conditions, 1), 1);
+        M = 200;
+        dropshape = zeros(size(recorded_conditions, 1), M);
         for jj = 1:(size(recorded_conditions, 1))
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
             drop_radius = zeta_generator(adim_deformations);
             drop_radius = @(theta) 1 + drop_radius(theta);
+            dropshape(jj, :) = drop_radius(linspace(0, pi, M))*length_unit;
             drop_height = @(theta) cos(theta) .* drop_radius(theta) + adim_CM;
             drop_top_adim(jj)    = drop_height(0);
             drop_bottom_adim(jj) = drop_height(pi);
@@ -128,4 +131,5 @@ for ii = 1:length(Ohs)
         drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
         'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
         writetable(T, '../2_output/directComparisonNew.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
+    writematrix([[nan, linspace(0, pi, M)]; [times_vector_adim(:)*t_ic, dropshape]], '../2_output/directComparisonShape.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
 end
