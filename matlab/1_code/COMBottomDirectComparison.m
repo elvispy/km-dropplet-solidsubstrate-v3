@@ -47,9 +47,9 @@ for ii = 1:length(Ohs)
     %scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
     
     % Plot Contact Time vs Time_s_ (SIMULATIONS)
-    alldata2 = alldata(abs(alldata.weber - bnc.We)/bnc.We < 1e-2 &  ...
-        abs(alldata.ohnesorge - bnc.Oh)/bnc.Oh < 1e-2 &  ...
-        abs(alldata.bond - bnc.Bo)/bnc.Bo < 1e-2, :);
+    alldata2 = alldata(abs(alldata.weber - bnc.We)/bnc.We < 5e-3 &  ...
+        abs(alldata.ohnesorge - bnc.Oh)/bnc.Oh < 5e-3 &  ...
+        abs(alldata.bond - bnc.Bo)/bnc.Bo < 5e-3, :);
     %[~, idx2] = min(abs(alldata2.weber - bnc.We));  % idx is the index of the closest value
     
     %alldata = alldata(values.PROBLEM_CONSTANTS.weber == bnc.We, :);
@@ -127,5 +127,5 @@ for ii = 1:length(Ohs)
     T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
         drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
         'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
-        writetable(T, '../2_output/directComparisonNew.xlsx', 'Sheet', string(ii));
+        writetable(T, '../2_output/directComparisonNew.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
 end
