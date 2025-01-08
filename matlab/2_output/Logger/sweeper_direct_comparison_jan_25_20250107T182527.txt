@@ -1,0 +1,22 @@
+------------
+07-Jan-2025 18:25:27 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_direct_comparison_jan_25
+[Warning: The assignment added rows to the table, but did not assign values to all of the table's existing variables.
+Those variables are extended with rows containing default values.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tabular/subsasgnDot', '/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/subsasgnDot.m', 469)" style="font-weight:bold">tabular/subsasgnDot</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/subsasgnDot.m',469,0)">line 469</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tabular/subsasgn', '/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/subsasgn.m', 70)" style="font-weight:bold">tabular/subsasgn</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/matlab/datatypes/tabular/@tabular/subsasgn.m',70,0)">line 70</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeper_direct_comparison_jan_25', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_direct_comparison_jan_25.m', 51)" style="font-weight:bold">sweeper_direct_comparison_jan_25</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_direct_comparison_jan_25.m',51,0)">line 51</a>)] 
+<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeper_direct_comparison_jan_25.m',104,1)">104 </a>parfor ii = 1:height(simulations_cgs)
+if system_dependent('IsDebugMode')==1, dbcont; end
+---------
+---------
+---------
+Starting simulation with velocity -48.1716, modes 90, version v3 ... 
+Se dividio dt por 2, dt=1.829826e-04 U = -48.1716, modes = 90, version = 3 
+Finished simulation with velocity -48.1716, modes 90, version v3 ... 
+Starting simulation with velocity -16.3242, modes 90, version v3 ... 
+Finished simulation with velocity -16.3242, modes 90, version v3 ... 
+Starting simulation with velocity -4.93261, modes 90, version v3 ... 
+Finished simulation with velocity -4.93261, modes 90, version v3 ... 
+Parallel pool using the 'local' profile is shutting down.
+Python 3.9.5
