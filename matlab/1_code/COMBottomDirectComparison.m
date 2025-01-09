@@ -121,6 +121,9 @@ for ii = 1:length(Ohs)
         end
         %plot(times_vector_adim, contact_radius_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
        
+        V0 = -abs(values.default_physical.initial_velocity);
+        g = values.default_physical.g;
+        t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g;
 
     end
 
@@ -130,7 +133,7 @@ for ii = 1:length(Ohs)
     %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
     %plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
     
-    T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
+    T = table(times_vector_adim(:)*t_ic - t0, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
         drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
         'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
         writetable(T, '../2_output/directComparisonNew.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
