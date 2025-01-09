@@ -121,7 +121,7 @@ for ii = 1:length(Ohs)
         end
         %plot(times_vector_adim, contact_radius_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
        
-        V0 = -abs(values.default_physical.initial_velocity);
+        V0 = abs(values.default_physical.initial_velocity);
         g = values.default_physical.g;
         t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g;
 
