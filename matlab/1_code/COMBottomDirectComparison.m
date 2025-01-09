@@ -123,19 +123,13 @@ for ii = 1:length(Ohs)
        
         V0 = abs(values.default_physical.initial_velocity);
         g = values.default_physical.g;
-        t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g;
+        t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g; % Calculating experimental start of contact to substract
 
     end
 
-    % Plot Maximum Radius vs Time_s_
-    %figure(2); hold on; set(gcf, 'Position', [77 224 ceil(450*17/9) 450]);
-    %plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
-    %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
-    %plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
-    
     T = table(times_vector_adim(:)*t_ic - t0, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
         drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
         'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
         writetable(T, '../2_output/directComparisonNew.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
-    writematrix([[nan, linspace(0, pi, M)]; [times_vector_adim(:)*t_ic, dropshape]], '../2_output/directComparisonShape.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
+    writematrix([[nan, linspace(0, pi, M)]; [times_vector_adim(:)*t_ic-t0, dropshape]], '../2_output/directComparisonShape.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
 end
