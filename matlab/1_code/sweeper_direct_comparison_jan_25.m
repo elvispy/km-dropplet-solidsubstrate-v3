@@ -32,16 +32,18 @@ Bos = [0.019, 0.019, 0.020153]';
 %#ok<*NOPTS>
 prefix = 'directComparison';
 rho = 0.87; Ro = 0.0203; sigma = 18.7;
+g = 980.65; %Bo.* sigma ./(rho .* Ro^2);
+Ros = sqrt(Bos * sigma / (g*rho));
 %We = [0.25459, 0.15591, 0.095856, 0.062007, 0.023778, 0.81868, 1.4044, 2.3001, 3.5801];%logspace(-5, 0, 41);
 %Bo = 10.^([-inf, -3, -2, -1, 0]);
-velocities = -sqrt(sigma/(rho*Ro) .* Wes); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
-g = 980.65; %Bo.* sigma ./(rho .* Ro^2);
+velocities = -sqrt(sigma./(rho*Ros) .* Wes); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
+
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
     "nu", 0.01 * 2, ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
-    "undisturbed_radius", Ro, ... % (cgs)
+    "undisturbed_radius", Ros, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
     "harmonics_qtt", 90', ...
     "version", 3);

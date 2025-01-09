@@ -5,10 +5,10 @@ addpath(safe_folder, '-begin');
 
 
 warning('off', 'all');
-Ro = 0.0203; % radius in cm
-rho = 0.87; %g/cm3
-sigma = 18.7; %dyne/m
-t_ic = sqrt(rho*Ro^3/sigma); % inertio-capillary time scale
+%Ro = 0.0203; % radius in cm
+%rho = 0.87; %g/cm3
+%sigma = 18.7; %dyne/m
+%t_ic = sqrt(rho*Ro^3/sigma); % inertio-capillary time scale
 %filename = '../0_data/manual/Low We comparison.xlsx';
 %filename = '../0_data/manual/Oh comparisons.xlsx';
 alldata = load('../2_output/postprocessing.mat', 'data');
@@ -60,6 +60,9 @@ for ii = 1:length(Ohs)
         values = load(file);
         length_unit = values.length_unit;
         recorded_conditions = values.recorded_conditions;
+        Ro = values.default_physical.undisturbed_radius;
+        tic = sqrt(values.default_physical.rhoS*values.default_physical.undisturbed_radius.^3 ...
+            /values.default_physical.sigmaS); % inertio-capillary time scale
         pixel = 0.02*length_unit;%5e-4; % 5e-4 cm %Threshold for experimental contact
         theta_vector = values.PROBLEM_CONSTANTS.theta_vector;
         times_vector_adim = values.recorded_times/t_ic;
@@ -92,7 +95,7 @@ for ii = 1:length(Ohs)
             % end
             % EXPERIMENTAL max_contact_radius calculation
             current_contact_points_exp = recorded_conditions{jj}.contact_points;
-            if current_contact_points_exp == 0
+            if current_contact_points_exp == 0 && false
                 current_contact_radius_exp = 0;
             else 
                 kk = 1;
@@ -101,7 +104,7 @@ for ii = 1:length(Ohs)
                     kk = kk + 1;
                     theta2 = theta_vector(current_contact_points_exp + kk);
                 end
-                theta1 = theta_vector(current_contact_points_exp + kk - 1);
+                theta1 = theta_vector(max(current_contact_points_exp + kk - 1, 1));
                 while abs(theta1-theta2) > pi/1e+3
                     theta_middle = (theta1+theta2)/2;
                     if drop_height(theta_middle) < pixel/length_unit
