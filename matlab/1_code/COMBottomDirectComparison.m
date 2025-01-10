@@ -124,12 +124,22 @@ for ii = 1:length(Ohs)
         V0 = abs(values.default_physical.initial_velocity);
         g = values.default_physical.g;
         t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g; % Calculating experimental start of contact to substract
-
+        X = @(t) -t * V0 - g*t.^2;
+        rc = @(t) 10* sqrt(Ro^2 - (X(t) - 0.02*Ro)^2); % 10 because we go from cm to mm
     end
+    tts = linspace(0, 0.8*t0, 5)';
+    times = [tts ;times_vector_adim(:)*t_ic - t0];
+    c_radii = [rc(tts); contact_radius_adim(:)*(10*Ro)];
+    max_width = [10*Ro*ones(5, 1); max_width_adim(:)*(10*Ro)];
+    CM = [10*X(tts); drop_CM_adim(:)*(10*Ro)];
+    bottom =  [10*(X(tts)-Ro);drop_bottom_adim(:)*(10*Ro)];
+    top    =  [10*(X(tts)+Ro);drop_top_adim(:)*(10*Ro)];
+    top_exp = [10*(X(tts)+Ro);drop_top_adim_exp(:) * (10*Ro)];
 
-    T = table(times_vector_adim(:)*t_ic - t0, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
-        drop_CM_adim(:)*(10*Ro), drop_bottom_adim(:)*(10*Ro), drop_top_adim(:) * (10*Ro), drop_top_adim_exp(:) * (10*Ro), ...
+    T = table(times, c_radii, max_width, CM, bottom, top, top_exp, ...
         'VariableNames', {'Time (s)', 'Contact radius (mm)', 'Max radius (mm)', 'Center of Mass (mm)', 'Bottom (mm)', 'Top (mm)', 'Top (camera view) (mm)'});
         writetable(T, '../2_output/directComparisonNew.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
-    writematrix([[nan, linspace(0, pi, M)]; [times_vector_adim(:)*t_ic-t0, dropshape]], '../2_output/directComparisonShape.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
+    writematrix([[nan, linspace(0, pi, M)]; ...
+        [times, [repmat(dropshape(1, :), 5, 1); dropshape]]], ...
+        '../2_output/directComparisonShape.xlsx', 'Sheet', sprintf("We=%.5g", bnc.We));
 end
