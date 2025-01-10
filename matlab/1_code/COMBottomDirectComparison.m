@@ -124,7 +124,7 @@ for ii = 1:length(Ohs)
         V0 = abs(values.default_physical.initial_velocity);
         g = values.default_physical.g;
         t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g; % Calculating experimental start of contact to substract
-        X = @(t) -t * V0 - g*t.^2;
+        X = @(t) -t * V0 - g*t.^2 + Ro; 
         rc = @(t) 10* sqrt(Ro^2 - (X(t) - 0.02*Ro).^2); % 10 because we go from cm to mm
     end
     tts = linspace(0, -0.8*t0, 5)';
