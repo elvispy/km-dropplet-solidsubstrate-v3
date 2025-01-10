@@ -127,7 +127,7 @@ for ii = 1:length(Ohs)
         X = @(t) -t * V0 - g*t.^2;
         rc = @(t) 10* sqrt(Ro^2 - (X(t) - 0.02*Ro).^2); % 10 because we go from cm to mm
     end
-    tts = linspace(0, 0.8*t0, 5)';
+    tts = linspace(0, -0.8*t0, 5)';
     times = [tts ;times_vector_adim(:)*t_ic - t0];
     c_radii = [rc(tts); contact_radius_adim(:)*(10*Ro)];
     max_width = [10*Ro*ones(5, 1); max_width_adim(:)*(10*Ro)];
