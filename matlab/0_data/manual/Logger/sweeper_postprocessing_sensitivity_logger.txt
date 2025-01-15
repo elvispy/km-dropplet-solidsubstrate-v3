@@ -531,3 +531,55 @@ Connected to the parallel pool (number of workers: 4).
 Parallel pool using the 'local' profile is shutting down.
 [Warning: Did not save the postprocessing file. There is one in the directory already] 
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 264)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',264,0)">line 264</a>)] 
+-------
+15-Jan-2025 16:39:06 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:46:35 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:47:19 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:47:34 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+[Warning: The temporary variable 'CM_in' will be cleared at the beginning of each iteration of the parfor-loop. If
+'CM_in' is used before it is set, a runtime error will occur. For more information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB,
+"Uninitialized Temporaries"</a>.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 44)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,0)">line 44</a>)] 
+[Warning: The temporary variable 'CM_in02R' will be cleared at the beginning of each iteration of the parfor-loop. If
+'CM_in02R' is used before it is set, a runtime error will occur. For more information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in
+MATLAB, "Uninitialized Temporaries"</a>.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 44)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,0)">line 44</a>)] 
+[Warning: The temporary variable 'Ein' will be cleared at the beginning of each iteration of the parfor-loop. If 'Ein'
+is used before it is set, a runtime error will occur. For more information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB,
+"Uninitialized Temporaries"</a>.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 44)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,0)">line 44</a>)] 
+[Warning: The temporary variable 'Ein02R' will be cleared at the beginning of each iteration of the parfor-loop. If
+'Ein02R' is used before it is set, a runtime error will occur. For more information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in
+MATLAB, "Uninitialized Temporaries"</a>.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 44)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,0)">line 44</a>)] 
+[Warning: The temporary variable 'Eout' will be cleared at the beginning of each iteration of the parfor-loop. If
+'Eout' is used before it is set, a runtime error will occur. For more information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in MATLAB,
+"Uninitialized Temporaries"</a>.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 44)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,0)">line 44</a>)] 
+[Warning: The temporary variable 'Eout_exp' will be cleared at the beginning of each iteration of the parfor-loop. If
+'Eout_exp' is used before it is set, a runtime error will occur. For more information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops in
+MATLAB, "Uninitialized Temporaries"</a>.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 44)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,0)">line 44</a>)] 
+[Warning: The temporary variable 'theta_middle' will be cleared at the beginning of each iteration of the parfor-loop.
+If 'theta_middle' is used before it is set, a runtime error will occur. For more information, see <a href="matlab: helpview([docroot '/parallel-computing/distcomp_ug.map'],'MIR_ERROR_UNINITIALIZED_TEMPORARY_VARIABLE')">Parallel for Loops
+in MATLAB, "Uninitialized Temporaries"</a>.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 44)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,0)">line 44</a>)] 
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+Parallel pool using the 'local' profile is shutting down.
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 267)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',267,0)">line 267</a>)] 

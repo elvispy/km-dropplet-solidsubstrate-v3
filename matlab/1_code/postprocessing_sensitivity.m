@@ -47,6 +47,8 @@ parfor ii = 1:length(files_folder)
                 contains(files_folder(ii).name, "postprocessing") || ...
                 contains(lower(files_folder(ii).name), "error"); continue; 
         end
+        %if ~contains(files_folder(ii).name, "HighWeSweep20241110T150017"); continue; end
+        
         %if ~isnan(data{ii, "coef_rest_exp"}); continue; end
         lastwarn('', ''); %clear recorded_conditions recorded_times default_physical length_unit theta_vector
         val = load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
@@ -79,6 +81,7 @@ parfor ii = 1:length(files_folder)
         contact_time = nan; touch_time = nan; liftoff_time = nan;
         V0 = abs(default_physical.initial_velocity);
         t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g; % Calculating experimental start of contact to substract
+        if isnan(t0); t0 = -0.02*Ro/V0; end
         V = @(t)  -V0 - g*t; % COM Velocity
         X = @(t) -t * V0 - g/2*t.^2 +Ro; % COM position
         contact_time_exp = nan; liftoff_time_exp = nan;
