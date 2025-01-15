@@ -175,6 +175,7 @@ for ii = 1:length(files_folder)
             if ~isnan(touch_time) && ~isnan(liftoff_time_exp) 
                 contact_time_exp = liftoff_time_exp - (touch_time + t0);
                 coef_restitution_exp = sqrt(abs(Eout_exp/Ein02R)); %  0.02R
+                break;
             end
             
             % max_contact_radius calculation
