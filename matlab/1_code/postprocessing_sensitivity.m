@@ -41,7 +41,7 @@ data = data(~isnan(data.initial_velocity_cgs), :);
 
 %pixel = 5e-4; %Threshold for experimental contact
 fnames = data{:, 1};
-for ii = 1:length(files_folder)
+parfor ii = 1:length(files_folder)
     try
         if ismember(files_folder(ii).name, fnames) || ...
                 contains(files_folder(ii).name, "postprocessing") || ...
@@ -175,7 +175,6 @@ for ii = 1:length(files_folder)
             if ~isnan(touch_time) && ~isnan(liftoff_time_exp) 
                 contact_time_exp = liftoff_time_exp - (touch_time + t0);
                 coef_restitution_exp = sqrt(abs(Eout_exp/Ein02R)); %  0.02R
-                break;
             end
             
             % max_contact_radius calculation
