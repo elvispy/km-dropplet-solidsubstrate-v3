@@ -21,7 +21,7 @@ files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 % Create table to fill values (adimensional unless stated in the title)
 varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "parent_folder", "number_of_harmonics", ...
     "contact_time_ms_00R", "contact_time_ms002R",  "coef_restitution00R", "coef_restitution002R", ...
-    "max_contact_radius00R", "max_contact_radius002R"];
+    "max_contact_radius_cm_00R", "max_contact_radius_cm_002R"];
 varTypes=["string", "double", "double", "double", "double", "string", "double", "double", ...
     "double", "double", "double", "double", "double"];
 
@@ -201,7 +201,7 @@ parfor ii = 1:length(files_folder)
                     end
                 end
                 current_contact_radius = sin(theta_middle) ...
-                    * drop_radius(theta_middle);
+                    * drop_radius(theta_middle) * length_unit;
             end
             if current_contact_radius > max_contact_radius
                 max_contact_radius = current_contact_radius; %0.00R
@@ -230,7 +230,7 @@ parfor ii = 1:length(files_folder)
                     end
                 end
                 current_contact_radius_exp = sin(theta1) ...
-                    * drop_radius(theta1);
+                    * drop_radius(theta1) * length_unit;
             end
             if current_contact_radius_exp > max_contact_radius_exp
                 max_contact_radius_exp = current_contact_radius_exp; % 0.02R
