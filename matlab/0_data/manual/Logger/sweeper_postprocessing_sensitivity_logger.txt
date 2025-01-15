@@ -522,3 +522,12 @@ Connected to the parallel pool (number of workers: 4).
 <a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/parallel/cluster/+parallel/+internal/+pool/AnalysedSet.m',21,1)">21  </a>            obj.LastGoodChangeLevel = obj.ChangeListener.getChangeLevel();
 if system_dependent('IsDebugMode')==1, dbquit; end
 Parallel pool using the 'local' profile is shutting down.
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:21:59 
+ /Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+Parallel pool using the 'local' profile is shutting down.
+[Warning: Did not save the postprocessing file. There is one in the directory already] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('postprocessing_sensitivity', '/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m', 264)" style="font-weight:bold">postprocessing_sensitivity</a> (<a href="matlab: opentoline('/Users/harrislab/Documents/impact/elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',264,0)">line 264</a>)] 
