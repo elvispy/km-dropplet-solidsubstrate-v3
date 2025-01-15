@@ -1,10 +1,11 @@
 % Script to calculate relevant variables for all the simulations that
-%have been run
+%have been run. This script will calcualte only relevant variables 
+% With two tresholds: 0.00R and 0.02R. 
 
 % OS-independent parent folder
 root_folder = fileparts(fileparts(mfilename('fullpath')));
 % Setting diary path
-diary(fullfile(root_folder, '0_data', 'manual', 'Logger', 'sweeper_postprocessing_logger.txt'));
+diary(fullfile(root_folder, '0_data', 'manual', 'Logger', 'sweeper_postprocessing_sensitivity_logger.txt'));
 
 disp("-------");
 fprintf("%s \n %s \n", datestr(datetime()), mfilename('fullpath'));
@@ -19,12 +20,10 @@ files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
 
 % Create table to fill values (adimensional unless stated in the title)
 varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "parent_folder", "number_of_harmonics", ...
-    "max_width", "contact_time_ms", "coef_restitution", "north_pole_min_height", "north_pole_exp_min_height", ...
-    "max_contact_radius", "spread_time_ms", "spread_time_width_ms", ...
-    "contact_time_exp_ms", "coef_rest_exp", "max_contact_radius_exp", "spread_time_exp_ms", ...
-    "energy_modes"];
-varTypes=["string", "double", "double", "double", "double", "string", "double", "double", "double", "double", ...
-    "double", "double", "double", "double", "double", "double", "double", "double", "double", 'cell'];
+    "contact_time_ms_00R", "contact_time_ms002R",  "coef_restitution00R", "coef_restitution002R", ...
+    "max_contact_radius00R", "max_contact_radius002R"];
+varTypes=["string", "double", "double", "double", "double", "string", "double", "double", ...
+    "double", "double", "double", "double", "double"];
 
 sz = [length(files_folder) length(varNames)];
 
@@ -39,6 +38,7 @@ if size(data, 2) ~= length(varNames) || sum(data.Properties.VariableNames ~= var
 end
 
 data = data(~isnan(data.initial_velocity_cgs), :);
+
 %pixel = 5e-4; %Threshold for experimental contact
 fnames = data{:, 1};
 for ii = 1:length(files_folder)
@@ -77,19 +77,24 @@ for ii = 1:length(files_folder)
         pixel = 0.02 * length_unit;
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
+        V0 = abs(default_physical.initial_velocity);
+        t0 = (-V0 + sqrt(V0^2 - 2*g*0.02*Ro))/g; % Calculating experimental start of contact to substract
+        V = @(t)  -V0 - g*t; % COM Velocity
+        X = @(t) -t * V0 - g/2*t.^2 +Ro; % COM position
         contact_time_exp = nan; liftoff_time_exp = nan;
         coef_restitution = nan; Vin = nan; Vout = nan;
         coef_restitution_exp = nan; Vout_exp = nan;
-        north_pole_min_height = inf; north_pole_exp_min_height = inf;
-        max_contact_radius = -inf; spread_time = nan; spread_time_width = nan;
-        max_contact_radius_exp = -inf; spread_time_exp = nan; 
+        %north_pole_min_height = inf; north_pole_exp_min_height = inf;
+        max_contact_radius = -inf; %spread_time = nan; spread_time_width = nan;
+        max_contact_radius_exp = -inf; %spread_time_exp = nan; 
         
         velocity_unit = length_unit/time_unit;
-        energy_constant = sigmaS/(rhoS * Ro * velocity_unit.^2);
-        idxs = 1:PROBLEM_CONSTANTS.nb_harmonics;
-        Xl = (2*pi./(idxs .* (2 * idxs + 1))); Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1));
-        deformation_modes_energies = nan;
-        A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
+        %energy_constant = sigmaS/(rhoS * Ro * velocity_unit.^2);
+        %idxs = 1:PROBLEM_CONSTANTS.nb_harmonics;
+        %Xl = (2*pi./(idxs .* (2 * idxs + 1))); Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1));
+        %deformation_modes_energies = nan;
+        %A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
+
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
@@ -104,8 +109,10 @@ for ii = 1:length(files_folder)
                         recorded_conditions{jj+1}.contact_points > 0
                     touch_time = recorded_times(jj);
                     Vin = recorded_conditions{jj}.center_of_mass_velocity;
-                    CM_in = recorded_conditions{jj}.center_of_mass;
-                    Ein = 1/2 * Vin^2;
+                    CM_in    = recorded_conditions{jj}.center_of_mass; % 0.00R
+                    CM_in02R = X(t0); % 0.02R
+                    Ein    = 1/2 * Vin^2;  % 0.00R
+                    Ein02R = 1/2 * V(t0)^2;% 0.02R
                 end
             end
             
@@ -113,9 +120,9 @@ for ii = 1:length(files_folder)
                 if recorded_conditions{jj}.contact_points > 0  && ...
                         recorded_conditions{jj+1}.contact_points == 0
                     liftoff_time = recorded_times(jj);
-                    Vout = recorded_conditions{jj}.center_of_mass_velocity;
+                    Vout = recorded_conditions{jj}.center_of_mass_velocity; % 0.00R
                     Eout = 1/2*Vout^2 + (recorded_conditions{jj}.center_of_mass ...
-                        - CM_in)*g;
+                        - CM_in)*g; %0.00R
                 end
             end
             if ~isnan(touch_time) && ~isnan(liftoff_time)
@@ -124,65 +131,78 @@ for ii = 1:length(files_folder)
             end
 
             % Min_height (north pole)
-            current_height = drop_height(0);
-            next_height = drop_height(pi/100);
-            if current_height < north_pole_min_height; north_pole_min_height = current_height; end
-            if next_height < current_height %&& current_height < north_pole_exp_min_height
-                %north_pole_exp_min_height = current_height;
-                if current_height < north_pole_exp_min_height; north_pole_exp_min_height = current_height; end
-            else
-                currang = pi/200; dth = pi/200;
-                next_next_height = drop_height(currang + dth);
-                while next_next_height >= next_height && currang < pi/3
-                    currang = currang + dth;
-                    next_height = next_next_height;
-                    next_next_height = drop_height(currang + dth);
-                end
-                if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
-            end
+            % current_height = drop_height(0);
+            % next_height = drop_height(pi/100);
+            % if current_height < north_pole_min_height; north_pole_min_height = current_height; end
+            % if next_height < current_height %&& current_height < north_pole_exp_min_height
+            %     %north_pole_exp_min_height = current_height;
+            %     if current_height < north_pole_exp_min_height; north_pole_exp_min_height = current_height; end
+            % else
+            %     currang = pi/200; dth = pi/200;
+            %     next_next_height = drop_height(currang + dth);
+            %     while next_next_height >= next_height && currang < pi/3
+            %         currang = currang + dth;
+            %         next_height = next_next_height;
+            %         next_next_height = drop_height(currang + dth);
+            %     end
+            %     if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
+            % end
 
             % Experimental contact_radius && coef restitution
             if isnan(liftoff_time_exp)
                 % If contact ended numerically but simulation ended, record lift off time anyways
                 if drop_height(pi) > pixel/length_unit %||((size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)))
                     liftoff_time_exp = recorded_times(jj);
-                    Vout_exp = recorded_conditions{jj}.center_of_mass_velocity;
+                    Vout_exp = recorded_conditions{jj}.center_of_mass_velocity; % 0.02R
                     Eout_exp = 1/2*Vout_exp^2 + (recorded_conditions{jj}.center_of_mass ...
-                        - CM_in)*g;
+                        - CM_in)*g; % 0.02R
 
-                    A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
-                    deformation_modes_energies = Xl .* (recorded_conditions{jj}.deformation_velocities(idxs)/velocity_unit).^2 + ...
-                        energy_constant * Yl .* (recorded_conditions{jj}.deformation_amplitudes(idxs)/length_unit).^2;
-                    deformation_modes_energies = A*deformation_modes_energies;
+                    %A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
+                    %deformation_modes_energies = Xl .* (recorded_conditions{jj}.deformation_velocities(idxs)/velocity_unit).^2 + ...
+                    %    energy_constant * Yl .* (recorded_conditions{jj}.deformation_amplitudes(idxs)/length_unit).^2;
+                    %deformation_modes_energies = A*deformation_modes_energies;
                     
                 end
             end
                 
-            % Max width calculation & spread time of width
-            current_width = maximum_contact_radius(adim_deformations);
-            if current_width > max_width
-                max_width = current_width; 
-                spread_time_width = recorded_times(jj) - touch_time;
-            end
-            % We will record experimental touch time 
+            % % Max width calculation & spread time of width
+            % current_width = maximum_contact_radius(adim_deformations);
+            % if current_width > max_width
+            %     max_width = current_width; 
+            %     spread_time_width = recorded_times(jj) - touch_time; %0.00R
+            % end
+            % We will record experimental contact time
             if ~isnan(touch_time) && ~isnan(liftoff_time_exp) 
-                contact_time_exp = liftoff_time_exp - touch_time;
-                coef_restitution_exp = sqrt(abs(Eout_exp/Ein));
+                contact_time_exp = liftoff_time_exp - (touch_time + t0);
+                coef_restitution_exp = sqrt(abs(Eout_exp/Ein02R)); %  0.02R
             end
             
-
-
             % max_contact_radius calculation
             current_contact_points = recorded_conditions{jj}.contact_points;
             if current_contact_points == 0
                 current_contact_radius = 0;
             else
-                current_contact_radius = sin(theta_vector(current_contact_points)) ...
-                    * drop_radius(theta_vector(current_contact_points));
+                kk = 1;
+                theta2 = theta_vector(current_contact_points+kk);
+                while drop_height(theta2) < 1e-6/length_unit
+                    kk = kk + 1;
+                    theta2 = theta_vector(current_contact_points + kk);
+                end
+                theta1 = theta_vector(current_contact_points + kk - 1);
+                while abs(theta1-theta2) > pi/1e+3
+                    theta_middle = (theta1+theta2)/2;
+                    if drop_height(theta_middle) < 1e-6/length_unit
+                        theta1 = theta_middle;
+                    else
+                        theta2 = theta_middle;
+                    end
+                end
+                current_contact_radius = sin(theta_middle) ...
+                    * drop_radius(theta_middle);
             end
             if current_contact_radius > max_contact_radius
-                max_contact_radius = current_contact_radius;
-                spread_time = recorded_times(jj) - touch_time;
+                max_contact_radius = current_contact_radius; %0.00R
+                %spread_time = recorded_times(jj) - touch_time;
             end
 
             % EXPERIMENTAL max_contact_radius calculation
@@ -210,16 +230,15 @@ for ii = 1:length(files_folder)
                     * drop_radius(theta1);
             end
             if current_contact_radius_exp > max_contact_radius_exp
-                max_contact_radius_exp = current_contact_radius_exp;
-                spread_time_exp = recorded_times(jj) - touch_time;
+                max_contact_radius_exp = current_contact_radius_exp; % 0.02R
+                %spread_time_exp = recorded_times(jj) - touch_time;
             end
         end
         % Add value to tables
         [~, dropLiquid, lol] = fileparts(files_folder(ii).folder); dropLiquid = strcat(dropLiquid, lol);
         data(ii, :) = {files_folder(ii).name, Vin, Westar, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
-            max_width, contact_time, coef_restitution, north_pole_min_height, ...
-            north_pole_exp_min_height, max_contact_radius, spread_time, spread_time_width, ...
-            contact_time_exp, coef_restitution_exp, max_contact_radius_exp, spread_time_exp, {deformation_modes_energies}};
+            contact_time, contact_time_exp, coef_restitution, coef_restitution_exp, ...
+            max_contact_radius, max_contact_radius_exp};
 
     catch me
         if contains(files_folder(ii).name, "error"); continue; end
@@ -236,8 +255,8 @@ delete(gcp("nocreate")); % Deleting current parallel workers
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name');
 
-writetable(data, fullfile(root_folder, "2_output", "postprocessing.csv"));
-s = fullfile(root_folder, "2_output", "postprocessing.mat");
+writetable(data, fullfile(root_folder, "2_output", "postprocessing_sensitivity.csv"));
+s = fullfile(root_folder, "2_output", "postprocessing_sensitivity.mat");
 warning ('on','all');
 if ~exist(s, "file")
     save(s, "data");

@@ -1,0 +1,481 @@
+-------
+15-Jan-2025 16:38:04 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',44,1)">44  </a>for ii = 1:length(files_folder)
+data
+
+data =
+
+  61×13 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>file_name</strong>    <strong>initial_velocity_cgs</strong>    <strong>weber</strong>    <strong>bond</strong>    <strong>ohnesorge</strong>    <strong>parent_folder</strong>    <strong>number_of_harmonics</strong>    <strong>contact_time_ms_00R</strong>    <strong>contact_time_ms002R</strong>    <strong>coef_restitution00R</strong>    <strong>coef_restitution002R</strong>    <strong>max_contact_radius00R</strong>    <strong>max_contact_radius002R</strong>
+    <strong>_________</strong>    <strong>____________________</strong>    <strong>_____</strong>    <strong>____</strong>    <strong>_________</strong>    <strong>_____________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>____________________</strong>    <strong>_____________________</strong>    <strong>______________________</strong>
+
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+
+        :                 :                :       :          :              :                   :                      :                      :                      :                      :                        :                        :           
+
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+
+	<a href="matlab:if exist('data','var') && istabular(data),displayWholeObj(data,'data'),else,fprintf('Unable to display table variable ''data'' because it no longer exists.\n');end">Display all 61 rows.</a>
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+V(0)
+
+ans =
+
+   -8.0763
+
+V0
+
+V0 =
+
+    8.0763
+
+X(0)
+
+ans =
+
+    0.0207
+
+Ro
+
+Ro =
+
+    0.0203
+
+t0
+
+t0 =
+
+  -5.0425e-05
+
+X(t0)
+
+ans =
+
+    0.0211
+
+X(-t0)
+
+ans =
+
+    0.0203
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:41:32 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',84,1)">84  </a>        contact_time_exp = nan; liftoff_time_exp = nan;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',85,1)">85  </a>        coef_restitution = nan; Vin = nan; Vout = nan;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',86,1)">86  </a>        coef_restitution_exp = nan; Vout_exp = nan;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',88,1)">88  </a>        max_contact_radius = -inf; %spread_time = nan; spread_time_width = nan;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',89,1)">89  </a>        max_contact_radius_exp = -inf; %spread_time_exp = nan; 
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',91,1)">91  </a>        velocity_unit = length_unit/time_unit;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',98,1)">98  </a>        for jj = 1:(size(recorded_conditions, 1)-1)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',99,1)">99  </a>            adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',100,1)">100 </a>            adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',101,1)">101 </a>            drop_radius = zeta_generator(adim_deformations);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',102,1)">102 </a>            drop_radius = @(theta) 1 + drop_radius(theta);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',103,1)">103 </a>            drop_height = @(theta) cos(theta) .* drop_radius(theta) + adim_CM;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',107,1)">107 </a>            if isnan(touch_time)
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',108,1)">108 </a>                if recorded_conditions{jj}.contact_points == 0 && ...
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',109,1)">109 </a>                        recorded_conditions{jj+1}.contact_points > 0
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',110,1)">110 </a>                    touch_time = recorded_times(jj);
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',111,1)">111 </a>                    Vin = recorded_conditions{jj}.center_of_mass_velocity;
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',112,1)">112 </a>                    CM_in    = recorded_conditions{jj}.center_of_mass; % 0.00R
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',113,1)">113 </a>                    CM_in02R = X(t0); % 0.02R
+X(0)
+
+ans =
+
+    0.0203
+
+X(t0)
+
+ans =
+
+    0.0207
+
+t0
+
+t0 =
+
+  -5.0425e-05
+
+X(0) - Ro
+
+ans =
+
+     0
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',114,1)">114 </a>                    Ein    = 1/2 * Vin^2;  % 0.00R
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',115,1)">115 </a>                    Ein02R = 1/2 * V(t0)^2;% 0.02R
+if system_dependent('IsDebugMode')==1, dbstep; end
+<a href="matlab: opentoline('/Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity.m',116,1)">116 </a>                end
+Vin
+
+Vin =
+
+   -8.0763
+
+V(0)
+
+ans =
+
+   -8.0763
+
+V(t0)
+
+ans =
+
+   -8.0269
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T132952-3.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T132952-6.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T132952-9.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T132952.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133114.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133121.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133128.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133224.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133259.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133337.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133416.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133451.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133511.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133536.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T133712.mat 
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:UndefinedFunction'
+       message: 'Unrecognized function or variable 'theta_moddle'.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:45:36 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbquit all; end
+clear all
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:46:04 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+data(ii, :)
+
+ans =
+
+  1×13 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>file_name</strong>    <strong>initial_velocity_cgs</strong>    <strong>weber</strong>    <strong>bond</strong>    <strong>ohnesorge</strong>    <strong>parent_folder</strong>    <strong>number_of_harmonics</strong>    <strong>contact_time_ms_00R</strong>    <strong>contact_time_ms002R</strong>    <strong>coef_restitution00R</strong>    <strong>coef_restitution002R</strong>    <strong>max_contact_radius00R</strong>    <strong>max_contact_radius002R</strong>
+    <strong>_________</strong>    <strong>____________________</strong>    <strong>_____</strong>    <strong>____</strong>    <strong>_________</strong>    <strong>_____________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>____________________</strong>    <strong>_____________________</strong>    <strong>______________________</strong>
+
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+
+data
+
+data =
+
+  61×13 <a href="matlab:helpPopup('table')" style="font-weight:bold">table</a>
+
+    <strong>file_name</strong>    <strong>initial_velocity_cgs</strong>    <strong>weber</strong>    <strong>bond</strong>    <strong>ohnesorge</strong>    <strong>parent_folder</strong>    <strong>number_of_harmonics</strong>    <strong>contact_time_ms_00R</strong>    <strong>contact_time_ms002R</strong>    <strong>coef_restitution00R</strong>    <strong>coef_restitution002R</strong>    <strong>max_contact_radius00R</strong>    <strong>max_contact_radius002R</strong>
+    <strong>_________</strong>    <strong>____________________</strong>    <strong>_____</strong>    <strong>____</strong>    <strong>_________</strong>    <strong>_____________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>___________________</strong>    <strong>____________________</strong>    <strong>_____________________</strong>    <strong>______________________</strong>
+
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+
+        :                 :                :       :          :              :                   :                      :                      :                      :                      :                        :                        :           
+
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+    <missing>             0                0       0          0          <missing>               0                      0                      0                      0                      0                        0                        0           
+
+	<a href="matlab:if exist('data','var') && istabular(data),displayWholeObj(data,'data'),else,fprintf('Unable to display table variable ''data'' because it no longer exists.\n');end">Display all 61 rows.</a>
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Exception at: /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v2 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02) directComparison20241114T132952-3.mat 
+if system_dependent('IsDebugMode')==1, dbstep; end
+  <a href="matlab:helpPopup('MException')" style="font-weight:bold">MException</a> with properties:
+
+    identifier: 'MATLAB:catenate:dimensionMismatch'
+       message: 'Dimensions of arrays being concatenated are not consistent.'
+         cause: {}
+         stack: [1×1 struct]
+    Correction: []
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+{files_folder(ii).name, Vin, Westar, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
+            contact_time, contact_time_exp, coef_restitution, coef_restitution_exp, 
+            max_contact_radius, max_contact_radius_exp}
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of arrays being concatenated are not consistent.
+} 
+contact_time
+
+contact_time =
+
+    2.0253
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:48:16 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:51:07 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:51:44 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:54:23 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
+if system_dependent('IsDebugMode')==1, dbquit; end
+postprocessing_sensitivity
+-------
+15-Jan-2025 16:55:00 
+ /Users/eaguerov/Documents/Github/km-dropplet-solidsubstrate-v3/matlab/1_code/postprocessing_sensitivity 
