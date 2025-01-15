@@ -257,8 +257,8 @@ end
 delete(gcp("nocreate")); % Deleting current parallel workers
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name');
-
-writetable(data, fullfile(root_folder, "2_output", "postprocessing_sensitivity.csv"));
+data_chase = data(data.number_of_harmonics == 90 & contains(data.parent_folder, 'v3') & abs(data.ohnesorge - 0.0303767)./data.ohnesorge <= 0.01 & data.bond <= 0.0191, :);
+writetable(data_chase, fullfile(root_folder, "2_output", "data_chase.csv"));
 s = fullfile(root_folder, "2_output", "postprocessing_sensitivity.mat");
 warning ('on','all');
 if ~exist(s, "file")
