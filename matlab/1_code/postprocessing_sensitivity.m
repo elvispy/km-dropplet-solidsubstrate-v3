@@ -155,7 +155,7 @@ parfor ii = 1:length(files_folder)
                     liftoff_time_exp = recorded_times(jj);
                     Vout_exp = recorded_conditions{jj}.center_of_mass_velocity; % 0.02R
                     Eout_exp = 1/2*Vout_exp^2 + (recorded_conditions{jj}.center_of_mass ...
-                        - CM_in)*g; % 0.02R
+                        - CM_in02R)*g; % 0.02R
 
                     %A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
                     %deformation_modes_energies = Xl .* (recorded_conditions{jj}.deformation_velocities(idxs)/velocity_unit).^2 + ...
