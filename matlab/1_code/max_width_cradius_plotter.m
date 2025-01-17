@@ -83,9 +83,9 @@ function max_width_cradius_plotter(varargin)
                 texts{jj} = sprintf('$t = %.2f, t_c = %.2f, t_m = %.2f$', adim_times{jj}(ii), spread_time_tracker(jj), ...
                     spread_widths_tracker(jj));
 
-                xline(-max_widths_tracker(jj), 'b--', 'LineWidth', 4); xline(max_widths_tracker(jj), 'b--', 'LineWidth', 4);
+                xline(-max_widths_tracker(jj), '--', 'LineWidth', 4); xline(max_widths_tracker(jj), '--', 'LineWidth', 4);
                 plot([-max_contact_radius_tracker(jj), max_contact_radius_tracker(jj)], [0, 0], ...
-                    'r-', 'LineWidth', 2+jj);
+                    '-', 'LineWidth', 1+1.5*jj);
 
             end % end inner for (videos)
             

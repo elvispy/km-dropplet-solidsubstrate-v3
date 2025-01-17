@@ -1,4 +1,4 @@
-
+% This script will 
 % Add functions to calculate maximum width
 safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
 addpath(safe_folder, '-begin');
@@ -9,8 +9,8 @@ Ro = 0.0203; % radius in cm
 rho = 0.96; %g/cm3
 sigma = 20.5; %dyne/m
 t_ic = sqrt(rho*Ro^3/sigma); % inertio-capillary time scale
-%filename = '../0_data/manual/Low We comparison.xlsx';
-filename = '../0_data/manual/Oh comparisons.xlsx';
+filename = '../0_data/manual/Low We comparison.xlsx';
+%filename = '../0_data/manual/Oh comparisons.xlsx';
 alldata = load('../2_output/postprocessing.mat', 'data');
 alldata = alldata.data;
 alldata = alldata(contains(alldata.file_name, 'directComparison') & contains(alldata.parent_folder,'v3') & alldata.number_of_harmonics == 90, :);
