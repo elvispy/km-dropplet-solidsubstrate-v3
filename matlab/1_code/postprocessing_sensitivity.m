@@ -187,14 +187,14 @@ parfor ii = 1:length(files_folder)
             else
                 kk = 1;
                 theta2 = theta_vector(current_contact_points+kk);
-                while drop_height(theta2) < 1e-6/length_unit
+                while drop_height(theta2) < 1e-6
                     kk = kk + 1;
                     theta2 = theta_vector(current_contact_points + kk);
                 end
                 theta1 = theta_vector(current_contact_points + kk - 1);
-                while abs(theta1-theta2) > pi/1e+3
+                while abs(theta1-theta2) > pi/1e+4
                     theta_middle = (theta1+theta2)/2;
-                    if drop_height(theta_middle) < 1e-6/length_unit
+                    if drop_height(theta_middle) < 1e-6
                         theta1 = theta_middle;
                     else
                         theta2 = theta_middle;
@@ -221,7 +221,7 @@ parfor ii = 1:length(files_folder)
                     theta2 = theta_vector(current_contact_points_exp + kk);
                 end
                 theta1 = theta_vector(current_contact_points_exp + kk - 1);
-                while abs(theta1-theta2) > pi/1e+3
+                while abs(theta1-theta2) > pi/1e+4
                     theta_middle = (theta1+theta2)/2;
                     if drop_height(theta_middle) < pixel/length_unit
                         theta1 = theta_middle;
