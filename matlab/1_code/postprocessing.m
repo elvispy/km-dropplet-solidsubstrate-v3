@@ -41,7 +41,7 @@ end
 data = data(~isnan(data.initial_velocity_cgs), :);
 %pixel = 5e-4; %Threshold for experimental contact
 fnames = data{:, 1};
-for ii = 1:length(files_folder)
+parfor ii = 1:length(files_folder)
     try
         if ismember(files_folder(ii).name, fnames) || ...
                 contains(files_folder(ii).name, "postprocessing") || ...

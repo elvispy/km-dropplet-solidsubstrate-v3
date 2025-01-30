@@ -9,25 +9,26 @@ ddate = datestr(datetime(), 30); % 30 = ISO 8601
 diary(sprintf("../2_output/Logger/%s_%s.txt", mfilename, ddate));
 disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
-force_sweep = true;
+force_sweep = false;
+postprocessing_bool = true;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'directComparison';
+prefix = 'higherResolution_t_rc';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We = [0.25459, 0.15591, 0.095856, 0.062007, 0.023778, 0.81868, 1.4044, 2.3001, 3.5801];%logspace(-5, 0, 41);
-Bo = 10.^([-inf, -3, -2, -1, 0]);
+We = logspace(-5, 1, 91);
+Bo = 0.0189;%10.^([-inf, -3, -2, -1, 0]);
 velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
-g = [981]; %Bo.* sigma ./(rho .* Ro^2);
+g = Bo.* sigma ./(rho .* Ro^2);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [2]', ... % Viscocity in cgs
+    "nu", 0.01 * [0, 2, 20]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
-    "harmonics_qtt", [90, 120]', ...
-    "version", [2, 3]')
+    "harmonics_qtt", [120]', ...
+    "version", [3]')
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -143,6 +144,7 @@ end
 cd(root);
 delete(gcp("nocreate")); % Deleting current parallel workers
 
+if postprocessing_bool == true; postprocessing; end
 % Load Python3 in MACOS based on https://www.mathworks.com/matlabcentral/answers/359408-trouble-with-a-command-in-matlab-s-system
 if ~ispc && system('python3 --version') ~= 0; setenv('PATH', [getenv('PATH') ':/usr/local/bin/']); end
 
