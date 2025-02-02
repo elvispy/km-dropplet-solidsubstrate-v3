@@ -23,7 +23,7 @@ g = Bo.* sigma ./(rho .* Ro^2);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [0, 2, 20]', ... % Viscocity in cgs
+    "nu", 0.01 * [0, 1, 2, 5, 20, 50]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
@@ -78,9 +78,7 @@ simulations_cgs.folder = a.folder;
 safe_folder = fullfile(root, "simulation_code");
 addpath(safe_folder, '-begin');
 %safe_folder = fullfile(root, "D50Quant100", "rho1000sigma7220nu98muair0", ...
-%    "RhoS1000SigmaS7220", "R0350mm", "ImpDefCornerAng180U38");
-
-%final_folders = simulations_cgs.folder;
+%    "RhoS1000Sigma_folders = simulations_cgs.folder;
 
 % Extract columns from table as parfor does not allowusing them inside the
 % loop (TOOD: convert the table to a struct array
@@ -93,7 +91,9 @@ sigmaS = simulations_cgs.sigmaS;
 nu = simulations_cgs.nu; g = simulations_cgs.g;
 initial_velocity = simulations_cgs.initial_velocity;
 undisturbed_radius = simulations_cgs.undisturbed_radius;
-%% Starting simulation
+%% Starting simulatioS7220", "R0350mm", "ImpDefCornerAng180U38");
+
+%finaln
 parfor ii = 1:height(simulations_cgs)
     %Check if the final folder exists
     if ~exist(final_folders(ii), 'dir')
