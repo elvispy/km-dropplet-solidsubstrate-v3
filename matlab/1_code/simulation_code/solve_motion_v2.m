@@ -167,7 +167,7 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
     contact_points = 0;
     
     % Define the time step so that the highest frequency has N steps
-    N = 20;
+    N = 8;
     max_dt = (2*pi/(sqrt(harmonics_qtt*(harmonics_qtt+2)*(harmonics_qtt-1))*N));
     %max_dt = round(time_unit/(N * harmonics_qtt^(3/2)), 1, 'significant')/time_unit; %max_dt = 0.0034359491980026735;
     dt = max_dt; 
@@ -176,7 +176,7 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
     current_time = initial_time/time_unit;
     if simulation_time == inf
         % Just to save some values in the matrix
-        final_time = min(20000*dt, 10e-3/time_unit);
+        final_time = min(50000*dt, 10e-3/time_unit);
     else
         final_time = simulation_time/time_unit;
     end
@@ -385,6 +385,10 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
                         fprintf("Changed final time. Current progress: %.0f%%\n", ...
                         current_time/final_time*100);
                     end
+                end
+                if simulation_time == inf && current_time >= 0.999*final_time
+                    warning("Simulation time is infinite but simulation apparently wont finish")
+                    fprintf("Too much time has elapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
                 end
     
                 if live_plotting == true

@@ -90,7 +90,7 @@ function h = plot_condition(idx, conditions, varargin)
         mps = ps(sample)/pressure_unit;
 
         %mps(5) = 1;
-        arrX((end-conditions.contact_points-5):end) = 0;
+        arrX((end-ceil(conditions.contact_points/nb_harmonics*length(arrX))-5):end) = 0;
         quiver(EtaX(1:2:end), EtaY(1:2:end), mps(1:2:end) .* (-arrX(1:2:end)), ...
             mps(1:2:end) .* (-arrY(1:2:end)), ...
             'AutoScaleFactor',1, 'LineWidth',2);
