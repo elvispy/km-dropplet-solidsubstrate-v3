@@ -35,18 +35,22 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
     %      5) order                  (int, 1)         = order of the finite
     %                                                   differences to be solved
     %  - varargin{3} = Other options. 
-    %      1) live_plotting          (bool, false)    = whether or not to plot real-time results (more consuming)
+    %      1) live_plotting          (bool, true)     = whether or not to plot real-time results (more consuming)
     %      2) debug_flag             (bool, false)    = Verbose real-time info for the simulation (experimental feature)
     %      3) folder                 (string, ") .    = Folder whre the
     %                                 results will be stored. Default is current directory
     %      4) prefix                 (sttring, '')    = Prefix to be put in
-    %      the name of the file
+    %      the name of the output files
+    %      5) save_results           (bool, true)     = Whether to export or not the results
+    %      6) optimize_for_bounce    (bool, false)    = Whether to exit early if bounce has ended
+    %      7) saving_frequency       (s, nan)         = Determines the frequency at which we save the output results
     
     %% Defining default Arguments
     
-    default_options = struct('live_plotting', false, 'debug_flag', false, ...
+    default_options = struct('live_plotting', true, 'debug_flag', false, ...
             'folder', fullfile(fileparts(fileparts(fileparts(mfilename('fullpath')))), '2_output'), ...
-            'prefix', '', 'save_results', true, 'optimize_for_bounce', false);
+            'prefix', '', 'save_results', true, 'optimize_for_bounce', false, ...
+            'saving_frequency', nan);
     default_numerical = struct('simulation_time', inf, 'harmonics_qtt', 20, ...
         'angular_sampling', nan, 'version', 3, 'order', 1);
     
