@@ -180,17 +180,24 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
     current_time = initial_time/time_unit;
     if simulation_time == inf
         % Just to save some values in the matrix
-        final_time = min(50000*dt, 10e-3/time_unit);
+        final_time = 20e-3/time_unit; %min(50000*dt, 10e-3/time_unit);
     else
         final_time = simulation_time/time_unit;
     end
+    if isnan(default_options.saving_frequency)
+        saving_frequency = 1e-5/time_unit; % One shot every  0.01 ms
+    else
+        saving_frequency = default_options.saving_frequency;
+    end
+    saving_frequency = max(saving_frequency, max_dt);
+    counter_time = saving_frequency;
     current_index = 2;%  This integer points to the next available index in variables that are going to 
                       %  export data (index 1 is for initial conditions)
-    maximum_index = ceil((final_time - initial_time)/dt) + 4;
-    number_of_extra_indexes = 0;
+    maximum_index = ceil(final_time/saving_frequency) + 5;%ceil((final_time - initial_time)/dt) + 4;
+    %anumber_of_extra_indexes = 0;
 
     %grow_dt = false;%  THis variable controls how fast dt can grow
-    jjj = 0; myflag = true;%  Indexes to keep track how small is dt compared to max_dt
+    %jjj = 0; myflag = true;%  Indexes to keep track how small is dt compared to max_dt
     flips = 0;
       
     legendre_matrix = precompute_integrals(theta_vector, harmonics_qtt);
@@ -346,7 +353,7 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
                     previous_conditions = {previous_conditions{2:end} current_conditions};
                 end
 
-                current_time = current_time + dt(end); jjj = jjj + 1;
+                current_time = current_time + dt(end); %jjj = jjj + 1;
                 dt = dt(1:max(1, end-1)); if size(dt, 1) == 1; dt = max_dt; end
                 % if mod(jjj, 2) == 0 && grow_dt == true
                 %     jjj = floor(jjj/2); 
@@ -356,25 +363,52 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
                 %     % Decrease the number of time you can make dt bigger
                 %     grow_dt = false;
                 % end
-    
-                %  TODO: Update Indexes if necessary
-    
-                % TODO: % Stored data
-                recorded_conditions{current_index} = give_dimensions_v2(current_conditions);
-                recorded_times(current_index) = current_time * time_unit;
-                current_index = current_index + 1; % Point to the next space in memory 
-    
-                % If we are in a multiple of max_dt, reset indexes
-                if dt(end) == max_dt
-                    %jjj = 0;
-                    %grow_dt = true;
+                
+                % Only store data if you have passed the counter time
+                % (multiples of saving_frequency variable above)
+                if current_time >= counter_time
+                    % TODO: % Stored data
+                    recorded_conditions{current_index} = give_dimensions_v2(current_conditions);
+                    recorded_times(current_index) = current_time * time_unit;
+                    current_index = current_index + 1; % Point to the next space in memory 
+                    
                     indexes_to_save(current_to_save) = current_index - 1;
                     current_to_save = current_to_save + 1;
-                else
-                    number_of_extra_indexes = number_of_extra_indexes + 1;
+                    % % If we are in a multiple of max_dt, reset indexes
+                    % if dt(end) == max_dt
+                    % 
+                    %     indexes_to_save(current_to_save) = current_index - 1;
+                    %     current_to_save = current_to_save + 1;
+                    % else
+                    %     number_of_extra_indexes = number_of_extra_indexes + 1;
+                    % end
+                    counter_time = counter_time + saving_frequency;
+
+                    if live_plotting == true 
+                        % Do some live plotting here
+        
+                        plot_title = sprintf(" t = %-8.5f (ms), Contact points = %-2g deg, \n v_k = %-8.5f cm/s, z_k = %-8.5f cm\n", ...
+                           1e+3 * current_time * time_unit, current_conditions.contact_points, ...
+                                current_conditions.center_of_mass_velocity * velocity_unit, ...
+                                current_conditions.center_of_mass* length_unit);
+                        h = plot_condition(1, current_conditions, 1.25, plot_title, PROBLEM_CONSTANTS);
+                        
+                        if PROBLEM_CONSTANTS.DEBUG_FLAG == true
+                            currFrame = getframe(h);
+                            writeVideo(vidObj,currFrame);
+                        end
+        
+                    else
+                        if PROBLEM_CONSTANTS.DEBUG_FLAG == true
+                            if current_time/final_time >= progress_bar
+                                fprintf("Done %.0f%% of the simulation.\n", current_time/final_time*100);
+                                progress_bar = progress_bar + 0.1;
+                            end
+                        end
+                    end   
                 end
 
-                if current_index > 5 && ...
+                if current_index > 2 && ...
                         recorded_conditions{current_index-1}.center_of_mass_velocity * recorded_conditions{current_index-2}.center_of_mass_velocity <= 0
                     flips = flips + 1;
                 end
@@ -393,30 +427,10 @@ function [recorded_conditions, recorded_times, PROBLEM_CONSTANTS] = solve_motion
                 if simulation_time == inf && current_time >= 0.999*final_time
                     warning("Simulation time is infinite but simulation apparently wont finish")
                     fprintf("Too much time has elapsed U = %g, modes = %g, version = %d \n", initial_velocity, harmonics_qtt, version);
+                    break;
                 end
     
-                if live_plotting == true
-                    % Do some live plotting here
-    
-                    plot_title = sprintf(" t = %-8.5f (ms), Contact points = %-2g deg, \n v_k = %-8.5f cm/s, z_k = %-8.5f cm\n", ...
-                       1e+3 * current_time * time_unit, current_conditions.contact_points, ...
-                            current_conditions.center_of_mass_velocity * velocity_unit, ...
-                            current_conditions.center_of_mass* length_unit);
-                    h = plot_condition(1, current_conditions, 1.25, plot_title, PROBLEM_CONSTANTS);
-                    
-                    if PROBLEM_CONSTANTS.DEBUG_FLAG == true
-                        currFrame = getframe(h);
-                        writeVideo(vidObj,currFrame);
-                    end
-    
-                else
-                    if PROBLEM_CONSTANTS.DEBUG_FLAG == true
-                        if current_time/final_time >= progress_bar
-                            fprintf("Done %.0f%% of the simulation.\n", current_time/final_time*100);
-                            progress_bar = progress_bar + 0.1;
-                        end
-                    end
-                end   
+                
             end
     
         end
