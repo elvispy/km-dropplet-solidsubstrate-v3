@@ -28,7 +28,7 @@ function h = plot_condition(idx, conditions, varargin)
         h = ancestor(idx, 'figure');
     end
     
-    if nargin < 4 || varargin{2} == true; hold off; end
+    %if nargin < 4 || (islogical(varargin{2}) && varargin{2} == true); hold off; end
     
     cut = 0.75 * pi;
     sample = [linspace(0, cut, 30), linspace(cut, pi, 30)];
@@ -47,6 +47,7 @@ function h = plot_condition(idx, conditions, varargin)
     end
     EtaX = arrayfun(@(angle) sin(angle) * (1+  etas(angle)), sample);
     EtaY = height + arrayfun(@(angle) cos(angle) .* (1+  etas(angle)), sample);
+    hold off;
     fill( EtaX,EtaY, [135, 206, 235]/256, 'LineStyle','none' ,'FaceAlpha', 0.3);
     hold on;
     fill(-EtaX,EtaY, [135, 206, 235]/256, 'LineStyle','none', 'FaceAlpha', 0.3);
@@ -69,6 +70,7 @@ function h = plot_condition(idx, conditions, varargin)
                 (1 + etas(theta_vector(conditions.contact_points)/2 + theta_vector(conditions.contact_points+1)/2));
             plot([-contact_radius, contact_radius], [0, 0], 'g--', 'LineWidth', 3);
         end
+        title(varargin{2}, 'FontSize', 14);
     else
         pressure_unit = 1;
         %warning("Assuming pressure unit");

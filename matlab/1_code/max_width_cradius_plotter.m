@@ -151,7 +151,7 @@ function max_width_cradius_plotter(varargin)
                 % Plotting
                 % Current time, maximum radius, maximum equatorial radius
                 ax = subplot(1, length(file), jj);
-                plot_condition(ax, adim_conditions, 1.75, true); %changed from jj==1 to true (now that are subplots)
+                plot_condition(ax, adim_conditions, 1.75); %changed from jj==1 to true (now that are subplots)
                 texts{jj} = sprintf('$t = %.2f$  (ms),$ t_{r_c} = %.2f$  (ms), $ t_m = %.2f$ (ms)', 1000*times{jj}(ii), 1000* spread_time_tracker(jj), ...
                     1000* spread_widths_tracker(jj));
                 
