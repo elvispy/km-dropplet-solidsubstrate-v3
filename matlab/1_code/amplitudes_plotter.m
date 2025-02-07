@@ -1,3 +1,6 @@
+% Plots the deformation amplitudes, velocities and energies evolution for 
+% a specific file to be chosen
+
 function amplitudes_plotter(varargin)
     % Add functions to calculate maximum width
     close all;

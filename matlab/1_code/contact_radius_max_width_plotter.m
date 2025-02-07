@@ -1,4 +1,5 @@
-% This script will 
+% This script will  plot contact radius, max radius and max width
+% Data will be taken from the google sheets
 % Add functions to calculate maximum width
 safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
 addpath(safe_folder, '-begin');

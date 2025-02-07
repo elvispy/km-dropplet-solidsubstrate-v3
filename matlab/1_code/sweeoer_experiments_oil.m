@@ -14,20 +14,20 @@ postprocessing_bool = true;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'higherResolution_t_rc';
+prefix = 'jump_t_rc_fullsweep';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We = logspace(-5, 1, 91);
+We = logspace(-5, 1, 61);
 Bo = 0.0189;%10.^([-inf, -3, -2, -1, 0]);
 velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
 g = Bo.* sigma ./(rho .* Ro^2);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [0, 1, 2, 5, 20, 50]', ... % Viscocity in cgs
+    "nu", 0.01 * [0, 2]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
-    "harmonics_qtt", [120]', ...
+    "harmonics_qtt", [250]', ...
     "version", [3]')
 
 % We check how many outputs we want
@@ -94,6 +94,7 @@ undisturbed_radius = simulations_cgs.undisturbed_radius;
 %% Starting simulatioS7220", "R0350mm", "ImpDefCornerAng180U38");
 
 %finaln
+T = height(simulations_cgs);
 parfor ii = 1:height(simulations_cgs)
     %Check if the final folder exists
     if ~exist(final_folders(ii), 'dir')
@@ -117,34 +118,35 @@ parfor ii = 1:height(simulations_cgs)
         %solve_motion_v2(physical_parameters, numerical_parameters);
 
         try
-            fprintf("---------\n");
-            fprintf("Starting simulation with velocity %g, modes %d, version v%d ... \n", ...
-                initial_velocity(ii), harmonics_qtt(ii), version(ii));
+            %fprintf("---------\n");
+            fprintf("Starting simulation %d/%d, with velocity %g, modes %d, version v%d ... \n", ...
+                ii, T, initial_velocity(ii), harmonics_qtt(ii), version(ii));
             solve_motion_v2(physical_parameters, numerical_parameters, options);
             completed_simulations(ii) = true; % To attest that the simulation has been finished
-            fprintf("Finished simulation with velocity %g, modes %d, version v%d ... \n", ...
-                initial_velocity(ii), harmonics_qtt(ii), version(ii));
+            fprintf("Finished simulation %d/%d, with velocity %g, modes %d, version v%d ... \n", ...
+                ii, T, initial_velocity(ii), harmonics_qtt(ii), version(ii));
         catch ME
             cd(final_folders(ii))
             fprintf("---------\n");
-            fprintf("Couldn't run simulation with the following parameters: \n Velocity: %g \n Modes: %g \n Version: %g \n", ...
-                initial_velocity(ii), harmonics_qtt(ii), version(ii)); 
+            fprintf("Couldn't run simulation %d/%d, with the following parameters: \n Velocity: %g \n Modes: %g \n Version: %g \n", ...
+                ii, T, initial_velocity(ii), harmonics_qtt(ii), version(ii)); 
             a = datetime('now'); a.Format = 'yyyyMMddmmss';
             parsave(sprintf("error_logU0=%g-%s.mat", initial_velocity(ii), a), ME);
         end
     else
         fprintf("---------\n");
-        fprintf("Not running simulation with the following parameters (already done): \n Velocity: %g \n Modes: %g \n Version: %g \n", ...
-                initial_velocity(ii), harmonics_qtt(ii), version(ii)); 
+        fprintf("Not running simulation %d/%d, with the following parameters (already done): \n Velocity: %g \n Modes: %g \n Version: %g \n", ...
+                ii, T, initial_velocity(ii), harmonics_qtt(ii), version(ii)); 
     end
     
 
 end
 
 cd(root);
-delete(gcp("nocreate")); % Deleting current parallel workers
 
 if postprocessing_bool == true; postprocessing; end
+delete(gcp("nocreate")); % Deleting current parallel workers
+
 % Load Python3 in MACOS based on https://www.mathworks.com/matlabcentral/answers/359408-trouble-with-a-command-in-matlab-s-system
 if ~ispc && system('python3 --version') ~= 0; setenv('PATH', [getenv('PATH') ':/usr/local/bin/']); end
 

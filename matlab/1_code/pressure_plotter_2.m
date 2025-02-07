@@ -26,7 +26,7 @@ function pressure_plotter_2(varargin)
     numl = cellfun(@(x) x.contact_points, recorded_conditions)';
 
     dr = 1/400;
-    N = floor(length(times)*0.95); M = floor(1/dr);
+    N = floor(length(times)*0.95); M = floor(1.5/dr);
     pfield_radial = zeros(M, N); cRadii = zeros(N, 1);
     indexes = floor(linspace(1, length(times), N));
     for ii = 1:N

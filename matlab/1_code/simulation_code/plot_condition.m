@@ -17,12 +17,17 @@ function h = plot_condition(idx, conditions, varargin)
       - varargin{3}: Angles vector to determine contact angle
 
 %}
-    h = figure(idx);
-    if idx == 2
-        set(gcf, 'Position', [780 159 760 586]);
-    else
-        set(gcf, 'Position', [0   159 760 586]);
+    if isnumeric(idx)
+        h = figure(idx);
+        if idx == 2
+            set(gcf, 'Position', [780 159 760 586]);
+        else
+            set(gcf, 'Position', [0   159 760 586]);
+        end
+    elseif isa(idx, 'matlab.graphics.axis.Axes')
+        h = ancestor(idx, 'figure');
     end
+    
     if nargin < 4 || varargin{2} == true; hold off; end
     
     cut = 0.75 * pi;
@@ -90,7 +95,7 @@ function h = plot_condition(idx, conditions, varargin)
             mps(1:2:end) .* (-arrY(1:2:end)), ...
             'AutoScaleFactor',1, 'LineWidth',2);
 
-        if idx ~= 1
+        if idx == 2
             angle_tol = pi*2/nb_harmonics;
             cm = conditions.center_of_mass;
             plot([0, sin(pi+angle_tol)], [cm, cos(pi+angle_tol)], 'b','LineWidth',0.3);

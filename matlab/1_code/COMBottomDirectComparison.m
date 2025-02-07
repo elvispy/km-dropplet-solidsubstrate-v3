@@ -1,3 +1,6 @@
+% This script will export the TOP, BOTTOM and COM of certain SIMULATIONS
+% to be compared with the experiments. No files are chosen by the user
+
 
 % Add functions to calculate maximum width
 safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");

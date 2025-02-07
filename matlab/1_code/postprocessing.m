@@ -124,22 +124,39 @@ parfor ii = 1:length(files_folder)
             end
 
             % Min_height (north pole)
-            current_height = drop_height(0);
-            next_height = drop_height(pi/100);
-            if current_height < north_pole_min_height; north_pole_min_height = current_height; end
-            if next_height < current_height %&& current_height < north_pole_exp_min_height
-                %north_pole_exp_min_height = current_height;
-                if current_height < north_pole_exp_min_height; north_pole_exp_min_height = current_height; end
-            else
-                currang = pi/200; dth = pi/200;
-                next_next_height = drop_height(currang + dth);
-                while next_next_height >= next_height && currang < pi/3
-                    currang = currang + dth;
-                    next_height = next_next_height;
-                    next_next_height = drop_height(currang + dth);
-                end
-                if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
+            north_pole_min_height = drop_height(0);
+            north_pole_exp_max_projection = drop_height(0); currang = pi/4; dtheta = pi/2; N = 9;
+            while dtheta > pi/N^3
+               vals = drop_height(linspace(currang-dtheta/2, currang+dtheta/2, N));
+               [maxval, maxindex] = max(vals);
+               if maxval > north_pole_exp_max_projection
+                   north_pole_exp_max_projection = maxval;
+               end
+               currang = max(currang - dtheta/2 + (maxindex-1)/N * dtheta, dtheta/(2*N));
+               dtheta = dtheta/N;
+               if north_pole_exp_max_projection == drop_height(0)
+                   break;
+               end
             end
+            
+            north_pole_exp_min_height = min(north_pole_exp_min_height, north_pole_exp_max_projection);
+            
+%             current_height = drop_height(0);
+%             next_height = drop_height(pi/100);
+%             if current_height < north_pole_min_height; north_pole_min_height = current_height; end
+%             if next_height < current_height %&& current_height < north_pole_exp_min_height
+%                 %north_pole_exp_min_height = current_height;
+%                 if current_height < north_pole_exp_min_height; north_pole_exp_min_height = current_height; end
+%             else
+%                 currang = pi/200; dth = pi/200;
+%                 next_next_height = drop_height(currang + dth);
+%                 while next_next_height >= next_height && currang < pi/3
+%                     currang = currang + dth;
+%                     next_height = next_next_height;
+%                     next_next_height = drop_height(currang + dth);
+%                 end
+%                 if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
+%             end
 
             % Experimental contact_radius && coef restitution
             if isnan(liftoff_time_exp)
