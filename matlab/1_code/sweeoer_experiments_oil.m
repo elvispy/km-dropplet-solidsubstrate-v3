@@ -9,7 +9,7 @@ ddate = datestr(datetime(), 30); % 30 = ISO 8601
 diary(sprintf("../2_output/Logger/%s_%s.txt", mfilename, ddate));
 disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
-force_sweep = true;
+force_sweep = false;
 postprocessing_bool = true;
 
 %% Setting simulation parameters
@@ -107,7 +107,7 @@ parfor ii = 1:height(simulations_cgs)
         
         numerical_parameters = struct("harmonics_qtt", harmonics_qtt(ii),...
             "simulation_time", inf, "version", version(ii));
-        options = struct('version', version(ii), 'prefix', prefix);
+        options = struct('version', version(ii), 'prefix', prefix, 'live_plotting', false);
 
         physical_parameters = struct("undisturbed_radius", undisturbed_radius(ii), ...
             "initial_height", nan, "initial_velocity", initial_velocity(ii), ...

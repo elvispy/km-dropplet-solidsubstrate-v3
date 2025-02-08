@@ -1,0 +1,1353 @@
+------------
+05-Feb-2025 09:31:31 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: [3×1 double]
+                     g: 979.3825
+    undisturbed_radius: 0.0203
+      initial_velocity: [41×1 double]
+         harmonics_qtt: [2×1 double]
+               version: 3
+
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_sensitivity.mat, undefined function or variable 
+[Warning: Possible corrupt file: /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01,
+sigmaS=2.05e+01, R=2.03e-02)/jump_t_rc20250204T205005.mat. It's going to be deleted
+] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 101)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',101,0)">line 101</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02), jump_t_rc20250204T205236.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02), jump_t_rc20250204T205241.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02), jump_t_rc20250204T205345.mat, undefined function or variable 
+<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',97,1)">97  </a>parfor ii = 1:height(simulations_cgs)
+simulations_cgs
+
+simulations_cgs =
+
+  246×10 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>rhoS</strong>    <strong>sigmaS</strong>     <strong>nu</strong>       <strong>g</strong>       <strong>undisturbed_radius</strong>    <strong>initial_velocity</strong>    <strong>harmonics_qtt</strong>    <strong>version</strong>    <strong>done</strong>                                                               <strong>folder</strong>                                                           
+    <strong>____</strong>    <strong>______</strong>    <strong>____</strong>    <strong>______</strong>    <strong>__________________</strong>    <strong>________________</strong>    <strong>_____________</strong>    <strong>_______</strong>    <strong>_____</strong>    <strong>___________________________________________________________________________________________________________________________</strong>
+
+    0.96     20.5        0    979.38          0.0203              -3.2433              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.2433              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.2433              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.3381              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.3381              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.3381              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.4355              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.4355              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.4355              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.5358              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.5358              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.5358              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.6391              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.6391              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.6391              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.7454              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.7454              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.7454              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.8547              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.8547              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.8547              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.9673              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.9673              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.9673              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.0831              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.0831              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.0831              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.2024              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.2024              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.2024              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.3251              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.3251              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.3251              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.4514              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.4514              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.4514              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.5813              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.5813              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.5813              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.7151              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.7151              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.7151              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.8528              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.8528              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.8528              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.9945              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.9945              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.9945              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.1404              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.1404              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.1404              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.2905              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.2905              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.2905              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.4449              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.4449              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.4449              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.6039              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.6039              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.6039              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.7676              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.7676              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.7676              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203               -5.936              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203               -5.936              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203               -5.936              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.1093              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.1093              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.1093              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.2877              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.2877              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.2877              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.4713              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.4713              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.4713              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.6603              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.6603              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.6603              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.8548              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.8548              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.8548              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.0549              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.0549              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.0549              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.2609              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.2609              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.2609              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203               -7.473              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203               -7.473              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203               -7.473              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.6912              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.6912              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.6912              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.9158              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.9158              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.9158              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.1469              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.1469              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.1469              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.3848              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.3848              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.3848              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.6297              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.6297              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.6297              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.8816              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.8816              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.8816              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203               -9.141              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203               -9.141              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203               -9.141              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -9.4079              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -9.4079              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -9.4079              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -9.6826              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -9.6826              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -9.6826              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -9.9654              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -9.9654              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -9.9654              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -10.256              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -10.256              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -10.256              150            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.2433              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.2433              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.2433              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.3381              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.3381              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.3381              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.4355              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.4355              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.4355              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.5358              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.5358              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.5358              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.6391              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.6391              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.6391              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.7454              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.7454              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.7454              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.8547              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.8547              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.8547              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -3.9673              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -3.9673              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -3.9673              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.0831              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.0831              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.0831              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.2024              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.2024              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.2024              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.3251              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.3251              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.3251              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.4514              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.4514              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.4514              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.5813              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.5813              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.5813              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.7151              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.7151              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.7151              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.8528              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.8528              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.8528              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -4.9945              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -4.9945              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -4.9945              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.1404              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.1404              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.1404              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.2905              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.2905              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.2905              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.4449              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.4449              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.4449              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.6039              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.6039              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.6039              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -5.7676              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -5.7676              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -5.7676              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203               -5.936              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203               -5.936              250            3       true     "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203               -5.936              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.1093              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.1093              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.1093              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.2877              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.2877              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.2877              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.4713              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.4713              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.4713              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.6603              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.6603              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.6603              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -6.8548              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -6.8548              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -6.8548              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.0549              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.0549              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.0549              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.2609              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.2609              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.2609              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203               -7.473              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203               -7.473              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203               -7.473              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.6912              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.6912              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.6912              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -7.9158              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -7.9158              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -7.9158              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.1469              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.1469              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.1469              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.3848              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.3848              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.3848              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.6297              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.6297              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.6297              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -8.8816              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -8.8816              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -8.8816              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203               -9.141              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203               -9.141              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203               -9.141              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -9.4079              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -9.4079              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -9.4079              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -9.6826              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -9.6826              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -9.6826              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -9.9654              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -9.9654              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -9.9654              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5        0    979.38          0.0203              -10.256              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.01    979.38          0.0203              -10.256              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+    0.96     20.5     0.02    979.38          0.0203              -10.256              250            3       false    "/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02)"
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10.2564 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10.2564 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -10.2564 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.96537 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.96537 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.96537 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.68263 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.68263 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.68263 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.40791 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.40791 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.40791 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.88164 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.88164 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.88164 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 250 
+ Version: 3 
+---------
+Starting simulation with velocity -4.20236, modes 250, version v3 ... 
+Finished simulation with velocity -4.20236, modes 250, version v3 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 250 
+ Version: 3 
+---------
+Starting simulation with velocity -3.85472, modes 250, version v3 ... 
+Finished simulation with velocity -3.85472, modes 250, version v3 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 250 
+ Version: 3 
+---------
+Starting simulation with velocity -4.71513, modes 250, version v3 ... 
+Finished simulation with velocity -4.71513, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.28772, modes 250, version v3 ... 
+Finished simulation with velocity -6.28772, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.85472, modes 250, version v3 ... 
+Finished simulation with velocity -3.85472, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -4.08313, modes 250, version v3 ... 
+Finished simulation with velocity -4.08313, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -4.71513, modes 250, version v3 ... 
+Finished simulation with velocity -4.71513, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.28772, modes 250, version v3 ... 
+Finished simulation with velocity -6.28772, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.74536, modes 250, version v3 ... 
+Finished simulation with velocity -3.74536, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -4.08313, modes 250, version v3 ... 
+Finished simulation with velocity -4.08313, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -4.71513, modes 250, version v3 ... 
+Finished simulation with velocity -4.71513, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.28772, modes 250, version v3 ... 
+Finished simulation with velocity -6.28772, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.74536, modes 250, version v3 ... 
+Finished simulation with velocity -3.74536, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -4.08313, modes 250, version v3 ... 
+Finished simulation with velocity -4.08313, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -4.58135, modes 250, version v3 ... 
+Finished simulation with velocity -4.58135, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.10933, modes 250, version v3 ... 
+Finished simulation with velocity -6.10933, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.74536, modes 250, version v3 ... 
+Finished simulation with velocity -3.74536, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.96728, modes 250, version v3 ... 
+Finished simulation with velocity -3.96728, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -4.58135, modes 250, version v3 ... 
+Finished simulation with velocity -4.58135, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.10933, modes 250, version v3 ... 
+Finished simulation with velocity -6.10933, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.63909, modes 250, version v3 ... 
+Finished simulation with velocity -3.63909, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.85478, modes 250, version v3 ... 
+Finished simulation with velocity -6.85478, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.26095, modes 250, version v3 ... 
+Finished simulation with velocity -7.26095, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.10933, modes 250, version v3 ... 
+Finished simulation with velocity -6.10933, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.63909, modes 250, version v3 ... 
+Finished simulation with velocity -3.63909, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.66029, modes 250, version v3 ... 
+Finished simulation with velocity -6.66029, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.26095, modes 250, version v3 ... 
+Finished simulation with velocity -7.26095, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -5.93599, modes 250, version v3 ... 
+Finished simulation with velocity -5.93599, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.63909, modes 250, version v3 ... 
+Finished simulation with velocity -3.63909, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.66029, modes 250, version v3 ... 
+Finished simulation with velocity -6.66029, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.05494, modes 250, version v3 ... 
+Finished simulation with velocity -7.05494, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.69119, modes 250, version v3 ... 
+Finished simulation with velocity -7.69119, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.53585, modes 250, version v3 ... 
+Finished simulation with velocity -3.53585, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.66029, modes 250, version v3 ... 
+Finished simulation with velocity -6.66029, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.05494, modes 250, version v3 ... 
+Finished simulation with velocity -7.05494, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.69119, modes 250, version v3 ... 
+Finished simulation with velocity -7.69119, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.53585, modes 250, version v3 ... 
+Finished simulation with velocity -3.53585, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.47133, modes 250, version v3 ... 
+Finished simulation with velocity -6.47133, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.05494, modes 250, version v3 ... 
+Finished simulation with velocity -7.05494, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.69119, modes 250, version v3 ... 
+Finished simulation with velocity -7.69119, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -3.53585, modes 250, version v3 ... 
+Finished simulation with velocity -3.53585, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.47133, modes 250, version v3 ... 
+Finished simulation with velocity -6.47133, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.85478, modes 250, version v3 ... 
+Finished simulation with velocity -6.85478, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.47297, modes 250, version v3 ... 
+Finished simulation with velocity -7.47297, modes 250, version v3 ... 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 250 
+ Version: 3 
+---------
+Starting simulation with velocity -5.44494, modes 250, version v3 ... 
+Finished simulation with velocity -5.44494, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.47133, modes 250, version v3 ... 
+Finished simulation with velocity -6.47133, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -6.85478, modes 250, version v3 ... 
+Finished simulation with velocity -6.85478, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.47297, modes 250, version v3 ... 
+Finished simulation with velocity -7.47297, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -5.44494, modes 250, version v3 ... 
+Finished simulation with velocity -5.44494, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.14692, modes 250, version v3 ... 
+Finished simulation with velocity -8.14692, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.38481, modes 250, version v3 ... 
+Finished simulation with velocity -8.38481, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.47297, modes 250, version v3 ... 
+Finished simulation with velocity -7.47297, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -5.44494, modes 250, version v3 ... 
+Finished simulation with velocity -5.44494, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.91577, modes 250, version v3 ... 
+Finished simulation with velocity -7.91577, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.38481, modes 250, version v3 ... 
+Finished simulation with velocity -8.38481, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.26095, modes 250, version v3 ... 
+Finished simulation with velocity -7.26095, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -5.29046, modes 250, version v3 ... 
+Finished simulation with velocity -5.29046, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.91577, modes 250, version v3 ... 
+Finished simulation with velocity -7.91577, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.14692, modes 250, version v3 ... 
+Finished simulation with velocity -8.14692, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -5.29046, modes 250, version v3 ... 
+Finished simulation with velocity -5.29046, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.62965, modes 250, version v3 ... 
+Finished simulation with velocity -8.62965, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -7.91577, modes 250, version v3 ... 
+Finished simulation with velocity -7.91577, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.14692, modes 250, version v3 ... 
+Finished simulation with velocity -8.14692, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -5.29046, modes 250, version v3 ... 
+Finished simulation with velocity -5.29046, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.62965, modes 250, version v3 ... 
+Finished simulation with velocity -8.62965, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -9.40791, modes 250, version v3 ... 
+Finished simulation with velocity -9.40791, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -9.68263, modes 250, version v3 ... 
+Finished simulation with velocity -9.68263, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -9.14099, modes 250, version v3 ... 
+Finished simulation with velocity -9.14099, modes 250, version v3 ... 
+---------
+Starting simulation with velocity -8.62965, modes 250, version v3 ... 
+Finished simulation with velocity -8.62965, modes 250, version v3 ... 
+<a href="matlab: opentoline('/Applications/MATLAB_R2020a.app/toolbox/parallel/distcomp/+distcomp/remoteparfor.m',375,1)">375 </a>                    obj.displayOutput();
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeoer_experiments_oil

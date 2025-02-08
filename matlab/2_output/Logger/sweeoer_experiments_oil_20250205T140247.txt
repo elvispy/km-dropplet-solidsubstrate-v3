@@ -1,0 +1,1254 @@
+------------
+05-Feb-2025 14:02:47 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: [3×1 double]
+                     g: 979.3825
+    undisturbed_radius: 0.0203
+      initial_velocity: [41×1 double]
+         harmonics_qtt: [2×1 double]
+               version: 3
+
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_sensitivity.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02), jump_t_rc20250204T205236.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02), jump_t_rc20250204T205241.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 61)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',61,0)">line 61</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output/Version v3 (rhoS=9.60e-01, sigmaS=2.05e+01, R=2.03e-02), jump_t_rc20250204T205345.mat, undefined function or variable 
+if system_dependent('IsDebugMode')==1, dbcont; end
+---------
+Not running simulation 1/246, with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 2/246, with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 3/246, with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 4/246, with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 5/246, with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 6/246, with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 7/246, with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 8/246, with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 9/246, with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 10/246, with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 11/246, with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 12/246, with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 13/246, with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 14/246, with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 15/246, with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 16/246, with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 17/246, with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 18/246, with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 19/246, with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 20/246, with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 21/246, with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 22/246, with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 23/246, with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 24/246, with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 25/246, with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 26/246, with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 27/246, with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 28/246, with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 29/246, with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 30/246, with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 31/246, with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 32/246, with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 33/246, with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 34/246, with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 35/246, with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 36/246, with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 37/246, with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 38/246, with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 39/246, with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 40/246, with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 41/246, with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 42/246, with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 43/246, with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 44/246, with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 45/246, with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 46/246, with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 47/246, with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 48/246, with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 49/246, with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 50/246, with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 51/246, with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 52/246, with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 53/246, with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 54/246, with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 55/246, with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 56/246, with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 57/246, with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 58/246, with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 59/246, with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 60/246, with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 61/246, with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 62/246, with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 63/246, with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 64/246, with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 65/246, with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 66/246, with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 67/246, with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 68/246, with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 69/246, with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 70/246, with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 71/246, with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 72/246, with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 73/246, with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 74/246, with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 75/246, with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 76/246, with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 77/246, with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 78/246, with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 79/246, with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 80/246, with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 81/246, with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 82/246, with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 83/246, with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 84/246, with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 85/246, with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 86/246, with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 87/246, with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 88/246, with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 89/246, with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 90/246, with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 91/246, with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 92/246, with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 93/246, with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 94/246, with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 95/246, with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 96/246, with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 97/246, with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 98/246, with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 99/246, with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 100/246, with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 101/246, with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 102/246, with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 103/246, with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 104/246, with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 105/246, with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 106/246, with the following parameters (already done): 
+ Velocity: -8.88164 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 107/246, with the following parameters (already done): 
+ Velocity: -8.88164 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 108/246, with the following parameters (already done): 
+ Velocity: -8.88164 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 109/246, with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 110/246, with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 111/246, with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 112/246, with the following parameters (already done): 
+ Velocity: -9.40791 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 113/246, with the following parameters (already done): 
+ Velocity: -9.40791 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 114/246, with the following parameters (already done): 
+ Velocity: -9.40791 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 115/246, with the following parameters (already done): 
+ Velocity: -9.68263 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 116/246, with the following parameters (already done): 
+ Velocity: -9.68263 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 117/246, with the following parameters (already done): 
+ Velocity: -9.68263 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 118/246, with the following parameters (already done): 
+ Velocity: -9.96537 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 119/246, with the following parameters (already done): 
+ Velocity: -9.96537 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 120/246, with the following parameters (already done): 
+ Velocity: -9.96537 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 121/246, with the following parameters (already done): 
+ Velocity: -10.2564 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 122/246, with the following parameters (already done): 
+ Velocity: -10.2564 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 123/246, with the following parameters (already done): 
+ Velocity: -10.2564 
+ Modes: 150 
+ Version: 3 
+---------
+Not running simulation 124/246, with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 125/246, with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 126/246, with the following parameters (already done): 
+ Velocity: -3.24335 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 127/246, with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 128/246, with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 129/246, with the following parameters (already done): 
+ Velocity: -3.33805 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 130/246, with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 131/246, with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 132/246, with the following parameters (already done): 
+ Velocity: -3.43553 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 133/246, with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 134/246, with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 135/246, with the following parameters (already done): 
+ Velocity: -3.53585 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 136/246, with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 137/246, with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 138/246, with the following parameters (already done): 
+ Velocity: -3.63909 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 139/246, with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 140/246, with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 141/246, with the following parameters (already done): 
+ Velocity: -3.74536 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 142/246, with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 143/246, with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 144/246, with the following parameters (already done): 
+ Velocity: -3.85472 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 145/246, with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 146/246, with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 147/246, with the following parameters (already done): 
+ Velocity: -3.96728 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 148/246, with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 149/246, with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 150/246, with the following parameters (already done): 
+ Velocity: -4.08313 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 151/246, with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 152/246, with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 153/246, with the following parameters (already done): 
+ Velocity: -4.20236 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 154/246, with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 155/246, with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 156/246, with the following parameters (already done): 
+ Velocity: -4.32507 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 157/246, with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 158/246, with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 159/246, with the following parameters (already done): 
+ Velocity: -4.45137 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 160/246, with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 161/246, with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 162/246, with the following parameters (already done): 
+ Velocity: -4.58135 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 163/246, with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 164/246, with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 165/246, with the following parameters (already done): 
+ Velocity: -4.71513 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 166/246, with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 167/246, with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 168/246, with the following parameters (already done): 
+ Velocity: -4.85281 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 169/246, with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 170/246, with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 171/246, with the following parameters (already done): 
+ Velocity: -4.99451 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 172/246, with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 173/246, with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 174/246, with the following parameters (already done): 
+ Velocity: -5.14036 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 175/246, with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 176/246, with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 177/246, with the following parameters (already done): 
+ Velocity: -5.29046 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 178/246, with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 179/246, with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 180/246, with the following parameters (already done): 
+ Velocity: -5.44494 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 181/246, with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 182/246, with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 183/246, with the following parameters (already done): 
+ Velocity: -5.60394 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 184/246, with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 185/246, with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 186/246, with the following parameters (already done): 
+ Velocity: -5.76758 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 187/246, with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 188/246, with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 189/246, with the following parameters (already done): 
+ Velocity: -5.93599 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 190/246, with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 191/246, with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 192/246, with the following parameters (already done): 
+ Velocity: -6.10933 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 193/246, with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 194/246, with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 195/246, with the following parameters (already done): 
+ Velocity: -6.28772 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 196/246, with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 197/246, with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 198/246, with the following parameters (already done): 
+ Velocity: -6.47133 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 199/246, with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 200/246, with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 201/246, with the following parameters (already done): 
+ Velocity: -6.66029 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 202/246, with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 203/246, with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 204/246, with the following parameters (already done): 
+ Velocity: -6.85478 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 205/246, with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 206/246, with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 207/246, with the following parameters (already done): 
+ Velocity: -7.05494 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 208/246, with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 209/246, with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 210/246, with the following parameters (already done): 
+ Velocity: -7.26095 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 211/246, with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 212/246, with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 213/246, with the following parameters (already done): 
+ Velocity: -7.47297 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 214/246, with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 215/246, with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 216/246, with the following parameters (already done): 
+ Velocity: -7.69119 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 217/246, with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 218/246, with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 219/246, with the following parameters (already done): 
+ Velocity: -7.91577 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 220/246, with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 221/246, with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 222/246, with the following parameters (already done): 
+ Velocity: -8.14692 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 223/246, with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 224/246, with the following parameters (already done): 
+ Velocity: -8.38481 
+ Modes: 250 
+ Version: 3 
+Starting simulation 225/246, with velocity -8.38481, modes 250, version v3 ... 
+Finished simulation 225/246, with velocity -8.38481, modes 250, version v3 ... 
+---------
+Not running simulation 226/246, with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 227/246, with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 250 
+ Version: 3 
+---------
+Not running simulation 228/246, with the following parameters (already done): 
+ Velocity: -8.62965 
+ Modes: 250 
+ Version: 3 
+Starting simulation 229/246, with velocity -8.88164, modes 250, version v3 ... 
+Finished simulation 229/246, with velocity -8.88164, modes 250, version v3 ... 
+Starting simulation 230/246, with velocity -8.88164, modes 250, version v3 ... 
+Finished simulation 230/246, with velocity -8.88164, modes 250, version v3 ... 
+Starting simulation 231/246, with velocity -8.88164, modes 250, version v3 ... 
+Finished simulation 231/246, with velocity -8.88164, modes 250, version v3 ... 
+---------
+Not running simulation 232/246, with the following parameters (already done): 
+ Velocity: -9.14099 
+ Modes: 250 
+ Version: 3 
+Starting simulation 233/246, with velocity -9.14099, modes 250, version v3 ... 
+Finished simulation 233/246, with velocity -9.14099, modes 250, version v3 ... 
+Starting simulation 234/246, with velocity -9.14099, modes 250, version v3 ... 
+Finished simulation 234/246, with velocity -9.14099, modes 250, version v3 ... 
+---------
+Not running simulation 235/246, with the following parameters (already done): 
+ Velocity: -9.40791 
+ Modes: 250 
+ Version: 3 
+Starting simulation 236/246, with velocity -9.40791, modes 250, version v3 ... 
+Finished simulation 236/246, with velocity -9.40791, modes 250, version v3 ... 
+Starting simulation 237/246, with velocity -9.40791, modes 250, version v3 ... 
+Finished simulation 237/246, with velocity -9.40791, modes 250, version v3 ... 
+---------
+Not running simulation 238/246, with the following parameters (already done): 
+ Velocity: -9.68263 
+ Modes: 250 
+ Version: 3 
+Starting simulation 239/246, with velocity -9.68263, modes 250, version v3 ... 
+Finished simulation 239/246, with velocity -9.68263, modes 250, version v3 ... 
+Starting simulation 240/246, with velocity -9.68263, modes 250, version v3 ... 
+Finished simulation 240/246, with velocity -9.68263, modes 250, version v3 ... 
+Starting simulation 241/246, with velocity -9.96537, modes 250, version v3 ... 
+Finished simulation 241/246, with velocity -9.96537, modes 250, version v3 ... 
+Starting simulation 242/246, with velocity -9.96537, modes 250, version v3 ... 
+Finished simulation 242/246, with velocity -9.96537, modes 250, version v3 ... 
+Starting simulation 243/246, with velocity -9.96537, modes 250, version v3 ... 
+Finished simulation 243/246, with velocity -9.96537, modes 250, version v3 ... 
+Starting simulation 244/246, with velocity -10.2564, modes 250, version v3 ... 
+Finished simulation 244/246, with velocity -10.2564, modes 250, version v3 ... 
+Starting simulation 245/246, with velocity -10.2564, modes 250, version v3 ... 
+Finished simulation 245/246, with velocity -10.2564, modes 250, version v3 ... 
+Starting simulation 246/246, with velocity -10.2564, modes 250, version v3 ... 
+Finished simulation 246/246, with velocity -10.2564, modes 250, version v3 ... 
