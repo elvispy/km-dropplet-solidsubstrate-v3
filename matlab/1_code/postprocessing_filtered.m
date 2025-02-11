@@ -14,7 +14,7 @@ safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
 addpath(safe_folder, '-begin');
 
 % FInding all .mat files that correspond to simulations
-files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
+files_folder = dir(fullfile(root_folder, "2_output", "**/*_FULL*.mat"));
 
 
 % Create table to fill values (adimensional unless stated in the title)
@@ -30,6 +30,7 @@ sz = [length(files_folder) length(varNames)];
 
 if isfile(fullfile(root_folder, "2_output", "postprocessing.mat"))
     load(fullfile(root_folder,"2_output", "postprocessing.mat"), "data");
+    data = data(contains(data.file_name, "_FULL"), :);
 else
     data = table();
 end
@@ -41,11 +42,10 @@ end
 data = data(~isnan(data.initial_velocity_cgs), :);
 %pixel = 5e-4; %Threshold for experimental contact
 fnames = data{:, 1};
-T = length(files_folder);
-parfor ii = 1:length(files_folder)
+for ii = 1:length(files_folder)
     try
-        if ismember(files_folder(ii).name, fnames) || ...
-                contains(files_folder(ii).name, "postprocessing") || ...
+        %if ismember(files_folder(ii).name, fnames) || ...
+        if        contains(files_folder(ii).name, "postprocessing") || ...
                 contains(lower(files_folder(ii).name), "error"); continue; 
         end
         %if ~isnan(data{ii, "coef_rest_exp"}); continue; end
@@ -67,7 +67,6 @@ parfor ii = 1:length(files_folder)
         Westar = rhoS * default_physical.initial_velocity^2 * Ro/sigmaS;
         
         if isfield(default_physical, 'nu'); Oh = default_physical.nu / sqrt(sigmaS * Ro * rhoS); else; Oh = 0; end
-        
         g = default_physical.g;
         theta_vector = val.PROBLEM_CONSTANTS.theta_vector;
         Westar = default_physical.rhoS * default_physical.initial_velocity^2 * ...
@@ -75,8 +74,7 @@ parfor ii = 1:length(files_folder)
         Oh = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
             * default_physical.undisturbed_radius));
         Bo = rhoS * default_physical.g * Ro^2 / sigmaS;
-        fprintf("Starting postprocessing (We = %.2e, Oh= %.2e, Bo = %.2e), Simul %d/%d\n", ...
-            Westar, Oh, Bo, ii, T);
+        
         pixel = 0.02 * length_unit;
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
@@ -217,8 +215,8 @@ parfor ii = 1:length(files_folder)
                     kk = kk + 1;
                     theta2 = theta_vector(current_contact_points_exp + kk);
                 end
-                theta1 = pi;
-                while abs(theta1-theta2) > pi/1e+4
+                theta1 = theta_vector(current_contact_points_exp + kk - 1);
+                while abs(theta1-theta2) > pi/1e+3
                     theta_middle = (theta1+theta2)/2;
                     if drop_height(theta_middle) < pixel/length_unit
                         theta1 = theta_middle;
