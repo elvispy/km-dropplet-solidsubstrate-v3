@@ -201,7 +201,7 @@ function max_width_cradius_plotter(varargin)
             title("Contact Radius", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
             plot(1000*times{jj}(times_idx), contact_radii02R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.02R, We = %.2f, Oh = %.3f", wes(jj), ohs(jj)));
             plot(1000*times{jj}(times_idx), contact_radii00R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.00R, We = %.2f, Oh = %.3f", wes(jj), ohs(jj)));
-            xline(1000*spread_time_tracker(jj), 'LineWidth', jj+1, 'DisplayName', sprintf('Time to maximum radius We = %.2f, Oh = %.3f', wes(jj), ohs(jj)));
+            scatter(1000*spread_time_tracker(jj), max_contact_radius_tracker(jj), "*", 'DisplayName', sprintf('Time to maximum radius We = %.2f, Oh = %.3f', wes(jj), ohs(jj)));
             legend('FontSize', 14, 'Location', 'southwest');
             subplot(1, 3, 3); hold on; grid on; set(gca, 'FontSize', 16);
             title("Maximum Width", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
