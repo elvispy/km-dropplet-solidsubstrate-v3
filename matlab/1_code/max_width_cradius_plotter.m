@@ -154,7 +154,7 @@ function max_width_cradius_plotter(varargin)
                     spread_widths_tracker(jj) = times{jj}(ii);
                 end
                 
-                if true
+                if false
                     % Plotting
                     % Current time, maximum radius, maximum equatorial radius
                     ax = subplot(1, length(file), jj);
@@ -187,7 +187,8 @@ function max_width_cradius_plotter(varargin)
                     ylabel('$ y/R_o $', 'Interpreter','Latex', 'FontSize', 28);
                 end
             end % end inner for (videos)
-            writeVideo(vidObj, getframe(gcf));
+            
+            if false; writeVideo(vidObj, getframe(gcf)); end
             
         end % end outer for (video
         close(vidObj);
