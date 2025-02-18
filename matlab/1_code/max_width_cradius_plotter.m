@@ -195,17 +195,17 @@ function max_width_cradius_plotter(varargin)
         for jj = 1:length(physicalParameters)
             subplot(1, 3, 1); hold on; grid on; set(gca, 'FontSize', 16);
             title("Minimum Height", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
-            plot(1000*times{jj}(times_idx), north_poles(jj, :), '--', 'LineWidth', jj+1, 'DisplayName', sprintf("We = %.2f, Oh = %.3f", wes(jj), ohs(jj)));
+            plot(1000*times{jj}(times_idx), north_poles(jj, :), '--', 'LineWidth', jj+1, 'DisplayName', sprintf("We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
             legend('FontSize', 14);
             subplot(1, 3, 2); hold on; grid on; set(gca, 'FontSize', 16);
             title("Contact Radius", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
-            plot(1000*times{jj}(times_idx), contact_radii02R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.02R, We = %.2f, Oh = %.3f", wes(jj), ohs(jj)));
-            plot(1000*times{jj}(times_idx), contact_radii00R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.00R, We = %.2f, Oh = %.3f", wes(jj), ohs(jj)));
-            scatter(1000*spread_time_tracker(jj), max_contact_radius_tracker(jj), "*", 'DisplayName', sprintf('Time to maximum radius We = %.2f, Oh = %.3f', wes(jj), ohs(jj)));
-            legend('FontSize', 14, 'Location', 'southwest');
+            plot(1000*times{jj}(times_idx), contact_radii02R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.02R, We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
+            plot(1000*times{jj}(times_idx), contact_radii00R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.00R, We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
+            scatter(1000*spread_time_tracker(jj), max_contact_radius_tracker(jj), "*", 'DisplayName', sprintf('Time to maximum radius We = %.2e, Oh = %.1e', wes(jj), ohs(jj)));
+            legend('FontSize', 12, 'Location', 'southeast');
             subplot(1, 3, 3); hold on; grid on; set(gca, 'FontSize', 16);
             title("Maximum Width", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
-            plot(1000*times{jj}(times_idx), max_widths(jj, :), '--', 'LineWidth', jj+1, 'DisplayName', sprintf("We = %.2f, Oh = %.3f", wes(jj), ohs(jj)));
+            plot(1000*times{jj}(times_idx), max_widths(jj, :), '--', 'LineWidth', jj+1, 'DisplayName', sprintf("We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
             legend('FontSize', 14);
             
         end
