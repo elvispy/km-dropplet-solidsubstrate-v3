@@ -118,6 +118,11 @@ parfor ii = 1:length(files_folder)
                     Vin = recorded_conditions{jj}.center_of_mass_velocity;
                     CM_in = recorded_conditions{jj}.center_of_mass;
                     Ein = 1/2 * Vin^2;
+                    % Experimental variables
+                    Vin_exp = Vin - t0*V0;
+                    Ein_exp = 1/2 * Vin_exp^2;
+                    touch_time_exp = touch_time + t0; % We shift time
+                    CM_in_exp = (1+pixel_adim)* CM_in;
                 end
             end
             
