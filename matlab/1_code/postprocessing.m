@@ -157,23 +157,6 @@ parfor ii = 1:length(files_folder)
             end
             
             north_pole_exp_min_height = min(north_pole_exp_min_height, north_pole_exp_max_projection);
-            
-%             current_height = drop_height(0);
-%             next_height = drop_height(pi/100);
-%             if current_height < north_pole_min_height; north_pole_min_height = current_height; end
-%             if next_height < current_height %&& current_height < north_pole_exp_min_height
-%                 %north_pole_exp_min_height = current_height;
-%                 if current_height < north_pole_exp_min_height; north_pole_exp_min_height = current_height; end
-%             else
-%                 currang = pi/200; dth = pi/200;
-%                 next_next_height = drop_height(currang + dth);
-%                 while next_next_height >= next_height && currang < pi/3
-%                     currang = currang + dth;
-%                     next_height = next_next_height;
-%                     next_next_height = drop_height(currang + dth);
-%                 end
-%                 if next_height < north_pole_exp_min_height; north_pole_exp_min_height = next_height; end
-%             end
 
             % Experimental contact_radius && coef restitution
             if isnan(liftoff_time_exp)
@@ -220,29 +203,24 @@ parfor ii = 1:length(files_folder)
             end
 
             % EXPERIMENTAL max_contact_radius calculation
-            current_contact_points_exp = recorded_conditions{jj}.contact_points;
-            if current_contact_points_exp == 0
-                current_contact_radius_exp = 0;
-            else
-                
-                kk = 1;
-                theta2 = theta_vector(current_contact_points_exp+kk);
-                while drop_height(theta2) < pixel/length_unit
-                    kk = kk + 1;
-                    theta2 = theta_vector(current_contact_points_exp + kk);
-                end
-                theta1 = pi;
-                while abs(theta1-theta2) > pi/1e+4
-                    theta_middle = (theta1+theta2)/2;
-                    if drop_height(theta_middle) < pixel/length_unit
-                        theta1 = theta_middle;
-                    else
-                        theta2 = theta_middle;
-                    end
-                end
-                current_contact_radius_exp = sin(theta1) ...
-                    * drop_radius(theta1);
+            kk = 1;
+            theta2 = theta_vector(recorded_conditions{jj}.contact_points+kk);
+            while drop_height(theta2) < pixel/length_unit
+                kk = kk + 1;
+                theta2 = theta_vector(recorded_conditions{jj}.contact_points + kk);
             end
+            theta1 = pi;
+            while abs(theta1-theta2) > pi/1e+4
+                theta_middle = (theta1+theta2)/2;
+                if drop_height(theta_middle) < pixel/length_unit
+                    theta1 = theta_middle;
+                else
+                    theta2 = theta_middle;
+                end
+            end
+            current_contact_radius_exp = sin(theta1) ...
+                * drop_radius(theta1);
+            
             if current_contact_radius_exp > max_contact_radius_exp
                 max_contact_radius_exp = current_contact_radius_exp;
                 spread_time_exp = recorded_times(jj) - touch_time;
