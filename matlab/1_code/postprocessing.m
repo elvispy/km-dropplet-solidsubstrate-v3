@@ -44,12 +44,15 @@ fnames = data{:, 1};
 T = length(files_folder);
 parfor ii = 1:length(files_folder)
     try
+        % If it has been calculated before, or is it the postprocessing.mat
+        % file, or it has eerror in its name, skip it. 
         if ismember(files_folder(ii).name, fnames) || ...
                 contains(files_folder(ii).name, "postprocessing") || ...
                 contains(lower(files_folder(ii).name), "error"); continue; 
         end
         %if ~isnan(data{ii, "coef_rest_exp"}); continue; end
         lastwarn('', ''); %clear recorded_conditions recorded_times default_physical length_unit theta_vector
+        % Clear unused variables from previous loops. 
         val = load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
             "recorded_conditions", "recorded_times", "default_physical", ...
             "length_unit", "PROBLEM_CONSTANTS", "time_unit");
@@ -62,6 +65,7 @@ parfor ii = 1:length(files_folder)
 
         if contains(lastwarn, 'not found'); error(lastwarn);  end
         
+        % Extract dimensional variables sigma, rho, R, We
         recorded_times = recorded_times * 1e+3; % To miliseconds
         sigmaS = default_physical.sigmaS; rhoS = default_physical.rhoS; Ro = default_physical.undisturbed_radius;
         Westar = rhoS * default_physical.initial_velocity^2 * Ro/sigmaS;
@@ -77,7 +81,7 @@ parfor ii = 1:length(files_folder)
         Bo = rhoS * default_physical.g * Ro^2 / sigmaS;
         fprintf("Starting postprocessing (We = %.2e, Oh= %.2e, Bo = %.2e), Simul %d/%d\n", ...
             Westar, Oh, Bo, ii, T);
-        pixel = 0.02 * length_unit;
+        pixel = 0.02 * length_unit; pixel_adim = pixel/length_unit;
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
         contact_time_exp = nan; liftoff_time_exp = nan;
@@ -93,6 +97,10 @@ parfor ii = 1:length(files_folder)
         Xl = (2*pi./(idxs .* (2 * idxs + 1))); Yl = (2*pi * (idxs.^2 + idxs - 2)./(2*idxs+1));
         deformation_modes_energies = nan;
         A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
+
+        V0 = abs(default_physical.initial_velocity);
+        g = default_physical.g;
+        t0 = (-V0 + sqrt(V0^2 - 2*g*pixel_adim*Ro))/g; % Calculating experimental start of contact to substract
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
@@ -105,6 +113,7 @@ parfor ii = 1:length(files_folder)
             if isnan(touch_time)
                 if recorded_conditions{jj}.contact_points == 0 && ...
                         recorded_conditions{jj+1}.contact_points > 0
+                    % Numerical variables
                     touch_time = recorded_times(jj);
                     Vin = recorded_conditions{jj}.center_of_mass_velocity;
                     CM_in = recorded_conditions{jj}.center_of_mass;
