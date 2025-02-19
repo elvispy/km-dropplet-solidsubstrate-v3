@@ -165,7 +165,7 @@ parfor ii = 1:length(files_folder)
                     liftoff_time_exp = recorded_times(jj);
                     Vout_exp = recorded_conditions{jj}.center_of_mass_velocity;
                     Eout_exp = 1/2*Vout_exp^2 + (recorded_conditions{jj}.center_of_mass ...
-                        - CM_in)*g;
+                        - CM_in_exp)*g;
 
                     A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
                     deformation_modes_energies = Xl .* (recorded_conditions{jj}.deformation_velocities(idxs)/velocity_unit).^2 + ...
@@ -183,8 +183,8 @@ parfor ii = 1:length(files_folder)
             end
             % We will record experimental touch time 
             if ~isnan(touch_time) && ~isnan(liftoff_time_exp) 
-                contact_time_exp = liftoff_time_exp - touch_time;
-                coef_restitution_exp = sqrt(abs(Eout_exp/Ein));
+                contact_time_exp = liftoff_time_exp - touch_time_exp;
+                coef_restitution_exp = sqrt(abs(Eout_exp/Ein_exp));
             end
             
 
@@ -223,9 +223,17 @@ parfor ii = 1:length(files_folder)
             
             if current_contact_radius_exp > max_contact_radius_exp
                 max_contact_radius_exp = current_contact_radius_exp;
-                spread_time_exp = recorded_times(jj) - touch_time;
+                spread_time_exp = recorded_times(jj) - touch_time_exp;
             end
         end
+
+        %V0 = abs(default_physical.initial_velocity);
+        %g = default_physical.g;
+        %t0 = (-V0 + sqrt(V0^2 - 2*g*pixel_adim*Ro))/g; % Calculating experimental start of contact to substract
+        %X = @(t) -t * V0 - g/2*t.^2 + (1 + pixel_adim)*Ro; 
+        %rc = @(t) 10* sqrt(Ro^2 - (X(t) - 0.02*Ro).^2); % Contat radius in cm (10 because we go from cm to mm)
+    
+    
         % Add value to tables
         [~, dropLiquid, lol] = fileparts(files_folder(ii).folder); dropLiquid = strcat(dropLiquid, lol);
         data(ii, :) = {files_folder(ii).name, Vin, Westar, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
