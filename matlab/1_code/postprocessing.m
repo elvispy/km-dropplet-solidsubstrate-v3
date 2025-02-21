@@ -14,7 +14,8 @@ safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
 addpath(safe_folder, '-begin');
 
 % FInding all .mat files that correspond to simulations
-files_folder = dir(fullfile(root_folder, "2_output", "**/*.mat"));
+prefix = ""; % Only look for simulations starting with this prefix
+files_folder = dir(fullfile(root_folder, "2_output", sprintf("**/%s*.mat", prefix)));
 
 
 % Create table to fill values (adimensional unless stated in the title)
@@ -27,9 +28,9 @@ varTypes=["string", "double", "double", "double", "double", "string", "double", 
     "double", "double", "double", "double", "double", "double", "double", "double", "double", 'cell'];
 
 sz = [length(files_folder) length(varNames)];
-
-if isfile(fullfile(root_folder, "2_output", "postprocessing.mat"))
-    load(fullfile(root_folder,"2_output", "postprocessing.mat"), "data");
+fname = sprintf("postprocessing%s.mat", prefix);
+if isfile(fullfile(root_folder, "2_output", fname))
+    load(fullfile(root_folder,"2_output", fname), "data");
 else
     data = table();
 end
@@ -98,9 +99,22 @@ parfor ii = 1:length(files_folder)
         deformation_modes_energies = nan;
         A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
 
-        V0 = abs(default_physical.initial_velocity);
+        Vn = abs(default_physical.initial_velocity);
         g = default_physical.g;
-        t0 = (-V0 + sqrt(V0^2 - 2*g*pixel_adim*Ro))/g; % Calculating experimental start of contact to substract
+        % Calculating experimental start of contact to substract (negative value)
+        if g == 0
+            t0 = 0.02*Ro/Vn;
+        else
+            t0 = real((Vn - sqrt(Vn^2 - 2*g*pixel_adim*Ro))/g); 
+            if Vn^2 < 2*g*pixel_adim*Ro 
+                fprintf("SKIPPING postprocessing (We = %.2e, Oh= %.2e, Bo = %.2e), Simul %d/%d \n", ...
+                   Westar, Oh, Bo, ii, T);
+                continue; 
+            end            
+        end
+        V0 = sqrt(Vn^2-2*g*Ro*pixel_adim);
+        X = @(t) pixel_adim*Ro - t*V0 -g*t^2/2;
+        assert(abs(X(t0)) <= 1e-13 ); assert(abs(X(0) - pixel_adim*Ro) < 1e-13);
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
@@ -119,9 +133,10 @@ parfor ii = 1:length(files_folder)
                     CM_in = recorded_conditions{jj}.center_of_mass;
                     Ein = 1/2 * Vin^2;
                     % Experimental variables
-                    Vin_exp = Vin - t0*V0;
+                    Vin_exp = Vin + t0*g; assert(abs(Vin_exp+V0) < 1e-12);
+                    %fprintf("Westar experimental is %.2e \n\n", Westar * Vin_exp^2/Vn^2);
                     Ein_exp = 1/2 * Vin_exp^2;
-                    touch_time_exp = touch_time + t0; % We shift time
+                    touch_time_exp = touch_time - 1000*t0; % We shift time in miliseconds
                     CM_in_exp = (1+pixel_adim)* CM_in;
                 end
             end
@@ -161,7 +176,7 @@ parfor ii = 1:length(files_folder)
             % Experimental contact_radius && coef restitution
             if isnan(liftoff_time_exp)
                 % If contact ended numerically but simulation ended, record lift off time anyways
-                if drop_height(pi) > pixel/length_unit %||((size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)))
+                if drop_height(pi) >= pixel/length_unit %||((size(recorded_conditions, 1)-1 == jj && ~isnan(liftoff_time)))
                     liftoff_time_exp = recorded_times(jj);
                     Vout_exp = recorded_conditions{jj}.center_of_mass_velocity;
                     Eout_exp = 1/2*Vout_exp^2 + (recorded_conditions{jj}.center_of_mass ...
@@ -186,8 +201,6 @@ parfor ii = 1:length(files_folder)
                 contact_time_exp = liftoff_time_exp - touch_time_exp;
                 coef_restitution_exp = sqrt(abs(Eout_exp/Ein_exp));
             end
-            
-
 
             % max_contact_radius calculation
             current_contact_points = recorded_conditions{jj}.contact_points;
@@ -236,7 +249,7 @@ parfor ii = 1:length(files_folder)
     
         % Add value to tables
         [~, dropLiquid, lol] = fileparts(files_folder(ii).folder); dropLiquid = strcat(dropLiquid, lol);
-        data(ii, :) = {files_folder(ii).name, Vin, Westar, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
+        data(ii, :) = {files_folder(ii).name, Vin_exp, Westar*Vin_exp^2/Vn^2, Bo, Oh, dropLiquid, PROBLEM_CONSTANTS.nb_harmonics, ...
             max_width, contact_time, coef_restitution, north_pole_min_height, ...
             north_pole_exp_min_height, max_contact_radius, spread_time, spread_time_width, ...
             contact_time_exp, coef_restitution_exp, max_contact_radius_exp, spread_time_exp, {deformation_modes_energies}};
@@ -254,14 +267,15 @@ parfor ii = 1:length(files_folder)
 end
 delete(gcp("nocreate")); % Deleting current parallel workers
 % Filtering
-data = rmmissing(data, 'DataVariables','file_name');
+data = rmmissing(data, 'DataVariables','file_name'); %data = data(data.max_width > -inf, :);
 
 writetable(data, fullfile(root_folder, "2_output", "postprocessing.csv"));
-s = fullfile(root_folder, "2_output", "postprocessing.mat");
+s = fullfile(root_folder, "2_output", fname);
 warning ('on','all');
 if ~exist(s, "file")
     save(s, "data");
 else
     warning('Did not save the postprocessing file. There is one in the directory already');
 end
+system('python3 sending_email.py');
 diary off
