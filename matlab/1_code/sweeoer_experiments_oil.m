@@ -143,14 +143,18 @@ parfor ii = 1:height(simulations_cgs)
 end
 
 cd(root);
-
-if postprocessing_bool == true; postprocessing; end
-delete(gcp("nocreate")); % Deleting current parallel workers
-
 % Load Python3 in MACOS based on https://www.mathworks.com/matlabcentral/answers/359408-trouble-with-a-command-in-matlab-s-system
 if ~ispc && system('python3 --version') ~= 0; setenv('PATH', [getenv('PATH') ':/usr/local/bin/']); end
 
-system('python3 sending_email.py'); % Sending email to notify that's finished
+if postprocessing_bool == true
+    postprocessing; 
+else
+    system('python3 sending_email.py'); % Sending email to notify that's finished
+end
+delete(gcp("nocreate")); % Deleting current parallel workers
+
+
+
 diary off % turning logger off
 
 

@@ -36,8 +36,8 @@ function max_width_cradius_plotter(varargin)
         times = arrayfun(@(jj) physicalParameters{jj}.recorded_times, ...
             1:length(file), 'UniformOutput', false);
         sz = min(arrayfun(@(jj) size(physicalParameters{jj}.recorded_times, 1), 1:length(file)));
-        n_shots = min(1000, sz);
-        max_widths  = 2*ones(length(file), n_shots); contact_radii02R = zeros(length(file), n_shots);
+        n_shots = min(1000, sz); nbefore = 30;
+        max_widths  = 2*ones(length(file), n_shots); contact_radii02R = zeros(length(file), n_shots); cradiibefore = zeros(length(file), nbefore);
         north_poles = 2*ones(length(file), n_shots); contact_radii00R = zeros(length(file), n_shots);
         max_radii_time = zeros(length(file), 1); max_contact_radii = zeros(length(file), 1);
         times_idx = ceil(linspace(1, sz, n_shots));
@@ -63,13 +63,36 @@ function max_width_cradius_plotter(varargin)
                 %tic = sqrt(default_physical.rhoS* default_physical.undisturbed_radius^3/default_physical.sigmaS);
                 
                 %recorded_conditions{ii}.amplitude_defor = 1;
-                
+                pixel_adim = 0.02;
                 default_physical = physicalParameters{jj}.default_physical;
-                wes(jj) = default_physical.rhoS * default_physical.initial_velocity^2 * ...
+                if idx <= 2
+                    
+                    g = default_physical.g; Ro = default_physical.undisturbed_radius; 
+                    Vn = abs(default_physical.initial_velocity);
+                    % Calculating experimental start of contact to substract (negative value)
+                    if g == 0
+                        t0 = 0.02*Ro/Vn;
+                    else
+                        t0 = real((Vn - sqrt(Vn^2 - 2*g*pixel_adim*Ro))/g); 
+                        if Vn^2 < 2*g*pixel_adim*Ro 
+                            fprintf("Invalid data");
+                            error("Not a valid impact velocity. Increase it.");
+                        end            
+                    end
+                    V0 = sqrt(Vn^2-2*g*Ro*pixel_adim);
+                    X = @(t) pixel_adim*Ro - t*V0 - g*t.^2/2;
+                    tt0 = linspace(-t0, 0, nbefore);
+                    cradiibefore(jj, :) = sin(acos((X(tt0 + t0) + (1-pixel_adim)*Ro)./Ro)); % Non dimensional contact radius!
+                end
+                
+                
+                wes(jj) = default_physical.rhoS * V0^2 * ...
                     default_physical.undisturbed_radius / default_physical.sigmaS;
                 ohs(jj) = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
                     * default_physical.undisturbed_radius));
                 bos(jj) = default_physical.rhoS * default_physical.g * default_physical.undisturbed_radius^2 / default_physical.sigmaS;
+                
+                
                 
                 %% Calculating min height (experimental side-view projection)
                 north_pole_exp_min_height = drop_height(0); currang = pi/4; dtheta = pi/2; N = 9;
@@ -92,7 +115,7 @@ function max_width_cradius_plotter(varargin)
 
                 %% Calculating (current) contact radius
                 % 0.02 Treshold
-                pixel_adim = 0.02;
+                %pixel_adim = 0.02;
                 
                 kk = 1;
                 current_contact_points_exp = adim_conditions.contact_points;
@@ -200,6 +223,7 @@ function max_width_cradius_plotter(varargin)
             legend('FontSize', 14);
             subplot(1, 3, 2); hold on; grid on; set(gca, 'FontSize', 16);
             title("Contact Radius", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
+            plot(1000*tt0, cradiibefore(jj, :), 'LineWidth', jj+1, 'DisplayName', "");
             plot(1000*times{jj}(times_idx), contact_radii02R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.02R, We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
             plot(1000*times{jj}(times_idx), contact_radii00R(jj, :), 'LineWidth', jj+1, 'DisplayName', sprintf("0.00R, We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
             scatter(1000*spread_time_tracker(jj), max_contact_radius_tracker(jj), "*", 'DisplayName', sprintf('Time to maximum radius We = %.2e, Oh = %.1e', wes(jj), ohs(jj)));
