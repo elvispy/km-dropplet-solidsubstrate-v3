@@ -11,23 +11,26 @@ disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
 force_sweep = false;
 postprocessing_bool = true;
+optimize_for_bounce = true;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'jump_t_rc_FULLsweep_2';
+prefix = 'criticalWeOh180';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We = logspace(-4, 1, 51);
+We_exp = logspace(log10(3e-3), log10(4e-3), 30);
 Bo = 0.0189;%10.^([-inf, -3, -2, -1, 0]);
-velocities = -sqrt(sigma/(rho*Ro) .* We); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
+velocities_exp = -sqrt(sigma/(rho*Ro) .* We_exp); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
 g = Bo.* sigma ./(rho .* Ro^2);
+X =2*g*Ro*0.02;
+velocities = -sqrt(velocities_exp.^2 + X);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [0, 2]', ... % Viscocity in cgs
+    "nu", 0.01 * [20]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
-    "harmonics_qtt", [250]', ...
+    "harmonics_qtt", [180]', ...
     "version", [3]')
 
 % We check how many outputs we want
@@ -107,7 +110,8 @@ parfor ii = 1:height(simulations_cgs)
         
         numerical_parameters = struct("harmonics_qtt", harmonics_qtt(ii),...
             "simulation_time", inf, "version", version(ii));
-        options = struct('version', version(ii), 'prefix', prefix, 'live_plotting', false);
+        options = struct('version', version(ii), 'prefix', prefix, 'live_plotting', false,...
+            'optimize_for_bounce', optimize_for_bounce);
 
         physical_parameters = struct("undisturbed_radius", undisturbed_radius(ii), ...
             "initial_height", nan, "initial_velocity", initial_velocity(ii), ...

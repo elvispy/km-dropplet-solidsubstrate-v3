@@ -6,9 +6,17 @@ Ro = sqrt(Bo * sigma / (rho *g));
 nu = Oh .* sqrt(sigma*Ro/rho);
 harmonics_qtt = 90; version = 3;
 
+if nargin == 5
+    prefix = varargin{3}.prefix;
+    save_results = varargin{3}.save;
+else
+    prefix = '';
+    save_results = false;
+end
 numerical_parameters = struct("harmonics_qtt", 90,...
             "simulation_time", inf, "version", 3);
-options = struct('version', 3, 'save_results', false, 'optimize_for_bounce', true);
+options = struct('version', 3, 'save_results', save_results, 'optimize_for_bounce', true,...
+    'prefix', prefix);
 physical_parameters = struct("undisturbed_radius", Ro, ...
             "initial_height", nan, "initial_velocity", nan, ...
             "initial_amplitudes", zeros(1, 90), ...
@@ -112,6 +120,7 @@ end
 
 
 function [We, flag] = next_guess(guesses, Oh, Bo)
+% Flag output is flag to decide whether to stop simulating or not. 
     % Returns the next best guess given the values that we have available
     
     if size(guesses, 2) == 3
@@ -149,13 +158,13 @@ function [We, flag] = next_guess(guesses, Oh, Bo)
         else
             We = (minyes + maxno)/2;
             if maxno <= minyes
-                if (minyes - maxno)/minyes <= 0.05
+                if (minyes - maxno)/minyes <= 0.01
                     flag = false;
                 else
                     flag = true;
                 end
             else
-                warning('Inconsistent (nonmonotonic) bouncing behaviour. Stopping procedure');
+                warning('Inconsistent (nonmonotonic) bouncing behaviour for Oh = %.2f, Bo=%.2f. Stopping procedure', Oh, Bo);
                 flag = false;
             end
             

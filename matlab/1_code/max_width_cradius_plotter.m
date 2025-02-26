@@ -20,10 +20,10 @@ function max_width_cradius_plotter(varargin)
             vidObj = replace(fullfilepath{ii}, ".mat", ".mp4");
         end
         vidObj = VideoWriter(vidObj, "MPEG-4");
-        set(vidObj, 'Quality', 100, 'FrameRate', 2);
+        set(vidObj, 'Quality', 100, 'FrameRate', 10);
         open(vidObj);
         close all;
-        pplots = figure(1); set(pplots, 'Position', [954 94 1080 420]);
+        pplots = figure(1); set(pplots, 'Position', [954 94 900 600]);
         
         
         texts = cell(length(file), 1);
@@ -36,7 +36,7 @@ function max_width_cradius_plotter(varargin)
         times = arrayfun(@(jj) physicalParameters{jj}.recorded_times, ...
             1:length(file), 'UniformOutput', false);
         sz = min(arrayfun(@(jj) size(physicalParameters{jj}.recorded_times, 1), 1:length(file)));
-        n_shots = min(1000, sz); nbefore = 30;
+        n_shots = min(200, sz); nbefore = 30;
         max_widths  = 2*ones(length(file), n_shots); contact_radii02R = zeros(length(file), n_shots); cradiibefore = zeros(length(file), nbefore);
         north_poles = 2*ones(length(file), n_shots); contact_radii00R = zeros(length(file), n_shots);
         max_radii_time = zeros(length(file), 1); max_contact_radii = zeros(length(file), 1);
@@ -177,7 +177,7 @@ function max_width_cradius_plotter(varargin)
                     spread_widths_tracker(jj) = times{jj}(ii);
                 end
                 
-                if false
+                if true
                     % Plotting
                     % Current time, maximum radius, maximum equatorial radius
                     ax = subplot(1, length(file), jj);
@@ -211,7 +211,7 @@ function max_width_cradius_plotter(varargin)
                 end
             end % end inner for (videos)
             
-            if false; writeVideo(vidObj, getframe(gcf)); end
+            if true; writeVideo(vidObj, getframe(gcf)); end
             
         end % end outer for (video
         close(vidObj);

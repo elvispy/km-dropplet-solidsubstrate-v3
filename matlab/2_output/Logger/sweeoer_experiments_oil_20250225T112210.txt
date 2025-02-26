@@ -1,0 +1,141 @@
+------------
+25-Feb-2025 11:22:10 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: 0.020000000000000
+                     g: 9.793825377951421e+02
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: [20×1 double]
+         harmonics_qtt: 180
+               version: 3
+
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingWeOhSweep20241108T220304.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_old.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_sensitivity.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh180.mat, undefined function or variable 
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+Starting simulation 1/20, with velocity -0.976242, modes 180, version v3 ... 
+Starting simulation 2/20, with velocity -0.979073, modes 180, version v3 ... 
+Starting simulation 3/20, with velocity -0.981897, modes 180, version v3 ... 
+Starting simulation 4/20, with velocity -0.984712, modes 180, version v3 ... 
+Finished simulation 1/20, with velocity -0.976242, modes 180, version v3 ... 
+Finished simulation 2/20, with velocity -0.979073, modes 180, version v3 ... 
+Finished simulation 4/20, with velocity -0.984712, modes 180, version v3 ... 
+Finished simulation 3/20, with velocity -0.981897, modes 180, version v3 ... 
+Starting simulation 6/20, with velocity -0.990318, modes 180, version v3 ... 
+Finished simulation 6/20, with velocity -0.990318, modes 180, version v3 ... 
+Starting simulation 12/20, with velocity -1.00695, modes 180, version v3 ... 
+Finished simulation 12/20, with velocity -1.00695, modes 180, version v3 ... 
+Starting simulation 8/20, with velocity -0.995893, modes 180, version v3 ... 
+Finished simulation 8/20, with velocity -0.995893, modes 180, version v3 ... 
+Starting simulation 10/20, with velocity -1.00144, modes 180, version v3 ... 
+Finished simulation 10/20, with velocity -1.00144, modes 180, version v3 ... 
+Starting simulation 5/20, with velocity -0.987519, modes 180, version v3 ... 
+Finished simulation 5/20, with velocity -0.987519, modes 180, version v3 ... 
+Starting simulation 11/20, with velocity -1.0042, modes 180, version v3 ... 
+Finished simulation 11/20, with velocity -1.0042, modes 180, version v3 ... 
+Starting simulation 7/20, with velocity -0.99311, modes 180, version v3 ... 
+Finished simulation 7/20, with velocity -0.99311, modes 180, version v3 ... 
+Starting simulation 9/20, with velocity -0.998669, modes 180, version v3 ... 
+Finished simulation 9/20, with velocity -0.998669, modes 180, version v3 ... 
+Starting simulation 13/20, with velocity -1.0097, modes 180, version v3 ... 
+Finished simulation 13/20, with velocity -1.0097, modes 180, version v3 ... 
+Starting simulation 14/20, with velocity -1.01243, modes 180, version v3 ... 
+Finished simulation 14/20, with velocity -1.01243, modes 180, version v3 ... 
+Starting simulation 15/20, with velocity -1.01516, modes 180, version v3 ... 
+Finished simulation 15/20, with velocity -1.01516, modes 180, version v3 ... 
+Starting simulation 16/20, with velocity -1.01789, modes 180, version v3 ... 
+Finished simulation 16/20, with velocity -1.01789, modes 180, version v3 ... 
+Starting simulation 17/20, with velocity -1.0206, modes 180, version v3 ... 
+Finished simulation 17/20, with velocity -1.0206, modes 180, version v3 ... 
+Starting simulation 18/20, with velocity -1.02331, modes 180, version v3 ... 
+Finished simulation 18/20, with velocity -1.02331, modes 180, version v3 ... 
+Starting simulation 19/20, with velocity -1.02601, modes 180, version v3 ... 
+Finished simulation 19/20, with velocity -1.02601, modes 180, version v3 ... 
+Starting simulation 20/20, with velocity -1.02871, modes 180, version v3 ... 
+Finished simulation 20/20, with velocity -1.02871, modes 180, version v3 ... 
+Python 3.9.5

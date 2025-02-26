@@ -1,0 +1,687 @@
+------------
+25-Feb-2025 14:49:39 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: [2×1 double]
+                     g: 9.793825377951421e+02
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: [30×1 double]
+         harmonics_qtt: 180
+               version: 3
+
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingWeOhSweep20241108T220304.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_old.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_sensitivity.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 63)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',63,0)">line 63</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh180.mat, undefined function or variable 
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+Starting simulation 1/60, with velocity -32.5579, modes 180, version v3 ... 
+Starting simulation 2/60, with velocity -32.5579, modes 180, version v3 ... 
+Starting simulation 3/60, with velocity -32.5928, modes 180, version v3 ... 
+Starting simulation 4/60, with velocity -32.5928, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.5579, modes = 180, version = 3 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.5579, modes = 180, version = 3 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.5928, modes = 180, version = 3 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.5928, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.5579, modes = 180, version = 3 
+Finished simulation 1/60, with velocity -32.5579, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.5928, modes = 180, version = 3 
+Finished simulation 3/60, with velocity -32.5928, modes 180, version v3 ... 
+Starting simulation 11/60, with velocity -32.7327, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.7327, modes = 180, version = 3 
+Starting simulation 25/60, with velocity -32.9791, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.9791, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.5579, modes = 180, version = 3 
+Finished simulation 2/60, with velocity -32.5579, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.5928, modes = 180, version = 3 
+Finished simulation 4/60, with velocity -32.5928, modes 180, version v3 ... 
+Starting simulation 18/60, with velocity -32.8381, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.8381, modes = 180, version = 3 
+Starting simulation 32/60, with velocity -33.0852, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.0852, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.9791, modes = 180, version = 3 
+Finished simulation 25/60, with velocity -32.9791, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.7327, modes = 180, version = 3 
+Finished simulation 11/60, with velocity -32.7327, modes 180, version v3 ... 
+Starting simulation 24/60, with velocity -32.9438, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.9438, modes = 180, version = 3 
+Starting simulation 10/60, with velocity -32.6977, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.6977, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.8381, modes = 180, version = 3 
+Finished simulation 18/60, with velocity -32.8381, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.0852, modes = 180, version = 3 
+Finished simulation 32/60, with velocity -33.0852, modes 180, version v3 ... 
+Starting simulation 17/60, with velocity -32.8381, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.8381, modes = 180, version = 3 
+Starting simulation 31/60, with velocity -33.0852, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.0852, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.9438, modes = 180, version = 3 
+Finished simulation 24/60, with velocity -32.9438, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.6977, modes = 180, version = 3 
+Finished simulation 10/60, with velocity -32.6977, modes 180, version v3 ... 
+Starting simulation 9/60, with velocity -32.6977, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.6977, modes = 180, version = 3 
+Starting simulation 23/60, with velocity -32.9438, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.9438, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.8381, modes = 180, version = 3 
+Finished simulation 17/60, with velocity -32.8381, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.0852, modes = 180, version = 3 
+Finished simulation 31/60, with velocity -33.0852, modes 180, version v3 ... 
+Starting simulation 16/60, with velocity -32.8029, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.8029, modes = 180, version = 3 
+Starting simulation 30/60, with velocity -33.0498, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.0498, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.9438, modes = 180, version = 3 
+Finished simulation 23/60, with velocity -32.9438, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.6977, modes = 180, version = 3 
+Finished simulation 9/60, with velocity -32.6977, modes 180, version v3 ... 
+Starting simulation 22/60, with velocity -32.9085, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.9085, modes = 180, version = 3 
+Starting simulation 8/60, with velocity -32.6627, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.6627, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.8029, modes = 180, version = 3 
+Finished simulation 16/60, with velocity -32.8029, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.0498, modes = 180, version = 3 
+Finished simulation 30/60, with velocity -33.0498, modes 180, version v3 ... 
+Starting simulation 15/60, with velocity -32.8029, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.8029, modes = 180, version = 3 
+Starting simulation 29/60, with velocity -33.0498, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.0498, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.9085, modes = 180, version = 3 
+Finished simulation 22/60, with velocity -32.9085, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.6627, modes = 180, version = 3 
+Finished simulation 8/60, with velocity -32.6627, modes 180, version v3 ... 
+Starting simulation 21/60, with velocity -32.9085, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.9085, modes = 180, version = 3 
+Starting simulation 7/60, with velocity -32.6627, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.6627, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.8029, modes = 180, version = 3 
+Finished simulation 15/60, with velocity -32.8029, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.0498, modes = 180, version = 3 
+Finished simulation 29/60, with velocity -33.0498, modes 180, version v3 ... 
+Starting simulation 14/60, with velocity -32.7678, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.7678, modes = 180, version = 3 
+Starting simulation 28/60, with velocity -33.0144, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.0144, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.9085, modes = 180, version = 3 
+Finished simulation 21/60, with velocity -32.9085, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.6627, modes = 180, version = 3 
+Finished simulation 7/60, with velocity -32.6627, modes 180, version v3 ... 
+Starting simulation 20/60, with velocity -32.8733, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.8733, modes = 180, version = 3 
+Starting simulation 6/60, with velocity -32.6277, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.6277, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.7678, modes = 180, version = 3 
+Finished simulation 14/60, with velocity -32.7678, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.0144, modes = 180, version = 3 
+Finished simulation 28/60, with velocity -33.0144, modes 180, version v3 ... 
+Starting simulation 13/60, with velocity -32.7678, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.7678, modes = 180, version = 3 
+Starting simulation 27/60, with velocity -33.0144, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.0144, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.8733, modes = 180, version = 3 
+Finished simulation 20/60, with velocity -32.8733, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.6277, modes = 180, version = 3 
+Finished simulation 6/60, with velocity -32.6277, modes 180, version v3 ... 
+Starting simulation 19/60, with velocity -32.8733, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.8733, modes = 180, version = 3 
+Starting simulation 5/60, with velocity -32.6277, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.6277, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.7678, modes = 180, version = 3 
+Finished simulation 13/60, with velocity -32.7678, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.0144, modes = 180, version = 3 
+Finished simulation 27/60, with velocity -33.0144, modes 180, version v3 ... 
+Starting simulation 12/60, with velocity -32.7327, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.7327, modes = 180, version = 3 
+Starting simulation 26/60, with velocity -32.9791, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -32.9791, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.8733, modes = 180, version = 3 
+Finished simulation 19/60, with velocity -32.8733, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.6277, modes = 180, version = 3 
+Finished simulation 5/60, with velocity -32.6277, modes 180, version v3 ... 
+Starting simulation 36/60, with velocity -33.1562, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.1562, modes = 180, version = 3 
+Starting simulation 40/60, with velocity -33.2273, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.2273, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.7327, modes = 180, version = 3 
+Finished simulation 12/60, with velocity -32.7327, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -32.9791, modes = 180, version = 3 
+Finished simulation 26/60, with velocity -32.9791, modes 180, version v3 ... 
+Starting simulation 44/60, with velocity -33.2985, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.2985, modes = 180, version = 3 
+Starting simulation 48/60, with velocity -33.3699, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.3699, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.1562, modes = 180, version = 3 
+Finished simulation 36/60, with velocity -33.1562, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.2273, modes = 180, version = 3 
+Finished simulation 40/60, with velocity -33.2273, modes 180, version v3 ... 
+Starting simulation 35/60, with velocity -33.1562, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.1562, modes = 180, version = 3 
+Starting simulation 39/60, with velocity -33.2273, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.2273, modes = 180, version = 3 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.2985, modes = 180, version = 3 
+Finished simulation 44/60, with velocity -33.2985, modes 180, version v3 ... 
+Se dividio dt por 2, dt=8.108330e-05 U = -33.3699, modes = 180, version = 3 
+Finished simulation 48/60, with velocity -33.3699, modes 180, version v3 ... 
+Starting simulation 43/60, with velocity -33.2985, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.2985, modes = 180, version = 3 
+Starting simulation 47/60, with velocity -33.3699, modes 180, version v3 ... 
+Se dividio dt por 2, dt=1.621666e-04 U = -33.3699, modes = 180, version = 3 
+if system_dependent('IsDebugMode')==1, dbquit; end
+logspace(3e-2, 3e-2)
+
+ans =
+
+  Columns 1 through 3
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 4 through 6
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 7 through 9
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 10 through 12
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 13 through 15
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 16 through 18
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 19 through 21
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 22 through 24
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 25 through 27
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 28 through 30
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 31 through 33
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 34 through 36
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 37 through 39
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 40 through 42
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 43 through 45
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 46 through 48
+
+   1.071519305237606   1.071519305237606   1.071519305237606
+
+  Columns 49 through 50
+
+   1.071519305237606   1.071519305237606
+
+logspace(3e-3, 3e-2)
+
+ans =
+
+  Columns 1 through 3
+
+   1.006931668851804   1.008210045745130   1.009490045635856
+
+  Columns 4 through 6
+
+   1.010771670584503   1.012054922654205   1.013339803910719
+
+  Columns 7 through 9
+
+   1.014626316422421   1.015914462260314   1.017204243498032
+
+  Columns 10 through 12
+
+   1.018495662211839   1.019788720480638   1.021083420385968
+
+  Columns 13 through 15
+
+   1.022379764012013   1.023677753445603   1.024977390776216
+
+  Columns 16 through 18
+
+   1.026278678095983   1.027581617499693   1.028886211084793
+
+  Columns 19 through 21
+
+   1.030192460951392   1.031500369202267   1.032809937942863
+
+  Columns 22 through 24
+
+   1.034121169281300   1.035434065328373   1.036748628197557
+
+  Columns 25 through 27
+
+   1.038064860005010   1.039382762869578   1.040702338912795
+
+  Columns 28 through 30
+
+   1.042023590258889   1.043346519034787   1.044671127370114
+
+  Columns 31 through 33
+
+   1.045997417397199   1.047325391251079   1.048655051069501
+
+  Columns 34 through 36
+
+   1.049986398992925   1.051319437164532   1.052654167730219
+
+  Columns 37 through 39
+
+   1.053990592838612   1.055328714641061   1.056668535291650
+
+  Columns 40 through 42
+
+   1.058010056947197   1.059353281767259   1.060698211914131
+
+  Columns 43 through 45
+
+   1.062044849552859   1.063393196851233   1.064743255979798
+
+  Columns 46 through 48
+
+   1.066095029111852   1.067448518423456   1.068803726093429
+
+  Columns 49 through 50
+
+   1.070160654303360   1.071519305237606
+
+logspace(0, 1)
+
+ans =
+
+  Columns 1 through 3
+
+   1.000000000000000   1.048113134154686   1.098541141987558
+
+  Columns 4 through 6
+
+   1.151395399326447   1.206792640639329   1.264855216855296
+
+  Columns 7 through 9
+
+   1.325711365590109   1.389495494373138   1.456348477501244
+
+  Columns 10 through 12
+
+   1.526417967175234   1.599858719606058   1.676832936811008
+
+  Columns 13 through 15
+
+   1.757510624854792   1.842069969326716   1.930697728883250
+
+  Columns 16 through 18
+
+   2.023589647725157   2.120950887920191   2.222996482526195
+
+  Columns 19 through 21
+
+   2.329951810515372   2.442053094548651   2.559547922699536
+
+  Columns 22 through 24
+
+   2.682695795279725   2.811768697974231   2.947051702551811
+
+  Columns 25 through 27
+
+   3.088843596477481   3.237457542817644   3.393221771895329
+
+  Columns 28 through 30
+
+   3.556480306223128   3.727593720314940   3.906939937054617
+
+  Columns 31 through 33
+
+   4.094915062380426   4.291934260128778   4.498432668969445
+
+  Columns 34 through 36
+
+   4.714866363457393   4.941713361323835   5.179474679231212
+
+  Columns 37 through 39
+
+   5.428675439323861   5.689866029018296   5.963623316594642
+
+  Columns 40 through 42
+
+   6.250551925273973   6.551285568595509   6.866488450043002
+
+  Columns 43 through 45
+
+   7.196856730011519   7.543120063354617   7.906043210907700
+
+  Columns 46 through 48
+
+   8.286427728546844   8.685113737513527   9.102981779915218
+
+  Columns 49 through 50
+
+   9.540954763499940  10.000000000000000
+
+logspace(log10(3e-3), log10(3e-2))
+
+ans =
+
+  Columns 1 through 3
+
+   0.003000000000000   0.003144339402464   0.003295623425963
+
+  Columns 4 through 6
+
+   0.003454186197979   0.003620377921918   0.003794565650566
+
+  Columns 7 through 9
+
+   0.003977134096770   0.004168486483119   0.004369045432504
+
+  Columns 10 through 12
+
+   0.004579253901526   0.004799576158818   0.005030498810433
+
+  Columns 13 through 15
+
+   0.005272531874564   0.005526209907980   0.005792093186650
+
+  Columns 16 through 18
+
+   0.006070768943175   0.006362852663761   0.006668989447579
+
+  Columns 19 through 21
+
+   0.006989855431546   0.007326159283646   0.007678643768099
+
+  Columns 22 through 24
+
+   0.008048087385839   0.008435306093923   0.008841155107655
+
+  Columns 25 through 27
+
+   0.009266530789432   0.009712372628453   0.010179665315686
+
+  Columns 28 through 30
+
+   0.010669440918669   0.011182781160945   0.011720819811164
+
+  Columns 31 through 33
+
+   0.012284745187141   0.012875802780386   0.013495298006908
+
+  Columns 34 through 36
+
+   0.014144599090372   0.014825140083972   0.015538424037694
+
+  Columns 37 through 39
+
+   0.016286026317972   0.017069598087055   0.017890869949784
+
+  Columns 40 through 42
+
+   0.018751655775822   0.019653856705787   0.020599465350129
+
+  Columns 43 through 45
+
+   0.021590570190035   0.022629360190064   0.023718129632723
+
+  Columns 46 through 48
+
+   0.024859283185641   0.026055341212541   0.027308945339746
+
+  Columns 49 through 50
+
+   0.028622864290500   0.030000000000000
+
+logspace(log10(3e-3), log10(3e-2))
+
+ans =
+
+  Columns 1 through 3
+
+   0.003000000000000   0.003144339402464   0.003295623425963
+
+  Columns 4 through 6
+
+   0.003454186197979   0.003620377921918   0.003794565650566
+
+  Columns 7 through 9
+
+   0.003977134096770   0.004168486483119   0.004369045432504
+
+  Columns 10 through 12
+
+   0.004579253901526   0.004799576158818   0.005030498810433
+
+  Columns 13 through 15
+
+   0.005272531874564   0.005526209907980   0.005792093186650
+
+  Columns 16 through 18
+
+   0.006070768943175   0.006362852663761   0.006668989447579
+
+  Columns 19 through 21
+
+   0.006989855431546   0.007326159283646   0.007678643768099
+
+  Columns 22 through 24
+
+   0.008048087385839   0.008435306093923   0.008841155107655
+
+  Columns 25 through 27
+
+   0.009266530789432   0.009712372628453   0.010179665315686
+
+  Columns 28 through 30
+
+   0.010669440918669   0.011182781160945   0.011720819811164
+
+  Columns 31 through 33
+
+   0.012284745187141   0.012875802780386   0.013495298006908
+
+  Columns 34 through 36
+
+   0.014144599090372   0.014825140083972   0.015538424037694
+
+  Columns 37 through 39
+
+   0.016286026317972   0.017069598087055   0.017890869949784
+
+  Columns 40 through 42
+
+   0.018751655775822   0.019653856705787   0.020599465350129
+
+  Columns 43 through 45
+
+   0.021590570190035   0.022629360190064   0.023718129632723
+
+  Columns 46 through 48
+
+   0.024859283185641   0.026055341212541   0.027308945339746
+
+  Columns 49 through 50
+
+   0.028622864290500   0.030000000000000
+
+logspace(log10(3e-3), log10(3e-2))
+
+ans =
+
+  Columns 1 through 3
+
+   0.003000000000000   0.003144339402464   0.003295623425963
+
+  Columns 4 through 6
+
+   0.003454186197979   0.003620377921918   0.003794565650566
+
+  Columns 7 through 9
+
+   0.003977134096770   0.004168486483119   0.004369045432504
+
+  Columns 10 through 12
+
+   0.004579253901526   0.004799576158818   0.005030498810433
+
+  Columns 13 through 15
+
+   0.005272531874564   0.005526209907980   0.005792093186650
+
+  Columns 16 through 18
+
+   0.006070768943175   0.006362852663761   0.006668989447579
+
+  Columns 19 through 21
+
+   0.006989855431546   0.007326159283646   0.007678643768099
+
+  Columns 22 through 24
+
+   0.008048087385839   0.008435306093923   0.008841155107655
+
+  Columns 25 through 27
+
+   0.009266530789432   0.009712372628453   0.010179665315686
+
+  Columns 28 through 30
+
+   0.010669440918669   0.011182781160945   0.011720819811164
+
+  Columns 31 through 33
+
+   0.012284745187141   0.012875802780386   0.013495298006908
+
+  Columns 34 through 36
+
+   0.014144599090372   0.014825140083972   0.015538424037694
+
+  Columns 37 through 39
+
+   0.016286026317972   0.017069598087055   0.017890869949784
+
+  Columns 40 through 42
+
+   0.018751655775822   0.019653856705787   0.020599465350129
+
+  Columns 43 through 45
+
+   0.021590570190035   0.022629360190064   0.023718129632723
+
+  Columns 46 through 48
+
+   0.024859283185641   0.026055341212541   0.027308945339746
+
+  Columns 49 through 50
+
+   0.028622864290500   0.030000000000000
+
+sweeoer_experiments_oil

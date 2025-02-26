@@ -14,7 +14,7 @@ safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
 addpath(safe_folder, '-begin');
 
 % FInding all .mat files that correspond to simulations
-prefix = ""; % Only look for simulations starting with this prefix
+if exist('prefix', 'var') ~= 1; prefix = ""; end % Only look for simulations starting with this prefix
 files_folder = dir(fullfile(root_folder, "2_output", sprintf("**/%s*.mat", prefix)));
 
 
@@ -31,6 +31,12 @@ sz = [length(files_folder) length(varNames)];
 fname = sprintf("postprocessing%s.mat", prefix);
 if isfile(fullfile(root_folder, "2_output", fname))
     load(fullfile(root_folder,"2_output", fname), "data");
+    
+    
+    data{length(files_folder)+1, 'file_name'} = missing;
+    data = flipud(data);
+    % Filter values which are not present in data
+    files_folder = files_folder(cellfun(@(X) ~contains(X, data.file_name), {files_folder.name}));
 else
     data = table();
 end
@@ -42,7 +48,7 @@ end
 data = data(~isnan(data.initial_velocity_cgs), :);
 %pixel = 5e-4; %Threshold for experimental contact
 fnames = data{:, 1};
-T = length(files_folder);
+T = length(files_folder); 
 parfor ii = 1:length(files_folder)
     try
         % If it has been calculated before, or is it the postprocessing.mat
@@ -135,7 +141,7 @@ parfor ii = 1:length(files_folder)
                     % Experimental variables
                     Vin_exp = Vin + t0*g; assert(abs(Vin_exp+V0) < 1e-12);
                     %fprintf("Westar experimental is %.2e \n\n", Westar * Vin_exp^2/Vn^2);
-                    Ein_exp = 1/2 * Vin_exp^2;
+                    Ein_exp = 1/2 * Vin_exp^2; % Now we are measuring 
                     touch_time_exp = touch_time - 1000*t0; % We shift time in miliseconds
                     CM_in_exp = (1+pixel_adim)* CM_in;
                 end
@@ -253,7 +259,7 @@ parfor ii = 1:length(files_folder)
             max_width, contact_time, coef_restitution, north_pole_min_height, ...
             north_pole_exp_min_height, max_contact_radius, spread_time, spread_time_width, ...
             contact_time_exp, coef_restitution_exp, max_contact_radius_exp, spread_time_exp, {deformation_modes_energies}};
-
+        
     catch me
         if contains(files_folder(ii).name, "error"); continue; end
         fprintf("Exception at: %s %s \n", files_folder(ii).folder, files_folder(ii).name)
@@ -261,7 +267,7 @@ parfor ii = 1:length(files_folder)
         switch me.identifier
             case 'MATLAB:load:unableToReadMatFile'
                 disp(" deletingfiles!");
-                delete(fullfile(iles_folder(ii).folder, files_folder(ii).name));
+                delete(fullfile(files_folder(ii).folder, files_folder(ii).name));
         end
     end
 end
