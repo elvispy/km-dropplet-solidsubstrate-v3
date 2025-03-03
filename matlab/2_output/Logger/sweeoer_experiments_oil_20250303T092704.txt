@@ -1,0 +1,48 @@
+------------
+03-Mar-2025 09:27:04 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: 0.200000000000000
+                     g: 9.793825377951421e+02
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: [30×1 double]
+         harmonics_qtt: 90
+               version: []
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 91)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',91,0)">line 91</a>)
+To assign to or create a variable in a table, the number of rows must match the height of the table.
+} 
+size(simulations_cgs)
+
+ans =
+
+     0     8
+
+size(new_simuls
+ size(new_simuls
+                ↑
+{Error: Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+} 
+size(new_simuls)
+
+ans =
+
+   325     8
+
+[simulations_cgs;simulations_cgs]
+
+ans =
+
+  0×8 empty <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+sweeoer_experiments_oil
