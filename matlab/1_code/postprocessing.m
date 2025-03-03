@@ -17,6 +17,7 @@ addpath(safe_folder, '-begin');
 if exist('prefix', 'var') ~= 1; prefix = ""; end % Only look for simulations starting with this prefix
 files_folder = dir(fullfile(root_folder, "2_output", sprintf("**/%s*.mat", prefix)));
 
+debug = false;
 
 % Create table to fill values (adimensional unless stated in the title)
 varNames=["file_name", "initial_velocity_cgs", "weber", "bond", "ohnesorge", "parent_folder", "number_of_harmonics", ...
@@ -49,7 +50,13 @@ data = data(~isnan(data.initial_velocity_cgs), :);
 %pixel = 5e-4; %Threshold for experimental contact
 fnames = data{:, 1};
 T = length(files_folder); 
-parfor ii = 1:length(files_folder)
+if debug == true
+    energies = table('Size', [1, 6], 'VariableTypes', ["double", "double", "double", "double", "double", "double"], ...
+    'VariableNames', ["Weber", "KEin", "KEout", "PEout", "Eout", "epsilon"]);
+end
+
+% Sort by age (numeric field)
+for ii = 1:length(files_folder)
     try
         % If it has been calculated before, or is it the postprocessing.mat
         % file, or it has eerror in its name, skip it. 
@@ -86,8 +93,7 @@ parfor ii = 1:length(files_folder)
         Oh = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
             * default_physical.undisturbed_radius));
         Bo = rhoS * default_physical.g * Ro^2 / sigmaS;
-        fprintf("Starting postprocessing (We = %.2e, Oh= %.2e, Bo = %.2e), Simul %d/%d\n", ...
-            Westar, Oh, Bo, ii, T);
+        
         pixel = 0.02 * length_unit; pixel_adim = pixel/length_unit;
         max_width = -inf;
         contact_time = nan; touch_time = nan; liftoff_time = nan;
@@ -121,6 +127,8 @@ parfor ii = 1:length(files_folder)
         V0 = sqrt(Vn^2-2*g*Ro*pixel_adim);
         X = @(t) pixel_adim*Ro - t*V0 -g*t^2/2;
         assert(abs(X(t0)) <= 1e-13 ); assert(abs(X(0) - pixel_adim*Ro) < 1e-13);
+        fprintf("Starting postprocessing (We = %.2e, Oh= %.3e, Bo = %.3e), Simul %d/%d\n", ...
+            Westar*(V0/Vn)^2, Oh, Bo, ii, T);
         for jj = 1:(size(recorded_conditions, 1)-1)
             adim_deformations = recorded_conditions{jj}.deformation_amplitudes/length_unit;
             adim_CM = recorded_conditions{jj}.center_of_mass/length_unit;
@@ -144,6 +152,10 @@ parfor ii = 1:length(files_folder)
                     Ein_exp = 1/2 * Vin_exp^2; % Now we are measuring 
                     touch_time_exp = touch_time - 1000*t0; % We shift time in miliseconds
                     CM_in_exp = (1+pixel_adim)* CM_in;
+                    if debug == true 
+                        energies(ii, 1:2) = {Westar * (V0/Vn)^2, Ein_exp};
+                        fprintf("Input:  KE = %.3e.\n", Ein_exp); 
+                    end
                 end
             end
             
@@ -192,7 +204,10 @@ parfor ii = 1:length(files_folder)
                     deformation_modes_energies = Xl .* (recorded_conditions{jj}.deformation_velocities(idxs)/velocity_unit).^2 + ...
                         energy_constant * Yl .* (recorded_conditions{jj}.deformation_amplitudes(idxs)/length_unit).^2;
                     deformation_modes_energies = A*deformation_modes_energies;
-                    
+                    if debug == true
+                        energies(ii, 3:6) = { 1/2*Vout_exp.^2, Eout_exp-1/2*Vout_exp.^2, Eout_exp, sqrt(abs(Eout_exp/Ein_exp))};
+                        fprintf("Output: KE = %.3e, PE = %.3e, Eout = %.3e\n", 1/2*Vout_exp.^2, Eout_exp-1/2*Vout_exp.^2, Eout_exp); 
+                    end
                 end
             end
                 
@@ -206,6 +221,7 @@ parfor ii = 1:length(files_folder)
             if ~isnan(touch_time) && ~isnan(liftoff_time_exp) 
                 contact_time_exp = liftoff_time_exp - touch_time_exp;
                 coef_restitution_exp = sqrt(abs(Eout_exp/Ein_exp));
+                
             end
 
             % max_contact_radius calculation
@@ -275,7 +291,7 @@ delete(gcp("nocreate")); % Deleting current parallel workers
 % Filtering
 data = rmmissing(data, 'DataVariables','file_name'); %data = data(data.max_width > -inf, :);
 
-writetable(data, fullfile(root_folder, "2_output", "postprocessing.csv"));
+writetable(data, fullfile(root_folder, "2_output", replace(fname, ".mat", ".csv")));
 s = fullfile(root_folder, "2_output", fname);
 warning ('on','all');
 if ~exist(s, "file")
@@ -285,3 +301,8 @@ else
 end
 system('python3 sending_email.py');
 diary off
+% 
+% hold off; scatter(energies.Weber, energies.KEout, 50, 'filled', 'DisplayName', 'KEout'); hold on
+% scatter(energies.Weber, energies.PEout, 50, 'filled', 'DisplayName', 'PEout')
+% scatter(energies.Weber, energies.Eout, 50, 'filled', 'DisplayName', 'KEout+PEout')
+% yline(0); legend('show', 'FontSize', 14); xlabel("Weber");
