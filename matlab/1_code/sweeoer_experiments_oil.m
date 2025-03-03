@@ -13,9 +13,10 @@ force_sweep = false;
 postprocessing_bool = true;
 optimize_for_bounce = true;
 
+
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'criticalWeOh180';
+prefix = 'criticalWeOh90';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
 We_exp = logspace(log10(3e-3), log10(4e-3), 30);
 Bo = 0.0189;%10.^([-inf, -3, -2, -1, 0]);
@@ -30,8 +31,8 @@ vars = struct(...
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
-    "harmonics_qtt", [180]', ...
-    "version", [3]')
+    "harmonics_qtt", [90]', ...
+    "version", []')
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -53,11 +54,42 @@ if isempty(cartesian_product) == true; cartesian_product = double.empty(0, lengt
 simulations_cgs = array2table(cartesian_product, "VariableNames", fnames);
 
 
+files_folder = dir(fullfile(root_folder, "2_output", "**/criticalWeOh180*.mat"));
+We = zeros(1, length(files_folder));
+Oh = zeros(1, length(files_folder));
+Bo = zeros(1, length(files_folder));
+new_simuls = zeros(length(files_folder), length(fnames));
+
+% Sort by age (numeric field)
+for ii = 1:length(files_folder)
+
+
+    %if ~isnan(data{ii, "coef_rest_exp"}); continue; end
+    lastwarn('', ''); %clear recorded_conditions recorded_times default_physical length_unit theta_vector
+    % Clear unused variables from previous loops. 
+    val = load(fullfile(files_folder(ii).folder, files_folder(ii).name), ...
+        "recorded_conditions", "recorded_times", "default_physical", ...
+        "length_unit", "PROBLEM_CONSTANTS", "time_unit");
+    recorded_conditions = val.recorded_conditions;
+    recorded_times = val.recorded_times;
+    default_physical = val.default_physical;
+    length_unit = val.length_unit;
+    time_unit = val.time_unit;
+    PROBLEM_CONSTANTS = val.PROBLEM_CONSTANTS;
+
+
+    new_simuls(ii, :) = [default_physical.rhoS, default_physical.sigmaS, default_physical.nu, ...
+        default_physical.g, default_physical.undisturbed_radius, default_physical.initial_velocity, ...
+        90, 3]; % LAST TWO: HARMONICS_QTT AND VERSION;
+end
+
 
 % Now you can manually add any simulations that you would like to run, such
 % as:
 %  simulations_cgs = [simulations_cgs; ...
 %      {50, 100, 1, 72.20, 0, 9.78E-3, 1, 72.20, 0.001, 180, 1}];
+
+simulations_cgs = [simulations_cgs; array2table(new_simuls, 'VariableNames', simulations_cgs.Properties.VariableNames)];
 
 % retrieve simulations that have already been done. 
 if force_sweep == false
