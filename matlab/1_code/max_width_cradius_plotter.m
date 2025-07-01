@@ -83,16 +83,16 @@ function max_width_cradius_plotter(varargin)
                     X = @(t) pixel_adim*Ro - t*V0 - g*t.^2/2;
                     tt0 = linspace(-t0, 0, nbefore);
                     cradiibefore(jj, :) = sin(acos((X(tt0 + t0) + (1-pixel_adim)*Ro)./Ro)); % Non dimensional contact radius!
+                
+                
+                
+                    wes(jj) = default_physical.rhoS * V0^2 * ...
+                        default_physical.undisturbed_radius / default_physical.sigmaS;
+                    ohs(jj) = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
+                        * default_physical.undisturbed_radius));
+                    bos(jj) = default_physical.rhoS * default_physical.g * default_physical.undisturbed_radius^2 / default_physical.sigmaS;
+
                 end
-                
-                
-                wes(jj) = default_physical.rhoS * V0^2 * ...
-                    default_physical.undisturbed_radius / default_physical.sigmaS;
-                ohs(jj) = default_physical.nu * sqrt(default_physical.rhoS / (default_physical.sigmaS ...
-                    * default_physical.undisturbed_radius));
-                bos(jj) = default_physical.rhoS * default_physical.g * default_physical.undisturbed_radius^2 / default_physical.sigmaS;
-                
-                
                 
                 %% Calculating min height (experimental side-view projection)
                 north_pole_exp_min_height = drop_height(0); currang = pi/4; dtheta = pi/2; N = 9;
@@ -177,7 +177,7 @@ function max_width_cradius_plotter(varargin)
                     spread_widths_tracker(jj) = times{jj}(ii);
                 end
                 
-                if true
+                if false
                     % Plotting
                     % Current time, maximum radius, maximum equatorial radius
                     ax = subplot(1, length(file), jj);
@@ -211,7 +211,7 @@ function max_width_cradius_plotter(varargin)
                 end
             end % end inner for (videos)
             
-            if true; writeVideo(vidObj, getframe(gcf)); end
+            if false; writeVideo(vidObj, getframe(gcf)); end
             
         end % end outer for (video
         close(vidObj);
@@ -219,7 +219,7 @@ function max_width_cradius_plotter(varargin)
         for jj = 1:length(physicalParameters)
             subplot(1, 3, 1); hold on; grid on; set(gca, 'FontSize', 16);
             title("Minimum Height", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
-            plot(1000*times{jj}(times_idx), north_poles(jj, :), '--', 'LineWidth', jj+1, 'DisplayName', sprintf("We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
+            plot(1000*times{jj}(times_idx), north_poles(jj, :), '--'    , 'LineWidth', jj+1, 'DisplayName', sprintf("We = %.2e, Oh = %.1e", wes(jj), ohs(jj)));
             legend('FontSize', 14);
             subplot(1, 3, 2); hold on; grid on; set(gca, 'FontSize', 16);
             title("Contact Radius", 'FontSize', 16); xlabel("Time (ms)", 'FontSize', 14);
@@ -235,6 +235,39 @@ function max_width_cradius_plotter(varargin)
             
         end
         
-    end %
+        % Create a new Excel file
+
+        % Create a new Excel file
+        excelFileName = '../2_output/Simulation_Results.xlsx';
+
+        % Loop through each simulation file
+        for jj = 1:length(file)
+            % Use the full file name (including .mat) as the sheet name
+            sheetName = file{jj}; % This will include the .mat extension
+
+            % Prepare the data for the current sheet
+            
+            timeData = 1000 .* [t0+tt0'; t0+times{jj}(times_idx)]; % Convert time to milliseconds
+            Ro = physicalParameters{jj}.default_physical.undisturbed_radius; % Get Ro for dimensional conversion
+            contactRadiiData = Ro/100 .* [cradiibefore(jj, :)'; contact_radii02R(jj, :)']; % Convert to meters (dimensional)
+
+            % Combine time and contact radii data into a table
+            dataTable = table(timeData, contactRadiiData, 'VariableNames', {'Time_ms', 'Contact_Radii_m'});
+
+            % Write the time and contact radii data to the Excel sheet
+            writetable(dataTable, excelFileName, 'Sheet', sheetName, 'Range', 'A1');
+
+            % Create a small table for Weber, Ohnesorge, and Bond numbers
+            weOhBoTable = table({'Weber'; 'Ohnesorge'; 'Bond'}, [wes(jj); ohs(jj); bos(jj)], ...
+                'VariableNames', {'Parameter', 'Value'});
+
+            % Write the Weber, Ohnesorge, and Bond table to the Excel sheet
+            writetable(weOhBoTable, excelFileName, 'Sheet', sheetName, 'Range', 'D1');
+        end
+
+        disp(['Data exported to ' excelFileName]);
+
+        
+    end % end nargin == 1
 
 end % end function definition
