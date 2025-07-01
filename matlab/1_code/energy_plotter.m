@@ -140,16 +140,17 @@ function energy_plotter(varargin)
         C * Yl .* deformation_amplitudes(idxs, :).^2;
     
     mechanical_energy = (rhoS * Ro^3 *(COM - 0.02*Ro + 1/2 * COM_velocities.^2))/(energy_unit);
+    factor = (velocity_unit/default_physical.initial_velocity)^2;
     A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
-    plot(times, A*sum(deformation_energies(idxs, :), 1), 'LineWidth',2);
-    plot(times, mechanical_energy, 'LineWidth', 3);
+    plot(times, factor*A*sum(deformation_energies(idxs, :), 1), 'LineWidth',2);
+    plot(times, factor*mechanical_energy, 'LineWidth', 3);
     xline(times(cidx), 'LineWidth', 2);
     grid on;
     % Only show a subset of 
     set(gca, 'FontSize', 16);
     legend(["Total Surface energy", "Total Mechanical energy COM", "Contact ends"], 'FontSize', 12);
     xlabel('$ t/t_s $', 'Interpreter','Latex', 'FontSize', 20);
-    ylabel('$ E/(\rho R_o^3 V^2) $', 'Interpreter','Latex', 'FontSize', 20);
+    ylabel('$ E/(\rho R_o^3 V_0^2) $', 'Interpreter','Latex', 'FontSize', 20);
    
     title(sprintf("Energy contribution per mode with We = %.3g, Oh = %.3g, Bo = %.3g", Westar, Oh, Bo));
     yl = get(gca, 'YLim'); yl = [-.1, max(abs(yl))];
