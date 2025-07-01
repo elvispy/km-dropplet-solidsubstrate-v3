@@ -306,3 +306,29 @@ diary off
 % scatter(energies.Weber, energies.PEout, 50, 'filled', 'DisplayName', 'PEout')
 % scatter(energies.Weber, energies.Eout, 50, 'filled', 'DisplayName', 'KEout+PEout')
 % yline(0); legend('show', 'FontSize', 14); xlabel("Weber");
+
+
+function plotter(prefixString)
+
+    % Get a list of all CSV files in the directory
+    files = dir(fullfile("../../**/*.csv"));
+    
+    % Loop through each file
+    for i = 1:length(files)
+        % Get the file name
+        fileName = files(i).name;
+        
+        % Check if the file name contains the prefix string
+        if contains(fileName, prefixString)
+            % Read the CSV file (assuming no headers)
+            data = sortrows(readmatrix(fullfile(directory, fileName)));
+            
+            % Plot the data
+            %figure;
+            plot(data(:, 1), data(:, 2));  % Adjust columns as needed
+            %title(['Plot of ', fileName]);
+            %xlabel('X-axis');
+            %ylabel('Y-axis');
+        end
+    end
+end
