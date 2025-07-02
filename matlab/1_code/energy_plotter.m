@@ -77,11 +77,12 @@ function energy_plotter(varargin)
     %A = (velocity_unit.^2/default_physical.initial_velocity.^2)/(2*pi/3);
     plot(times/time_unit, sum(deformation_energies(idxs, :), 1)/energy_unit, 'LineWidth',2);
     plot(times/time_unit, mechanical_energy/energy_unit, 'LineWidth', 3);
-    xline(times(cidx), 'LineWidth', 2);
+    plot(times/time_unit, (sum(deformation_energies(idxs, :), 1)+mechanical_energy)/energy_unit, 'LineWidth', 3);
+    xline(times(cidx)/time_unit, 'LineWidth', 2);
     grid on;
     % Only show a subset of 
     set(gca, 'FontSize', 16);
-    legend(["Total Surface energy", "Total Mechanical energy COM", "Contact ends"], 'FontSize', 12);
+    legend(["Total Surface energy", "Total Mechanical energy COM", "Surface + Mechanical", "Contact ends"], 'FontSize', 14, "Location", "SouthEastOutside");
     xlabel('$ t/t_\sigma $', 'Interpreter','Latex', 'FontSize', 20);
     ylabel('$ E/(4 \pi R_o^2 \sigma) $', 'Interpreter','Latex', 'FontSize', 20);
    
