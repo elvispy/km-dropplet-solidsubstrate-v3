@@ -3,8 +3,8 @@
 
 function energy_plotter(varargin)
     % Add functions to calculate maximum width
-    %close all;
-    hold on;
+    close all;
+    %hold on;
     safe_folder = fullfile(fileparts(mfilename('fullpath')), "simulation_code");
     addpath(safe_folder, '-begin');
     filepathh = fullfile(fileparts(pwd), "2_output");
@@ -55,7 +55,7 @@ function energy_plotter(varargin)
     energy_unit = 4*pi* Ro^2 * sigmaS;    
     
     %C = sigmaS * Ro^2/energy_unit;
-    %saving_figure_energy = figure('Position', [100, 500, 1900, 500]); % Wider than tall
+    saving_figure_energy = figure('Position', [100, 500, 1900, 500]); % Wider than tall
     hold on;
     %recorded_conditions{ii}.amplitude_defor = 1;
     idxs = 1:nb_harmonics;

@@ -21,7 +21,7 @@ sheets2 = matlab.lang.makeValidName(sheets);
 data = struct();
 cmp = "parula";
 close all; cmap = parula(100*length(sheets)); ss = size(cmap, 1);
-for i = 1:numel(sheets)
+for i = [1 2 5 8] %1:numel(sheets)
     tbl = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 1);
     
     data.(sheets2{i}) = table2struct(tbl, 'ToScalar', true);
@@ -33,9 +33,10 @@ for i = 1:numel(sheets)
     figure(1); hold on; set(gcf, 'Position', [734 223 ceil(451*16/9) 451]);
     color_vector = repmat(bnc.We, size(bnc.Time_s_));
     idx = ceil(ss*(bnc.We)/4);
-    plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
-    %scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
-    
+    %plot(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro),'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"", 'Color', cmap(idx, :));
+    if i ~= 2
+    scatter(bnc.Time_s_/t_ic, bnc.ContactRadius_mm_/(10*Ro), 150, cmap(idx, :), 'filled'); %'DisplayName',sprintf("$We=%.2f$", bnc.We));
+    end
     % Plot Contact Time vs Time_s_ (SIMULATIONS)
     [~, idx2] = min(abs(alldata.weber - bnc.We));  % idx is the index of the closest value
     file = fullfile(pwd, "..", "2_output", alldata.parent_folder(idx2), alldata.file_name(idx2)); 
@@ -75,27 +76,25 @@ for i = 1:numel(sheets)
             % end
             % EXPERIMENTAL max_contact_radius calculation
             current_contact_points_exp = recorded_conditions{jj}.contact_points;
-            if current_contact_points_exp == 0
-                current_contact_radius_exp = 0;
-            else 
-                kk = 1;
-                theta2 = theta_vector(current_contact_points_exp+kk);
-                while drop_height(theta2) < pixel/length_unit
-                    kk = kk + 1;
-                    theta2 = theta_vector(current_contact_points_exp + kk);
-                end
-                theta1 = theta_vector(current_contact_points_exp + kk - 1);
-                while abs(theta1-theta2) > pi/1e+3
-                    theta_middle = (theta1+theta2)/2;
-                    if drop_height(theta_middle) < pixel/length_unit
-                        theta1 = theta_middle;
-                    else
-                        theta2 = theta_middle;
-                    end
-                end
-                current_contact_radius_exp = sin(theta1) ...
-                    * drop_radius(theta1);
+
+            kk = 2;
+            theta2 = theta_vector(current_contact_points_exp+kk);
+            while drop_height(theta2) < pixel/length_unit
+                kk = kk + 1;
+                theta2 = theta_vector(current_contact_points_exp + kk);
             end
+            theta1 = theta_vector(current_contact_points_exp + kk - 1);
+            while abs(theta1-theta2) > pi/1e+3
+                theta_middle = (theta1+theta2)/2;
+                if drop_height(theta_middle) < pixel/length_unit
+                    theta1 = theta_middle;
+                else
+                    theta2 = theta_middle;
+                end
+            end
+            current_contact_radius_exp = sin(theta1) ...
+                * drop_radius(theta1);
+
             contact_radius_adim(jj) = current_contact_radius_exp;
             % if current_contact_radius_exp > max_contact_radius_exp
             %     max_contact_radius_exp = current_contact_radius_exp;
@@ -109,8 +108,10 @@ for i = 1:numel(sheets)
 
     % Plot Maximum Radius vs Time_s_
     figure(2); hold on; set(gcf, 'Position', [77 224 ceil(450*17/9) 450]);
-    plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
-    %scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro), 50, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
+    %plot(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(10*Ro),'Color', cmap(idx, :), 'LineWidth', (4-bnc.We)/2+1.5, 'DisplayName',"");
+    if i ~= 2
+    scatter(bnc.Time_s_/t_ic, bnc.MaxRadius_mm_/(bnc.MaxRadius_mm_(1)), 150, cmap(idx, :), 'filled'); %DisplayName',sprintf("$We=%.2f$", bnc.We));
+    end
     plot(times_vector_adim, max_width_adim, '--', 'LineWidth', 2, 'DisplayName',"", 'Color', cmap(idx, :));
     
     T = table(times_vector_adim(:)*t_ic, contact_radius_adim(:)*(10*Ro), max_width_adim(:)*(10*Ro), ...
@@ -127,7 +128,7 @@ ylabel('Contact Radius $r/R_o$', 'Interpreter','latex');
 colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'hot', etc.)
 cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
-ylabel(cb, 'We');
+ylabel(cb, 'We'); xlim([-0.05 4]);
 set(gca, 'FontSize', 24);
 h1 = plot(NaN, NaN, 'k-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
 h2 = plot(NaN, NaN, 'k--', 'LineWidth', 2);  % Dummy plot for second legend entry
@@ -142,7 +143,7 @@ colormap(cmp);  % You can choose different colormaps (e.g., 'parula', 'jet', 'ho
 cb = colorbar;  % Show the color scale
 caxis([0 3.58]);
 ylabel(cb, 'We');
-xlim([0 3]);
+xlim([0 4]);
 set(gca, 'FontSize', 24);
 %set(gca,'ColorScale','log')
 h1 = plot(NaN, NaN, 'k-', 'MarkerFaceColor', 'k', 'LineWidth', 2);  % Dummy plot for first legend entry
