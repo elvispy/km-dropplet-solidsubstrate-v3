@@ -1,0 +1,24 @@
+------------
+03-Jul-2025 09:13:07 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.0200
+                     g: 979.3825
+    undisturbed_radius: 0.0203
+      initial_velocity: [2×1 double]
+         harmonics_qtt: [2×1 double]
+               version: []
+
+{Unrecognized function or variable 'root_folder'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 57)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',57,0)">line 57</a>)
+files_folder = dir(fullfile(root_folder, "2_output", "**/criticalWeOh180*.mat"));
+} 
+opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',57,0)
+sweeoer_experiments_oil

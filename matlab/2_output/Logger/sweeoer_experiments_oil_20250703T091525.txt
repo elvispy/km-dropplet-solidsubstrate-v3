@@ -1,0 +1,21 @@
+------------
+03-Jul-2025 09:15:25 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.9600
+                sigmaS: 20.5000
+                    nu: 0.0200
+                     g: 979.3825
+    undisturbed_radius: 0.0203
+      initial_velocity: [2×1 double]
+         harmonics_qtt: [2×1 double]
+               version: []
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit all; end
+sweeoer_experiments_oil

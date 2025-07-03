@@ -16,9 +16,9 @@ optimize_for_bounce = true;
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'criticalWeOh90';
+prefix = 'energyPlot';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We_exp = logspace(log10(3e-3), log10(4e-3), 30);
+We_exp = [0.254, 0.250] + rand()*1e-4;
 Bo = 0.0189;%10.^([-inf, -3, -2, -1, 0]);
 velocities_exp = -sqrt(sigma/(rho*Ro) .* We_exp); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
 g = Bo.* sigma ./(rho .* Ro^2);
@@ -27,12 +27,12 @@ velocities = -sqrt(velocities_exp.^2 + X);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [20]', ... % Viscocity in cgs
+    "nu", 0.01 * [2]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
-    "harmonics_qtt", [90]', ...
-    "version", []')
+    "harmonics_qtt", [90, 150]', ...
+    "version", [3]')
 
 % We check how many outputs we want
 numOutputs = length(fieldnames(vars));
@@ -54,7 +54,7 @@ if isempty(cartesian_product) == true; cartesian_product = double.empty(0, lengt
 simulations_cgs = array2table(cartesian_product, "VariableNames", fnames);
 
 
-files_folder = dir(fullfile(root_folder, "2_output", "**/criticalWeOh180*.mat"));
+files_folder = dir(fullfile(pwd, "2_output", "**/criticalWeOh180*.mat"));
 We = zeros(1, length(files_folder));
 Oh = zeros(1, length(files_folder));
 Bo = zeros(1, length(files_folder));
@@ -130,7 +130,7 @@ undisturbed_radius = simulations_cgs.undisturbed_radius;
 
 %finaln
 T = height(simulations_cgs);
-parfor ii = 1:height(simulations_cgs)
+for ii = 1:height(simulations_cgs)
     %Check if the final folder exists
     if ~exist(final_folders(ii), 'dir')
         mkdir(final_folders(ii))
