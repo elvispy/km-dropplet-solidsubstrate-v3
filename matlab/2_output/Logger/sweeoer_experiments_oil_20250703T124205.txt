@@ -1,0 +1,808 @@
+------------
+03-Jul-2025 12:42:05 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: 6.600000000000000e-04
+                     g: 0
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: -32.433461000125071
+         harmonics_qtt: [2×1 double]
+               version: 3
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing0225T11*7.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingWeOhSweep20241108T220304.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep2.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_old.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_sensitivity.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh180.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh90.mat, undefined function or variable 
+[Warning: Variable 'default_numerical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+[Warning: Variable 'default_physical' not found.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments>addSimulation', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 75)" style="font-weight:bold">pull_done_experiments>addSimulation</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',75,0)">line 75</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('pull_done_experiments', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m', 44)" style="font-weight:bold">pull_done_experiments</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/pull_done_experiments.m',44,0)">line 44</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 96)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',96,0)">line 96</a>)] 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingenergyPlot.mat, undefined function or variable 
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting simulation 1/2, with velocity -32.4335, modes 45, version v3 ... 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.257125e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.285624e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.257125e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.285624e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.142812e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.571406e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=7.857030e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.928515e-08 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.106553e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.106553e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  8.043167e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  8.043167e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.702763e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.702763e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.257125e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.285624e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.142812e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.571406e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=7.857030e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.928515e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.964258e-08 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.766384e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.766384e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.010792e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.010792e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.256909e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.256909e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.257125e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.285624e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.142812e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.571406e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=7.857030e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.928515e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.964258e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=9.821288e-09 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  6.915961e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  6.915961e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  5.026982e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  5.026982e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.064227e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.064227e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.257125e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.285624e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.142812e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.571406e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=7.857030e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.928515e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.964258e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=9.821288e-09 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.910644e-09 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.728990e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.728990e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.256746e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.256746e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.660569e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.660569e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.257125e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.285624e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.142812e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.571406e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=7.857030e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.928515e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.964258e-08 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=9.821288e-09 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.910644e-09 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.455322e-09 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.322476e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.322476e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 285)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',285,0)">line 285</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.141864e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.141864e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  6.651422e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  6.651422e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 289)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',289,0)">line 289</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.433007e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.433007e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.287296e-03 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.436479e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.218240e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.609120e-04 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=8.045599e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=4.022799e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.011400e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.005700e-05 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=5.028499e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=2.514250e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.257125e-06 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=6.285624e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=3.142812e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=1.571406e-07 U = -32.4335, modes = 45, version = 3 
+Se dividio dt por 2, dt=7.857030e-08 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.020640e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.020640e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=3.928515e-08 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  6.228494e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  6.228494e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  5.051603e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  5.051603e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.964258e-08 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.557124e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.557124e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.262901e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.262901e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=9.821288e-09 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.892811e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.892811e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.157253e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.157253e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=4.910644e-09 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  9.732028e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  9.732028e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  7.893133e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  7.893133e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=2.455322e-09 U = -32.4335, modes = 45, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.973283e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.973283e-19.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 295)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',295,0)">line 295</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.227661e-09 U = -32.4335, modes = 45, version = 3 
+Time step too small (1.227661e-09). U = -32.4335, modes = 45, version = 3 
+Finished simulation 1/2, with velocity -32.4335, modes 45, version v3 ... 
+Starting simulation 2/2, with velocity -32.4335, modes 90, version v3 ... 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.792092e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.396046e-08 U = -32.4335, modes = 90, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.948942e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.948942e-16.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=6.980231e-09 U = -32.4335, modes = 90, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.872358e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.872358e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.792092e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.396046e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=6.980231e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.490115e-09 U = -32.4335, modes = 90, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.218090e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.218090e-17.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=1.745058e-09 U = -32.4335, modes = 90, version = 3 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.045226e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 93)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',93,0)">line 93</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.045226e-18.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5>my_lsqr', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 95)" style="font-weight:bold">get_next_step_v5>my_lsqr</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',95,0)">line 95</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_next_step_v5', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m', 35)" style="font-weight:bold">get_next_step_v5</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/get_next_step_v5.m',35,0)">line 35</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('solve_motion_v2', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m', 287)" style="font-weight:bold">solve_motion_v2</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/simulation_code/solve_motion_v2.m',287,0)">line 287</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sweeoer_experiments_oil', '/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m', 160)" style="font-weight:bold">sweeoer_experiments_oil</a> (<a href="matlab: opentoline('/Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil.m',160,0)">line 160</a>)
+] 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.792092e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.396046e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=6.980231e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.490115e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.745058e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.725289e-10 U = -32.4335, modes = 90, version = 3 
+Time step too small (8.725289e-10). U = -32.4335, modes = 90, version = 3 
+Finished simulation 2/2, with velocity -32.4335, modes 90, version v3 ... 
+Python 3.9.5

@@ -67,6 +67,7 @@ function energy_plotter(varargin)
     
     mechanical_energy = (4*pi/3 * rhoS * Ro^3 *(g*COM  + 1/2 * COM_velocities.^2));
     total_energy = (sum(deformation_energies(idxs, :), 1)+mechanical_energy);
+    energy_unit = total_energy(1);
     disp(any(total_energy(1:(end-1)) < total_energy(2:end)));
 
     plot(times/time_unit, sum(deformation_energies(idxs, :), 1)/energy_unit, 'LineWidth',2);

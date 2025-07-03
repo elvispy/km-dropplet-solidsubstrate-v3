@@ -1,0 +1,325 @@
+------------
+03-Jul-2025 12:39:00 
+ /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/1_code/sweeoer_experiments_oil
+
+vars = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+                  rhoS: 0.960000000000000
+                sigmaS: 20.500000000000000
+                    nu: 6.600000000000000e-04
+                     g: 0
+    undisturbed_radius: 0.020300000000000
+      initial_velocity: -32.433461000125071
+         harmonics_qtt: [2×1 double]
+               version: 3
+
+if system_dependent('IsDebugMode')==1, dbcont; end
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing0225T11*7.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing2.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingWeOhSweep20241108T220304.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_WeOhSweep2.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_old.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessing_sensitivity.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh180.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingcriticalWeOh90.mat, undefined function or variable 
+Could not load simulation on /Volumes/Data/Elvis/km-dropplet-solidsubstrate-v3/matlab/2_output, postprocessingenergyPlot.mat, undefined function or variable 
+if system_dependent('IsDebugMode')==1, dbcont; end
+Starting simulation 1/2, with velocity -32.4335, modes 90, version v3 ... 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.792092e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.396046e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=6.980231e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.792092e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.396046e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=6.980231e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.490115e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.745058e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.574564e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.287282e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.143641e-04 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.718205e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.859103e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.429551e-05 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=7.147756e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.573878e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.786939e-06 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.934695e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=4.467348e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.233674e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.116837e-07 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=5.584185e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=2.792092e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.396046e-08 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=6.980231e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=3.490115e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=1.745058e-09 U = -32.4335, modes = 90, version = 3 
+Se dividio dt por 2, dt=8.725289e-10 U = -32.4335, modes = 90, version = 3 
+Time step too small (8.725289e-10). U = -32.4335, modes = 90, version = 3 
+Finished simulation 1/2, with velocity -32.4335, modes 90, version v3 ... 
+Starting simulation 2/2, with velocity -32.4335, modes 150, version v3 ... 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.040326e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.201629e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.040326e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.201629e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.600815e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.040326e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.201629e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.600815e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.300407e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.040326e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.201629e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.600815e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.300407e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.502036e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.040326e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.201629e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.600815e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.300407e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.502036e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.251018e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.040326e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.201629e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.600815e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.300407e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.502036e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.251018e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.625509e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.130587e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.065294e-04 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.326468e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.663234e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.331617e-05 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.658085e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.329043e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.664521e-06 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.322607e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=4.161303e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.080652e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.040326e-07 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=5.201629e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=2.600815e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.300407e-08 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=6.502036e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=3.251018e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=1.625509e-09 U = -32.4335, modes = 150, version = 3 
+Se dividio dt por 2, dt=8.127545e-10 U = -32.4335, modes = 150, version = 3 
+Time step too small (8.127545e-10). U = -32.4335, modes = 150, version = 3 
+Finished simulation 2/2, with velocity -32.4335, modes 150, version v3 ... 
+Python 3.9.5

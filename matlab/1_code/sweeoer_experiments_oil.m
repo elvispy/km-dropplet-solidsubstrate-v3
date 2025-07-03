@@ -9,17 +9,17 @@ ddate = datestr(datetime(), 30); % 30 = ISO 8601
 diary(sprintf("../2_output/Logger/%s_%s.txt", mfilename, ddate));
 disp("------------");
 fprintf("%s \n %s\n", string(datetime("now")), mfilename('fullpath'));
-force_sweep = false;
+force_sweep = true;
 postprocessing_bool = true;
 optimize_for_bounce = true;
 
 
 %% Setting simulation parameters
 %#ok<*NOPTS>
-prefix = 'energyPlot';
+prefix = 'Sanjay';
 sigma = 20.5; rho = 0.96; Ro = 0.0203;
-We_exp = [0.254, 0.250] + rand()*1e-4;
-Bo = 0.0189;%10.^([-inf, -3, -2, -1, 0]);
+We_exp = 1;
+Bo = 0; %0.0189;%10.^([-inf, -3, -2, -1, 0]);
 velocities_exp = -sqrt(sigma/(rho*Ro) .* We_exp); % [V, 2*V 3*V, 4*V, 5*V, 6*V, 7*V, 8*V, 9*V]);
 g = Bo.* sigma ./(rho .* Ro^2);
 X =2*g*Ro*0.02;
@@ -27,11 +27,11 @@ velocities = -sqrt(velocities_exp.^2 + X);
 vars = struct(...  
     "rhoS", rho, ... % Droplet density in cgs
     "sigmaS", sigma, ... % Surface tension in cgs
-    "nu", 0.01 * [2]', ... % Viscocity in cgs
+    "nu", 0.01 * [0.5]', ... % Viscocity in cgs
     "g", g', ... % Gravity (cgs)
     "undisturbed_radius", Ro, ... % (cgs)
     "initial_velocity", velocities', ... %(cgs)
-    "harmonics_qtt", [90, 150]', ...
+    "harmonics_qtt", [90]', ...
     "version", [3]')
 
 % We check how many outputs we want

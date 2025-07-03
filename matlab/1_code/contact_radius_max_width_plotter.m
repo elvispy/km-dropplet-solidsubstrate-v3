@@ -21,7 +21,7 @@ sheets2 = matlab.lang.makeValidName(sheets);
 data = struct();
 cmp = "parula";
 close all; cmap = parula(100*length(sheets)); ss = size(cmap, 1);
-for i = [1 2 5 8] %1:numel(sheets)
+for i = 1:numel(sheets) % [1 2 5 8] %
     tbl = readtable(filename, 'Sheet', sheets{i}, 'ReadVariableNames', true, 'HeaderLines', 1);
     
     data.(sheets2{i}) = table2struct(tbl, 'ToScalar', true);
